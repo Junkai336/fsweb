@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한 페이지 내에서 링크</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+    인라인 요소
+        - 왼쪽에서 오른쪽으로 가로 배치, 줄바꿈 되지 않는다.
+        - 인라인 요소의 가로/세로 크기는 콘텐츠 크기
+        - 인라인 요소는 블록레벨 요소를 자식으로 가질 수 없다. (반대는 가능)
+            (단 a 태그는 예외. a태그는 블록레벨 요소를 자식으로 가질 수 있다.)
+
+
+    #: 현재 페이지 (제일 꼭대기)
+    #top : 현재 페이지 제일 꼭대기
+    #값: 현재 페이지
+    <태그 id="값">
+    글로벌 속성: id, class, title 등
+    - 모든 태그에 사용할 수 있는 공통 속성
+    - 필요속성은 아니고 선택속성
+
+    <a href="URLㅣ파일ㅣ메일ㅣ전화번호">
+    
+
+-->
+    <ul>
+        <li><a href="#section1">섹션1</a></li>
+        <li><a href="#section2">섹션2</a></li>
+    </ul>
+    <h1>한 페이지 내에서 링크</h1>
+    <h1 id="section1">섹션1</h2>
+        <p>로렘입숨(립숨)
+            의미없는 텍스트, 디자인용 텍스트, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum eveniet assumenda
+            consequatur distinctio magnam, sed doloremque est perspiciatis velit accusamus alias sint quasi ducimus
+            blanditiis, repellat voluptatum tempore architecto explicabo. <!-- <lorem> --> </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quaerat adipisci earum ut voluptas ipsa
+            explicabo quam? Ipsum error maiores porro quasi qui illo sed reprehenderit facere quo, autem earum tempora
+            dolorum perferendis ipsa quisquam similique eum impedit harum dignissimos repellat pariatur quibusdam.
+            Veniam
+            omnis, molestias, culpa expedita mollitia explicabo veritatis at hic illum, aspernatur cupiditate reiciendis
+            consequuntur sint. Reiciendis provident molestiae maxime eum id corrupti obcaecati vel quisquam, neque
+            eveniet!
+            Cumque nemo iure earum debitis unde officia aliquid eveniet voluptatibus sed porro. Quam qui maiores nemo
+            illo
+            consequatur provident officiis commodi! Excepturi quae doloremque corporis ab ad, quas quaerat.</p>
+        <!-- lorem100 -->
+        <h2 id="section2">섹션2</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis doloribus dolore omnis laborum consectetur
+            eveniet sit dolor qui expedita impedit, vel recusandae amet et modi similique. Quasi itaque distinctio
+            consequatur. Iusto hic beatae harum consequuntur, reprehenderit repellendus id modi molestiae ipsum aut
+            veritatis dignissimos deserunt dolor in provident voluptates explicabo nobis accusamus nemo illum aliquam
+            error
+            quas. Dolor possimus animi corporis ducimus sit ut est atque soluta quos nam modi, iure quas perferendis,
+            quidem
+            itaque cupiditate, voluptates aliquam qui corrupti provident quam nesciunt odit sunt culpa. Fugiat nesciunt
+            vitae expedita repellat odio, minus quo itaque, blanditiis at voluptates tenetur distinctio unde officiis
+            illum
+            eveniet soluta. Praesentium, iusto vero? Minima aliquam consectetur cumque cum laboriosam itaque sint
+            eligendi
+            sapiente iure aspernatur. Doloribus beatae vero possimus excepturi est rerum voluptate aliquid, accusantium
+            sed
+            cumque quos laborum recusandae, eligendi dolore ex officiis esse fugit labore, nemo voluptatem quia quidem
+            non.
+            Id molestias natus numquam voluptatem aliquid fugiat ad facere possimus magnam atque explicabo, autem
+            maiores
+            culpa et consequatur ducimus recusandae dolorem deleniti eum commodi ipsum odio veniam. Velit libero
+            adipisci,
+            consequuntur doloremque soluta, ullam ducimus dignissimos obcaecati, sunt fugit voluptas quidem temporibus
+            modi
+            tempora illum laborum at mollitia nobis. Repudiandae facere reiciendis aliquid.</p>
+
+        <h2>푸터</h2>
+        <a href="#top">위로가기</a>
+
+        <!-- 좋은 예-->
+        <p><a href="#">나는 단락이다</a></p>
+        <!-- 좋지 않은 예  -->
+        <a href="#">
+            <p>나는 단락이다</p>
+        </a>
+
+</body>
+
+</html>
