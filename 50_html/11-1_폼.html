@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML</title>
 </head>
+
 <body>
     <h1>폼</h1>
+    <!-- 
+        <form>: 폼 요소 그룹핑
+        <fieldset>: 그룹핑
+        <legend>: fieldset으로 그룹핑한 콘텐츠의 제목
+        <label>: 
+        <input>: 한 줄 텍스트 입력, 버튼, ...
+            intput은 빈태그(=종료태그없다.)
+        <button>: 버튼
+        <textarea>: 여러 줄 텍스트 입력
+        <select>: 목록
+            <option>:
+            <optgroup>:
+
+        <input>        
+        <datalist>: 콤보 = 목록 + 입력
+     -->
     <!-- 텍스트 입력 상자 -->
     <label for="user_id">아이디:</label>
     <input type="text" name="user_id" id="user_id" required>
@@ -24,11 +42,11 @@
     <input type="tel" name="user_tel" id="user_tel" placeholder="전화번호를 쓰세요." required>
 
     <!-- 이메일 입력 상자 -->
-    <label for="user_email">이메일:</label> 
+    <label for="user_email">이메일:</label>
     <input type="email" name="user_email" id="user_email">
 
     <!-- URL 입력 상자 -->
-    <label for="user_url">웹주소:</label> 
+    <label for="user_url">웹주소:</label>
     <input type="url" name="user_url" id="user_url">
 
     <!-- 서버로 넘겨질 값을 지정하는 입력 상자 -->
@@ -87,4 +105,5 @@
     <label for="appt">시간 선택 (오전/오후 시:분)</label>
     <input type="time" id="appt" name="appt">
 </body>
+
 </html>
