@@ -5,19 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>유미카츠</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 
 <body>
     <!-- 헤더 -->
     <header>
         <nav class="gnb">
-            <ul class="main_menu">
-                <li><a href="#">
+            <ul id=header class="main_menu">
+                <li><a href="#header">
                         <h1><em>BR</em> Architects</h1>
                     </a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#sec2">Projects</a></li>
+                <li><a href="#sec3">About</a></li>
+                <li><a href="#sec4">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -31,41 +36,81 @@
     <section id="sec2" class="section"></section>
     <h2>Projects</h2>
     <div class="project_list">
-        <p class="project1"><span>Summer House</span></p>
+        <p class="project1">Summer House</p>
         <img src="image/House1.jpg" alt="project1">
-
-        <p class="project2"><span>Brick House/span></p>
+        <p class="project2">Brick House</p>
         <img src="image/House2.jpg" alt="project2">
-        <p class="project1"><span>Renovated</span></p>
+        <p class="project3">Renovated</p>
         <img src="image/House3.jpg" alt="project3">
-        <p class="project1"><span>Barn House</span></p>
+        <p class="project4">Barn House</p>
         <img src="image/House4.jpg" alt="project4">
-        <p class="project1"><span>Summer House</span></p>
+        <p class="project5">Summer House</p>
         <img src="image/House5.jpg" alt="project5">
-        <p class="project1"><span>Brick House</span></p>
+        <p class="project6">Brick House</p>
         <img src="image/House6.jpg" alt="project6">
-        <p class="project1"><span>Summer House</span></p>
+        <p class="project7">Renovated</p>
         <img src="image/House7.jpg" alt="project7">
-        <p class="project1"><span>Summer House</span></p>
+        <p class="project8">Barn House</p>
         <img src="image/House8.jpg" alt="project8">
-
     </div>
 
     <!-- 섹션3 -->
     <section id="sec3" class="section"></section>
     <h2>About</h2>
+    <div class="about">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ullam dignissimos deserunt ea accusantium maxime
+            animi sapiente quae veniam, fuga odio quas adipisci architecto perspiciatis, temporibus nisi reiciendis
+            magni! Reiciendis quaerat cupiditate vitae a, excepturi quos dolor doloribus fuga repellendus ipsa,
+            laboriosam soluta accusantium suscipit incidunt, deleniti molestiae atque corporis. Illum maxime labore illo
+            quam saepe vitae natus quia suscipit molestias minima doloremque perferendis sint doloribus ut aperiam et
+            impedit, consequuntur deserunt libero iste officia nam ipsum! Aut modi quaerat quidem. Nesciunt pariatur
+            excepturi vel accusamus dolorum quia quas quam, ipsam rem, quae dolores at. Laborum ad vero aut quaerat!</p>
+    </div>
+    <div class="about_person">
+        <!-- John -->
+        <img src="image/John.jpg" alt="John">
+        <h3>John Doe</h3>
+        <p>CEO & Founder</p>
+        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        <p><button class="contact">Contact</button></p>
+        <!-- Jane -->
+        <img src="image/Jane.jpg" alt="Jane">
+        <h3>Jane Doe</h3>
+        <p>Architect</p>
+        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        <p><button class="contact">Contact</button></p>
+        <!-- Mike -->
+        <img src="image/Mike.jpg" alt="Mike">
+        <h3>Mike Ross</h3>
+        <p>Architect</p>
+        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        <p><button class="contact">Contact</button></p>
+        <!-- Dan -->
+        <img src="image/Dan.jpg" alt="Dan">
+        <h3>Dan Star</h3>
+        <p>Architect</p>
+        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        <p><button class="contact">Contact</button></p>
+    </div>
 
     <!-- 섹션4 -->
     <section id="sec4" class="section"></section>
     <h2>Contact</h2>
-
+    <p>Lets get in touch and talk about your next project.</p>
+    <input type="text" placeholder="Name"><br>
+    <input type="text" placeholder="Email"><br>
+    <input type="text" placeholder="Subject"><br>
+    <input type="text" placeholder="Comment"><br>
+    <button class="send_message" type="submit">SEND MESSAGE</button><br>
+    <img src="image/map.jpg" alt="location">
     <!-- 푸터 -->
-    <footer></footer>
+    <footer>
+        <p>Powered by <a href="#">w3.css</a></p>
+    </footer>
 </body>
 
 </html>
 
 
 <!-- id는 똑같은 이름 x , class는 똑같은 이름 o 
-identity 식별자 , -->
-<!--  -->
+id: identity 식별자 , -->
