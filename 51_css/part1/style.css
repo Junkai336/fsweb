@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+/* 외부 CSS */
+선택자 {속성: 값;}
+ul {color: green;}
+P {color: antiquewhite;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+    주석 단축키
+    ctrl + /
+    shift + alt + a 
+
+    선택자 {속성: 값;}
+
+    CSS의 문서에 HTML 태그를 사용하면 안된다. <p> {color: green} 뭐이런거
+
+    선택자에 태그 이름을 쓰다보니, HTML 태그와 혼동한다.
+ */
+
