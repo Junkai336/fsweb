@@ -7,17 +7,18 @@
     <title>NH농협은행</title>
 </head>
 <!-- 저스트 쇼핑몰 벤치마킹
-fatkun batch로 사이즈보고 수집ㄱㄱ
+fatkun batch로 사이즈보고 수집
 로고: 2장 - 200x40 (1장v) (사이즈안맞음)
 슬라이드 이미지 3장 - 1200x300 (v)
 갤러리 3장 - 110x110 (v)
-배너 1장 - 380x190
-바로가기 1장 - 380x190
+배너 1장 - 380x190 (v) (사이즈안맞음)
+바로가기 1장 - 380x190 (v)
 -->
+
 <body>
     <div id="wrap">
         <header>
-            <h1>NH농협은행</h1>
+            <h1><img src="images/logo.png" alt="농협로고"></h1>
             <!-- GNB -->
             <nav class="gnb">
                 <ul class="main">
@@ -67,20 +68,70 @@ fatkun batch로 사이즈보고 수집ㄱㄱ
                 <li><a href="#"></a><img src="images/slide1.png" alt="슬라이드1"></li>
             </ul>
         </div>
+
+        <!-- 모달 창 -->
+        <div class="modal">
+            <div class="popup">
+                <!-- 팝업 내용 -->
+                <h2>NH농협카드 발급인프라(멀티퍼셈,카드발급기)</h2>
+                <p>NH농협은행 공고 제2023 - 37호, 카드발급인프라(카드발급기) 구매 <br>
+                    NH농협은행 공고 제2023 - 38호, 발급인프라(멀티퍼셈) 구매 <br>
+                    <br>
+                    NH농협카드 「발급인프라(멀티퍼셈·카드발급기) 도입」을 위한 입찰을 아래와 같이 공고합니다. <br>
+                    <br>
+                    -아 래- <br>
+                    □ 사 업 명 : NH농협카드 「발급인프라(멀티퍼셈·카드발급기) 도입」<br>
+                    □ 사업내용 : '제안요청서' 참고 (붙임) <br>
+                    □ 사업기간 : '23.12.15. 이내 구매물품 입고 <br>
+                    □ 사업예산 : 26.6억원 이내 (부가세포함) <br>
+                    □ 입찰방법 : 지명경쟁입찰 및 부담이 되는 경쟁입찰에서의 낙찰자 결정 <br>
+                    □ 참가대상 : 카드사에 대형 카드발급기 또는 멀티퍼셈을 납품한 실적이 있으며 유지보수가 가능한 자 <br>
+                    □ 접수기간 : 항목별 상이 (제안요청서 참고) <br>
+                    □ 제출장소 : NH농협카드 카드발급팀 (서울시 서대문구 통일로 81, 농협생명빌딩 서관 6층) <br>
+                    □ 제출방법 : 방문접수에 한함 <br>
+                    □ 서류제출 : 제안요청서에 제시하는 제안서 및 제반 서류 <br>
+                    ※ 은행 휴무일(토, 일, 법정공휴일) 및 근무시간(오후 6시) 종료 후 제출 불가 <br>
+                    ※ 기타 자세한 사항은 첨부파일(하단 다운로드)을 참고하시기 바랍니다. <br>
+                </p>
+                <button type="button">닫기</button>
+            </div>
+        </div>
+
         <div id="contents">
-            <!-- 탭 메뉴 -->
-            <div class="tabs">공지사항/갤러리</div>
+            <!-- 탭 -->
+            <div id="tabs">
+                <!-- 버튼 영역 -->
+                <ul class="button">
+                    <li><a href="#tab1">공고</a></li>
+                    <li><a href="#tab2">갤러리</a></li>
+                </ul>
+                <!-- 내용 영역 -->
+                <div id="tab1">
+                    <ul>
+                        <li><a href=""><span>NH농협카드 발급인프라(멀티퍼셈,카드발급기)</span> 2023.07.28</a></li>
+                        <li><a href=""><span>NH농협은행 산업정보시스템 고도화 프로젝트</span> 2023.07.27</a></li>
+                        <li><a href=""><span>NH농협은행 운영리스크 규제(PSMOR)</span> 2023.05.17</a></li>
+                    </ul>
+                </div>
+                <div id="tab2">
+                    <a href="#"><img src="images/gall1.png" alt="갤러리1"></a>
+                    <a href="#"><img src="images/gall2.png" alt="갤러리2"></a>
+                    <a href="#"><img src="images/gall3.png" alt="갤러리3"></a>
+                </div>
+            </div>
             <!-- 배너 이미지 -->
-            <div class="banner">배너
-                <a href=""><img src="" alt=""></a>
+            <div class="banner">연혁
+                <a href=""><img src="images/banner.png" alt="배너"></a>
             </div>
             <!-- 바로가기 이미지 -->
-            <div class="shortcut">바로가기
-                <a href=""><img src="" alt=""></a>
+            <div class="shortcut">홍보영상
+                <a href=""><img src="images/shortcut.png" alt="홍보영상"></a>
             </div>
         </div>
         <footer>
-            <div class="blogo">NH농협은행</div>
+            <div class="blogo">
+                <img src="images/logo.png" alt="농협로고">
+            </div>
             <div class="copyright">주소 및 저작권
                 <p>서울중구 통일로 120 NH농협은행</p>
                 <p>COPYRIGHTS (C) 2021 BY NongHyup.ALL RIGHTS RESERVED.</p>

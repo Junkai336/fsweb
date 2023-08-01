@@ -1,33 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
-        /* 140개 영문 키워드: https://www.w3schools.com/colors/colors_names.asp */
+        /*
+         1.140개 영문 키워드: https://www.w3schools.com/colors/colors_names.asp 
+        red
+            */
 
-        /* HEX: 16진수 -> 0~9, A~F */
-        /* #RRGGBB 또는 #RGB */
+        /*
+         2.HEX: 16진수 -> 0~9, A~F
+        #RRGGBB 또는 #RGB (두문자가 서로 같을 때 하나로 표현 가능)
+        #ff0000 또는 #f00
+        #123456
+        #113355 또는 #135
+        #000000 ~ #ffffff 또는 #000 ~ #fff
+        */
 
-        /* rgb(0~255, 0~255, 0~255) */  
+        /* 
+        3.rgb(0~255, 0~255, 0~255) 
+        rgb(0,0,0) ~ rgb(255,255,255)
+        */
 
-        /* rgba(0~255, 0~255, 0~255, 0~1) */
+        /* 
+        4.rgba(0~255, 0~255, 0~255, 0~1) 
+        rgba(0,0,0,1) ~ rgba(255,255,255,1)
+        rgba(0,0,0,0.3) ~ rgba(255,255,255,0)
+        0~1 : 알파값, 투명도 0(투명)~1(불투명)
+        */
 
-        /* hsl(0~359, 0~100%, 0~100%) */
-        
-        /* hsla(0~359, 0~100%, 0~100%, 0~1) */
+        /* 
+        5.hsl(0~359, 0~100%, 0~100%) 
+        hsl(0,0%,0%) ~ hsl(359,100%,100%)
+        hue, saturation(채도), lightness(명도)
+        */
 
+        /* 
+        6.hsla(0~359, 0~100%, 0~100%, 0~1)
+        hsla(0,0%,0%,0) ~ hsla(359,100%,100%,1) 
+        */
+
+        /* 
+        영문 키워드는 테스트용 
+        포폴 제작시 #RRGGBB 16진수 방식
+        투명도가 필요하면 rgba(red,green,blue,alpha)
+        */
+
+        /* 우선순위 id > class > 요소 */
+        p {color:#4fffff;}
+        .cName {color:red;}
+        #cHex {color:blueviolet}
+        p {color: #0000ff}
+        p {color: rgb(0,255,000);}
+        /* alpha: 0~1 */
+        .cRgba, .cHsl, .cHsla {color: rgba(138, 33, 25, 0.4);}
+        .chsl {background-color: hsl(100,60%,30%);}
+        .chsla {background-color: hsla(80,60%,70%,0.5)}
     </style>
 </head>
+
 <body>
     <h1>CSS 색상 값</h1>
-    <p class="colorName">red</p>
-    <p class="colorHex">#ff0000</p>
-    <p class="colorRgb">rgb(255, 0, 0)</p>
-    <p class="colorRgba">rgba(255, 0, 0, 0.5)</p>
-    <p class="colorHsl">hsl(0, 100%, 50%)</p>
-    <p class="colorHsla">hsla(0, 100%, 50%, 0.5)</p>
+    <p class="cName">red</p>
+    <p id="cHex">#ff0000</p>
+    <p>rgb(255, 0, 0)</p>
+    <p class="cRgba">rgba(255, 0, 0, 0.5)</p>
+    <p class="cHsl">hsl(0, 100%, 50%)</p>
+    <p class="cHsla">hsla(0, 100%, 50%, 0.5)</p>
 </body>
+
 </html>
