@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,15 +17,30 @@
         clear: both;
 */
 
+/* 
+        1.float
+            float 처리한 요소는 공중에 뜬다.
+            float 처리한 요소의 아래 요소가 위로 올라온다.
+            자식을 float 처리하면 부모의 height=0;
+        2.clear
+
+        3.overflow
+
+        4.의사요소: ::after, ::before
+
+        5.border
+        
+*/
+
 
         div {
-            width:200px;
-            height:150px;
+            width: 200px;
+            height: 150px;
         }
 
         /* (1) .div1의 float를 left로 지정하시오. */
         .div1 {
-            background-color:lightblue;
+            background-color: lightblue;
             float: left;
             /* width의 기본값이 콘텐츠크기로 바뀐다. */
         }
@@ -45,10 +61,12 @@
         }
     </style>
 </head>
+
 <body>
     <h1>플로트</h1>
     <div class="div1">박스1</div>
     <div class="div2">박스2</div>
     <div class="div3">박스3</div>
 </body>
+
 </html>
