@@ -1,45 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        /* .container::after {
+            content: '';
+            display: block;
+            clear: both;
+        } */
+        /* 부모영역 벗어난 영역도 그대로 표시. 부모의 높이값을 가진다.*/
+
         .container {
-            background: red;
-            overflow:hidden;
+            background-color: red;
+            overflow: hidden;
+            /* 부모영역 벗어난 영역은 숨긴다. 부모의 높이값을 가진다.*/
+            /* overflow: auto;  */
+            /* 부모의 높이값은 얻지 못한다. */
         }
+
         .container div {
-            float:left;
-            width:200px;
-            height:100px;
-            margin:20px;
-            background:yellow;
+            /* 클래스선택자 + 요소선택자라서 우선순위가 가장 높은듯 id>class>요소 */
+            float: left;
+            width: 200px;
+            height: 100px;
+            margin: 20px;
+            background-color: yellow;
+            /* overflow: visible; */
         }
+
+        /*
+        
+        overflow-x: scroll; -> 가로 스크롤
+        overflow-y: scroll; -> 세로 스크롤
+        
+        overflow: visible; -> 넘치는 콘텐츠도 그대로 보임 -> (기본값)
+        overflow: scroll; -> 스크롤바 생성
+        overflow: hidden; -> 넘치면 숨김
+        overflow: auto; -> 스크롤바 생성
+        */
 
         /* (1) .ovf1에 overflow 속성을 visible로 지정하시오. */
-
+        .container .ovf1 {
+            overflow: visible;
+        }
 
         /* (2) .ovf2에 overflow-y 속성을 scroll로 지정하시오. */
-
+        .container .ovf2 {
+            /* overflow: scroll; */
+            overflow-y: scroll;
+        }
 
         /* (3) .ovf3에 overflow 속성을 hidden으로 지정하시오. */
-
+        .container .ovf3 {
+            overflow: hidden;
+        }
 
         /* (4) .ovf4에 overflow 속성을 auto로 지정하시오. */
+        .container .ovf4 {
+            overflow: auto;
+        }
 
-
+        /* scroll: 컨텐츠 없어도 스크롤바 있음  */
+        .container .ovf5 {
+            /* overflow: auto; */
+            overflow: scroll;
+        }
     </style>
 </head>
+
 <body>
     <h1>오버플로우</h1>
     <p>콘텐츠가 요소의 범위를 넘칠 경우 넘친 부분을 그대로 표시(visible)하거나, 숨기거나(hidden), 스크롤바(scroll, auto)를 나타낸다.</p>
     <div class="container">
-        <div class="ovf1">visible: Lorem, ipsum dolor sit amet consectetur adipisicing elit. A molestias ipsam laudantium fuga odit enim at pariatur autem aspernatur exercitationem excepturi dignissimos nobis explicabo porro voluptate, rem itaque. Perferendis, ullam?</div>
-        <div class="ovf2">scroll: Lorem, ipsum dolor sit amet consectetur adipisicing elit. A molestias ipsam laudantium fuga odit enim at pariatur autem aspernatur exercitationem excepturi dignissimos nobis explicabo porro voluptate, rem itaque. Perferendis, ullam?</div>
-        <div class="ovf3">hidden: Lorem, ipsum dolor sit amet consectetur adipisicing elit. A molestias ipsam laudantium fuga odit enim at pariatur autem aspernatur exercitationem excepturi dignissimos nobis explicabo porro voluptate, rem itaque. Perferendis, ullam?</div>
-        <div class="ovf4">auto: Lorem, ipsum dolor sit amet consectetur adipisicing elit. A molestias ipsam laudantium fuga odit enim at pariatur autem aspernatur exercitationem excepturi dignissimos nobis explicabo porro voluptate, rem itaque. Perferendis, ullam?</div>
+        <div class="ovf1">visible: 1Lorem, ipsum dolor sit amet consectetur adipisicing elit. A molestias ipsam
+            laudantium fuga odit enim at pariatur autem aspernatur exercitationem excepturi dignissimos nobis explicabo
+            porro voluptate, rem itaque. Perferendis, ullam?</div>
+        <div class="ovf2">scroll: 2Lorem, ipsum dolor sit amet consectetur adipisicing elit. A molestias ipsam laudantium
+            fuga odit enim at pariatur autem aspernatur exercitationem excepturi dignissimos nobis explicabo porro
+            voluptate, rem itaque. Perferendis, ullam?</div>
+        <div class="ovf3">hidden: 3Lorem, ipsum dolor sit amet consectetur adipisicing elit. A molestias ipsam laudantium
+            fuga odit enim at pariatur autem aspernatur exercitationem excepturi dignissimos nobis explicabo porro
+            voluptate, rem itaque. Perferendis, ullam?</div>
+        <div class="ovf4">auto: 4Lorem, ipsum dolor sit amet consectetur adipisicing elit. A molestias ipsam laudantium
+            fuga odit enim at pariatur autem aspernatur exercitationem excepturi dignissimos nobis explicabo porro
+            voluptate, rem itaque. Perferendis, ullam?</div>
+        <div class="ovf5">auto: 5Lorem, ipsum dolor sit amet</div>
     </div>
 </body>
+
 </html>
