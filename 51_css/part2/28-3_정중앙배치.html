@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스 정중앙배치</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        body>div {
+            position: relative;
+            background-color: lightcoral;
+        }
+
+        .txt {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-family: "Segoe UI",Arial,sans-serif;
+            letter-spacing: 4px;
+            font-size: 56px;
+        }
+
+        /*
+            가로 중앙 배치
+            1. 블록레벨 요소 -> margin: 0 auto;
+            2. 인라인 요소 -> text-align: center;
+            3. 이미지는 인라인 요소 따라서 텍스트 처럼
+                text-align:center; 사용하여 가운데 배치할 수 있다.
+                (이미지는 텍스트 한 자하고 동일하다.)
+
+                글자 속성은 대부분 상속된다?
+         */
+
+        .main_img {
+            width: 1500px;
+            margin: 0 auto;
+            /* text-align: center; */
+        }
+
+        .tit1 {
+            padding: 8px 16px;
+            background-color: #000;
+            /* opacity는 불투명도 0(투명) 1(불투명) 불투명이 기본값. 숫자만 쓴다. 단위 없음. */
+            opacity: 0.75;
+
+            font-weight: bolder;
+        }
+
+        .tit1+span {
+            font-size: 52px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="main_img"><img src="../assets/images/yumi.png" alt="yumi"></div>
+        <div class="txt">
+            <span class="tit1"><b>유미</b></span>
+            <span>카츠</span>
+        </div>
+    </div>
+</body>
+
+</html>

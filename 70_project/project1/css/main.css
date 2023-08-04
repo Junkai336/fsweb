@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+/* 작업용 */
+body * {outline: 1px solid green;}
+
+/* reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* common */
+
+#wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* logo */
+
+.logo {
+    float: left;
+    }
+
+/* global navigation bar */
+#gnb {
+    float: right;
+}
+
+
+/* 1depth */
+
+#gnb .main li {
+    display: inline-block
+}
+
+/* 2depth */
+
+#gnb .sub {
+    display: none;
+}
+
+/* slide */
+
+#slide li {
+    position: absolute;
+}

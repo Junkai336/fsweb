@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭</title>
+    <style>
+        /* 0은 단위 생략 가능하다. */
+
+        /* reset(초기화) : 기본값이 들어 있던 것을 전부 제거 body~ul*/
+        body
+        {
+            margin: 0;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style:none;
+        }
+        /* 탭 */
+        #tabs li {
+            /* float: left; */
+            display: inline-block;
+            /* width: 100px; */
+            background-color: lightgreen;
+            padding: 8px 16px;
+        }
+
+        #tabs div {
+            position: absolute;
+            top: 40px;
+            width: 400px;
+            height: 200px;
+        }
+
+        #tab1 {
+            background-color: lightblue;
+        }
+
+        #tab2 {
+            background-color: lightcoral;
+        }
+
+        /* 기본값이 같으면 아래쪽 것이 보인다. */
+    </style>
+</head>
+
+<body>
+    <!-- 탭 -->
+    <div id="tabs">
+        <!-- 버튼 영역 -->
+        <ul class="btn">
+            <li><a href="#tab1">공지사항</a></li>
+            <li><a href="#tab2">갤러리</a></li>
+        </ul>
+        <!-- 내용 영역 -->
+        <div id="tab1">내용1aaa</div>
+        <div id="tab2">내용2eee</div>
+    </div>
+</body>
+
+</html>
