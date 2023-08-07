@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+/* 
+        블록레벨 요소를 가로 배치해 준다.
+        float: left; -> 왼쪽 기준 배치
+        float: right; -> 오른쪽 기준 배치
+        clear는 float 처리한 요소의 아래(형제) 요소에 대해서 float이 적용되지 않도록 제거
+        clear: left;
+        clear: right;
+        clear: both;
+*/
+        .clearfix::after {
+            content:'';
+            display: block;
+            clear: both;
+        } 
+
+        ul {
+            width:1504px;
+            margin-top:0;
+            margin-bottom:0;
+            padding-left:0;
+            background-color: yellow;
+            /* overflow: hidden; */
+        }
+        li {
+            /* 공간이 부족하면 아래로 내려간다. */
+            width:360px;
+            height:240px;
+            float:left;
+            margin:8px;
+        }
+
+        .div1 {
+            background-color:#333;
+        }
+
+        .div2 {
+            background-color: #ccc;
+        }
+
+        .div3 {
+            background-color: #999;
+        }
+
+        .div4 {
+            background-color: #555;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>플로트</h1>
+    <ul class="clearfix">
+        <li class="div1">박스1</li>
+        <li class="div2">박스2</li>
+        <li class="div3">박스3</li>
+        <li class="div4">박스4</li>
+        <li class="div4">박스5</li>
+        <li class="div3">박스6</li>
+        <li class="div2">박스7</li>
+        <li class="div1">박스8</li>
+    </ul>
+</body>
+</html>

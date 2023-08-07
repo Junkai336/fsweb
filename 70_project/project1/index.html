@@ -12,7 +12,7 @@ fatkun batch로 사이즈보고 수집
 로고: 2장 - 200x40 (1장v) (사이즈안맞음)
 슬라이드 이미지 3장 - 1200x300 (v)
 갤러리 3장 - 110x110 (v)
-배너 1장 - 380x190 (v) (사이즈안맞음)
+배너 1장 - 380x190 (v)
 바로가기 1장 - 380x190 (v)
 
 이거 사이즈 안맞는거 집에서 ㄱㄱ
@@ -63,6 +63,7 @@ fatkun batch로 사이즈보고 수집
                 </ul>
             </nav>
         </header>
+        <!-- 이미지 슬라이드 -->
         <div id="slide">
             <ul>
                 <li><a href="#"></a><img src="images/slide1.png" alt="슬라이드1"></li>
@@ -73,7 +74,7 @@ fatkun batch로 사이즈보고 수집
         </div>
 
         <!-- 모달 창 -->
-        <div class="modal">
+        <div id="modal">
             <div class="popup">
                 <!-- 팝업 내용 -->
                 <h2>NH농협카드 발급인프라(멀티퍼셈,카드발급기)</h2>
@@ -103,39 +104,42 @@ fatkun batch로 사이즈보고 수집
         <div id="contents">
             <!-- 탭 -->
             <div id="tabs">
-                <!-- 버튼 영역 -->
-                <ul class="button">
-                    <li><a href="#tab1">공고</a></li>
-                    <li><a href="#tab2">갤러리</a></li>
-                </ul>
-                <!-- 내용 영역 -->
+                <!-- 공지사항 -->
+                <label for="btn1">공지사항</label>
+                <input type="radio" name="tabs" id="btn1" checked>
                 <div id="tab1">
                     <ul>
-                        <li><a href=""><span>NH농협카드 발급인프라(멀티퍼셈,카드발급기)</span> 2023.07.28</a></li>
-                        <li><a href=""><span>NH농협은행 산업정보시스템 고도화 프로젝트</span> 2023.07.27</a></li>
-                        <li><a href=""><span>NH농협은행 운영리스크 규제(PSMOR)</span> 2023.05.17</a></li>
+                        <li><a href=""><span>NH농협카드 발급인프라</span> 2023.07.28</a></li>
+                        <li><a href=""><span>NH농협은행 산업정보시스템</span> 2023.07.27</a></li>
+                        <li><a href=""><span>NH농협은행 운영리스크</span> 2023.05.17</a></li>
+                        <li><a href=""><span>하나 더</span> 2023.05.17</a></li>
                     </ul>
                 </div>
+                <!-- 갤러리 -->
+                <label for="btn2">갤러리</label>
+                <input type="radio" name="tabs" id="btn2">
                 <div id="tab2">
                     <a href="#"><img src="images/gall1.png" alt="갤러리1"></a>
                     <a href="#"><img src="images/gall2.png" alt="갤러리2"></a>
                     <a href="#"><img src="images/gall3.png" alt="갤러리3"></a>
                 </div>
-            </div>
-            <!-- 배너 이미지 -->
-            <div class="banner">연혁
+            </div> <!-- //#tabs -->
+
+            <!-- 배너 이미지 --> <!-- 연혁 -->
+            <div class="banner">
                 <a href=""><img src="images/banner.png" alt="배너"></a>
             </div>
-            <!-- 바로가기 이미지 -->
-            <div class="shortcut">홍보영상
+            <!-- 바로가기 이미지 --> <!-- 홍보영상 -->
+            <div class="shortcut">
                 <a href=""><img src="images/shortcut.png" alt="홍보영상"></a>
             </div>
         </div>
+
         <footer>
             <div class="blogo">
-                <img src="images/logo.png" alt="농협로고">
+                <img src="images/blogo.png" alt="농협로고">
             </div>
-            <div class="copyright">주소 및 저작권
+            <div class="copy">
                 <p>서울중구 통일로 120 NH농협은행</p>
                 <p>COPYRIGHTS (C) 2021 BY NongHyup.ALL RIGHTS RESERVED.</p>
             </div>

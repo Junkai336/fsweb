@@ -10,104 +10,84 @@
 
 <body>
     <!-- 헤더 -->
-    <header>
-        <nav class="gnb">
-            <ul id=header class="main_menu">
-                <li><a href="#header">
-                        <h1><em>BR</em> Architects</h1>
-                    </a></li>
-                <li><a href="#sec2">Projects</a></li>
-                <li><a href="#sec3">About</a></li>
-                <li><a href="#sec4">Contact</a></li>
+    <header class="clearfix">
+        <!-- 로고 -->
+        <h1 class="logo">
+            <a href="#"><img src="image/yumi_logo.png" alt="유미카츠_로고"></a>
+        </h1>
+        <!-- 내비게이션 -->
+        <nav id="gnb">
+            <ul>
+                <li><a href="#sec2">메뉴소개</a></li>
+                <li><a href="#sec3">창업안내</a></li>
+                <li><a href="#sec4">가맹문의</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- 섹션1 -->
-    <section id="sec1" class="section"></section>
-    <h2>BR Architects</h2>
-    <img src="image/yumi.png" alt="Buliding">
+    <div class="container">
+        <!-- 섹션1 -->
+        <div id="sec1" class="sec">
+            <div class="main_img"><img src="image/yumi1.png" alt="섹션1_유미카츠"></div>
+            <div class="txt">
+                <span class="tit1"><b>유미</b></span>
+                <span>카츠</span>
+            </div>
+        </div> <!-- //#sec1 -->
 
-    <!-- 섹션2 -->
-    <section id="sec2" class="section"></section>
-    <h2>Projects</h2>
-    <div class="project_list">
-        <p class="project1">떡볶카츠</p>
-        <img src="image/House1a.png" alt="project1">
-        <p class="project2">토마호크카츠</p>
-        <img src="image/House2a.png" alt="project2">
-        <p class="project3">새우튀김카레</p>
-        <img src="image/House3a.png" alt="project3">
-        <p class="project4">김치나베</p>
-        <img src="image/House4a.png" alt="project4">
-        <p class="project5">돈쫄</p>
-        <img src="image/House5a.png" alt="project5">
-        <p class="project6">함박카츠</p>
-        <img src="image/House6a.png" alt="project6">
-        <p class="project7">등심카레우동</p>
-        <img src="image/House7a.png" alt="project7">
-        <p class="project8">유미우동</p>
-        <img src="image/House8a.png" alt="project8">
+        <!-- 섹션2 -->
+        <section id="sec2" class="sec sec23">
+            <h2>메뉴소개</h2>
+            <ul class="clearfix"> <!-- float된 부모는 clear처리를 한다. -->
+                <li><img src="image/House1a.png" alt="섹션2_메뉴이미지1"><span>떡볶카츠</span></li>
+                <li><img src="image/House2a.png" alt="섹션2_메뉴이미지2"><span>토마호크카츠</span></li>
+                <li><img src="image/House3a.png" alt="섹션2_메뉴이미지3"><span>새우튀김카레</span></li>
+                <li><img src="image/House4a.png" alt="섹션2_메뉴이미지4"><span>김치나베</span></li>
+                <!-- <li class="li4"><img src="image/house4a.png" alt="섹션2_메뉴이미지4"><span>김치나베</span></li> -->
+                <li><img src="image/House5a.png" alt="섹션2_메뉴이미지5"><span>돈쫄</span></li>
+                <li><img src="image/House6a.png" alt="섹션2_메뉴이미지6"><span>함박카츠</span></li>
+                <li><img src="image/House7a.png" alt="섹션2_메뉴이미지7"><span>등심카레우동</span></li>
+                <li><img src="image/House8a.png" alt="섹션2_메뉴이미지8"><span>유미유동</span></li>
+                <!-- <li class="li8"><img src="image/house8a.png" alt="섹션2_메뉴이미지8"><span>유미유동</span></li> -->
+            </ul>
+        </section> <!-- //#sec2 -->
+
+        <!-- 섹션3 -->
+        <section id="sec3" class="sec sec23">
+            <h2>창업안내</h2>
+            <p>셀프 서비스 시스템으로 효율적인 매장 운영 <br> <strong>이제는 인건비가 관건!</strong> <br> 1줄 더 </p>
+            <ul class="clearfix">
+                <li><img src="image/John.jpg" alt="섹션3_안내이미지1">
+                    <h3>제목</h3>
+                    <p>기간</p>
+                    <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                </li>
+                <li><img src="image/John.jpg" alt="섹션3_안내이미지2">
+                    <h3>제목</h3>
+                    <p>기간</p>
+                    <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                </li>
+                <li><img src="image/John.jpg" alt="섹션3_안내이미지3">
+                    <h3>제목</h3>
+                    <p>기간</p>
+                    <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                </li>
+                <li><img src="image/John.jpg" alt="섹션3_안내이미지4">
+                    <h3>제목</h3>
+                    <p>기간</p>
+                    <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                </li>
+            </ul>
+        </section> <!-- //#sec3 -->
+
+        <!-- 섹션4 -->
+        <section id="sec4" class="sec">
+            <h2>가맹문의</h2>
+        </section> <!-- //#sec4 -->
     </div>
 
-    <!-- 섹션3 -->
-    <section id="sec3" class="section"></section>
-    <h2>About</h2>
-    <div class="about">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ullam dignissimos deserunt ea accusantium maxime
-            animi sapiente quae veniam, fuga odio quas adipisci architecto perspiciatis, temporibus nisi reiciendis
-            magni! Reiciendis quaerat cupiditate vitae a, excepturi quos dolor doloribus fuga repellendus ipsa,
-            laboriosam soluta accusantium suscipit incidunt, deleniti molestiae atque corporis. Illum maxime labore illo
-            quam saepe vitae natus quia suscipit molestias minima doloremque perferendis sint doloribus ut aperiam et
-            impedit, consequuntur deserunt libero iste officia nam ipsum! Aut modi quaerat quidem. Nesciunt pariatur
-            excepturi vel accusamus dolorum quia quas quam, ipsam rem, quae dolores at. Laborum ad vero aut quaerat!</p>
-    </div>
-    <div class="about_person">
-        <!-- John -->
-        <img src="image/John.jpg" alt="John">
-        <h3>John Doe</h3>
-        <p>CEO & Founder</p>
-        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-        <p><button class="contact">Contact</button></p>
-        <!-- Jane -->
-        <img src="image/Jane.jpg" alt="Jane">
-        <h3>Jane Doe</h3>
-        <p>Architect</p>
-        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-        <p><button class="contact">Contact</button></p>
-        <!-- Mike -->
-        <img src="image/Mike.jpg" alt="Mike">
-        <h3>Mike Ross</h3>
-        <p>Architect</p>
-        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-        <p><button class="contact">Contact</button></p>
-        <!-- Dan -->
-        <img src="image/Dan.jpg" alt="Dan">
-        <h3>Dan Star</h3>
-        <p>Architect</p>
-        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-        <p><button class="contact">Contact</button></p>
-    </div>
-
-    <!-- 섹션4 -->
-    <section id="sec4" class="section"></section>
-    <h2>Contact</h2>
-    <p>Lets get in touch and talk about your next project.</p>
-    <input type="text" placeholder="Name"><br>
-    <input type="text" placeholder="Email"><br>
-    <input type="text" placeholder="Subject"><br>
-    <input type="text" placeholder="Comment"><br>
-    <button class="send_message" type="submit">SEND MESSAGE</button><br>
-    <img src="image/map.jpg" alt="location">
     <!-- 푸터 -->
-    <footer>
-        <p>Powered by <a href="#">w3.css</a></p>
-    </footer>
+    <footer>COPYRIGHT 2022ⓒ (주)호윤크리에이티브 유미카츠. ALL RIGHTS RESERVED.</footer>
 </body>
 
 </html>
-
-
-<!-- id는 똑같은 이름 x , class는 똑같은 이름 o 
-id: identity 식별자 , -->
-
