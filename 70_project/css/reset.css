@@ -16,6 +16,11 @@ img {
     width: 100%;
 }
 
+input {
+    border:none;
+    padding: 0;
+}
+
 .clearfix:after {
     content:'';
     display: block;
