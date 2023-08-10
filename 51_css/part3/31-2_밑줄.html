@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>밑줄</title>
+    <style>
+        p:nth-of-type(1) {
+            text-decoration: underline 1px red;
+            text-underline-offset: 20px;
+        }
+
+        p:nth-of-type(2) {
+            display: inline-block;
+            border-bottom: 1px solid red;
+            padding-bottom: 10px; /* padding은 음수불가 */
+        }
+    </style>
+</head>
+
+<body>
+    <p>text-decoration</p>
+    <p>border-bottom</p>
+    <p><ins>HTML 태그로 선을 긋자! (컨텐츠삽입용도)</ins></p>
+    <p><del>HTML 태그로 선을 긋자! (컨텐츠삭제용도)</del></p>
+    <p><u>HTML 태그로 밑줄을 긋자!</u></p>
+    <!-- strike 태그 사장됨 -->
+    <p><strike>HTML 태그로 밑줄을 긋자!</strike></p>
+</body>
+
+</html>

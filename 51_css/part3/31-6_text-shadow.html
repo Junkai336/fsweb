@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
-        p {font-size: 3rem;}
+        p {
+            font-size: 3rem;
+        }
 
         /* 
+            박스 그림자: 
+                box-shadow: 가로위치 세로위치 [흐림] [퍼짐] [색] [inset], 
+                            가로위치 세로위치 [흐림] [퍼짐] [색] [inset], ...;
+            
             텍스트 그림자: 
-            text-shadow: 가로위치 세로위치 [흐림] [색], 가로위치 세로위치 [흐림] [색], ...;
-            색의 기본값: 글자색 
+                text-shadow:가로위치 세로위치 [흐림] [색], 
+                            가로위치 세로위치 [흐림] [색], ...;
+                            색의 기본값: 글자색 
         */
 
         /* 
@@ -22,6 +30,7 @@
         */
         .ts1 {
             color: white;
+            text-shadow: 2px 2px 4px #000;
         }
 
         /* 
@@ -32,6 +41,7 @@
         */
         .ts2 {
             color: white;
+            text-shadow: 1px 1px 2px #000, 0px 0px 25px blue, 0px 0px 5px darkblue;
         }
 
 
@@ -44,13 +54,17 @@
         */
         .ts3 {
             color: coral;
+            text-shadow: -1px 0 0 #000, 0px 1px 0 #000, 1px 0 0 #000, 0 -1px 0 #000;
+
         }
     </style>
 </head>
+
 <body>
     <h1>텍스트 그림자 효과</h1>
     <p class="ts1">text-shadow</p>
     <p class="ts2">text-shadow</p>
     <p class="ts3">text-shadow</p>
 </body>
+
 </html>

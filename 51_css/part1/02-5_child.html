@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -44,24 +45,69 @@
             홀수: 2n-1 또는 odd
         */
 
+        p:first-child {
+            color: red;
+        }
+
+        p:last-child {
+            color: blue;
+        }
+
+        p:nth-child(2) {
+            color: yellow;
+        }
+
+        p:nth-child(1) {
+            background-color: blue;
+        }
+
+        p:nth-child(12) {
+            background-color: orange;
+        }
+
+        p:nth-last-child(5) {
+            border: 1px solid green;
+        }
+
+        p:nth-child(odd) {
+            font-size: 7px;
+        }
+
+        p:nth-child(even) {
+            font-size: 22px;
+        }
+
+        p:nth-child(6n) {
+            font-style: italic;
+        }
+
+        p:nth-child(3) { /* 같은 형제관계 중에서 3번쨰. 3번쨰가 p라면 다크그린이 된다. */
+            background-color: darkgreen;
+        }
     </style>
 </head>
+
 <body>
     <h1>의사 클래스 선택자</h1>
     <h2>~child</h2>
-    <div>
-        <p>1 번째 요소입니다.</p>
-        <p>2 번째 요소입니다.</p>
-        <p>3 번째 요소입니다.</p>
-        <p>4 번째 요소입니다.</p>
-        <p>5 번째 요소입니다.</p>
-        <p>6 번째 요소입니다.</p>
-        <p>7 번째 요소입니다.</p>
-        <p>8 번째 요소입니다.</p>
-        <p>9 번째 요소입니다.</p>
-        <p>10 번째 요소입니다.</p>
-        <p>11 번째 요소입니다.</p>
-        <p>12 번째 요소입니다.</p>
-    </div>
+    <p>1 번째 요소입니다.</p>
+    <p>2 번째 요소입니다.</p>
+    <p>3 번째 요소입니다.</p>
+    <p>4 번째 요소입니다.</p>
+    <p>5 번째 요소입니다.</p>
+    <p>6 번째 요소입니다.</p>
+    <p>7 번째 요소입니다.</p>
+    <p>8 번째 요소입니다.</p>
+    <p>9 번째 요소입니다.</p>
+    <p>10 번째 요소입니다.</p>
+    <p>11 번째 요소입니다.</p>
+    <p>12 번째 요소입니다.</p>
 </body>
+
 </html>
+
+<!-- div로 묶지 않으면 "1번째 P"는 존재하지 않는다. h1h2가 첫번째 두번째 형제라서-->
+<!-- 부모관계 기준으로 같은 형제 관계를 선택한다. -->
+
+<!-- of type은 3번째 p더라도 그것이 p 중에서는 첫번째라면 선택된다. -->
+<!-- 형제관계의 type을 구별하기 때문임 -->

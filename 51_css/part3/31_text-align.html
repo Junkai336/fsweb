@@ -1,19 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        /* 
+            text-align
+            vertical-align
+            text-decoration
+            text-indent
+            text-transform
+            line-height
+            letter-spacing
+            word-spacing
+            white-space
+            text-overflow: ...(텍스트 줄임)
+            text-shadow
+        */
 
+        p {
+            border: 1px solid red;
+        }
+
+        .tal {
+            text-align: left;
+        }
+
+        .tar {
+            text-align: right;
+        }
+
+        .tac {
+            text-align: center;
+        }
+
+        /* 양쪽 맞춤 (왼쪽 오른쪽 둘다 맞춤.) */
+        .taj {
+            text-align: justify;
+
+            /* 영문도 한글처럼 글자 단위로 줄바꿈 된다. */
+            word-break: break-all;
+        }
+
+
+        img {
+            width: 100px;
+        }
+
+        .taimg {
+            text-align: center;
+        }
+
+
+        /* text-align은 텍스트의 수평(가로) 정렬 속성으로 block 요소 안에 있는 inline 요소(텍스트, 이미지 등)만을 정렬 한다. 즉, block 요소에만 적용할 수 있다. */
     </style>
 </head>
+
 <body>
     <h1>텍스트 수평 정렬</h1>
-    <p class="tal">text-align은 텍스트의 수평(가로) 정렬 속성으로 block 요소 안에 있는 inline 요소(텍스트, 이미지 등)만을 정렬 한다. 즉, block 요소에만 적용할 수 있다.</p>
-    <p class="tar">text-align은 텍스트의 수평(가로) 정렬 속성으로 block 요소 안에 있는 inline 요소(텍스트, 이미지 등)만을 정렬 한다. 즉, block 요소에만 적용할 수 있다.</p>
-    <p class="tac">text-align은 텍스트의 수평(가로) 정렬 속성으로 block 요소 안에 있는 inline 요소(텍스트, 이미지 등)만을 정렬 한다. 즉, block 요소에만 적용할 수 있다.</p>
-    <p class="taj">text-align은 텍스트의 수평(가로) 정렬 속성으로 block 요소 안에 있는 inline 요소(텍스트, 이미지 등)만을 정렬 한다. 즉, block 요소에만 적용할 수 있다.</p>
+    <p class="tal">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium facilis voluptatem beatae
+        voluptatibus facere laborum distinctio tempore voluptas voluptatum eaque rem eius sed sunt, modi, a vitae quam!
+        Esse, dicta impedit vitae quia mollitia, deleniti optio beatae sint blanditiis fuga eaque alias. Quam
+        dignissimos officiis ratione voluptate voluptatum optio magnam commodi sit iusto odio eligendi praesentium autem
+        architecto veritatis ex distinctio minus maiores dolorum quod exercitationem, quidem quibusdam natus eos? Sed
+        porro, quaerat tempore dolor ipsa iure commodi maiores explicabo nam asperiores cupiditate aspernatur illum
+        exercitationem quam eius odit alias inventore similique? Hic officia maxime fugiat numquam esse mollitia in,
+        totam commodi eligendi laudantium veritatis voluptates cumque sequi qui repellat tempore minima modi aspernatur
+        corporis, ullam dolor cupiditate quam! Nesciunt aperiam placeat exercitationem, ipsam inventore sapiente quas
+        ullam ipsum repellendus nihil rem reprehenderit dolore? Atque nostrum quas nam. Eligendi doloremque omnis
+        exercitationem adipisci repellat sit debitis magni ipsa itaque beatae quaerat animi, incidunt tenetur? Facilis,
+        dolore laborum impedit repudiandae eius ullam mollitia numquam ipsa praesentium aperiam? Eum, tempora doloribus.
+        Veritatis sapiente vero illum dicta consequatur magnam, reprehenderit delectus inventore incidunt quam!
+        Provident dicta asperiores omnis eum ipsam voluptas explicabo, earum debitis corporis? Sapiente at repellendus
+        dignissimos architecto perferendis quisquam distinctio! tal</p>
+    <p class="tar">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium facilis voluptatem beatae
+        voluptatibus facere laborum distinctio tempore voluptas voluptatum eaque rem eius sed sunt, modi, a vitae quam!
+        Esse, dicta impedit vitae quia mollitia, deleniti optio beatae sint blanditiis fuga eaque alias. Quam
+        dignissimos officiis ratione voluptate voluptatum optio magnam commodi sit iusto odio eligendi praesentium autem
+        architecto veritatis ex distinctio minus maiores dolorum quod exercitationem, quidem quibusdam natus eos? Sed
+        porro, quaerat tempore dolor ipsa iure commodi maiores explicabo nam asperiores cupiditate aspernatur illum
+        exercitationem quam eius odit alias inventore similique? Hic officia maxime fugiat numquam esse mollitia in,
+        totam commodi eligendi laudantium veritatis voluptates cumque sequi qui repellat tempore minima modi aspernatur
+        corporis, ullam dolor cupiditate quam! Nesciunt aperiam placeat exercitationem, ipsam inventore sapiente quas
+        ullam ipsum repellendus nihil rem reprehenderit dolore? Atque nostrum quas nam. Eligendi doloremque omnis
+        exercitationem adipisci repellat sit debitis magni ipsa itaque beatae quaerat animi, incidunt tenetur? Facilis,
+        dolore laborum impedit repudiandae eius ullam mollitia numquam ipsa praesentium aperiam? Eum, tempora doloribus.
+        Veritatis sapiente vero illum dicta consequatur magnam, reprehenderit delectus inventore incidunt quam!
+        Provident dicta asperiores omnis eum ipsam voluptas explicabo, earum debitis corporis? Sapiente at repellendus
+        dignissimos architecto perferendis quisquam distinctio! tar</p>
+    <p class="tac">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium facilis voluptatem beatae
+        voluptatibus facere laborum distinctio tempore voluptas voluptatum eaque rem eius sed sunt, modi, a vitae quam!
+        Esse, dicta impedit vitae quia mollitia, deleniti optio beatae sint blanditiis fuga eaque alias. Quam
+        dignissimos officiis ratione voluptate voluptatum optio magnam commodi sit iusto odio eligendi praesentium autem
+        architecto veritatis ex distinctio minus maiores dolorum quod exercitationem, quidem quibusdam natus eos? Sed
+        porro, quaerat tempore dolor ipsa iure commodi maiores explicabo nam asperiores cupiditate aspernatur illum
+        exercitationem quam eius odit alias inventore similique? Hic officia maxime fugiat numquam esse mollitia in,
+        totam commodi eligendi laudantium veritatis voluptates cumque sequi qui repellat tempore minima modi aspernatur
+        corporis, ullam dolor cupiditate quam! Nesciunt aperiam placeat exercitationem, ipsam inventore sapiente quas
+        ullam ipsum repellendus nihil rem reprehenderit dolore? Atque nostrum quas nam. Eligendi doloremque omnis
+        exercitationem adipisci repellat sit debitis magni ipsa itaque beatae quaerat animi, incidunt tenetur? Facilis,
+        dolore laborum impedit repudiandae eius ullam mollitia numquam ipsa praesentium aperiam? Eum, tempora doloribus.
+        Veritatis sapiente vero illum dicta consequatur magnam, reprehenderit delectus inventore incidunt quam!
+        Provident dicta asperiores omnis eum ipsam voluptas explicabo, earum debitis corporis? Sapiente at repellendus
+        dignissimos architecto perferendis quisquam distinctio! tac</p>
+    <!-- CSS justify 값은 영문자는 단어별로 자동 줄바꿈된다. 한글은 글자별로 자동 줄바꿈된다. -->
+    <p class="taj">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium facilis voluptatem beatae
+        voluptatibus facere laborum distinctio tempore voluptas voluptatum eaque rem eius sed sunt, modi, a vitae quam!
+        Esse, dicta impedit vitae quia mollitia, deleniti optio beatae sint blanditiis fuga eaque alias. Quam
+        dignissimos officiis ratione voluptate voluptatum optio magnam commodi sit iusto odio eligendi praesentium autem
+        architecto veritatis ex distinctio minus maiores dolorum quod exercitationem, quidem quibusdam natus eos? Sed
+        porro, quaerat tempore dolor ipsa iure commodi maiores explicabo nam asperiores cupiditate aspernatur illum
+        exercitationem quam eius odit alias inventore similique? Hic officia maxime fugiat numquam esse mollitia in,
+        totam commodi eligendi laudantium veritatis voluptates cumque sequi qui repellat tempore minima modi aspernatur
+        corporis, ullam dolor cupiditate quam! Nesciunt aperiam placeat exercitationem, ipsam inventore sapiente quas
+        ullam ipsum repellendus nihil rem reprehenderit dolore? Atque nostrum quas nam. Eligendi doloremque omnis
+        exercitationem adipisci repellat sit debitis magni ipsa itaque beatae quaerat animi, incidunt tenetur? Facilis,
+        dolore laborum impedit repudiandae eius ullam mollitia numquam ipsa praesentium aperiam? Eum, tempora doloribus.
+        Veritatis sapiente vero illum dicta consequatur magnam, reprehenderit delectus inventore incidunt quam!
+        Provident dicta asperiores omnis eum ipsam voluptas explicabo, earum debitis corporis? Sapiente at repellendus
+        dignissimos architecto perferendis quisquam distinctio!1830 taj</p>
+        <p class="taimg">
+            <img src="../assets/images/coca.png" alt="coca">
+        </p>
 </body>
+
 </html>
