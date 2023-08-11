@@ -13,10 +13,44 @@
 
             /* background-image:url(), url(), ... */
             /* 첫 번째로 기록한 url이 위로 지정된다. */
+            
+            /* 
 
-            /* bg3.png와 bg1.jpg 두 개의 이미지를 하나의 배경 이미지 속성으로 지정하시오. */
+            색: 단일색, 그라디언트, 패턴(반복 무늬)
 
+            background-color;
+                background-clip: 시작 위치;
+            background-image:; -> 패턴
+                background-repeat: 반복;
+                    값: repeat, no-repeat, repeat-x, repeat-y
+                background-position: 위치;
+                    값: px, %, 키워드
+                    x위치: left, right, center
+                    y위치: top, bottom, center
+                background-attachment -> 패럴렉스 이미지;
+                background-size: 이미지 크기;
+                    값: px, %, 키워드
+                    키워드: contain, cover
+                background-origen: 시작 위치;
+            backgrounbd-blend-mod: 합성 방식;
+         */
+
+         /*
+         background-image: url(), url(), ,,, 
+          첫번째로 기록한 url이 위로 지정된다.
+          */
+
+                /* 속기형 background-image: color image size; */
+
+          /* itally.png와 sta2.jpg 두 개의 이미지를 하나의 배경 이미지 속성으로 지정하시오. */
+          
+         background-image: url(../assets/images/bg.png), url(../assets/images/busy-line.png), url(../assets/images/italy1.jpg);
+         background-repeat: repeat-x, repeat-x, no-repeat;
+         background-position: 0 bottom, 0, 0;
+         background-size: 5px 5px, cover;
         }
+
+            
     </style>
 </head>
 

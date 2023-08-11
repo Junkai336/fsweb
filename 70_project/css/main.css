@@ -19,7 +19,7 @@
 .container {
     width: 960px;
     margin: 0 auto;
-    background-color: lightgreen;
+    /* background-color: lightgreen; */
 }
 
 .counter {
@@ -28,7 +28,19 @@
 
 footer {
     background-color: #333;
+    text-align: center;
 }
+
+/* 패럴렉스 스크롤링(Parallax scrolling) */
+#sec1 {
+    background-image: url(../images/bg3-2.jpg) no-repeat center/cover fixed;
+}
+
+.parallax {
+    height: 400px;
+    background: no-repeat center/cover fixed;
+}
+
 
 /* 헤더 */
 header {
@@ -58,7 +70,9 @@ header {
 /* 단위: px, %, em, rem, vw, vh, vmin, vmax */
 #sec1 {
     position: relative;
-    height: 700px;
+    height: 100vh;
+    background-image: url(../images/bg3.jpg);
+
     /* 컨텐츠가 없기 때문에 높이를 준다? 블록레벨이라서?? */
 }
 
@@ -99,6 +113,7 @@ header {
 .counter li {
     float: left;
     width: 25%;
+    list-style-type: none;
 }
 
 .counter span {
@@ -106,6 +121,11 @@ header {
 }
 
 /* 섹션3: 작품 */
+
+#sec3 .parallax {
+    background-image: url(../images/bg1-2.png);
+}
+
 .pf li {
     float: left;
     width: 225px;
@@ -118,6 +138,10 @@ header {
 }
 
 /* 섹션4: 연락처 */
+#sec4 .parallax {
+    background-image: url(../images/bg2-2.png);
+}
+
 .map {
     float: left;
     width: 284px;
