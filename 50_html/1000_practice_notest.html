@@ -104,7 +104,7 @@
 <!-- 02 -->
 
 <!-- 5초 뒤에 지정한 주소로 이동 -->
-<meta http-equiv="refresh" content="5; url=http://bback.dothome.co.kr">
+<!-- <meta http-equiv="refresh" content="5; url=http://bback.dothome.co.kr"> -->
 
 
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
@@ -250,19 +250,245 @@
   -->
 
 <a href="#section1"></a> <!-- section1 위치로 이동 id랑 연결-->
-<p id="section1"></p> 
-<p id="section2"></p> 
+<p id="section1"></p>
+<p id="section2"></p>
 
 <p><a href=""></a>문장</p>
-<a href=""><p>문장</p></a> <!-- a태그가 블록레벨 요소를 자식으로 가질 수 있지만 좋지 않은 예시 -->
+<a href="">
+    <p>문장</p>
+</a> <!-- a태그가 블록레벨 요소를 자식으로 가질 수 있지만 좋지 않은 예시 -->
 
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
 <!-- 11 -->
 
-ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+<!-- 
+    form
+        - 사용자로부터 입력을 받을 수 있는 HTML 입력 폼 정의
+        - action="" : jsp(JavaServerPage)(서버)에 제출할 것이다.        인듯?
+        - method="" : 폼 태그안에 속한 요소등을 서버로 전송하는 방법을 지정해주는 속성
+                      (데이터를 어떻게 전송할 것인가?)
+            - ="get"  :  파라미터가 주소창에 나오는 방식
+            - ="post" : 파라미터가  http 프로토콜의 body에 넘어가는 방식 (주소창노출x)
+            - 파라미터: 클라이언트에서 요청시 넘어가는 데이터
+    autocomplete
+        - ="on" : 자동완성기능
+        - ="off" : ll off
+    fieldset
+        - form 요소와 연관된 요소를 하나로 그룹핑
+        - 네모난 박스가 생김
+    legend
+        - fieldset 요소의 캡션 정의
+        - 캡션(caption) = 설명
+    input
+        - 값: text, password, hidden, submit, reset, button, file, image, search, email,
+              tel, url, checkbox, number, range, color, date
+        - placeholder="" : 가상 텍스트
+        - value="" : 해당 버튼의 초기값, 버튼명, 전송값
+        - required : 폼 데이터가 서버로 제출되기 전 반드시 채워져 있어야 하는 입력 필드
+                     동작: checkbox, date, email, file, number, password, pickers, radio, search, tel, text, url 
+                     불리언 속성: 명시x:false 명시o:true
+        - checked : 눌러져있음.
+    label
+        - 사용자 인터페이스(UI) 요소의 라벨 정의
+        - for="" : 다른 요소의 id와 결합
+        - name="" : 구분을 위한 요소의 이름
+    button
+        - 클릭할 수 있는 버튼 정의
+        - 이미지, 텍스트 콘텐츠 삽입 가능 / input은 삽입할 수 없다고 함
+    onclick
+            - alert('')
+            - 클릭하면 뭐시기           인듯?
+    textarea
+        - 글상자.
+        - readonly : 읽기전용
+        - cols : 열 ㅡ
+        - row : 행 ㅣ
+        - cols, row : 크기를 나타내지 않는다.
+    select
+        - 옵션 메뉴를 제공하는 드롭다운 리스트 정의
+    option
+        - 드롭다운 리스트에서 사용되는 각각의 옵션 정의
+        - select, datalist 요소 내부에만 위치 가능
+        - value : 서버로 제출 될 값 명시. 명시하는게 일반적
+    optgroup
+        - 드롭다운 리스트에서 사용되는 옵션들의 그룹 정의
+        - 옵션 수가 많을 경우 옵션끼리 각각의 그룹으로 묶어주면 좀 더 쉽게 사용가능
+    -->
 
-<!-- 11-1 -->
+<!-- <h2>검색</h2> -->
+<form action="구글검색코드.jsp" method="get" autocomplete="on">
+    <fieldset>
+        <legend>검색창</legend>
+        <input type="search" name="search" placeholder="검색어를 입력하세요">
+        <input type="submit" value="검색">
+        <button type="submit">검색</button>
+    </fieldset>
+</form>
+
+<!-- <h2>로그인</h2> -->
+<form action="11_폼.html" method="post" autocomplete="off">
+    <fieldset>
+        <legend>로그인</legend>
+
+        <label for="user_id" name="user_id">아이디</label>
+        <input type="text" id="user_id" name="user_id" placeholder="id 입력하세요" required>
+        <br> <!-- 아이디 -->
+
+        <label for="user_password" name="user_password">비밀번호</label>
+        <input type="password" id="user_password" name="user_password" placeholder="pw 입력하세요" required>
+        <br> <!-- 비번 -->
+
+        <input type="submit" value="로그인인풋">
+        <button type="submit">로그인버튼</button>
+        &nbsp; <!-- 제출 --->
+
+        <input type="reset" onclick="alert('값이 초기화되었습니다.')" value="값 초기화">
+        <button type="reset">초기화버튼</button>
+        <br> <!-- 초기화 -->
+    </fieldset>
+</form>
+
+
+<h2>이용약관</h2>
+<form action="jsp로 보낼거면 묶어야할듯? 아마 전체를 한번에 묶지 않을까">
+<fieldset>
+    <div>
+        <label for="access_terms">OOO 이용약관</label>
+        <div>
+            <textarea cols="35"
+            rows="7">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit laborum iusto quis, voluptatem vitae in sint labore sed doloribus repudiandae! Maiores tempora exercitationem, a eius distinctio, architecto, repellat perferendis nisi beatae mollitia quia blanditiis sapiente. Voluptatibus voluptatum quae sint ducimus atque commodi, ab iste? Reiciendis quis ea ad eos hic.</textarea>
+        </div>
+        <input type="radio" id="access_agree" name="access_terms" value="y">동의
+        <input type="radio" id="access_disagree" name="access_terms" value="n" checked>비동의
+    </div> <!-- 블록레벨 요소라서 내리려고 둔듯? -->
+</fieldset>
+
+<h2>생년월일</h2>
+
+<fieldset>
+    <label for="birth"></label>
+    <input type="text" id="brith" name="birth" placeholder="년도를 입력해주세요.">
+
+<select name="month_list">
+    <optgroup>
+        <option value="jan" selected>1월</option>
+        <option value="feb" selected>2월</option>
+        <option value="mar">3월</option>
+        <option value="apr">4월</option>
+        <option value="~~~">5월</option>
+        <option value="~~~">6월</option>
+        <option value="~~~">7월</option>
+        <option value="~~~">8월</option>
+        <option value="~~~">9월</option>
+        <option value="~~~">10월</option>
+        <option value="~~~">11월</option>
+        <option value="~~~">12월</option>
+    </optgroup>
+</select>
+
+<input type="text" name="day" placeholder="일자를 입력해주세요.">
+
+</fieldset>
+</form>
+
+<fieldset>
+    <div>
+        <label for="user_tel">휴대전화</label>
+    <input type="tel" id="user_tel" name="user_tel">
+</div>
+
+<label for="user_email">이메일</label>
+<input type="email" name="user_email" id="user_email">
+
+<br>
+
+<label for="user_page">깃허브 주소</label>
+<input type="url" name="user_page" id="user_page" value="www.github~">
+</fieldset>
+
+<br>
+
+<fieldset>
+    <div>    
+        <label>관심 프로그램</label>
+        <!-- checkbox: 다중선택가능 -->
+        <input type="checkbox" name="lang1" value="html" checked>HTML
+        <input type="checkbox" name="lang2" value="css">CSS
+        <input type="checkbox" name="lang3" value="js">JAVASCRIPT
+    </div>
+</fieldset>
+
+<hr>
+
+<fieldset>
+    <label for="image">이미지</label>
+    <input type="image" id="image" src="../70_project/images/pf1.png" alt="image">
+    
+    <hr>
+    
+    <label for="fileselect">파일 선택</label>
+    <input type="file" id="fileselect" name="fileselect">
+</fieldset>
+
+<!--
+     여기 value 초기값 아닌 것 같은데 뭐였는지 까먹음
+     초기값이 텍스트로 출력되는 것?
+     id처럼 server랑 연동? checkbox는 value가 name..
+     input type="submit"의 value는 버튼 텍스트로 나타나는데 이게 값마다 다른 것인지?
+     
+     그러니까 input의 type마다 value의 역할이 다르다?
+ -->
+<br>
+
+<fieldset>
+    <h2>스핀 박스</h2>
+    <label for="quantity">수량</label>
+    <input type="number" id="quantity" name="quantity" min="1" max="99" step="1">
+    <!-- step: 올릴 떄 n배수로 올라감 -->
+</fieldset>
+
+<fieldset>
+    <h2>슬라이드 막대</h2>
+    <label for="bar">슬라이드 막대</label>
+    <input type="range" id="bar" name="bar" min="0" max="100" step="1">
+</fieldset>
+
+<fieldset>
+    <h2>컬러</h2>
+    <label for="color">색상 선택</label>
+    <input type="color" id="color" name="color" value="#fff">
+</fieldset>
+
+<h2>날짜</h2>
+<fieldset>
+    <label for="birthday">생년월일</label>
+    <input type="date" id="birthday" name="birthday">
+</fieldset>
+
+<br>
+<br>
+
+<label for="brithdaytime">연월일 시간</label>
+<input type="datetime-local">
+
+<br>
+<br>
+
+<label for="yearmonth">연월</label>
+<input type="month">
+
+<br>
+<br>
+
+<label for="">연+n번째주</label>
+<input type="week">
+
+<br>
+<br>
+
+<label for="">시각</label>
+<input type="time">
 
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
@@ -271,7 +497,31 @@
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
 <!-- 13 -->
+
 <!-- 13-1 -->
+
+<!-- 아직안함 -->
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
 <!-- 14 -->
 <!-- 15 -->
 <!-- 15-1 -->
+
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+<!-- 해결 안된 것 -->
+
+<!-- 
+    1. root 경로, 절대 경로 정확한 구분 
+    2. input 태그의 value 역할이 속성마다 다른지 (초기값, 서버전송)
+-->
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+<!-- 그냥 궁금한 것 -->
+
+<!-- 
+    
+ -->
