@@ -265,6 +265,7 @@
 <!-- 
     form
         - 사용자로부터 입력을 받을 수 있는 HTML 입력 폼 정의
+        - 폼 요소 그룹핑
         - action="" : jsp(JavaServerPage)(서버)에 제출할 것이다.        인듯?
         - method="" : 폼 태그안에 속한 요소등을 서버로 전송하는 방법을 지정해주는 속성
                       (데이터를 어떻게 전송할 것인가?)
@@ -275,20 +276,24 @@
         - ="on" : 자동완성기능
         - ="off" : ll off
     fieldset
+        - 그룹핑
         - form 요소와 연관된 요소를 하나로 그룹핑
         - 네모난 박스가 생김
     legend
+        - fieldset으로 그룹핑한 콘텐츠의 제목
         - fieldset 요소의 캡션 정의
         - 캡션(caption) = 설명
     input
+        - 빈 태그 (종료 태그 X)
         - 값: text, password, hidden, submit, reset, button, file, image, search, email,
-              tel, url, checkbox, number, range, color, date
+              tel, url, checkbox, radio, number, range, color, date
         - placeholder="" : 가상 텍스트
         - value="" : 해당 버튼의 초기값, 버튼명, 전송값
         - required : 폼 데이터가 서버로 제출되기 전 반드시 채워져 있어야 하는 입력 필드
                      동작: checkbox, date, email, file, number, password, pickers, radio, search, tel, text, url 
                      불리언 속성: 명시x:false 명시o:true
         - checked : 눌러져있음.
+        - list="" : 선택할수있는리스트보여주는거 id랑 연동
     label
         - 사용자 인터페이스(UI) 요소의 라벨 정의
         - for="" : 다른 요소의 id와 결합
@@ -300,12 +305,13 @@
             - alert('')
             - 클릭하면 뭐시기           인듯?
     textarea
-        - 글상자.
+        - 글상자.(여러 줄 텍스트 입력)
         - readonly : 읽기전용
-        - cols : 열 ㅡ
-        - row : 행 ㅣ
+        - cols : 열 ㅡ (가로 몇자 보여줄건가)
+        - row : 행 ㅣ (세로로 한번에 몇글자)
         - cols, row : 크기를 나타내지 않는다.
     select
+        - 목록
         - 옵션 메뉴를 제공하는 드롭다운 리스트 정의
     option
         - 드롭다운 리스트에서 사용되는 각각의 옵션 정의
@@ -314,6 +320,8 @@
     optgroup
         - 드롭다운 리스트에서 사용되는 옵션들의 그룹 정의
         - 옵션 수가 많을 경우 옵션끼리 각각의 그룹으로 묶어주면 좀 더 쉽게 사용가능
+    datalist
+        - 콤보 = 목록 + 입력
     -->
 
 <!-- <h2>검색</h2> -->
@@ -350,67 +358,83 @@
 </form>
 
 
-<h2>이용약관</h2>
 <form action="jsp로 보낼거면 묶어야할듯? 아마 전체를 한번에 묶지 않을까">
-<fieldset>
-    <div>
-        <label for="access_terms">OOO 이용약관</label>
+    <fieldset>
+        <legend>이용약관</legend>
         <div>
-            <textarea cols="35"
-            rows="7">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit laborum iusto quis, voluptatem vitae in sint labore sed doloribus repudiandae! Maiores tempora exercitationem, a eius distinctio, architecto, repellat perferendis nisi beatae mollitia quia blanditiis sapiente. Voluptatibus voluptatum quae sint ducimus atque commodi, ab iste? Reiciendis quis ea ad eos hic.</textarea>
-        </div>
-        <input type="radio" id="access_agree" name="access_terms" value="y">동의
-        <input type="radio" id="access_disagree" name="access_terms" value="n" checked>비동의
-    </div> <!-- 블록레벨 요소라서 내리려고 둔듯? -->
-</fieldset>
+            <label for="access_terms">OOO 이용약관</label>
+            <div>
+                <textarea cols="35"
+                    rows="7">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit laborum iusto quis, voluptatem vitae in sint labore sed doloribus repudiandae! Maiores tempora exercitationem, a eius distinctio, architecto, repellat perferendis nisi beatae mollitia quia blanditiis sapiente. Voluptatibus voluptatum quae sint ducimus atque commodi, ab iste? Reiciendis quis ea ad eos hic.</textarea>
+            </div>
+            <input type="radio" id="access_agree" name="access_terms" value="y">동의
+            <input type="radio" id="access_disagree" name="access_terms" value="n" checked>비동의
+        </div> <!-- 블록레벨 요소라서 내리려고 둔듯? -->
+    </fieldset>
 
-<h2>생년월일</h2>
+    <fieldset>
+        <legend>생년월일</legend>
+        <label for="birth"></label>
+        <input type="text" id="brith" name="birth" placeholder="년도를 입력해주세요.">
 
-<fieldset>
-    <label for="birth"></label>
-    <input type="text" id="brith" name="birth" placeholder="년도를 입력해주세요.">
+        <select name="month_list">
+            <optgroup>
+                <option value="jan" selected>1월</option>
+                <option value="feb" selected>2월</option>
+                <option value="mar">3월</option>
+                <option value="apr">4월</option>
+                <option value="~~~">5월</option>
+                <option value="~~~">6월</option>
+                <option value="~~~">7월</option>
+                <option value="~~~">8월</option>
+                <option value="~~~">9월</option>
+                <option value="~~~">10월</option>
+                <option value="~~~">11월</option>
+                <option value="~~~">12월</option>
+            </optgroup>
+        </select>
 
-<select name="month_list">
-    <optgroup>
-        <option value="jan" selected>1월</option>
-        <option value="feb" selected>2월</option>
-        <option value="mar">3월</option>
-        <option value="apr">4월</option>
-        <option value="~~~">5월</option>
-        <option value="~~~">6월</option>
-        <option value="~~~">7월</option>
-        <option value="~~~">8월</option>
-        <option value="~~~">9월</option>
-        <option value="~~~">10월</option>
-        <option value="~~~">11월</option>
-        <option value="~~~">12월</option>
-    </optgroup>
-</select>
+        <input type="text" name="day" placeholder="일자를 입력해주세요.">
 
-<input type="text" name="day" placeholder="일자를 입력해주세요.">
-
-</fieldset>
+    </fieldset>
 </form>
 
 <fieldset>
+    <legend>휴대전화, 이메일, 주소</legend>
+
     <div>
         <label for="user_tel">휴대전화</label>
-    <input type="tel" id="user_tel" name="user_tel">
-</div>
+        <input type="tel" id="user_tel" name="user_tel">
+    </div>
 
-<label for="user_email">이메일</label>
-<input type="email" name="user_email" id="user_email">
+    <label for="user_email">이메일</label>
+    <input type="email" name="user_email" id="user_email">
 
-<br>
+    <br>
 
-<label for="user_page">깃허브 주소</label>
-<input type="url" name="user_page" id="user_page" value="www.github~">
+
+        <div>
+            <input type="text" name="user_email_forward">@
+            <input type="text" name="user_email_backward" list="email_backward">
+            <datalist id="email_backward">
+                <option value="naver.com"></option>
+                <option value="google.com"></option>
+                <option value="nate.com"></option>
+            </datalist>
+        </div>
+
+
+    <br>
+
+    <label for="user_page">깃허브 주소</label>
+    <input type="url" name="user_page" id="user_page" value="www.github~">
 </fieldset>
 
 <br>
 
 <fieldset>
-    <div>    
+    <legend>관심 프로그램</legend>
+    <div>
         <label>관심 프로그램</label>
         <!-- checkbox: 다중선택가능 -->
         <input type="checkbox" name="lang1" value="html" checked>HTML
@@ -422,11 +446,12 @@
 <hr>
 
 <fieldset>
+    <legend>이미지, 파일선택</legend>
     <label for="image">이미지</label>
     <input type="image" id="image" src="../70_project/images/pf1.png" alt="image">
-    
+
     <hr>
-    
+
     <label for="fileselect">파일 선택</label>
     <input type="file" id="fileselect" name="fileselect">
 </fieldset>
@@ -442,29 +467,28 @@
 <br>
 
 <fieldset>
-    <h2>스핀 박스</h2>
+    <legend>스핀 박스</legend>
     <label for="quantity">수량</label>
     <input type="number" id="quantity" name="quantity" min="1" max="99" step="1">
     <!-- step: 올릴 떄 n배수로 올라감 -->
 </fieldset>
 
 <fieldset>
-    <h2>슬라이드 막대</h2>
+    <legend>슬라이드 막대</legend>
     <label for="bar">슬라이드 막대</label>
     <input type="range" id="bar" name="bar" min="0" max="100" step="1">
 </fieldset>
 
 <fieldset>
-    <h2>컬러</h2>
+    <legend>컬러</legend>
     <label for="color">색상 선택</label>
     <input type="color" id="color" name="color" value="#fff">
 </fieldset>
 
-<h2>날짜</h2>
 <fieldset>
+    <legend>날짜</legend>
     <label for="birthday">생년월일</label>
     <input type="date" id="birthday" name="birthday">
-</fieldset>
 
 <br>
 <br>
@@ -489,10 +513,26 @@
 
 <label for="">시각</label>
 <input type="time">
+</fieldset>
 
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
 <!-- 12 -->
+
+<!-- https://caniuse.com/ -->
+<!-- shift alt b 5대 브라우저 테스트-->
+
+<!-- 
+    video
+    audio
+        autoplay : 자동실행
+        muted : 음소거
+        loop : 무한 반복
+        controls : 컨트롤
+    source
+        src : video, audio 태그의 필수 속성, 미디어 URL
+    iframe
+ -->
 
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
@@ -525,3 +565,11 @@
 <!-- 
     
  -->
+
+ 814. 치과, h12~19, csp1, 플젝포샵
+815. csp1,p2, 플젝포샵
+
+프로젝트
+- 이미지, 텍스트 채워넣고
+- 로고 SVG 파일로 바꿔주고
+- 이미지 낡은거 갈아주기

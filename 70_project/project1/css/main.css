@@ -1,5 +1,7 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
+@import url(reset.css);
+/* @import url(typo.css); */
 
 
 /* 작업용 */
@@ -8,39 +10,13 @@
     } */
 
 /* reset */
-* {
-    /* 요소의 패딩과 테두리를 요소의 안쪽으로 지정한다. */
-    box-sizing: border-box;
-    /* 기본 h1,h2,p 위아래마진有, ul 마진, 
-    기본적으로 인라인요소는 여백이 없으나 button 패딩有 
-    저것만 여백 0처리 해주는게 이상적*/
-    /* margin: 0; */
-    /* padding: 0; */
-}
 
-h1,
-h2,
-p,
-ul {
-    margin: 0;
-}
-
-li {
-    list-style: none;
-}
-
-ul,
-button {
-    padding: 0;
-}
-
-img {
-    
-    width: 100%;
-    vertical-align: top;
-}
-
-/* type */
+/* 
+    typo: 글꼴, 크기, 색, 줄간격, 자간, 밑줄
+    font: 스타일(굵기, 기울기) 크기/줄간격 글꼴;
+    letter-spacing
+    color: 글자색
+*/
 
 html {
     font-size: 10px;
@@ -142,7 +118,7 @@ header {
 #contents {
     height: 200px;
     margin: 5px 0;
-}
+    }
 
 #contents>div {
     /* 1200 - 424 = 776/2 = 388 */
@@ -230,7 +206,7 @@ label {
 /* footer */
 footer {
     height: 100px;
-    background-color: #ccc;
+    background: linear-gradient(#fff, #ddd);
     color: #111;
     padding: 30px;
 }
