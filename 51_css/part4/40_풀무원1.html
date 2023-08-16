@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>풀무원</title>
+    <style>
+        /* 초기화 */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        /* 타이포 */
+
+        html {
+            font-size: 10px;
+        }
+
+        body {
+            font: 1.5rem/1.5 'Noto Sans KR', sans-serif;
+            color: #333;
+            letter-spacing: -1px;
+        }
+
+        section {
+            height: 100vh;
+        }
+
+        #sec1 {
+            background: #ece9de;
+            padding-top: 143px;
+        }
+
+        dl {
+            color:#fff;
+            font-size: 1.8rem;
+        }
+
+        dt {
+            font-size: 2.4rem;
+            font-weight: 700;
+        }
+
+        dd {
+            font-size: 1.8rem;
+        }
+
+        h2 {
+            font-size: 4.5rem;
+            font-weight: normal;
+        }
+
+        p {
+            font-size: 2rem;
+        }
+
+        .container {
+            /* 요소를 가로/세로 중앙 배치하기 */
+            /* position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -590px;
+            margin-top: -122px; */
+            /* 
+            transform: translate(-50%,-50%); 
+            #sec1에 부모를 display: table; width:100%;
+            .container에 display: tabel-cell; vertical-align: middle;
+            .inner에 width:1179px, margin:0 auto;
+            */
+            width: 1179px;
+            margin: 0 auto;
+        }
+
+        /* background: red;
+        블록레벨요소의 가로 가운데 배치 */
+
+        p {
+            margin: 30px 0 54px 0;
+        }
+
+        span {
+            display: block;
+        }
+
+        #sec2 {
+            background: #7f9f52;
+        }
+
+        ul::after {
+            /* height: 493px; */
+            /* overflow: hidden; */
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        li {
+            position: relative;
+            float: left;
+            width: 393px;
+            height: 493px;
+            background: red no-repeat 50% 50%/cover;
+            text-align: center;
+
+        }
+
+        li:nth-of-type(1) {
+            /* 이미지크기: 393*493 */
+            /* 파일/폴더 명명 규칙 */
+            /* background-image: url(),url(),... */
+            background-image: url(풀무원/s01_list_icon_1.png), url(풀무원/s01_list_img1.jpg);
+        }
+
+        li:nth-of-type(1):hover {
+            background-image: url(풀무원/s01_list_icon_1_on.png); 
+            background-color: #333; 
+        }
+
+        li:nth-of-type(2) {
+            background-image: url(풀무원/s01_list_icon_2.png), url(풀무원/s01_list_img2.jpg);
+        }
+
+        li:nth-of-type(2):hover {
+            background-image: url(풀무원/s01_list_icon_2_on.png); 
+            background-color: #333; 
+        }
+
+        li:nth-of-type(3) {
+            background-image: url(풀무원/s01_list_icon_3.png), url(풀무원/s01_list_img3.jpg);
+        }
+
+        li:nth-of-type(3):hover {
+            background-image: url(풀무원/s01_list_icon_3_on.png); 
+            background-color: #333; 
+        }
+
+        /* 포지션을 absolute;로 하게 되면 요소의 width:컨텐츠크기 가 됨 (text-align center 그래서 안먹힘) 그래서 width=100%함 */
+        /* 포지션 absolut로 하게 되면 margin:0 auto; 통하지 않는다. 그래서 left50%,margin-left는width의-절반 */
+        dl {
+            position: absolute;
+            width: 100%;
+            height: 85px;
+            /* bottom: 0; */
+            top: 314px;
+            /* left: 50%; */
+            /* margin-left: -120px; */
+            opacity: 0;
+            transition: .5s;
+        }
+
+        dt {
+            padding-bottom: 6px;
+            margin-bottom: 12px;
+            border-bottom: 1px solid #fff;
+        }
+
+        dt::after {
+            content:'';
+            width: 240px;
+            height: 2px;
+            display: block;
+            margin: 6px auto;
+            background: #fff;
+        }
+
+        li:hover dl {
+            opacity: 1;
+        }
+        /* li에 마우스 올리면 dl의 opacity를 1로 한다. */
+        /* css는 부모에 마우스 갖다댔을 때만 자식만 보이게 가능? 자바스크립트는 반대로 가능 */
+
+        /* display: none;은 transition 효과가 적용되지 않지만 opacity는 적용된다.  */
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <section id="sec1">
+            <div class="container">
+                <h2>바른 먹거리</h2>
+                <p>나와 내 가족의 건강, 더 나아가~</p>
+                <ul>
+                    <li>
+                        <dl>
+                            <dt>바른먹거리 </dt>
+                            <dd>
+                                <span>내 가족의 행복을 위한</span>
+                                <span>바른 먹거리는 무엇일까요?</span>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>로하스 </dt>
+                            <dd>
+                                <span>로하스 ~~</span>
+                                <span>로하스 ~~</span>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>바른먹거리 캠페인 </dt>
+                            <dd>
+                                <span>바른 먹거리 ~~</span>
+                                <span>&nbsp;</span>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- 섹션 공통 -->
+
+
+
+        <!-- 섹션 스스로 해보기 -->
+        </section>
+        <section id="sec2">
+            <h2></h2>
+            <p></p>
+        </section>
+    </div>
+</body>
+
+</html>

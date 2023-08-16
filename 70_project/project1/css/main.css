@@ -46,14 +46,19 @@ a {
 
 .copy {
     color: #444;
-    text-align: center;
+    /* text-align: center; */
+    line-height: 50px;
     font-size: 1.2rem;
 }
 
-.blogo {
+.copy p {
+    font-size: 1.33rem;
+}
+
+/* .blogo {
     text-align: left;
     opacity: .95;
-}
+} */
 
 /* common */
 
@@ -73,7 +78,25 @@ header {
 /* logo */
 
 .logo {
+    /* float: left; */
+    font: 18px;
+    letter-spacing: 4px;
+    width: 300px;
     float: left;
+}
+
+.logo span {
+    letter-spacing: 8px;
+}
+
+.logo a {
+    color: #777;
+}
+
+.logo image {
+    width: 7px;
+    vertical-align: middle;
+    margin-right: 16px;
 }
 
 /* global navigation bar */
@@ -105,6 +128,7 @@ header {
 
 #slide li {
     position: absolute;
+    background-color: #5177a7;
 }
 
 /* modal */
@@ -155,9 +179,6 @@ label {
 }
 
 /* 공지사항 */
-/* #tab1 {
-
-} */
 
 #tab1 li {
     /* display: none; */
@@ -187,8 +208,8 @@ label {
 }
 
 #tab2 a {
-    margin: 0 4px;
     display: inline-block;
+    margin: 0 4px;
 }
 
 /* banner */
@@ -205,10 +226,11 @@ label {
 
 /* footer */
 footer {
+    position: relative;
     height: 100px;
     background: linear-gradient(#fff, #ddd);
     color: #111;
-    padding: 30px;
+    padding: 0 30px;
 }
 
 footer>a {
@@ -229,13 +251,18 @@ footer div {
 /* 주소 및 저작권 */
 
 .copy {
-    width: 640px;
+    float:left;
+    /* width: 640px; */
+    background: url(../images/blogo.png) no-repeat 200px 50/71px;
+    padding-left: 300px;
 }
 
 /* SNS */
 
 .sns {
+    float: right;
     width: 300px;
+    line-height: 100px;
 }
 
 .sns li {
