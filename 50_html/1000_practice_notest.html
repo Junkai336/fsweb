@@ -14,6 +14,7 @@
 
 수직선택, 다중선택
     ctrl alt 방향키  , alt 클릭
+    글자선택 후 ctrl d
 
  -->
 
@@ -28,6 +29,8 @@
 - p
 - hr : 콘텐츠 분리, 수평선
 - ul, ol, li, dl, dt, dd
+- 시멘틱(의미있는) 태그
+    - header, footer, section, article, aside, nav, main ...
 
 
     인라인 요소
@@ -523,7 +526,7 @@
 <!-- shift alt b 5대 브라우저 테스트-->
 
 <!-- 
-    video
+    video : 비디오 자체의 속성을 얘기하는듯?
     audio
         autoplay : 자동실행
         muted : 음소거
@@ -531,8 +534,27 @@
         controls : 컨트롤
     source
         src : video, audio 태그의 필수 속성, 미디어 URL
-    iframe
+        type : video,audio/확장자(mp4,mpeg,webm,ogg,wav)
+    iframe : 외부 파일 연결할 때 사용 / 인라인 요소
+
+    video 포맷 지원: mp4, webm, ogg
+    audio 포맷 지원: mp3, wav, ogg
+
+    온라인 비디오 다운로더 ssyoutube : https://ssyoutube.com/ko16uF/
  -->
+
+    <video autoplay muted controls>
+        <source src="assets/video/mov_bbb.mp4" type="video/mp4">
+    </video>
+
+    <iframe src="https://www.youtube.com/embed/YE7VzlLtp-4" ></iframe>
+
+    <iframe width="1745" height="977" src="https://www.youtube.com/embed/YE7VzlLtp-4" title="Big Buck Bunny" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    <audio autoplay muted controls>
+        <source src="assets/audio/horse.ogv" type="audio/ogg">
+        브라우저가 지원하지 않으면 이 메시지가 뜸 
+    </audio>
 
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
@@ -544,7 +566,6 @@
 
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
-<!-- 14 -->
 <!-- 15 -->
 <!-- 15-1 -->
 
@@ -555,7 +576,6 @@
 
 <!-- 
     1. root 경로, 절대 경로 정확한 구분 
-    2. input 태그의 value 역할이 속성마다 다른지 (초기값, 서버전송)
 -->
 
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
@@ -566,8 +586,6 @@
     
  -->
 
- 814. 치과, h12~19, csp1, 플젝포샵
-815. csp1,p2, 플젝포샵
 
 프로젝트
 - 이미지, 텍스트 채워넣고
