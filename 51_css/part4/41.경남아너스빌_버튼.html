@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    a {
+        position:relative;
+        display: inline-block;
+        width: 170px;
+        height: 46px;
+        background-color: #000;
+        color: red;
+        text-align: center;
+        line-height: 46px;
+        overflow: hidden;
+    }
+
+    a:hover .bg {
+        transform:translateX(0);
+        transition: .3s;
+    }
+
+    span {
+        position: absolute;
+        left: 0;
+        display: inline-block;
+        width: 170px;
+        height: 46px;
+    }
+
+    .bg {
+        position: absolute;
+        background: #978c87;
+        transform: translateX(-170px);
+    }
+
+</style>
+</head>
+<body>
+    <a href="#">
+        <span class="bg">&nbsp;</span>
+        <span>브랜드 스토리</span>
+    </a>
+
+</body>
+</html>

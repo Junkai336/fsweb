@@ -7,6 +7,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        /* 
+            함수(function = 기능)
+            background-image: url();
+            left: calc(100% - 100px);
+
+            text-transform: 대소문자 변환;
+
+            transform(변환)
+                1. 이동
+                2. 크기 조절
+                3. 회전
+                4. 기울임
+
+            transform(변환): 값; (이동)
+                단위: px, %
+                translateX(x): 좌우
+                translateY(y): 상하
+                translateZ(z): 깊이(앞/뒤)
+                translate3d(x,y,z)
+                perspective(값): 원근감 -> 변형 요소에 직접 지정
+                translate(x,y) -> y를 생략하면 x만.
+
+                단위 없음. 기본값(1) 2면 2배
+                scaleX(x): 가로
+                scaleY(y): 세로
+                scaleZ(z): 깊이
+                scale3D(x,y,z)
+                scale(x[,y]) -> y를 생략하면 x에 비례하여 y값이 적용된다.
+
+                단위: 0 = 360 = 720 = 1440 deg(각도)
+                rotateX(x): 3D
+                rotateY(y): 3D
+                rotateZ(z): 2D
+                rotate3d(x,y,z,각도):
+                rotate(각도): 2D  = rotateZ(z)
+
+                단위: deg(각도)
+                skewX(deg)
+                skewY(deg)
+                skew(deg,deg)
+
+
+
+
+            2D 변환: X축, Y축
+
+            3D 변환: X축, Y축, Z축
+            perspective: 1000px; -> 관점, 부모 요소에 지정
+                값: px (%는 사용할 수 없다.)
+            perspective-origin: x축 y축; -> 관점 기준
+            transform-origin: x축 y축; -> 변형 기준
+                값: px, %, 키워드
+                x축: left, right, center
+                y축: top, bottom, center
+
+                transform-style
+                backface-visibility
+                
+                안보임
+                display:none; 요소가 아예 제거됨        , 트랜지션 적용 x
+                opacity:0;  화면상에서만 안보이고 잇음  , 트랜지션 적용 o
+                visibility:hidden; ㅣㅣ                 , 트랜지션 적용 x
+        */
+        .wrap {
+            /* float:left -> 자식에 지정(.outer) */
+            /* display: flex; -> 부모에 지정(.outer의 부모 .wrap) */
+            display: flex;
+        }
+
         .outer {
             border: 1px solid black;
             /* perspective는 관점 속성으로 부모 요소에 지정한다. */
@@ -16,10 +85,11 @@
             margin: 20px;
         }
 
+        /* .trf는 <span>태그 이다. */
         .trf {
             display: inline-block;
-            width:100px;
-            height:100px;
+            width: 100px;
+            height: 100px;
             background: red;
             transition: .5s;
         }
@@ -32,27 +102,93 @@
         */
 
         /* .outer에 마우스를 올렸을 때 .trftr의 위치를 가로로 100px 이동되게 하시오. */
+        .outer:hover .trftr {
+            transform: translate(100px, 0);
+            /* transform: translate(100px); */
+        }
 
+        /* outer에 마우스를 올렸을 때 .trfsc의 크기를 너비/높이 모두 1.2로 지정하시오. */
 
-        /* .outer에 마우스를 올렸을 때 .trfsc의 크기를 너비/높이 모두 1.2로 지정하시오. */
+        .outer:hover .trfsc {
+            transform: scale(1.2, 1.2);
+            /* transform: scale(1.2); */
+        }
+
+        /* .trftz {
+            transform: perspective(1000px) translateZ(0px);
+        } */
+
+        .outer:hover .trftz {
+            /* 
+                원근감(perspective)과 함께 사용해야 한다.
+                perspective: 값; -> 속성
+                transform: perspective(); -> 값
+                transform: 값1 값2 값3 ...;
+
+                1.부모에 perspective를 지정함
+                    transform: translateZ(z);
+
+                2.부모에 perspective를 지정하지 않음.
+                    transform: perspective() translateZ(z);
+
+            */
+            /* transform: translateZ(z); */
+            transform: perspective(1000px) translateZ(100px);
+        }
+
+        .tfttd {
+            transform: perspective(1000px) translate3d(0, 0, 0);
+        }
+
+        .outer:hover .trftd {
+            transform: perspective(1000px) translate3d(100px, 100px, 100px);
+        }
+
+        .outer:hover .trft {
+            /* 
+                이동
+                
+                2D
+                transform: translate(x[,y]);
+                transform: translateX(x);
+                transform: translateY(y);
+
+                3D
+                transform: translateZ(z);
+                transform: translate3d(x,y,z);
+            */
+            transform: translateY(0, 100px);
+        }
+
 
 
         .trfro {
             /* 변환의 기준 */
             transform-origin: 0 0;
         }
-        /* .outer에 마우스를 올렸을 때 .trfro를 60도 회전되도록 지정하시오. */
 
+        /* .outer에 마우스를 올렸을 때 .trfro를 60도 회전되도록 지정하시오. */
+        .outer:hover .trfro {
+            transform: rotate(60deg);
+            /* transform: rotateZ(60deg); */
+        }
 
         /* .outer에 마우스를 올렸을 때 .trfrox를 x축 기준으로 60도 회전되도록 지정하시오. */
-
+        .outer:hover .trfrox {
+            transform: rotateX(60deg);
+        }
 
         /* .outer에 마우스를 올렸을 때 .trfroy를 y축 기준으로 90도 회전되도록 지정하시오. */
-
+        .outer:hover .trfroy {
+            transform: rotateY(90deg);
+        }
 
         /* .outer에 마우스를 올렸을 때 .trfsk를 y축 기준으로 10도 기울이시오. */
+        .outer:hover .trfsk {
+            transform: skewY(10deg);
+        }
 
-
+        legend
     </style>
 </head>
 
@@ -63,8 +199,7 @@
         <span class="trf trftr">translate</span>transform
     </div>
     <h2>크기 조절</h2>
-    <div class="outer">
-        <span class="trf trfsc">scale</span>transform
+    <div class="outens" ; <span class="trf trfsc">scale</span>transform
     </div>
     <h2>회전</h2>
     <div class="outer">
