@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        div {
+            position: relative;
+            width: 178px;
+            height: 100px;
+            background: url(../assets/ht/bg-main0-0.png) no-repeat 0 0;
+            /* margin:20px; */
+            opacity:0;
+            text-indent: -9999em;
+
+        }
+
+        .anim {
+            animation: move 3s forwards;
+        }
+
+        @keyframes move {
+            0% {
+                opacity: 0%;
+                transform: translate(0);
+                
+            }
+
+            100% {
+                opacity: 100%;
+                transform: translate(200px);
+            }
+
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>애니메이션</h1>
+    <div class="anim">박스</div>
+</body>
+
+</html>

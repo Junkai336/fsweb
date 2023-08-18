@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,51 +9,128 @@
     <style>
         div {
             position: relative;
-            width:100px;
-            height:100px;
+            width: 100px;
+            height: 100px;
             background: yellow;
-            margin:20px;
-            left:0px; top:0px;
+            /* margin:20px; */
+            left: 0px;
+            top: 0px;
         }
 
         /* 
             animation-name: 애니메이션 이름;
+
             animation-duration: 애니메이션 시간(단위: s(초));
+
             animation-iteration-count: 애니메이션 반복 여부;
+                값: 숫자, infinite
+
             animation-direction: 애니메이션 방향;
+                값: normal, alternate, reverse, alternate-reverse
+
             animation-timing-function: 애니메이션 시간 함수;
+                값: ease, ease-in, ease-out, ease-in-out, linear, cubic-bezier(0,0,1,1)
             animation-delay: 애니메이션 지연 시간(단위: s(초));
+
+            animation-fill-mode: 값;
+                값: none,
+                    forwards: 100% 상태 유지, 반복 횟수는 1로 지정 -> 구름, 텍스트
+                    backwards: 0% 위치에서 시작 
+                    both: (backwards처럼 시작해서 forwards처럼 멈춘다)
+
+            animation-play-state: 실행 상태;
+                값: running, paused
+
+
+
+            (속기형)
+            animation: name duration [delay] [timing-function] [iteration-count] [direction]
+                        이름  시간  지연시간    가속도              반복횟수        방향
+
+            키프레임, 프레임 -> 애니메이션의 작업 단위
+            @keyframes name {CSS 속성}
         */
 
 
-        /* .anim에 애니메이션의 이름은 move, 시간은 1초, 무한 반복(infinite), 좌우 왕복(alternate), 등속도(linear), 지연 시간은 2초로 지정하시오. */
 
 
-        
+
         /* 
             애니메이션 코드 형식
             @keyframe 이름 {
-                from {속성: 값;}
-                to {속성: 값;}
+                from {시작 CSS}
+                to {끝 CSS}
             }
             
             또는 
             
             @keyframe 이름 {
-                0% {속성: 값;}
-                100% {속성: 값;}
+                0% {시작 CSS}
+                50% {중간 CSS}                  일반적인 픽셀단위는 소수점을 쓰지 않으나 %는 써도 됨 50.1%,50.2% 이런거
+                100% {끝 CSS}
             }
+            */
+
+
+        /* 
+            애니메이션의 이름 규칙
+                1. 영문의 대소문자를 구별한다.
+                2. 첫 글자는 영문자, -, _로 쓴다.
+                3. 두 번째 글자부터 영문자, _, -, 숫자 사용
+            
         */
 
-        @keyframes move {
-            0% {left:0;}
-            100% {left:200px;}
+
+
+        /* .anim에 애니메이션의 이름은 move, 시간은 1초, 무한 반복(infinite), 좌우 왕복(alternate), 등속도(linear), 지연 시간은 2초로 지정하시오. */
+
+
+        .anim {
+            animation-name: move;
+            animation-duration: 6s;
+            animation-timing-function: ease;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            /* animation: move 1s ease 2s infinite alternate; */
         }
 
+        @keyframes move {
+            0% {
+                left: 0;
+                background-color: yellow;
+            }
+
+            25% {
+                left: 0;
+                transform: rotate(30deg);
+            }
+
+            60% {
+                left: 1000px;
+                transform: rotate(0deg);
+                background-color: red;
+            }
+
+            100% {
+                left: 0px;
+                transform: rotate(-360deg);
+                background-color: yellow;
+            }
+        }
+
+        /*
+        direction 안쓴거: 원래방향, 내가기록한방향 (normal이 기본값)
+        alternate: 왔다갔다 (normal-reverse-normal-reverse 이런듯함)
+        reverse: 반대로
+        alternate-reverse: 반대로 - 왔다갔다
+         */
     </style>
 </head>
+
 <body>
     <h1>애니메이션</h1>
     <div class="anim">박스</div>
 </body>
+
 </html>
