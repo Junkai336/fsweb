@@ -416,15 +416,15 @@
     <br>
 
 
-        <div>
-            <input type="text" name="user_email_forward">@
-            <input type="text" name="user_email_backward" list="email_backward">
-            <datalist id="email_backward">
-                <option value="naver.com"></option>
-                <option value="google.com"></option>
-                <option value="nate.com"></option>
-            </datalist>
-        </div>
+    <div>
+        <input type="text" name="user_email_forward">@
+        <input type="text" name="user_email_backward" list="email_backward">
+        <datalist id="email_backward">
+            <option value="naver.com"></option>
+            <option value="google.com"></option>
+            <option value="nate.com"></option>
+        </datalist>
+    </div>
 
 
     <br>
@@ -493,29 +493,29 @@
     <label for="birthday">생년월일</label>
     <input type="date" id="birthday" name="birthday">
 
-<br>
-<br>
+    <br>
+    <br>
 
-<label for="brithdaytime">연월일 시간</label>
-<input type="datetime-local">
+    <label for="brithdaytime">연월일 시간</label>
+    <input type="datetime-local">
 
-<br>
-<br>
+    <br>
+    <br>
 
-<label for="yearmonth">연월</label>
-<input type="month">
+    <label for="yearmonth">연월</label>
+    <input type="month">
 
-<br>
-<br>
+    <br>
+    <br>
 
-<label for="">연+n번째주</label>
-<input type="week">
+    <label for="">연+n번째주</label>
+    <input type="week">
 
-<br>
-<br>
+    <br>
+    <br>
 
-<label for="">시각</label>
-<input type="time">
+    <label for="">시각</label>
+    <input type="time">
 </fieldset>
 
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
@@ -543,18 +543,20 @@
     온라인 비디오 다운로더 ssyoutube : https://ssyoutube.com/ko16uF/
  -->
 
-    <video autoplay muted controls>
-        <source src="assets/video/mov_bbb.mp4" type="video/mp4">
-    </video>
+<video autoplay muted controls>
+    <source src="assets/video/mov_bbb.mp4" type="video/mp4">
+</video>
 
-    <iframe src="https://www.youtube.com/embed/YE7VzlLtp-4" ></iframe>
+<iframe src="https://www.youtube.com/embed/YE7VzlLtp-4"></iframe>
 
-    <iframe width="1745" height="977" src="https://www.youtube.com/embed/YE7VzlLtp-4" title="Big Buck Bunny" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="1745" height="977" src="https://www.youtube.com/embed/YE7VzlLtp-4" title="Big Buck Bunny" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
 
-    <audio autoplay muted controls>
-        <source src="assets/audio/horse.ogv" type="audio/ogg">
-        브라우저가 지원하지 않으면 이 메시지가 뜸 
-    </audio>
+<audio autoplay muted controls>
+    <source src="assets/audio/horse.ogv" type="audio/ogg">
+    브라우저가 지원하지 않으면 이 메시지가 뜸
+</audio>
 
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
@@ -569,8 +571,97 @@
 <!-- 15 -->
 <!-- 15-1 -->
 
+<!-- 
+    header 안에 header, footer (x)
+ -->
+
+<!-- 시맨틱
+    header, footer
+    main : 문서에 한번만 사용
+    section: 하나 이상의 제목(h2~h6) 있어야 함.
+    article: 하나 이상의 제목(h2~h6) 있어야 함. / 독립된 컨텐츠
+    aside: 사이드 (본문 내용 외 컨텐츠 영역)
+    nav: 내비게이션
+  -->
+
+<!-- 딴거
+    address: 글의 저자 or 회사와 연락할 수 있는 정보 명시
+             <body> 안의 <address> = 해당 문서의 연락 정보
+            <article> 안의 <address> = 해당 글에 대한 연락 정보 <-?
+            이텔릭체(italic)로 표현되는 듯 함
+  -->
+
+<header>
+    <nav>
+        <ul>
+            <li></li>
+            <li></li>
+        </ul>
+    </nav>
+</header>
+
+<main></main>
+
+<footer>
+    <address>
+        본원에 방문하려면: <br>
+        www.naver.com <br>
+        안양시 동안구 호계동~ <br>
+    </address>
+</footer>
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+<!-- 16 레이아웃 연습-->
+
+<!-- 
+    CSS
+    * : 전역속성
+    .wrap * : class 태그의 전역속성 (싹 다 적용) 인듯?    
+ -->
+
+<!-- 
+    글로벌 속성: id, class, title 등
+
+    id, class = CSS와 연결 = 값은 임의로 정하라
+
+    속성의 값(이름) 규칙
+        - 첫글자 영문, _, -
+        - 두번째문자부터 영문자, _, -, 숫자
+        - 대소문자 구별
+        
+    id: 중복사용 X
+    class: 중복사용 O
+  -->
+  <section id="sec1">
+      <div class="wrap">
+          <div class="container">
+              <main class="panel_box">
+                <h3>LOGIN</h3>
+                <form action="login.jsp">
+                    <!-- <fieldset> -->
+                        <span>id</span><input type="text"> <br>
+                        <span>ps</span><input type="password">
+                    <!-- </fieldset> -->
+                </form>
+              </main>
+        </div>
+    </div>
+</section>
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+<!-- 17 이미지 슬라이드 -->
 
 
+
+
+<!-- 18 탭메뉴 -->
+
+
+
+
+<!-- 19 모달 팝업 -->
 
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 

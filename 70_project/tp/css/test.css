@@ -1,0 +1,127 @@
+@charset "uft-8";
+@import url(typo.css);
+
+/* 초기화 */
+
+* {box-sizing: border-box;}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+body, nav, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    
+}
+
+li {
+    list-style: none;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+/* 작업중 */
+
+header {
+    background: lightblue;
+}
+
+.sec1 {
+    background: lightcoral;
+}
+
+.sec2 {
+    background: lightcyan;
+}
+
+.sec3 {
+    background: lightgreen;
+}
+
+footer {
+    background: #333;
+}
+/* 공통 */
+.sec {
+    height: 100vh;
+}
+
+/* header */
+header {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+
+}
+
+.wrap {
+    /* position: relative; */
+    /* width: 100%; */
+    /* height: 200px; */
+}
+
+
+.container {
+    /* position: absolute; */
+    width: 680px;
+    height: 100px;
+    margin: 0 auto;
+    background: red;
+}
+
+.nav {
+    width: 680px;
+    height: 100px;
+    background: pink;
+}
+.logo {
+    position:relative;
+    left: 200px;
+    top: 50px;
+    transform: translate(-50%, -50%);
+    float: left;
+}
+.mainn {
+    position: relative;
+    left: 85px;
+    top: 50px;
+    transform: translate(-50%, -50%);
+    width: 170px;
+    float: left;
+    text-align: center;
+    /* background: blue; */
+}
+.subn { 
+    display: none;
+}
+
+.ms {
+    /* display: flex; */
+    /* top: -100px; */
+    background: green;
+    float: right;
+    /* overflow:hidden; */
+    /* width: 30%; */
+    /* height: 50px; */
+
+}
+
+.ms div {
+    display: inline-block;
+}
+.mbs li{
+    display: inline-block;
+}
+.sns li{
+    display: inline-block;
+}

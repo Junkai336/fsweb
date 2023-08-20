@@ -25,7 +25,7 @@ nav, .nav {
     overflow:hidden;
 }
 section, .section {
-    float:left;
+    float:right;
     width:70%;
     height:150px;
     background: #ddd;
@@ -36,7 +36,7 @@ section, .section {
 }
 article, .article {
     background: cyan;
-    margin:0 20px;
+    margin:20px;
 }
 footer, .footer {
     line-height: 50px;
