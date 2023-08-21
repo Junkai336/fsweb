@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+/* 로그인 섹션 */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.wrap {
+    outline: 2px solid black;
+}
+
+.panel_box {
+    width: 450px;
+    height: 400px;
+    border: 1px solid black;
+    border-radius: 15px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.login_form {
+    outline: 1px solid black;
+    margin-top: 100px;
+}

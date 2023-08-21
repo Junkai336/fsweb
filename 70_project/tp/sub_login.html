@@ -9,13 +9,14 @@
     <!-- https://stay-present.tistory.com/14 -->
     <!-- 서브웨이 홈페이지 -> 페이지 소스 보기 -> 30번째 줄 -->
     <link rel="icon" href="assets/images/subway_favicon.ico">
+    <link rel="stylesheet" href="css/login.css">
 </head>
 
 <body>
     <!-- 헤더 -->
     <header>
         <div class="">
-
+            헤더
         </div>
     </header>
     <!-- // 헤더-->
@@ -28,18 +29,16 @@
 
     <!-- 로그인 섹션 -->
 
-    <section id="sec1">
+    <section id="login_sec">
         <div class="wrap">
             <div class="panel_box">
-                <form action="login_jsp" method="post" autocomplete="on">
-                    <fieldset>
-                        <h3>LOGIN</h3>
+                <form action="login_jsp" method="post" autocomplete="on" class="login_form">
+                        <h3 class="login_h3">LOGIN</h3>
                         <label for="user_id" name="id"></label>
                         <span>ID &nbsp;</span><input type="text" name="id" id="user_id" placeholder="아이디를 입력하세요."> <br>
                         <label for="user_password" name="password"></label>
                         <span>PS &nbsp;</span><input type="password" name="password" id="user_password" placeholder="패스워드를 입력하세요."> <br>
                         <input type="checkbox"> <span>이메일 아이디 저장</span>
-                    </fieldset>
                 </form>
             </div>
         </div>
