@@ -1,0 +1,224 @@
+@charset "uft-8";
+@import url(typo.css);
+
+/* 초기화 */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.6rem;
+    width: 100%;
+}
+
+body,
+nav,
+h1,
+h2,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+
+}
+a {
+    text-decoration-line: none;
+}
+li {
+    list-style: none;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+/* 작업중 */
+header {
+    background: lightblue;
+}
+.sec1 {
+    background: lightcoral;
+}
+.sec2 {
+    background: lightgreen;
+}
+.sec3 {
+    background: lightsalmon;
+}
+
+footer {
+    background: #333;
+}
+
+/* 공통 */
+h2 {
+    display: none;
+}
+.sec {
+    height: 100vh;
+    height: 931px;
+}
+
+/* 헤더 */
+
+.wrap {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.wrap a {
+    color: #000;
+}
+.wrap:hover {
+    transition-duration: 0.3s;
+    background: #fff;
+}
+.wrap:hover .subn {
+    transition-duration: 0.3s;
+    display: block;
+}
+.logo {
+    width: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gbn {
+    width: 680px;
+}
+
+#gbn>ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainn {
+    width: 170px;
+    height: 100px;
+    display: inline-block;
+    text-align: center;
+    line-height: 100px;
+}
+
+.mainn a {
+    font-size: 2.5rem;
+    ;
+}
+
+.subn {
+    display: none;
+    height: 150px;
+    background: #fff;
+    line-height: 36px
+}
+.subn a {
+    font-size: 1.7rem;
+}
+.ms {
+    margin-right: 50px;
+    width: 320px;
+    display: flex;
+}
+
+
+
+.mbs ul {
+    display: flex;
+}
+
+.mbs li {
+    width: 80px;
+    text-align: center;
+    line-height: 100px;
+}
+
+.sns ul {
+    width: 160px;
+    display: flex;
+}
+
+.sns li {
+    width: 40px;
+    height: 100px;
+    text-align: center;
+    line-height: 112px;
+}
+
+
+.sns img {
+    width: 25px;
+}
+
+/* 섹션1 */
+
+/* 섹션2 */
+.sec2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* 섹션3 */
+.sec3 img {
+}
+
+/* 푸터 */
+footer {
+    width: 100%;
+    height: 300px;
+}
+.bn a {
+    color: #000;
+}
+.bcon {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+
+}
+
+.bcon>li {
+    width: 320px;
+    text-align: center;
+    line-height: 20px;
+}
+
+
+.bmn {
+    display: inline-block;
+    height: 40px;
+    line-height: 50px;
+    font-size: 2rem;
+}
+
+.bsn li {
+    margin: 3px;
+}
+
+.copy {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}
+
+.copy span {
+    display: block;
+    padding: 10px;
+}
+

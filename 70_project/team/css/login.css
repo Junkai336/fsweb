@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url(typo.css);
+@import url(main.css);
 
 /* 로그인 섹션 */
 
@@ -8,8 +10,12 @@
     padding: 0;
 }
 
-.wrap {
-    outline: 2px solid pink;
+#login_sec {
+    height: 1500px;
+}
+
+.wrap_login {
+    outline: 5px solid pink;
 }
 
 .panel_box {
@@ -18,7 +24,7 @@
     border: 1px solid black;
     border-radius: 15px;
     text-align: center;
-    margin: 0 auto;
+    margin: 0 auto;/
 }
 
 .login_form {
