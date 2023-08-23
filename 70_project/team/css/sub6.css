@@ -1,0 +1,78 @@
+@charset "UTF-8";
+@import url(typo.css);
+@import url(main.css);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* #terms_section {
+    display: flex;
+} */
+
+.wrap {
+    background-color: #fff;
+    z-index: 2;
+}
+
+.wrap_terms {
+    padding-top: 150px;
+    height: 890px;
+    background-color: #ddd;
+    margin: 0 auto;
+}
+
+
+.terms_form {
+    position: relative;
+    left: calc(50% - 250px);
+    /* translate: calc(50% - 165px); */
+    /* margin: 0 auto; */
+    background-color: #fff;
+    width: 500px;
+    padding: 25px 0;
+    border-radius: 15px;
+}
+
+.form11 {
+    translate: calc(50% - 165px);
+}
+
+.next_button {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    width: 325px;
+    height: 50px;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #aaa;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+.terms_agree_word {
+    font-size: 20px;
+}
+
+.form11 h3 {
+    margin-left: 105px;
+}
+
+/* .terms_parent {
+    display: flex; 
+}
+
+.terms {
+    flex-direction: column;
+    justify-content: space-around;
+} */
+
+/* textarea {
+    text-align: justify;
+    outline: 2px solid pink;
+} */

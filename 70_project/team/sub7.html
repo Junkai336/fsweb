@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUBWAY 뉴스 : 공지사항</title>
+    <title>회원가입</title>
     <link rel="icon" href="assets/images/subway_favicon.ico">
-    <link rel="stylesheet" href="css/notice.css">
+    <link rel="stylesheet" href="css/sub7.css">
 </head>
+
 <body>
-     <!-- 헤더 -->
-     <header>
+    <!-- 헤더 -->
+    <header>
         <div class="wrap">
             <h1 class="logo"><a href="#"><img src="asset/image/logo_sub_header.png" alt="sub header img"></a>
             </h1>
@@ -75,19 +77,33 @@
     </header>
     <!-- // 헤더-->
 
-    <!-- 공지사항 섹션 -->
-
-    <section class="notice_section"></section>
-
-    <!-- //.공지사항 섹션 -->
+    <!-- 회원가입 섹션 -->
 
 
 
+<section class="regist_section">
+    <div class="wrap_regist">
+        <form action="registration_jsp">
+            <div class="form_box">
+                <h3>회원가입</h3>
+                <p>서브웨이 홈페이지 신규 가입</p>
+                <label for="user_id" name="id"></label>
+                <span class="boxid"></span><input type="text" name="id" id="user_id" placeholder="이메일 아이디"> <br>
+                <span class="boxid"></span><input type="text" name="id" id="user_id" placeholder="비밀번호"> <br>
+                <span class="boxid"></span><input type="text" name="id" id="user_id" placeholder="비밀번호 확인"> <br>
+                <span class="boxid"></span><input type="text" name="id" id="user_id" placeholder="휴대폰 번호"> <br>
+            </div>
+            
+        </form>
+    </div>
+</section>
 
 
 
-    <!-- 푸터 -->
-    <footer>
+    <!-- //. 회원가입 섹션 -->
+
+      <!-- 푸터 -->
+      <footer>
         <div class="bn">
             <ul class="bcon">
                 <li>
@@ -138,4 +154,5 @@
     </footer>
     <!-- //..푸터 -->
 </body>
+
 </html>
