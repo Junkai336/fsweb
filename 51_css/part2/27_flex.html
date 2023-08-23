@@ -12,36 +12,87 @@
         }
 
         /* 
-            플렉스 박스(유연한 박스)
-            주축과 교차축
-                flex-direction:row; 이면 주축 row, 교차축 column
-                flew-direction:column; 이면 주축 column, 교차축 row
 
-            부모: 플렉스 컨테이너
-                1. display:flex;
-                2. flex-direction: 방향;
-                3. flex-wrap: 줄바꿈;
-                4. flex-flow: direction wrap
-                5. justify-content: 주축 정렬
-                6. align-items: 교차축 정렬
-                7. align-content: 교차축 블록 방향 정렬 (2개의 라인)
+            float: left, right -> 가로 방향만
+            1가지 속성: clear: left, right, both
 
-            자식: 플렉스 아이템
-                8. align-self: 교차축 정렬, align-items 보다 우선 적용된다.
-                9. flex-grow: 커진다.
-                10. flex-shrink: 작아진다.
-                11. flex-basis: 처음 크기
-                12. flex: grow shrink basis
-                13. order: 순서, 숫자가 작을수록 앞에 배치
+        1. 플렉서블 방식
+            display: none, block, inline, inline-block, table, table-cell, list-items
+
+            display: flex; -> 가로/세로 방향
+            사용할 수 있는 12가지 속성: flex-direction, flex-flow, flex-wrap, flex-shink, flex-basis, flex-grow
+                                        flex-, order, justify-constent, align-content, align-items, align-self
+
+
+            <table> : HTML로 레이아웃 설정 -> 비표준, <div>
+            display: grid; -> 요즘 최신식? table이랑 비슷
+
+            position: static; 기본인데 left,right,top,bottom,z-index 못씀
+
+            HTML, CSS 표준을 정하는 기관 W3C -> 검증 (유효성 검사 웹사이트)
+            w3schools.com -> 모든 개발 언어
+            MDN -> 모질라, HTML CSS JS
+
+    ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
         */
 
+        /* 
+            레이아웃 구현
+            1. float -> flex, grid
+
+            플렉스(flex,flexible) 박스(유연한 박스)
+            주축과 교차축
+                flex-direction:row; 이면 주축 row, 교차축 column
+                flex-direction:column; 이면 주축 column, 교차축 row
+
+            부모: 플렉스 컨테이너
+                display:flex; <- 이거 부모한테 적용시키면 컨테이너고 자식 플렉스 적용됨 / 부모 flex 자식은 플렉스아이템, display:flex;하면 자식은 아이템이면서 컨테이너 자손 플렉스아이템 됨
+                    1. flex-direction: 방향;
+                        값: row(행,가로,기본값)
+                                column(열,세로)
+                                row-reverse: 역-가로
+                                column-reverse: 역-세로
+
+                    2. flex-wrap: 줄바꿈;
+                        값: nowrap: 줄바꿈 하지 않음
+                            wrap: 줄바꿈 함
+                            wrarp-reverse: 역으로 줄바꿈 함
+
+                    3. 1,2번의 속기형 flex-flow: direction wrap
+                    4. justify-content: 주축 정렬
+                        값: flex-start: 시작 (기본값)
+                            flex-end: 끝
+                            start: reverse가 적용되지 않는 시작
+                            end: reverse가 적용되지 않는 끝
+                            center: 가운데
+                            space-between: 시작과 끝 배치 후 남은 공간 균등하게.
+                            space-around: 아이템의 주변 공간을 균등하게
+                            space-evenly: 아이템을 제외한 남은 공간을 균등하게
+
+                    5. align-items: 교차축 정렬
+                    6. align-content: 교차축 블록 방향 정렬 (2개의 라인)
+
+            자식: 플렉스 아이템
+                    7. align-self: 교차축 정렬, align-items 보다 우선 적용된다.
+                    8. flex-grow: 커진다.
+                    9. flex-shrink: 작아진다.
+                    10. flex-basis: 처음 크기
+                    11. 8,9,10의 속기형 -> flex: grow shrink basis
+                    12. order: 순서, 숫자가 작을수록 앞에 배치
+        */
 
         /* 부모 요소인 .container의 display를 flex로 적용해 보세요. */
+        /* 회색 박스를 가로배치 하고 싶다면 회색 박스의 부모에게 flex를 주면 된다. */
         .container {
-            outline: 1px solid red;
+            display: flex;
+            outline: 10px solid red;
+            outline-offset: 20px;
+            border: 10px solid blue;
+            /* overflow: hidden; */
         }
 
         .container div {
+            /* float: left; */
             width: 100px;
             height: 100px;
             background-color: gray;
@@ -62,7 +113,14 @@
         <div>1</div>
         <div>2</div>
         <div>3</div>
+        <div>4</div>
     </div>
 </body>
 
 </html>
+
+
+<!-- 
+    outline은 상하좌우 안됨 근데 offset 가능
+    border는 이거저거? 지정가능
+ -->
