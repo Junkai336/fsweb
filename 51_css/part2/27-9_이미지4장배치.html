@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지4장배치</title>
+    <style>
+        /* reset.css */
+        body,
+        ul {
+            margin: 0;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+
+
+        /* common */
+
+        section {
+            padding: 0 30px;
+        }
+
+        li {
+            margin-bottom: 16px;
+        }
+
+        ul {
+            /* display: flex; */
+        }
+
+
+        /* tablet, desktop */
+        @media (min-width:576px) {
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0 auto;
+                justify-content: space-between;
+            }
+
+            li {
+                flex: calc(50% - 38px);
+            }
+
+            li:nth-of-type(2n-1) {
+                margin-right: 16px;
+            }
+            
+
+        }
+
+        /* desktop */
+        @media (min-width:992px) {
+            ul {
+            padding: 0 calc(100% - 1500px);
+            }
+            
+            li {
+                flex: calc(25% - 38px);
+                margin-right: 16px;
+            }
+
+            /* li 중에서 4의 배수 번째 li는 제외 */
+            :not(li:nth-of-type(4n)) {
+                margin-right: 16;
+            }
+        }
+    </style>
+</head>
+
+<!-- 위에 적용시킨건 밑으로 적용 된다. -->
+<!-- 밑에 적용시킨건 위로 적용 안된다. -->
+
+<body>
+    <section>
+        <h2>이탈리아</h2>
+        <div class="container">
+            <ul>
+                <li><img src="../assets/images/italy1.jpg" alt="더미이미지"></li>
+                <li><img src="../assets/images/italy2.jpg" alt="더미이미지"></li>
+                <li><img src="../assets/images/italy3.jpg" alt="더미이미지"></li>
+                <li><img src="../assets/images/italy4.jpg" alt="더미이미지"></li>
+            </ul>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -14,19 +14,144 @@
 }
 
 .regist_section {
-    height: 1100px;
+    height: 970px;
     background-color: #ccc;
-    outline: 2px solid red;
+    /* outline: 2px solid red; */
 }
 
 .wrap_regist {
     padding-top: 175px;
     position: relative;
     width: 500px;
-    height: 800px;
+    height: 790px;
     left: calc(50% - 250px);
-    top: calc(50% - 350px);
+    top: calc(50% - 360px);
     background-color: #fff;
     padding: 25px 0;
     border-radius: 15px;
 }
+
+.form_box {
+    position:absolute;
+    left: 146px;
+    text-align: center;
+
+}
+
+.form_box > p {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.form_box > input {
+    margin: 10px 0;
+    padding: 5px 0;
+    
+}
+
+.box  {
+    width: 150%;
+    translate: -40px;
+    font-size: 15px;
+}
+
+.favorite_menu_box {
+    outline: 1px solid #888;
+    /* width: 200px; */
+    margin: 10px 0;
+    height: 200px;
+    translate: 10px;
+    
+}
+
+#user_favmenu {
+    /* font-size: 28px; */
+    /* font-weight: bold; */
+    /* letter-spacing: 4px; */
+    color: #fff;
+    background-color: #aaa;
+}
+
+h3 {
+    font-size: 28px;
+    letter-spacing: 3px;
+}
+
+.complete_button {
+    width: 150%;
+    height: 55px;
+    translate: -46px;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: #fff;
+    background-color: #aaa;
+}
+
+#modal_box {
+    /* display: none; */
+    position: fixed;
+    left: 600px;
+    top: 200px;
+    width: 700px;
+    height: 600px;
+    border: 1px solid black;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+
+.popup {
+    height: 100%;
+    /* border: 1px solid pink; */
+    /* display: flex; */
+}
+
+
+.modal_ul {
+    /* width: 150px; */
+    /* height: 150px; */
+    /* border: 1px solid pink; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.modal_ul li { 
+    width: 232px;
+    height: 200px;
+    /* border: 1px solid #ccc; */
+    
+}
+
+/* li > img {
+    width: 150px;
+    height: 150px;
+    } */
+
+#modal_close {
+    position:absolute;
+    left: calc(50% - 50px);
+    margin-top: 10px;
+    width: 100px;
+    height: 50px;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: #fff;
+    background-color: #009923;
+    z-index: 99;
+}
+
+/* li:hover + #modal_box {
+    display: block;
+    background-color: red;
+} */
+
+/* #modal_box:target {
+    display: block;
+    background: yellow;
+} */
+

@@ -7,6 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        /* 
+            display:flex;
+                align-self
+                order
+                flex-grow: 숫자
+                flex-shrink: 숫자
+                flex-basis: 숫자(단위)
+
+                (속기형)
+                flex: grow shrink basis
+        */
         .container {
             display: flex;
             border: 1px solid orange;
@@ -17,7 +28,7 @@
             height: 100px;
             background-color: gray;
         }
-        
+
         /* 
             flex-grow: 숫자;
             flex-shrink: 숫자;
@@ -34,17 +45,35 @@
         */
 
         /* .fl1의 플렛스 아이템의 flex를 0 0 150px로 지정해 보세요. */
-        
 
+        .fl1 div {
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: 150px;
+        }
+
+         /* flex: 0 0 150px; */
 
         /* (1) .fli1에 flex 속성을 1로 지정하시오. */
+        .fli1 {
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: auto;
 
-        
+            /* = flex: 1; */
+        }
+
+
         /* (2) .fli2에 flex 속성을 2로 지정하시오. */
+        .fli2 {
+            flex: 2;
+        }
 
 
         /* (3) .fli3에 flex 속성을 3로 지정하시오. */
-
+        .fli3 {
+            flex: 3;
+        }
         
     </style>
 </head>

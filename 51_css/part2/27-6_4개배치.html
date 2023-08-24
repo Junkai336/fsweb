@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플렉스박스 - 4개 배치</title>
+    <style>
+        /* reset.css */
+        body,
+        ul,
+        h3,
+        p {
+            margin: 0;
+        }
+
+        .container {
+            width: 1500px;
+            margin: 0 auto;
+            /* width값을 주고 마진 0 auto 써야하는듯?? */
+            /* 디자인을 위해 div를 쓰는 경우도 있다.  */
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: 0;
+            color: #777;
+        }
+
+        /* flexible layout */
+        ul {
+            display: flex;
+            justify-content: space-between;
+            /* padding: 0 202px 0 201px; */
+            /* padding: 0 calc(50% - 750px); */
+        }
+
+        a {
+            display: block;
+            /* width가 안먹는 이유가 inline이라서 그렇다. !! */
+            width: 100%;
+            text-align: center;
+            border: 1px solid #777;
+            /* height: 60px; */
+            /* line-height: 60px; */
+            /* 높이값과 line-height를 똑같게 해서 맞추는 건 한 줄만 가능하다. */
+            padding: 16px;
+            box-sizing: border-box
+                /* reset에 border-box 해놓는게 패딩과 보더 주는게 편리하다. */
+        }
+
+        li {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 360px;
+            /* outline: 1px solid red; */
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <h2>섹션의 제목</h2>
+            <ul>
+                <li>
+                    <div>
+                        <img src="https://via.placeholder.com/360x240" alt="테스트">
+                        <h1>John Doe</h1>
+                        <p>CEO &amp; Founder</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis architecto ut sequi rerum,
+                            voluptates ea suscipit? Nemo, dolor voluptates magnam doloremque voluptate natus praesentium
+                            ullam officiis nam. Sed ex quasi quibusdam quidem sit ad voluptas.
+                        </p>
+                    </div>
+                        <a href="#">자세히보기</a>
+                </li>
+                <li>
+                    <div>
+                        <img src="https://via.placeholder.com/360x240" alt="테스트">
+                        <h1>John Doe</h1>
+                        <p>CEO &amp; Founder</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem in ut necessitatibus amet dolorem
+                            cum
+                            voluptatum omnis a nihil, tenetur corporis excepturi! Amet cumque a velit adipisci obcaecati nam
+                            quos.</p>
+                        </div>
+                        <a href="#">자세히보기</a>
+                </li>
+                <li>
+                    <div> <!-- div는 그룹핑하기 위해 사용 -->
+                        <img src="https://via.placeholder.com/360x240" alt="테스트">
+                        <h1>John Doe</h1>
+                        <p>CEO &amp; Founder</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, repudiandae.</p>
+                    </div>
+                        <a href="#">자세히보기</a>
+                </li>
+                <li>
+                    <div>
+                        <img src="https://via.placeholder.com/360x240" alt="테스트">
+                        <h1>John Doe</h1>
+                        <p>CEO &amp; Founder</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus optio voluptate aut labore?
+                            Ratioa
+                        </p>
+                    </div>
+                        <a href="#">자세히보기</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+</body>
+
+</html>
+
+<!-- ul 자식은 li만 가능 -->

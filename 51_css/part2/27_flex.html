@@ -70,7 +70,20 @@
                             space-evenly: 아이템을 제외한 남은 공간을 균등하게
 
                     5. align-items: 교차축 정렬
-                    6. align-content: 교차축 블록 방향 정렬 (2개의 라인)
+                        값: normal(stretch:flex-start)
+                            stretch: 아이템의 크기를 지정안했을 경우 기본값 / 컨테이너 크기만큼 늘어남
+                            flex-start: 아이템의 크기를 지정했을 경우 기본값
+                            flex-end: 끝
+                            center: 가운데
+                            baseline
+
+                    6. align-content: 교차축 블록 방향 정렬 (2개 이상의 라인이 존재)
+                        값: flex,start, start: 시작
+                            flex-end, end: 끝
+                            center: 가운데
+                            space-betwwen
+                            space-around
+                            space-evenly
 
             자식: 플렉스 아이템
                     7. align-self: 교차축 정렬, align-items 보다 우선 적용된다.
