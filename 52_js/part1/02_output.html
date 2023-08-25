@@ -12,6 +12,76 @@
     <h1>출력</h1>
     <script>
         /* 
+        이벤트(event)
+            - 사용자의 마우스, 키보드 사용으로 인한 인터렉티브 효과
+            마우스: click, dblclick, mousemove, mouseover, mouseout, ...
+            키보드: keydown, keyup, ...
+            창: resize, scroll, ...
+
+        inline(인라인)
+         <html 이벤트속성="자바스크립트">
+         <html 이벤트속성="함수();">
+         <html onclick="alert('경고창');">
+
+        internal(내부)
+        <script>js<역슬래시script>
+        <script>document.wirte('텍스트')<역슬래시script>
+
+        external(외부)
+        <script src="script.js"> <역슬래시script>
+    
+    script.js 파일 안에
+        console.log('텍스트')
+
+            ---
+
+        CSS의 selctor -> HTML 요소선택
+        #id
+        .class
+        태그
+
+        id,class,태그 선택
+        getElementById()
+        getElementsByClassName()
+        getElementsByTagName()
+        선택자 선택
+        querySelector()
+        querySelectorAll()
+        
+            ---
+
+            (window가 앞에 붙어있는 것은 생략할 수 있다~)
+        출력
+            window.alert()
+            document.write()
+            console.log()
+            window.confirm()
+        입력
+            window.prompt()
+
+        */
+
+        /*
+            주어 목적어 서술어
+            윈도우야.경고창을.띄워줘
+
+            윈도우야.경고창을.띄워줘
+            단어를 JS에서는 .으로 구분한다.
+            객체  .  메소드  . 
+            
+            객체: window(root), document, console
+            메소드: alert(), write(), log()
+
+            함수: alert(), confirm(), prompt()
+            사용자 함수: function()
+
+
+
+
+
+            객체: window, document, console, alert, write, log, 
+            - 메소드
+
             객체: window, console, document ...
             메서드(매개변수1, 매개변수2 ...): alert(), confirm() prompt(), write(), log()
 
@@ -22,15 +92,29 @@
             console.log('메시지'): 콘솔 출력
         */
 
-        // 경고창
+        // 문자열은 싱글커테이션,더블커테이션 '' "" 로 묶는다.
+        // 100, '100', "100"
+        // 값이 숫자, '문자열' 또는 "문자열"
+        // 객체.메소드(값, 값, ...)
+        // 파라미터: 변수, 값
+        // 자바스크립트의 문장 끝은 ;로 끝난다.
+        // 경고창 -> 확인
+        window.alert('ㅎㅇ요');
 
         // 확인/취소창
+        window.confirm('가입을 원하세요');
+
+        // 표현식(expression): 결과값이 나오는 거
+        // 문(statement)- 함수문, 제어문
 
         // 문서에 쓰기
+        document.write('ㅖ');
 
         // 콘솔
+        console.log('로그임');
 
         // 입력
+        window.prompt('당신의 나이가 몇 살인가요?', '초기값');
 
     </script>
 </body>

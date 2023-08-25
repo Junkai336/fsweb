@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,22 +8,162 @@
     <title>HTML</title>
     <link rel="stylesheet" href="css/13_테이블.css">
 </head>
+<!-- 파일필요 -->
+
 <body>
     <h1>표</h1>
-    <!-- 교재 19페이지에 있는 기본 표를 만들어 보세요. -->
+    <!-- 
+        필수사항
+        <table>: 표
+        <tr>: 행
+        <th>: 셀의 제목
+        <td>: 셀의 내용
+            <th rowspan="숫자" colspan="숫자">
+            <td rowspan="숫자" colspan="숫자">
+                rowspan: "행병합" 
+                colspan: "열병합"
+
+        선택사항
+        <caption>: 표의 제목
+        <colgroup>: 열 그룹
+        <col>: column(열)
+        <thead>: 제목 그룹
+        <tbody>: 내용 그룹
+        <tfoot>: 그룹
+
+        <table>
+            <caption>
+            <colgroup>
+                <col> : tr위에다가 씀 (위치가 정해져있음)
+                <col>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>: 제목 </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>: 내용 </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>: 내용 </td>
+                </tr>
+            </tfoot>
+        </table>
+     -->
 
     <h2>기본</h2>
     <table>
+        <!-- <caption> 태그는 반드시 table 바로 밑에 쓴다. -->
+        <caption>표의 제목</caption>
+        <tr>
+            <!-- scope=col은 열 방향 -->
+            <th scope="col">번호</th>
+            <th scope="col">과목</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>HTML</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>CSS</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>JAVASCRIPT</td>
+        </tr>
+    </table>
+    <br>
+
+    <table>
+        <!-- <caption> 태그는 반드시 table 바로 밑에 쓴다. -->
+        <caption>표의 제목</caption>
+        <tr>
+            <!-- scope=col은 열 범위 -->
+            <th scope="col">번호</th>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <th scope="col">과목</th>
+            <td>HTML</td>
+            <td>CSS</td>
+            <td>JS</td>
+        </tr> <!-- ? -->
+    </table>
+
+    <br>
+    <table>
+        <th scope="col">번호</th>
+        <th scope="col">과목</th>
+        <th scope="col">이름</th>
+        <tr>
+            <td>1</td>
+            <td>HTML</td>
+            <td>홍길동</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>CSS</td>
+            <td>김길동</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>JS</td>
+            <td>박길동</td>
+        </tr>
+    </table>
+    <br>
+    <table>
+        <tr>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>2</td>
+        </tr>
+        <br>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>4</td>
+        </tr>
     </table>
 
     <h2>열 병합</h2>
     <!-- 열을 병합할 때는 colspan 속성을 사용한다. -->
+    <!-- 1,3번 병합 -->
     <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <!-- 1열과 2열 2개를 병합 -->
+            <td colspan="2">3</td>
+        </tr>
     </table>
 
     <h2>행 병합</h2>
+    <!-- 1,2번 병합 -->
     <!-- 행을 병합할 때는 rowspan 속성을 사용한다. -->
     <table>
+        <tr>
+            <td rowspan="2">1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <!-- <td>3</td> -->
+            <td>4</td>
+        </tr>
     </table>
 </body>
+
 </html>

@@ -49,6 +49,32 @@ li {
     margin: 8px 0;
 }
 
+/* 검색어입력 */
+
+.search {
+    position:relative;
+    height: 50px;
+    /* border: 1px solid pink; */
+    /* text-align: right; */
+    /* display: inline-block; */
+}
+
+.search_form {
+    position:absolute;
+    left: 85%;
+    top: 70%;
+    /* width: 10; */
+    height: 25px;
+}
+
+.search > img {
+    position:absolute;
+    left: 83.5%;
+    top: 70.5%;
+    width: 18px;
+    height: 18px;
+}
+
 .button {
     text-align: center;
     /* margin-top: 16px 0; */
@@ -94,6 +120,8 @@ li {
     background-color: #fff;
 }
 
+
+
 .page_slot {
     font-size: 18px;
     text-align: center;
@@ -124,8 +152,94 @@ li {
     display: none;
 }
 
-.news_all_box li:nth-last-of-type(1) {
+/* .news_all_box li:nth-last-of-type(1) {
     
+} */
+
+h3>img:hover {
+    animation-name: imgimg;
+    animation-duration: 0.4s;
+    animation-timing-function: ease;
+    animation-delay: .0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.news_all_box .tab_sig:hover {
+    animation-name: imgimg;
+    animation-duration: 0.4s;
+    animation-timing-function: ease;
+    animation-delay: .0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.news_all_box li:hover {
+    animation-name: liboxbox;
+    animation-duration: 0.4s;
+    animation-timing-function: ease;
+    animation-delay: .0s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+}
+
+/* 호버하면 다른 요소 애니메이션 효과 어케 하는지 봐야됨 */
+.news_all_box li:hover > .tab_sig {
+    animation-name: imgimg;
+    animation-duration: 0.4s;
+    animation-timing-function: ease;
+    animation-delay: .0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.tab_image {
+    width: 100%;
+    height: 60%;
+    border-radius: 0 0 15px 15px;
+    margin-top: 72px;
+    /* vertical-align: bottom; */
+    /* text-align: bottom; */
+    /* margin: 0 auto; */
+}
+
+.tab_image_ready {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes imgimg {
+    0% {
+        scale: 1.0
+    }
+
+    100% {
+        scale: 1.05
+    }
+}
+
+@keyframes liboxbox {
+    0% {
+        scale: 1.0;
+    }
+
+    100% {
+        scale: 1.01;
+        translate: 0 -10px;
+        box-shadow: 5px 10px 8px 12px #bbb;
+        
+    }
+}
+
+.news_all_box {
+    text-align: center;
+}
+
+h3>img {
+    position: absolute;
+    left: 40.5%;
+    top: 14%;
 }
 
 /*

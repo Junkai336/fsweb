@@ -52,6 +52,10 @@
     translate: 5px;
 }
 
+.next_button:hover {
+    background-color: #009223;
+}
+
 h3 {
     font-size: 28px;
 }
@@ -63,6 +67,10 @@ h3 {
 .form11 h3 {
     margin-left: 105px;
 }
+
+/* #access_all:checked + .next_button {
+    background: yellow;
+} */
 
 /* .terms_parent {
     display: flex; 

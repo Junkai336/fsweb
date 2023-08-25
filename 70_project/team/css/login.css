@@ -228,7 +228,7 @@
     height: 50px;
     margin-top: 20px;
     color: #fff;
-    background-color: #009132;
+    background-color: #009223;
 }
 
 a {
@@ -244,4 +244,12 @@ a {
 .boxps {
     font-size: 10px;
     text-align: right;
+}
+
+.login_form span:hover {
+    font-weight: bold;
+}
+
+.checkbox_bold:hover ~ .checkbox_bold2 {
+    font-weight: bold;
 }
