@@ -92,7 +92,7 @@ h4 {
 
 textarea {
     text-align: left;
-    outline: 2px solid pink;
+    /* outline: 2px solid pink; */
 }
 
 .boxbox {
