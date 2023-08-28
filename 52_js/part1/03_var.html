@@ -96,6 +96,18 @@
             자바스크립트 예약어: https://www.w3schools.com/js/js_reserved.asp 
         */
 
+        //  여기서 a, b는 변수
+        //  'a', "b"는 문자열
+        var a; /* a를 변수로 선언한다. */
+        a = 10; /* a에 10을 할당한다. */
+
+        var a = 10, b = 5; /* a를 변수로 선언하는 동시에 a에 10을 할당한다. (재할당, 재선언 {이건 위에서 선언한거 아래에서 또 선언해서 쓴거}) */
+        var b = 5;
+        a = b;
+        // b <- a(=10)
+        document.write(a);
+        console.log(a);
+
     </script>
 </body>
 

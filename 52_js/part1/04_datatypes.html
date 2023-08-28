@@ -28,13 +28,14 @@
                 1. 변하는 데이터(값)을 저장할 수 있는 메모리 공간이다.
                 2. 한 개의 데이터만 저장할 수 있다.
                     -> 새로운 데이터가 들어오면 기존 데이터는 삭제된다.
-                
-            변수 선언
-            var 변수명;
-            변수명 = 값;
 
-            변수 선언 및 할당
-            var 변수명 = 값;
+                                                    키워드(예약어): true, false, var, let, const
+            변수 선언                               let a; const a;
+            var 변수명;         var a;  (변수 a를 선언한다.)
+            변수명 = 값;        a = 10; (10을 a에 할당한다.)
+
+            변수 선언 및 할당   
+            var 변수명 = 값;    var a = 10;
 
         */
 
@@ -64,6 +65,33 @@
 
         // boolean
         // Boolean() 함수는 숫자 0과 null, undefined, 빈 문자('')를 제외한 모든 데이터에 대해 true를 반환한다.
+
+        // 데이터
+        var a = '십';
+        var b = 'ten';
+        var c = '10';
+        var d = 10;
+        var e = true;
+        var f = false;
+        var g = undefined;
+        var h = null;
+
+        // .write() 내부에서 HTML을 문자열로 인식한다.
+        // document.write(a, '<br>');
+        // document.write(b, '<br>');
+        // document.write(c, '<br>');
+        // document.write(d, '<br>');
+        // document.write(e, '<br>');
+        // document.write(f, '<br>');
+        // document.write(g, '<br>');
+        // document.write(h, '<br>');
+
+        document.write(a, '<br>', b, '<br>', c, '<br>', d, '<br>', )
+
+        // 백틱(`) (숫자1번왼쪽에있는거)
+
+        // 자바스크립트는 대소문자 구별한다.
+        // 예약어(키워드): true, false
 
         // undefined
 

@@ -87,11 +87,29 @@
         // 클래스는 여러개 쓸 수 있어서 Element"s" 들어감
 
         document.querySelector('#blue').style.backgroundColor = 'green';
-        document.querySelector('#blue').style.border = 'solid';
+        document.querySelector('#blue').style.border = '1px solid blue';
         // querySelector로 들어간건 뭐 안들어간건 무조건 첫번째 인듯함
         document.querySelectorAll('p')[1].style.border = '1px solid red';
         // - 쓰면 오류나니까 카멜표기법으로 써라.
         // background-color -> backgroundColor
+        
+        var red = document.querySelector('.red');
+
+        red.style.border = '1px solid blue';
+        red.style.fontSize = '50px';
+        red.style.background = 'yellow';
+
+
+        // 2개 이상이 있을 때 selector를 선택하면 무조건 첫번째꺼?
+        // 속성
+        // HTML 태그의 내용 변경
+        // <태그 속성="값">내용<태그>
+        // 요소.innerText: 값; (~안에 텍스트)                 (태그 인식x)
+        // 요소.innerHTML: 값; (~안에 HTML태그) (텍스트 포함) (태그 인식o)
+        document.querySelector('.red').style.background = 'yellow';
+        document.querySelector('.red').innerHTML = '<h3>나라말싸미어쩌구저쩌구</h3>';
+        document.querySelector('.red').innerText = '가나다라마바사아자차카타파하';
+        
 
     </script>
 </body>
