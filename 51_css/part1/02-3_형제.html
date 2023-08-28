@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,12 +33,17 @@
         */
 
         /* p1 ~ p : .p1 아래있는 모든 p 요소를 가리킨다 */
-        .p1 ~ p {color: red;}
+        .p1~p {
+            color: red;
+        }
+
         /* .p1 + p : .p1의 바로 아래 있는 p 요소를 하나 선택한다. (나는 또 박스이다 div가 있기때문에 바로 밑에 p가 없음) */
-        .p1 + p {color: blue;}
-        
+        .p2+p {
+            color: blue;
+        }
     </style>
 </head>
+
 <body>
     <h1>형제 선택자</h1>
     <p>나는 첫째다.</p>
@@ -46,5 +52,12 @@
     <p>나는 셋째다.</p>
     <div>나는 박스이다.</div>
     <p>나는 넷째다.</p>
+    <p class="p2">나는 넷째다.aaa</p>
+    <div>나는 박스이다.</div>
+    <p>나는 넷째다.</p>
+    <p>나는 넷째다.</p>
+    <p>나는 넷째다.</p>
+    <p>나는 넷째다.</p>
 </body>
+
 </html>

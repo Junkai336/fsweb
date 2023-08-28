@@ -7,12 +7,26 @@
     <title>Document</title>
     <style>
         /* 02-1-1 범용, 리셋 */
+
+        * { 
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        body {
+            font-size: 1.6rem;
+        }
+
         body,
         h1,
         h2,
         h3,
         p,
-        ul {
+        ul
+        button {
             margin: 0;
             padding: 0;
         }
@@ -20,11 +34,32 @@
         li {
             list-style: none;
         }
+
+        /* 이미지는 부모박스 100% */
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        
     </style>
 </head>
 
 <body>
-<h1></h1>
+
+    <!-- child 테스트 -->
+
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+    <p>4</p>
+    <p>5</p>
+
 </body>
 
 </html>
