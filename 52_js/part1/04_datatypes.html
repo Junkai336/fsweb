@@ -77,6 +77,9 @@
         var h = null;
 
         // .write() 내부에서 HTML을 문자열로 인식한다.
+        // document.write(exp1, exp2, ....);
+
+
         // document.write(a, '<br>');
         // document.write(b, '<br>');
         // document.write(c, '<br>');
@@ -86,16 +89,74 @@
         // document.write(g, '<br>');
         // document.write(h, '<br>');
 
-        document.write(a, '<br>', b, '<br>', c, '<br>', d, '<br>', )
+        document.write('a = ', a, '<br>', 
+        'b =', b, '<br>', 
+        'c =', c, '<br>', 
+        'd =', d, '<br>', 
+        'e =', e, '<br>',
+        'f =', f, '<br>',
+        'g =', g, '<br>',
+        'h =', h, '<hr>'
+        );
 
-        // 백틱(`) (숫자1번왼쪽에있는거)
+        // +문자열 연결 연산자
+        document.write('a = ', a, '<br>', 
+        'b ='+ b+ '<br>'+ 
+        'c ='+ c+ '<br>'+ 
+        'd ='+ d+ '<br>'+ 
+        'e ='+ e+ '<br>'+
+        'f ='+ f+ '<br>'+
+        'g ='+ g+ '<br>'+
+        'h ='+ h+ '<hr>'
+        );
+
+        // 보간법: 변수를 ${변수} 로 표현
+        // 백틱(`) (숫자1번왼쪽에있는거) -> ''을 한번만 기록
+        // 백틱 안에서는 문자열이 '', "" 붙이지 않는다.
+        document.write(
+            `<hr> 
+            a = ${a}<br>
+            b = ${b}<br>
+            c = ${c}<br>
+            d = ${d}<br>
+            e = ${e}<br>
+            f = ${f}<br>
+            g = ${g}<br>
+            h = ${h}<br>`
+        );
+
+        // Template Literals(탬플릿 리터럴)
+        /*  
+        back-ticks(빽틱, ``)
+        ${변수 또는 표현식}
+
+        var a = '탬플릿 리터럴';
+
+        .write(표현식1, 표현식2, ...)
+            document.write('나는', a, '입니다.')
+        
+        +문자열 연결 연산자 사용
+            document.write('나는' + a + '입니다.')
+
+        탬플릿 리터럴
+            document.write(`나는 ${a} 입니다.`)
+       
+       
+        */
 
         // 자바스크립트는 대소문자 구별한다.
         // 예약어(키워드): true, false
 
-        // undefined
+        // undefined: 선언 후 할당하지 않은 값
+        var undef;
+        document.write(`<hr> undef = ${undef}`);
 
         // null
+        // 키워드(예약어)는 변수 이름으로 사용할 수 없다.
+        var nu = 10;
+        // null은 빈 값
+        nu = null;
+        document.write(`<br> nu = ${nu}`)
 
         // 출력
 
