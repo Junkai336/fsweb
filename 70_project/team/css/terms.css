@@ -63,6 +63,7 @@
 
 h4 {
     font-size: 28px;
+    letter-spacing: 3px;
 }
 
 .terms_agree_word {
@@ -98,7 +99,7 @@ textarea {
 .boxbox {
     position: absolute;
     /* border: 3px solid green; */
-    background-color: #58006c;
+    background-color: #009223;
     color: #58006c;
     left: -17%;
     top: -3%;

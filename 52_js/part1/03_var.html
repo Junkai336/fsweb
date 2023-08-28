@@ -12,6 +12,72 @@
     <h1>변수</h1>
     <script>
         /* 
+        객체(Object), 메소드(Method), 속성(Property)
+
+        자바스크립트의 명령문 끝은 세미콜론(;)을 찍는다.
+        자바스크립트의 명령어는 마침표(.)으로 구분한다.
+
+                객체(Object) 
+                 메소드
+                  속성
+                  객체    
+                    메소드  
+                     속성   
+                     객체        
+                    메소드
+                     속성
+
+                     window
+                     alert(매개변수)
+                     속성
+                     document
+                        write
+                        속성
+
+            객체.메소드()
+            window.alert();
+            document.write();
+
+            객체.객체.속성
+            요소.style.fontSize
+
+            
+            객체.메소드().객체.속성
+            document.getElementById().style.fontSize
+
+            객체: window(root), document, console
+                메소드: alert(), write(), log()
+        */
+        /* 
+
+        요소 선택
+        - document.getElementById('아이디명')
+        - document.getElementByClassName('명')
+        - document.getElementByTagName('태그명')
+        - document.querySelector('선택자')
+        - document.querySelectorAll('선택자들')
+
+        선택자 {속성: 값;}
+        
+        프론트엔드의 자바스크립트 활용
+        - HTML 태그 변경
+        - HTML의 속성 변경
+        - HTML의 내용 변경
+        - CSS의 속성 변경
+
+        HTML 속성 변경
+            요소.속성 = 값
+            요소.속성 = 값
+            a.title = "바꾸고 싶은 값을 기록"
+            
+
+        HTML 내용 변경
+
+
+        */
+
+
+        /*
             변수(Variables)
             1. 변하는 데이터(값)을 저장할 수 있는 메모리 공간이다.
             2. 한 개의 데이터만 저장할 수 있다. -> 새로운 데이터가 들어오면 기존 데이터는 삭제된다.

@@ -11,13 +11,48 @@
 <body>
     <h1>데이터 유형</h1>
     <script>
+        /*  
+        CSS 속성 변경
+            요소.style.CSS속성 = 값
+            document.getElementById('아이디명').style.color = '#0000ff';
+            document.getElementById('아이디명').style.lineHeight = 2;
+
+            대입(할당) 연산자: =
+            오른쪽 값을 왼쪽에 넣는다.
+            변수 = 값;
+            변수? 값을 담는 그릇(저장소)
+        */
+
         /* 
+            변수(Variables)
+                1. 변하는 데이터(값)을 저장할 수 있는 메모리 공간이다.
+                2. 한 개의 데이터만 저장할 수 있다.
+                    -> 새로운 데이터가 들어오면 기존 데이터는 삭제된다.
+                
+            변수 선언
+            var 변수명;
+            변수명 = 값;
+
+            변수 선언 및 할당
+            var 변수명 = 값;
+
+        */
+
+        /* 
+            문자열은 반드시 '' 또는 "" 로 묶는다.
+            "100", '100', 'getElementById()'
+
             데이터 유형
-            1. string: '문자열' 또는 "문자열"
-            2. number: 숫자
-            3. boolean(부울): true 또는 false
-            4. undefined
-            5. object(객체): Array(배열), Date(날짜), Math(수학), String(문자열), null, ... 
+            a. 기본
+                2. string: '문자열' 또는 "문자열"
+                3. number: 숫자(100, -10, 3.14, ...)
+                4. boolean(부울): true(참->1) 또는 false(거짓->0)
+                5. undefined
+            b. 복합
+                6. object(객체): 
+                    a. Array(배열), Date(날짜), Math(수학), 
+                    b. String(문자열), Number, Boolean
+                    c. 값: Null
 
             undefined는 변수에 값이 등록되기 전의 기본값이고,
             null은 변수에 저장된 데이터를 비우고자할 때 사용된다.

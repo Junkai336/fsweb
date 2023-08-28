@@ -16,12 +16,21 @@
 </head>
 
 <body>
-    <ul>
-        <li>목록1</li>
+    <!-- <ul>
+        <li id="blue">목록1</li>
         <li>목록2</li>
         <li class="red">목록3</li>
         <li>목록4</li>
-    </ul>
+    </ul> -->
+
+    <h1>DOM 접근</h1>
+    <h2>getElement</h2>
+    <p id="blue">getElementById</p>
+    <p class="red">getElementsClassName</p>
+    <p>getElementsTagName</p>
+    <h2 class="red">query</h2>
+    <p>querySelector</p>
+    <p>querySelectorAll</p>
 
     <script>
         /* 
@@ -40,16 +49,54 @@
             - 모든 주석은 주석 노드입니다.
 
             DOM에 접근하기
+            // ., # 사용하지 않는다.
             - document.getElementById('아이디명')
-            - document.getElementsByClassName('클래스명')
-            - document.getElementsByTagName('태그명')
+            - document.getElementsByClassName('클래스명').item(숫자)
+            - document.getElementsByTagName('태그명')[숫자]
+            숫자: 0번 부터 출발한다. 0,1,2,3,4...
+
+            //  ., # 기타 CSS 선택자 기호를 사용한다.
             - document.querySeletor('선택자')
             - document.querySeletorAll('선택자들')
 
+            객체.메서드()
+            객체.메서드().객체.CSS속성
+            요소선택.style.CSS속성 = 값;
+
             객체.style.속성 = 값;
         */
+
+        // 요소 선택
+        // 객체.메서드();
+        // document.write('텍스트');
+        // 문서.얻다요소에의해서아이디(아이디명)
+        // 문서의 아이디가 blue인 요소를 선택한다.
+        // 자바스크립트의 문자열은 따옴표('' 또는 "")로 묶는다.
+        document.write(document.getElementById('blue'));
+        console.log(document.getElementById('blue'));
+
+        // #blue {color: 'blue';}
+        document.getElementById('blue').style.color = 'blue';
+        // .red {color: 'red';}
+        // document.getElementsByClassName('red').items[0].style.color = 'red';
+
+        document.getElementsByClassName('red').item(0).style.color = 'red';
+        // li:nth-child(4)
+        // document.getElementsByTagName('li')[3].style.color = 'orange';
+        document.getElementsByTagName('p')[3].style.color = 'orange';
+        // 클래스는 여러개 쓸 수 있어서 Element"s" 들어감
+
+        document.querySelector('#blue').style.backgroundColor = 'green';
+        document.querySelector('#blue').style.border = 'solid';
+        // querySelector로 들어간건 뭐 안들어간건 무조건 첫번째 인듯함
+        document.querySelectorAll('p')[1].style.border = '1px solid red';
+        // - 쓰면 오류나니까 카멜표기법으로 써라.
+        // background-color -> backgroundColor
 
     </script>
 </body>
 
 </html>
+
+<!-- type이 아마 tag 일거임
+    typeerror -->
