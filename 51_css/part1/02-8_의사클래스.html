@@ -17,14 +17,14 @@
             background: yellow;
         }
 
-        :checked + p {
+        :checked ~ p {
             background: yellow;
         }
-        #tab3, #tab4 {
+        /* #tab3, #tab4 {
             display: none;
-        }
+        } */
         label {
-            cursor: pointer;
+            cursor: wait;
         }
 
         h2:nth-of-type(3) ~ :not(p) {
@@ -50,6 +50,7 @@
     <p>Lorem ipsum dolor sit amet.</p>
     <input type="radio" name="clkGroup" id="tab4">
     <p>Lorem ipsum dolor sit amet.</p>
+
 
     <!-- not: 제외하고. not(선택자) -->
     <h2>선택자:not(선택자)</h2>
