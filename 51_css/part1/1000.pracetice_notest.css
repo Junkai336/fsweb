@@ -348,6 +348,9 @@ https://www.w3schools.com/colors/colors_names.asp
 - 색상 채도 명도 alpha
 - hsl(100,50%,50%,0.5)
 
+opacity: 불투명도 0~1 (투명~불투명)
+alpha: 투명도 0~1 (불투명~투명)
+
 */
 
 p {
@@ -355,4 +358,5 @@ p {
   background-color: hsl(359,30%,60%,0.7);
   border: 3px dashed rgba(255,1,0,0.6);
   outline: 1px dotted rgb(100,100,100);
+  opacity: 1;
 }
