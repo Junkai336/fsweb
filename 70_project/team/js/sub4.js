@@ -84,6 +84,7 @@ const mo9 = document.querySelector('.mo9');
 const mo10 = document.querySelector('.mo10');
 const mo11 = document.querySelector('.mo11');
 const mo12 = document.querySelector('.mo12');
+// const mo12 = document.getElementsByClassName('mo12');
 
 
 

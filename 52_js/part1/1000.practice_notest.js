@@ -26,4 +26,27 @@
     인라인 스크립트
         - HTML 속성 값 으로 표시
         - <h1 onclick="document.write('Hello');">문자</h1>
+        - <html태그 이벤트속성="함수();">ㅁㅁㅁ</html태그>
+*/
+
+// ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+// 02_output
+
+/* 
+    이벤트(event)
+        - 사용자의 마우스, 키보드 사용으로 인한 인터액티브 효과
+        마우스
+            - click, dblclick, mousemove, mouseover, mouseout
+        
+        키보드
+            - keydown, keyup
+
+        창
+            - resize, scroll
+*/
+
+/* 
+    
+
 */
