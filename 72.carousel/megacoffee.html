@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캐로셀 - bxslider</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.css">
+    <style>
+        body {
+            background-color: lightblue;
+            margin: 0;
+        }
+
+        #section {
+            height: 100vh;
+        }
+
+        .bx-wrapper {
+            background: transparent;
+            box-shadow: none;
+            border: none;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .bx-wrapper .bx-pager {
+            bottom: 48px;
+        }
+
+        .bx-wrapper .bx-pager.bx-default-pager a:hover,
+        .bx-wrapper .bx-pager.bx-default-pager a.active,
+        .bx-wrapper .bx-pager.bx-default-pager a:focus {
+            background: red;
+        }
+
+        .bx-wrapper .bx-pager.bx-default-pager a {
+            background: #666;
+            width: 5px;
+            height: 5px;
+            margin: 0 5px;
+            border-radius: 5px;
+        }
+
+        /* 
+            미디어(<img>, <video>의 크기)
+            object-fit: cover, contain, ...
+            object-position: x위치 y위치;
+
+            배경 이미지: 
+            background-size: cover, contain;
+            background-position: x위치 y위치;
+        */
+
+    </style>
+</head>
+
+<body>
+    <!-- 
+        1.라이브러리: *.js, *.css
+        2.HTML 코드
+        3.JS 코드는 라이브러리(*.js) 아래 붙인다.
+     -->
+
+    <div id="section">
+        <div class="slideWrap">
+            <div class="bxslider">
+                <div><img src="images/slide1.jpg" alt="이미지"></div>
+                <div><img src="images/slide2.jpg" alt="이미지"></div>
+                <div><img src="images/slide3.jpg" alt="이미지"></div>
+            </div>
+        </div>
+    </div>
+    <!-- 제이쿼리 CDN -->
+    <!-- 
+        제이쿼리? 자바스크립트 라이브러리언어이다.
+        document.getElementById('myId');
+        document.getElementByClassName('myClass');
+        $('#myId')
+        $('.myClass')
+     -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <!-- bx 슬라이더 CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.js"></script>
+    <script>
+        // {}: 객체(object)
+        // 객체.메소드()
+        // 자바스크립트데이터: 숫자, 문자열, 불, 객체{}, ...
+        // 객체 정의
+        /* 
+            객체 정의
+            {
+                속성: 값,
+                속성: 값,
+                속성: 값,
+                ...
+            }
+        */
+        // 요소.메소드(매개변수, ...)
+        // $(선택자).bxSlider()
+        $('.bxslider').bxSlider({
+            auto: true,
+            // autoControls: true,
+            // stopAutoOnClick: true,
+            // pager: true,
+            // slideWidth: 600,
+            // pause: 40000
+            keyboardEnabled: true
+        });
+    </script>
+</body>
+
+</html>

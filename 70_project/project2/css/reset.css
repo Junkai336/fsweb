@@ -1,0 +1,48 @@
+/* 초기화 */
+* {
+    box-sizing: border-box;
+}
+
+/* scroll IE에서는 적용되지 않는다. */
+html {
+    scroll-behavior: smooth;
+    font-size: 10px;
+}
+
+body,
+h1,
+ul {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+/* li {
+    list-style: none;
+} */
+
+a {
+    text-decoration: none; 
+    color: #333;
+}
+
+img {
+    width:100%;
+}
+
+button {
+    border: none;
+}
+
+/* fieldset {
+    border: none;
+} */
+
+/* 아이프레임은 기본적으로 테두리가 있다. */
+iframe {
+    border: none;
+    width: 100%;
+}
