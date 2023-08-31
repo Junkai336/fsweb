@@ -18,10 +18,37 @@
 
            ↓ h1을 클릭하면 "값"을 실행시킨다.
      -->
+
     <!-- <h1 onclick="fn();">함수</h1> -->
-    <h1 onclick="alert('매개값');">함수</h1>
+    <!-- h1의 텍스트를 클릭하면 fn();를 호출 -->
+    <h1 onclick="alert('매개값');">텍스트</h1>
+    <h2 onclick="fn();">fnfnfn</h2>
+    <h2 onclick="fn2();">fnfnfn2</h2>
+    <h2 onclick="fn3();">fnfnfn3</h2>
+    <h2 onclick="fn4();">fnfnfn4</h2>
+    <p>123213</p>
     <script>
+        // 돔(HTMl)을 ㅇ
+
+        // DOM = Document Object Model
+        // domcontentloaded = 돔에있는내용부터먼저읽고실행해라
+        // 이벤트: click, load, DOMContentLoaded, mouseenter, ...
+        // 시작 이벤트
+        // window.addEventListener('이벤트', 함수);
+        
+        window.addEventListener('DOMContentLoaded', loadFn);
+        // 창이.추가이벤트가있는지듣고있다.
+
         /* 
+            window.addEventListener('DOMContentLoaded', loadFn);
+            창.추가이벤트듣고있는자('돔내용불러오기, 함수');
+            창이 돔(HTML태그구조)의 내용을 불러왔는지 창이 듣다가 추가 이벤트가 완료되면 함수를 실행한다.
+        */
+
+        function loadFn() {
+            
+            
+            /* 
             변수(variables) 
                 - 하나의 값을 저장 (하나 이상이면 덮어씌워버림)
                 - 변수를 선언 후
@@ -91,25 +118,97 @@
 
         // document.write(표현식, 표현식, ...)
         // 변수, 함수(재사용!, 이벤트), 제어문(반복문)
-        
+
         // document.write는 문서에 있는 화면 정보 모두 지우고 출력한다.
+        // fn()이 호출되면 중괄호 안의 코드가 실행된다.
+        /*  
+                선언적 함수 -> 이름이 있는 함수
+                function 함수(매개변수, ...) {
+                    코드;
+                    코드;
+                }
+
+                function 함수(매개변수, ...) {
+                    함수(); <- 재귀호출.
+                    return 값; <- 자기자신 계속 부르는걸 빠져나오기 위한 용도
+                }
+
+                익명 함수 -> 이름이 없는 함수
+                // 익명함수는 반드시 변수를 써라. 
+                var 변수(함수이름) = function 함수(매개변수, ...) {코드;}
+                var 변수(함수이름) = function 함수(매개변수) {코드;}
+
+                화살표 함수
+                var 변수           = (매개변수, ...) => {코드;}
+
+                1) 매개변수 1개이면 () 생략
+                var 변수 = 매개변수 => {코드; 코드;}
+
+                2) 코드가 한 문장이면 {} 생략
+                var 변수 = 매개변수 => 코드;
+
+                3) 매개변수가 없으면
+                var 변수 = () => 코드;
+
+                함수 호출
+                    함수(매개값, ...);
+
+
+        */
+
+        // 익명함수
+        var fn4 = function () {
+            txt2.inner.HTML = `익명함수<br>`;
+        }
+
+        var txt = document.getElementsByTagName('p');
+        //    var txt2 = document.querySelector('p');
+
         function fn() {
+            txt.innerHTML = `0 <br>`;
             document.write(1, '<br>');
             document.write(2, '<br>');
             document.write(3, '<br>');
             document.write(4, '<br>');
             document.write(5, '<br>');
         }
-        
+
+
+        function fn2() {
+            txt[0].innerHTML += `1<br>`;
+            txt[0].innerHTML += `2<br>`;
+            txt[0].innerHTML += `3<br>`;
+            txt[0].innerHTML += `4<br>`;
+            txt[0].innerHTML += `5<br>`;
+        }
+
+        function fn3() {
+            txt2.item(0).innerHTML += `0<br>`;
+            txt2.item(0).innerHTML += `2<br>`;
+            txt2.item(0).innerHTML += `3<br>`;
+            txt2.item(0).innerHTML += `4<br>`;
+            txt2.item(0).innerHTML += `5<br>`;
+        }
+
+        function fn4() {
+            txt2.innerHTML = `익명함수<br>`;
+            document.write(1, '<br>');
+        }
+
+
         fn();
         fn();
         fn();
         fn();
         // 페이지가 function을 보면 바로 최우선순위로 메모리에 넣음.
         // 익명함수는 함수 먼저 정의하고 아래에 호출해야됨 / 정의 -> 호출   순
-        
 
+
+
+    } // loadFn()
     </script>
 </body>
 
 </html>
+
+<!-- querySelect 와 querySelectAll 차이점 알면 모달될수도 -->
