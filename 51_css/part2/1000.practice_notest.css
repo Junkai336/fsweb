@@ -1,0 +1,35 @@
+/* 20 box_model */
+
+/* 
+    width: 너비
+    height: 높이
+    border: 테두리
+    margin: 요소 바깥 여백
+    padding: 요소 안쪽 여백
+*/
+
+/*  
+    width: auto; (100%)
+    height: auto; (컨텐츠 크기)
+
+    %는 부모 크기 기준
+*/
+
+/* 
+    위아래 margin은 둘 다 지정되어 있다면 큰 쪽으로만 지정 (상하마진 겹쳤을 때)
+*/
+
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+/* 20-1 box-sizing */
+
+/* 
+    padding 20주면 width,height 20*2
+    width와 height에 border,padding 크기가 포함된다.
+*/
+
+/* 
+    box-sizing:
+        - border-box;
+*/

@@ -47,6 +47,27 @@
 */
 
 /* 
+    id, class, 태그 선택
+        - getElementById()    
+        - getElementsByClassName()      Element"s"
+        - getElementsByTagName()
+
+    선택자 선택
+        - querySelector()
+        - querySelectorAll()
+*/
+
+// window가 앞에 붙어있는 것은 생략할 수 있다.
+// js에서는 단어를 .으로 구분한다.
+
+/* 
+    출력
+        - window.alert()
+        - document.write()
+        - console.log()
+        - window.confirm()
     
+    입력
+        - window.prompt()
 
 */
