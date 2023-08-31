@@ -3,14 +3,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 
 
+/**************************************************************************************
+typo.css: 크기, 색, 종류, 굵기, 줄간격, 자간 
+**************************************************************************************/
+
+/* typo는 완전 기본적인 폰트만 하는듯 */
+
+/* 
+    text-align:center;는 인라인 요소를 가운데 가게 하는 거. 이미지도 감
+    text-align은 부모 요소에 기록한다.
+ */
+
+/* 
+    vertical-align 또한 인라인 요소, table에서 <th>,<td>도 포함함.
+                    수직 정렬.
+ */
+
 body {
     /* 폰트패밀리는 보통 바디에 준다. */
     font: 1.5rem/1.8 'Noto Sans KR', sans-serif;
+    color: #333;
+    background: #fff;
 }
+
+footer, ::placeholder {
+    color: #777
+}
+
+/* .txt {
+    font-size: 3.6rem;
+} */
+
+#gnb, .txt {
+    letter-spacing: 4px;
+}
+
+/* 
+  #gnb a {color:#fff;} 이런식으로 색상 타이포 묶을 수도 있다. (파일따로써서 typo.css)
+*/
+
 
 /* 와이어프레임(작업용) */
 /* body * {outline: 1px solid black;} */
-header {
+/* header {
     background-color: lightblue;
 }
 
@@ -29,15 +64,20 @@ header {
 
 #sec4 {
     background-color: gold
-}
+} */
 
-footer {
-    background-color: lightblue;
-}
+/* footer {
+    background-color: #333;
+} */
 
-.sec {
+/* 
+    높이 강제지정은 웬만하면 하지 마라.
+    div박스가 벗어날 수 있다.
+    섹션 적당히 나누는 용도로 사용하는 것
+ */
+/* .sec {
     height: 800px
-}
+} */
 
 
 
@@ -51,7 +91,7 @@ header {
     position: fixed;
     width: 100%;
     height: 55px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.16), 2px 10px 0 rgba(0,0,0,0.12);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 2px 10px 0 rgba(0, 0, 0, 0.12);
     background-color: #fff;
     padding: 0 32px;
 }
@@ -61,7 +101,7 @@ header {
 /* 내비게이션 */
 
 #gnb li {
-    display:inline-block;
+    display: inline-block;
     margin-left: 32px;
 }
 
@@ -69,6 +109,11 @@ header {
     color: #111;
 }
 
+/* 섹션3,4 공통 */
+
+section:first-of-type~section>p {
+    margin-bottom: 40px;
+}
 
 /* 섹션 공통 */
 
@@ -81,19 +126,26 @@ header {
 /* 섹션1 */
 
 #sec1 {
-    top: 55px;
+    padding-top: 55px;
+    /* top: 55px; */
+    /* margin-top: 55px; */
+    /* transform: translateY(55px); */
+
 }
 
 .txt {
     position: absolute;
     left: 50%;
     top: 50%;
-    margin-top: -37.5px;
-    margin-left: -141px;
+    transform: translate(-50%, -50%);
+
+    /* margin-top: -37.5px; */
+    /* margin-left: -141px; */
+
     /* margin-bottom: -80px; */
     /* transform: translate(-50%, -50%); */
     color: #fff;
-    font-family: "Segoe UI",Arial,sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
     letter-spacing: 4px;
     font-size: 56px;
 }
@@ -117,6 +169,21 @@ header {
     font-size: 52px;
 }
 
+/* 섹션2,3,4 공통 */
+
+/* section:first-of-type ~ section {
+    margin-top: 64px;
+} */
+
+section h2 {
+    padding: 96px 0 20px 0;
+    /* margin: 64px 0 20px 0; */
+    /* margin-top: 64px; */
+    /* margin-bottom: 20px; */
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+
 /* 섹션2,3 공통 */
 
 .sec23 ul {
@@ -128,7 +195,7 @@ header {
     width: 360px;
     height: 240px;
     margin-right: 20px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
 .sec23 li:nth-of-type(4n) {
@@ -138,8 +205,20 @@ header {
 /* 섹션2 */
 /* id > class, 가상 클래스(:), 속성 > 요소, 가상 요소(::) */
 
+/* 인라인요소의 마진은 좌우만 적용O, 위아래 적용X */
+/* 마진 위아래는 겹치면 큰쪽'만'. */
+/*      좌우는 준만큼 + 되는듯 함 */
+#sec2 h2 {
+    margin-bottom: 40px;
+}
+
 #sec2 li {
     position: relative;
+    border: 1px solid #ccc;
+}
+
+#sec2 li:nth-of-type(4)~li {
+    margin-top: 20px;
 }
 
 /* #sec2 .li4 {
@@ -152,10 +231,10 @@ header {
 
 #sec2 span {
     position: absolute;
-    left:0;
-    top:0;
+    left: 0;
+    top: 0;
     color: #fff;
-    /* background: rgba(44,44,44,0.5); */
+    background: rgba(88, 88, 88, 0.3);
     padding: 8px 16px;
 }
 
@@ -166,9 +245,16 @@ header {
     flex-direction: column;
     justify-content: space-between;
     height: 455px;
+    max-height: 455px;
 }
 
+#sec3 li h3 {
+    margin: 16px 0;
+}
 
+#sec3 li p:first-of-type {
+    margin: 16px 0;
+}
 
 /* 버튼 */
 #sec3 a {
@@ -181,6 +267,11 @@ header {
 }
 
 /* 섹션4 */
+#sec4 {
+    padding-bottom: 8px;
+    /* margin-bottom: 8px; */
+}
+
 #sec4 input {
     display: block;
     width: 100%;
@@ -190,18 +281,44 @@ header {
 }
 
 #sec4 button {
+    margin: 32px 0 48px 0;
     padding: 12px 32px;
     background-color: #000;
     color: #fff;
 }
 
+.map {
+    height: 845px;
+}
+
+.map iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+}
 
 /* 푸터 */
 
+footer {
+    /* 한 줄 텍스트일 때 박스의 수직 중앙 정렬 (라인하이트) */
+    /* line-height: 84px; */
+    padding: 32px 0;
+    height: 84px;
+    text-align: center;
+    background-color: #333;
+    color: #777;
+}
 
+/* padding으로 글자 간격 맞추는거 boxsizing borderbox 랑 관련있음 */
 
+/* p는 기본 마진 있음 */
+/* 여백의 일관성.. */
 
+/* 
+    a, button, ::placeholder
+        - 이 친구들 글자색은 직접 설정한다. (직접 지정)
+    
 
-
-
-
+    : -> 가상 클래스
+    :: -> 가상 요소 (가상으로 내용이 들어간 것?)
+*/
