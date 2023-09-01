@@ -71,3 +71,10 @@
         - window.prompt()
 
 */
+
+/* 
+    객체.메소드.
+    
+    객체: window, document, console ...
+    메소드: 
+*/

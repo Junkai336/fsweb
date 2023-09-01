@@ -2,6 +2,24 @@
 @import url(reset.css);
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 
+/* 
+    배운거만 굉장히 잘 활용해도 ok
+    포폴 품질 ↑
+    벤치마킹은 최대한에서 최대한 똑같이.
+    이름없는 개발자가 임의대로 한 건 그다지 쳐주지 않는다. 
+*/
+
+/* 변수 정의 */
+/* 이건 전체 페이지 색상을 한번에 변경하는 용도 */
+
+:root {
+    --t333: #333;
+    --t111: #111;
+    --tfff: #fff;
+    --t777: #777;
+    --tccc: #ccc;
+    --tf1f1f1: #f1f1f1;
+}
 
 /**************************************************************************************
 typo.css: 크기, 색, 종류, 굵기, 줄간격, 자간 
@@ -19,22 +37,26 @@ typo.css: 크기, 색, 종류, 굵기, 줄간격, 자간
                     수직 정렬.
  */
 
+
+
 body {
     /* 폰트패밀리는 보통 바디에 준다. */
     font: 1.5rem/1.8 'Noto Sans KR', sans-serif;
-    color: #333;
-    background: #fff;
+    color: var(--t333);
+    background: var(--tfff);
 }
 
-footer, ::placeholder {
-    color: #777
+footer,
+::placeholder {
+    color: var(--t777);
 }
 
 /* .txt {
     font-size: 3.6rem;
 } */
 
-#gnb, .txt {
+#gnb,
+.txt {
     letter-spacing: 4px;
 }
 
@@ -79,58 +101,33 @@ footer, ::placeholder {
     height: 800px
 } */
 
-
-
-/* 헤더 */
-
+/* 밑에가 pc고 여기가 모바일 */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 10000;
     position: fixed;
+    /* position fixed, absolute 이면 width가 인라인처럼 된다. (요소 크기가 컨텐츠 크기) */
     width: 100%;
     height: 55px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 2px 10px 0 rgba(0, 0, 0, 0.12);
-    background-color: #fff;
+    background-color: var(--tfff);
     padding: 0 32px;
 }
 
-/* 로고 */
-
-/* 내비게이션 */
-
-#gnb li {
-    display: inline-block;
-    margin-left: 32px;
+.logo {
+    width: 40%;
 }
 
-#gnb a {
-    color: #111;
-}
-
-/* 섹션3,4 공통 */
-
-section:first-of-type~section>p {
-    margin-bottom: 40px;
-}
-
-/* 섹션 공통 */
-
-.sec {
-    position: relative;
-    width: 1500px;
-    margin: 0 auto;
+#gnb {
+    display: none;
 }
 
 /* 섹션1 */
 
-#sec1 {
-    padding-top: 55px;
-    /* top: 55px; */
-    /* margin-top: 55px; */
-    /* transform: translateY(55px); */
-
+.main_img {
+    position: relative;
 }
 
 .txt {
@@ -138,22 +135,6 @@ section:first-of-type~section>p {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-
-    /* margin-top: -37.5px; */
-    /* margin-left: -141px; */
-
-    /* margin-bottom: -80px; */
-    /* transform: translate(-50%, -50%); */
-    color: #fff;
-    font-family: "Segoe UI", Arial, sans-serif;
-    letter-spacing: 4px;
-    font-size: 56px;
-}
-
-.main_img {
-    width: 1500px;
-    margin: 0 auto;
-    /* text-align: center; */
 }
 
 .tit1 {
@@ -163,89 +144,56 @@ section:first-of-type~section>p {
     opacity: 0.75;
 
     font-weight: bolder;
+    color: var(--tfff);
+    font-family: "Segoe UI", Arial, sans-serif;
+    letter-spacing: 4px;
 }
 
-.tit1+span {
-    font-size: 52px;
+.tit2 {
+    display: none;
 }
 
 /* 섹션2,3,4 공통 */
 
-/* section:first-of-type ~ section {
-    margin-top: 64px;
-} */
-
-section h2 {
-    padding: 96px 0 20px 0;
-    /* margin: 64px 0 20px 0; */
-    /* margin-top: 64px; */
-    /* margin-bottom: 20px; */
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 20px;
-}
 
 /* 섹션2,3 공통 */
 
-.sec23 ul {
-    display: flex;
-    flex-wrap: wrap;
-}
 
 .sec23 li {
-    width: 360px;
-    height: 240px;
-    margin-right: 20px;
+    width: auto;
+    height: auto;
     /* margin-bottom: 20px; */
 }
 
-.sec23 li:nth-of-type(4n) {
-    margin-right: 0;
-}
-
-/* 섹션2 */
-/* id > class, 가상 클래스(:), 속성 > 요소, 가상 요소(::) */
-
-/* 인라인요소의 마진은 좌우만 적용O, 위아래 적용X */
-/* 마진 위아래는 겹치면 큰쪽'만'. */
-/*      좌우는 준만큼 + 되는듯 함 */
-#sec2 h2 {
+/* 섹션3,4 공통 */
+section:first-of-type~section>p {
     margin-bottom: 40px;
 }
 
+/* 섹션2 */
+
 #sec2 li {
     position: relative;
-    border: 1px solid #ccc;
+    border: 1px solid var(--cccc);
 }
 
-#sec2 li:nth-of-type(4)~li {
-    margin-top: 20px;
-}
+/* #sec2 li:first-of-type ~ li { */
+/* 
+     첫번째 요소를 제외한 아래 모든 형제 요소
+    */
 
-/* #sec2 .li4 {
-    margin-right: 0;
-}
-
-#sec2 .li8 {
-    margin-right: 0;
-} */
-
-#sec2 span {
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: #fff;
-    background: rgba(88, 88, 88, 0.3);
-    padding: 8px 16px;
+/* 
+    +는 바로 인접한 형제.
+    근데 그게 계속 반복돼서 8개 다 되는거임
+     */
+#sec2 li+li {
+    margin-top: 16px;
 }
 
 /* 섹션3 */
 
-#sec3 li {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 455px;
-    max-height: 455px;
+#sec3 li+li {
+    margin-top: 32px;
 }
 
 #sec3 li h3 {
@@ -253,42 +201,50 @@ section h2 {
 }
 
 #sec3 li p:first-of-type {
-    margin: 16px 0;
+    margin-bottom: 16px;
 }
 
 /* 버튼 */
 #sec3 a {
     display: block;
+    background-color: var(--tf1f1f1);
     color: #111;
     border: 1px solid #111;
     text-align: center;
     /* line-height: 40px; */
     padding: 8px 0;
+    margin-top: 20px;
+}
+
+#sec3 a:hover {
+    background-color: var(--tccc);
 }
 
 /* 섹션4 */
+
 #sec4 {
+    /* 지도 아래 여백 */
     padding-bottom: 8px;
     /* margin-bottom: 8px; */
 }
 
 #sec4 input {
-    display: block;
+    /* display: block; */
     width: 100%;
     padding: 12px 16px;
-    border: 1px solid #ccc;
-    margin-bottom: 20px;
+    border: 1px solid var(--tccc);
+    margin-bottom: 16px;
 }
 
 #sec4 button {
     margin: 32px 0 48px 0;
     padding: 12px 32px;
-    background-color: #000;
-    color: #fff;
+    background-color: var(--t111);
+    color: var(--tfff);
 }
 
 .map {
-    height: 845px;
+    height: 184px;
 }
 
 .map iframe {
@@ -302,19 +258,199 @@ section h2 {
 footer {
     /* 한 줄 텍스트일 때 박스의 수직 중앙 정렬 (라인하이트) */
     /* line-height: 84px; */
+
+    /*  */
     padding: 32px 0;
-    height: 84px;
+    /* height: 84px; */
     text-align: center;
     background-color: #333;
-    color: #777;
+    color: var(--t777);
 }
 
-/* padding으로 글자 간격 맞추는거 boxsizing borderbox 랑 관련있음 */
+/* ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ*/
+/* ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ*/
+/* ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ*/
+/* 최소 992px 이상ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ*/
+/* 데스크탑 */
+@media (min-width:992px) {
 
-/* p는 기본 마진 있음 */
-/* 여백의 일관성.. */
+    /* 헤더 */
 
-/* 
+    /* 로고 */
+
+    /* 내비게이션 */
+
+    #gnb li {
+        display: inline-block;
+        margin-left: 32px;
+    }
+
+    #gnb a {
+        color: #111;
+    }
+
+    /* 섹션3,4 공통 */
+
+
+    /* 섹션 공통 */
+
+    .sec {
+        position: relative;
+        width: 1500px;
+        margin: 0 auto;
+    }
+
+
+    section h2 {
+        padding: 96px 0 20px 0;
+        /* margin: 64px 0 20px 0; */
+        /* margin-top: 64px; */
+        /* margin-bottom: 20px; */
+        border-bottom: 1px solid var(--tccc);
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* 섹션1 */
+
+    #sec1 {
+        padding-top: 55px;
+        /* top: 55px; */
+        /* margin-top: 55px; */
+        /* transform: translateY(55px); */
+
+    }
+
+    .tit1 {
+        font-size: 56px;
+    }
+
+
+
+
+    .txt {
+        /* margin-top: -37.5px; */
+        /* margin-left: -141px; */
+
+        /* margin-bottom: -80px; */
+        /* transform: translate(-50%, -50%); */
+        color: var(--tfff);
+        font-family: "Segoe UI", Arial, sans-serif;
+        letter-spacing: 4px;
+        font-size: 56px;
+    }
+
+    .main_img {
+        width: 1500px;
+        margin: 0 auto;
+        /* text-align: center; */
+    }
+
+
+    .tit1+span {
+        font-size: 52px;
+    }
+
+    /* 섹션2,3,4 공통 */
+
+    section {
+        padding: 0 30px;
+    }
+
+    /* section:first-of-type ~ section {
+    margin-top: 64px;
+} */
+
+
+
+    /* 섹션2,3 공통 */
+
+    .sec23 ul {
+        /* 이미지 가로 배치 */
+        display: flex;
+        /* 줄바꿈 -> 이미지 한 줄에 4개씩 */
+        flex-wrap: wrap;
+    }
+
+    .sec23 li {
+        width: 360px;
+        height: 240px;
+        margin-right: 20px;
+        /* margin-bottom: 20px; */
+    }
+
+    .sec23 li:nth-of-type(4n) {
+        margin-right: 0;
+    }
+
+    /* 섹션2 */
+    /* id > class, 가상 클래스(:), 속성 > 요소, 가상 요소(::) */
+
+    /* 인라인요소의 마진은 좌우만 적용O, 위아래 적용X */
+    /* 마진 위아래는 겹치면 큰쪽'만'. */
+    /*      좌우는 준만큼 + 되는듯 함 */
+    #sec2 h2 {
+        margin-bottom: 40px;
+    }
+
+    /* 8개의 이미지 중 5번째 이미지 부터 4개만 위쪽 여백 */
+    #sec2 li:nth-of-type(4)~li {
+        margin-top: 20px;
+    }
+
+    #sec2 span {
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: var(--tfff);
+        background: rgba(88, 88, 88, 0.3);
+        padding: 8px 16px;
+    }
+
+    /* #sec2 .li4 {
+    margin-right: 0;
+}
+
+#sec2 .li8 {
+    margin-right: 0;
+} */
+
+
+    /* 섹션3 */
+
+    #sec3 li {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 455px;
+        max-height: 455px;
+    }
+
+    /* 섹션4 */
+
+    .map {
+        height: 845px;
+    }
+
+    /* 푸터 */
+
+    footer {
+        /* 한 줄 텍스트일 때 박스의 수직 중앙 정렬 (라인하이트) */
+        /* line-height: 84px; */
+
+        /* padding의 산출 근거?
+         폰트사이즈 15 * 1.8 = 29
+        */
+        padding: 32px 0;
+        height: 84px;
+    }
+
+    /* padding으로 글자 간격 맞추는거 boxsizing borderbox 랑 관련있음 */
+
+    /* p는 기본 마진 있음 */
+    /* 여백의 일관성.. */
+
+    /* 
     a, button, ::placeholder
         - 이 친구들 글자색은 직접 설정한다. (직접 지정)
     
@@ -322,3 +458,10 @@ footer {
     : -> 가상 클래스
     :: -> 가상 요소 (가상으로 내용이 들어간 것?)
 */
+
+}
+
+/* @media 미디어쿼리 992이상 */
+
+/* 아이패드미니가 태블릿, 아이폰12프로가 모바일 기준? */
+/* 개발자모드, 크롬웹확장프로그램으로 확인 */
