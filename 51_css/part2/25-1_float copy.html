@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+       
+
+        p { border: 1px solid red;  margin-bottom: 100px;}
+        img  {width:100px; border: 3px solid rgb(101, 160, 13);} 
+
+        /* 해결방안 4가지
+         1. ::after +clear:both;
+         2. overflow:hiden;
+         3. clear:both; 
+         4. height
+         */
+
+
+
+        /* (1) 본문의 두 번째 p 요소와 세 번째 p 요소에 ::after 선택자를 사용하여 clear:both; 처리하시오. */   
+              .p2::after{content:''; clear: both; display: block;  border: 6px solid yellow;}
+
+
+        /* (2) 본문 세번째요소 p요소에 overflow처리와 hidden처리를 하시오. */
+               .p3{overflow: hidden;}
+
+        /* (3) heihgt를 주기 -> 높이를 직접 계산해서 문제를 해결함.  */
+                .p4{height: 185px;}
+
+        /* (4)빈 span 태그를 줘서 clear:both 속성을 준다 */
+                   span{display: block; clear: both; border: 1px solid yellow;}
+
+
+
+        .p1 img{float:none;} /* 이미지를 글자 1개 취급하고 보면 이해가 쉬움 */
+        .p2 img{float:left; }  /* 이미지가 float처리를 해서 글자와 나란히 배치됨 하지만 부모요소를 넘어버림 */
+        .p3 img{float:left;}
+        .p4 img{float:left;}
+        .p5 img{float:right;}
+    </style>
+</head>
+<body>
+    <h1>이미지와 단락</h1>
+    
+    <p class="p1"><img  src="../assets/images/coca.png" alt="콜라">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id voluptatibus eius aspernatur laboriosam velit. Temporibus architecto doloribus quidem? Similique consequuntur voluptatibus mollitia veritatis aliquam minima alias asperiores eaque, labore sapiente qui sint accusantium quam ipsam quasi voluptatem, eum architecto? Voluptatibus facere error rerum odio exercitationem minima ab animi labore sunt?</p>
+    <p class="p2"><img src="../assets/images/coca.png" alt="콜라">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id voluptatibus eius aspernatur laboriosam velit. Temporibus architecto doloribus quidem? Similique consequuntur voluptatibus mollitia veritatis aliquam minima alias asperiores eaque, labore sapiente qui sint accusantium quam ipsam quasi voluptatem, eum architecto? Voluptatibus facere error rerum odio exercitationem minima ab animi labore sunt?</p>
+    
+    <p class="p3"><img  src="../assets/images/coca.png" alt="콜라">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id voluptatibus eius aspernatur laboriosam velit. Temporibus architecto doloribus quidem? Similique consequuntur voluptatibus mollitia veritatis aliquam minima alias asperiores eaque, labore sapiente qui sint accusantium quam ipsam quasi voluptatem, eum architecto? Voluptatibus facere error rerum odio exercitationem minima ab animi labore sunt?</p> 
+
+    <p class="p4"><img  src="../assets/images/coca.png" alt="콜라">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id voluptatibus eius aspernatur laboriosam velit. Temporibus architecto doloribus quidem? Similique consequuntur voluptatibus mollitia veritatis aliquam minima alias asperiores eaque, labore sapiente qui sint accusantium quam ipsam quasi voluptatem, eum architecto? Voluptatibus facere error rerum odio exercitationem minima ab animi labore sunt?</p>
+
+    <p class="p5"><img  src="../assets/images/coca.png" alt="콜라">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id voluptatibus eius aspernatur laboriosam velit. Temporibus architecto doloribus quidem? Similique consequuntur voluptatibus mollitia veritatis aliquam minima alias asperiores eaque, labore sapiente qui sint accusantium quam ipsam quasi voluptatem, eum architecto? Voluptatibus facere error rerum odio exercitationem minima ab animi labore sunt?<span></span></p>
+</body>
+</html>

@@ -126,6 +126,14 @@ header {
 
 /* 섹션1 */
 
+#sec1 {
+    padding-top: 55px;
+    /* top: 55px; */
+    /* margin-top: 55px; */
+    /* transform: translateY(55px); */
+
+}
+
 .main_img {
     position: relative;
 }
@@ -139,7 +147,7 @@ header {
 
 .tit1 {
     padding: 8px 16px;
-    background-color: #000;
+    background-color: var(--t111);
     /* opacity는 불투명도 0(투명) 1(불투명) 불투명이 기본값. 숫자만 쓴다. 단위 없음. */
     opacity: 0.75;
 
@@ -154,6 +162,20 @@ header {
 }
 
 /* 섹션2,3,4 공통 */
+
+section {
+    padding: 0 30px;
+}
+
+section h2 {
+    padding: 96px 0 20px 0;
+    /* margin: 64px 0 20px 0; */
+    /* margin-top: 64px; */
+    /* margin-bottom: 20px; */
+    border-bottom: 1px solid var(--tccc);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
 
 
 /* 섹션2,3 공통 */
@@ -175,6 +197,10 @@ section:first-of-type~section>p {
 #sec2 li {
     position: relative;
     border: 1px solid var(--cccc);
+}
+
+#sec2 h2 {
+    margin-bottom: 40px;
 }
 
 /* #sec2 li:first-of-type ~ li { */
@@ -237,7 +263,7 @@ section:first-of-type~section>p {
 }
 
 #sec4 button {
-    margin: 32px 0 48px 0;
+    margin: 16px 0 48px 0;
     padding: 12px 32px;
     background-color: var(--t111);
     color: var(--tfff);
@@ -301,25 +327,10 @@ footer {
     }
 
 
-    section h2 {
-        padding: 96px 0 20px 0;
-        /* margin: 64px 0 20px 0; */
-        /* margin-top: 64px; */
-        /* margin-bottom: 20px; */
-        border-bottom: 1px solid var(--tccc);
-        padding-bottom: 20px;
-        margin-bottom: 20px;
-    }
+
 
     /* 섹션1 */
 
-    #sec1 {
-        padding-top: 55px;
-        /* top: 55px; */
-        /* margin-top: 55px; */
-        /* transform: translateY(55px); */
-
-    }
 
     .tit1 {
         font-size: 56px;
@@ -353,10 +364,6 @@ footer {
 
     /* 섹션2,3,4 공통 */
 
-    section {
-        padding: 0 30px;
-    }
-
     /* section:first-of-type ~ section {
     margin-top: 64px;
 } */
@@ -389,9 +396,8 @@ footer {
     /* 인라인요소의 마진은 좌우만 적용O, 위아래 적용X */
     /* 마진 위아래는 겹치면 큰쪽'만'. */
     /*      좌우는 준만큼 + 되는듯 함 */
-    #sec2 h2 {
-        margin-bottom: 40px;
-    }
+
+
 
     /* 8개의 이미지 중 5번째 이미지 부터 4개만 위쪽 여백 */
     #sec2 li:nth-of-type(4)~li {
