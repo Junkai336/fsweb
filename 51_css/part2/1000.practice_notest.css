@@ -166,7 +166,9 @@
 
 /* 
     display
-            - none, inline, inline-block, block
+            - none, 
+            - block, inline, inline-block, 
+            - table, table-cell, list-items
             - flex, grid
     
     display: none; -> 화면에서 아예 제거, transition 적용 X
@@ -265,6 +267,70 @@
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
 /* 27 - display: flex */
+
+/* 
+    가로/세로 방향
+
+    속기형
+        - flex
+
+    속성
+        - flex-direction : 방향;
+            - row : 행, 가로, 기본값
+            - column : 열, 세로
+            - row-reverse : 역-가로
+            - column-reverse : 역-세로
+
+        - flex-wrap : 줄바꿈;
+            - nowrap : 줄바꿈 하지 않음
+            - wrap : 줄바꿈 함
+            - wrap-reverse : 역으로 줄바꿈 함
+
+        - flex-flow : direction, wrap (속기형)
+
+
+        - justify-content : 주축 정렬
+            - flex-start : 시작 (기본값)
+            - flex-end : 끝
+            - start : reverse가 적용되지 않는 시작
+            - end : reverse가 적용되지 않는 끝
+            - center : 가운데
+            - space-between : 시작과 끝 배치 후 남은 공간 균등
+            - space-around: 아이템의 주변 공간 균등
+            - space-evenly : 아이템을 제외한 남은 공간 균등
+
+        - align-items : 교차축 정렬
+            - normal
+            - stretch : 아이템 크기 지정안했을 경우 기본값 / 컨테이너 크기만큼 늘어남
+            - flex-start : 아이템 크기 지정했을 경우 기본값
+            - flex-end : 끝
+            - center : 가운데
+            - baseline
+            
+        - align-content : 교차축 블록 방향 정렬 (2개 이상 라인 존재)
+            - flex-start
+            - flex-end
+            - start
+            - end
+            - center
+            - space-between
+            - space-around
+            - space-evenly
+            
+        
+        자식: 플렉스 아이템
+        - align-self : 교차축 정렬 (align-items 보다 우선 적용)
+        - flex-grow : 커진다
+        - flex-shrink : 작아진다
+        - flex-basis : 처음 크기
+        - flex: grow shrink basis
+        - order : 순서 (숫자가 작을 수록 앞배치)
+*/
+
+/* 
+    부모 : 플렉스 컨테이너
+        - display:flex; 를 부모에게 적용시키면 컨테이너. 자식은 아이템이면서 컨테이너 자손은 플렉스 아이템이 되고 플렉스가 적용됨.
+*/
 
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 

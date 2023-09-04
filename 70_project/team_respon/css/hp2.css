@@ -136,6 +136,10 @@ li {
     width: 25px;
 }
 
+.mobile_menu_icon {
+    display: none;
+}
+
 @media (max-width:1280px) {
 
 
@@ -144,7 +148,7 @@ li {
     }
 
     .logo {
-        justify-content: left;
+        justify-content: start;
         line-height: 70px;
     }
 
@@ -153,10 +157,9 @@ li {
     }
 
     .sns li {
-        width: 40px;
-        height: 100px;
         line-height: calc(112px * 0.7);
-        translate: 60px; /* sns아이콘 위치변동 */
+        translate: 40px;
+        margin: 0 8px;
     }
 
     li.mainn {
@@ -177,6 +180,10 @@ li {
         height: 70px;
     }
 
+    .mobile_menu_icon {
+        display: block;
+    }
+
 }
 
 @media (max-width:760px) {
@@ -190,14 +197,29 @@ li {
         line-height: 60px;
     }
 
-    .sns {
+    .mbs {
         display: none;
+    }
+
+    .sns li {
+        display: none;
+        margin: 0 4px;
+    }
+
+    .sns li:nth-of-type(5) {
+        display: block;
+        transform: translateX(100px);
     }
 
     .wrap:hover {
         transition-duration: 0.3;
         background: #fff;
         height: 60px;
+    }
+
+    .ms {
+        width: 200px;
+        display: flex;
     }
 }
 
