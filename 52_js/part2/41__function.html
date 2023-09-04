@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        <p>ㅇㅇ</p>
+        <p>함수0</p>
+        <p>함수1</p>
+        <p>함수2</p>
+        <p>함수3</p>
+        <p>함수4</p>
+        <p>함수5</p>
+        <p>리턴값</p>
+        <p>변수참조?</p>
+    </h1>
+
+    <script>
+
+        // 요소 선택
+
+        /* 
+            document: 내장객체
+            alert(): 내장함수
+
+            document.getElementById('아이디')
+            document.getElementsByClassName('클래스')
+            document.getElementsByTagName('태그')
+
+            document.querySelector('#아이디')
+            document.querySelctorAll('.아이디')
+        */
+
+
+        // 사용자 정의 함수
+
+        /* 
+        1. 매개변수(매개값)
+        2. 리턴(return) -  값을 되돌려 주거나, 함수 종료할 때 사용하는 기능
+        3. 스코프(scope, 영역) - 변수, 함수
+
+        문(statement)
+            1. 표현식(expression): 결과 값이 있는 문장;
+            2. 함수문, 제어문(if, for): 결과 값이 없는 문장;
+        */
+
+
+
+        /* 
+
+        함수 정의
+
+        선언적 함수: 이름 있는 함수, 호이스팅
+        function 함수([parameter][,매개변수][,...]) {
+            코드;
+            return [표현식];
+                ex) return a * b;
+        }
+
+        익명함수
+
+        화살표 함수
+            var 참조변수 = () => 
+        
+        함수 호출
+            함수([매개값]); 또는 참조변수();
+        
+        */
+
+        //ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ
+
+        // 요소선택
+        var pTags = document.querySelectorAll('p');
+        // 변수가 여러개 지정이 안돼서 셀렉터All 쓰면 아이템 지정해줘야됨 [0][1][2][3] 이런 식으로. 0부터 시작함.
+
+        // HTML의 내용 변경 : innerHTML, innerText 속성
+        pTags[0].innerHTML = '셀렉터올 일 때 0번이 첫번째';
+
+        // 변경하고자 하는 변수가 몇번째 p인가? 확인할 수 있음 
+        console.log(pTags[0]);
+        console.log(pTags);
+
+
+        // HTML의 속성 : 요소.HTML속성 = 값;
+        
+        var divT = document.querySelector('div')
+
+        // fn0();
+        
+        // 선언적 함수
+        // 호이스팅(Hoisting) : 메모리에 미리 저장됨 (위fn실행)
+        function fn0(para1, para2, para3) {
+            document.write(para1, '<br>');
+            document.write(para2, '<br>');
+            document.write(para3, '<br><br>');
+            pTags[7].innerHTML = `para1 + para2 + para3 = ${para1+para2+para3}`
+            return para1 * para2 * para3;
+        }
+        
+        // 익명함수 이게 우선순위가 높음 (아래fn실행)
+        // 익명함수만 화살표 함수로 변경 가능
+        var fn1 = function (para1, para2, para3) {
+            document.write(para1 + para2, '<br>');
+            document.write(para2 + para3, '<br>');
+            // 벡틱`abcd`에서 ${} 해야 변수 처리가 된다.
+            // 벡틱이 편한 점은 문자열 그냥 쓰면 된다는 것~
+            pTags[1].innerHTML = `fn1의 결과:<br> ${para1+para2}<br>`;
+            pTags[1].innerHTML += `fn1의 결과2:<br> ${para1*para2}<br>`;
+            // CSS의 속성 변경 : 요소.style.color = 'red';
+            pTags[1].style.color = 'red';
+            // pTags[1].innerText = `fn1의 결과:<br> ${para1+para2}<br>`;
+        }
+
+
+        // 화살표 함수
+        const fn2 = (para1, para2, para3) => {
+            document.write(para1 + para2, '<br>');
+            document.write(para2 + para3, '<br>');
+            pTags[2].innerHTML = `${para1*para2}<br>`;
+            pTags[2].style.color = 'blue';
+        }
+        
+        // 매개변수가 1개일 경우 () 생략 가능
+        var fn3 = para1 => {
+            document.write(para1, '<br>');
+            pTags[3].innerHTML = `${para1*para1*para1}`;
+            pTags[3].innerHTML += `${para1*para1*50}`;
+            pTags[3].innerHTML += `
+            가나다라 <br>
+            마바사아자차카타 <br>
+            파하`;
+            pTags[3].style.border = '1px solid green';
+        }
+        
+        // 그러나 매개변수가 없는 경우는 () 생략 불가
+        var fn4 = () => document.write(444, '<br>');
+        pTags[4].innerText = `<br> 저는 텍스트에요`;
+
+
+        // 화살표 함수
+        // 명령문이 1개일 경우 {} 생략 가능
+        var fn5 = para1 => document.write(para1, '<br>');
+
+        // --
+
+        // 선언적 함수
+        fn0(10, 20, 30);
+
+        // 익명 함수
+        fn1(10, 20, 30);
+
+        // 화살표 함수
+        fn2(10, 20, 30);
+        fn3(100);
+        fn4();
+        fn5(50);
+
+        // 리턴값 불러온거 10*20*30
+        var referenceVariable = fn0(10, 20, 30);
+        document.write(referenceVariable);
+        pTags[8].innerText = `refVar = ${referenceVariable};`
+
+        // innerHTML 은 <br> 해야 줄바꿈 되고
+        // innerText 는 <br> 없이, 그러니까 엔터 누르면 줄바꿈 됨 (텍스트에어리어처럼)
+        // return; : 함수 종료, 값을 돌려주지 않음. 리턴만 쓴거.
+    </script>
+</body>
+
+</html>
