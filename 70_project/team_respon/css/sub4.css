@@ -22,12 +22,25 @@ li {
     list-style: none;
 }
 
+/* 노랑이 이미지 100% X */
+h3 img {
+    width: 60px;
+    height: 60px;
+}
+
+/* 노랑이 이미지 100% X */
+.tab_sig {
+    width: 60px;
+    height: 60px;
+}
+
+/* 공지사항 가장 큰 박스 */
 .notice_section {
     /* border: 5px solid red; */
     padding-top: 150px;
     /* width: 1920px; */
-    /* width: 100%; */
-    height: 2060px;
+    width: 100%;
+    height: 100%;
     background-color: #eee;
 }
 

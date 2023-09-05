@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: fixed;
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>제어문</h1>
+    <div>
+        <label for="val">a = </label>
+        <input type="text" id="val" placeholder="숫자를 입력하세요!">
+    </div>
+    <h2>if</h2>
+    <p class="p1">결과</p>
+    <h2>if~else</h2>
+    <p class="p2">결과</p>
+    <h2>if~else if~else</h2>
+    <p class="p3" title="툴팁">결과</p>
+    <h2>switch~case</h2>
+    <p class="p4">마우스대보셈</p>
+    <h2>for</h2>
+    <p class="p5">결과</p>
+    <h2>while</h2>
+    <p class="p6">결과</p>
+    <h2>do~while</h2>
+    <p class="p7">결과</p>
+    <h2>break</h2>
+    <p class="p8">결과</p>
+    <h2>continue</h2>
+    <p class="p9">결과</p>
+    <script>
+        /* 
+                데이터 유형
+                1. 문자열(string)
+                2. 숫자(number)
+                3. 불(boolean)
+                4. undefined
+                5. 객체(object): null
+        
+                연산자
+                1. 산술
+        
+                2. 비교
+            
+                a는 10보다 크다
+                a>10
+                a는 20보다 작다
+                a<20
+        
+                3. 논리
+                a는 10보다 크면서(그리고 &&) 20보다 작다
+                a>10 && a<20
+                a는 10보다 크거나(또는 ||) 20보다 작다
+                a>10 || a<20
+                a는 10보다 작거나 같다
+                !a>10
+                !(a>10)
+        
+                4.대입(할당)
+        
+                5.조건
+        
+        
+                조건식
+                조건식에 사용할 표현식 결과는 true 또는 false
+                false: '', 0, undefined, null
+        
+                제어문
+                1. 조건문 : if, else
+                2. 선택문 : switch~case, default
+                3. 반복문 : for, while, do
+        
+                var a = 3;
+                if (a >= 5) {
+                    T코드;
+                }
+                TF코드; (얘는 그냥 실행함)
+        
+                if (a >=5) {
+                    T코드;
+                } else (a < 5) {
+                    F코드;
+                }
+        */
+        // 문자열과 숫자를 비교(>,>=,<=,<)하면? false
+        // '십' > 5 -> F
+        // '십' < 5 -> F
+        // '가' > '나' -> F
+        // '가' < '나' -> T     (사전에 뒤로 등재된 것이 더 높다.)
+        // 100 = 100 -> true?
+        // 100 == 100 -> false?
+
+        // prompt의 결과는 문자이다.
+        // '10'
+        // 자동형변환: '10' > 2 에서 10 > 2로 만들어줌
+
+        // 입력
+        // let a = prompt('숫자를 입력해주세요', '');
+
+        let a = 10;
+        // 요소 선택
+        const inEle = document.querySelector('input')
+        inEle.value = 10;
+
+        // const pEle = document.querySelectorAll('p');
+        // pEle[0].innerHTML = 'ㅁㄴㅇ'
+        // pEle[0부터시작] 또는 pEle.item(0부터시작)
+        
+/*      const pEle1 = document.querySelector('.p1');
+        const pEle2 = document.querySelector('.p2');
+        const pEle3 = document.querySelector('.p3');
+        const pEle4 = document.querySelector('.p4');
+        const pEle5 = document.querySelector('.p5');
+        const pEle6 = document.querySelector('.p6');
+        const pEle7 = document.querySelector('.p7');
+        const pEle8 = document.querySelector('.p8');
+        const pEle9 = document.querySelector('.p9'); */
+        console.log(pEle);
+
+        pEle.innerHTML = '내용을 변경';
+        pEle.style.color = 'red';
+
+        // 자동형변환
+        // if의 첫 번째 경우
+        if (a > 5) {
+            pEle.style.backgroundColor = 'pink';
+        }
+        pEle.style.color = 'green';
+
+        a = 1;
+        // if의 두 번째 경우
+        if (a > 5) {
+            pEle2.style.backgroundColor = 'pink';
+            pEle2.innerText = '참';
+        } else {
+            pEle2.style.color = 'green';
+            pEle2.innerText = '거짓';
+        }
+
+        a = 0;
+        // if의 세 번째 경우
+        // 조건1이 거짓이면 조건2가 거짓이면 조건3이 거짓이면 else.
+        if (a > 10 && a < 20) {
+            pEle3.innerText = 'if';
+            pEle3.title = '첫 번째 조건이 참입니다.'
+        } else if (a > 20 && a < 30) {
+            pEle3.innerText = 'else if 1';
+            pEle3.title = '첫 번째 조건이 거짓이고, 두 번째 조건이 참입니다.'
+        } else if (a > 30 && a < 40) {
+            pEle3.innerText = 'else if 2';
+            pEle3.title = '두 번째 조건이 거짓이고, 세 번째 조건이 참입니다.'
+        } else {
+            pEle3.innerText = 'else';
+            pEle3.setAttribute('title', '모든 조건이 거짓이다.');
+        }
+
+
+        if (a > 2) {
+            console.log('참이요')
+        } else {
+            console.log('거짓이요')
+        }
+        console.log('전 그냥 나와요')
+
+        /* 
+            property(속성) -> CSS property
+            attribute(속성) -> HTML attribute
+
+
+            요소.HTML속성 = '값'
+            요소.setAttribute(para, para)
+                            속성이름 속성에대한값
+            요소.style.CSS속성 = '값'
+
+        */
+
+        // title 속성: 마우스 올렸을 때 툴팁 같은거 뜨는 거
+
+        // switch는 동등비교만 가능 ===
+
+
+        /* 
+            switch~case, default, break
+                표현식이 값과 일치하면 코드 실행
+
+            switch (표현식) {
+                case 값1: 코드1; break;
+                case 값2: 코드2; break;
+                case 값3: 코드3; break;
+                ...
+                [default: 코드;]
+            }
+
+            break가 없으면 값1이 코드1만 실행하는게 아니라 2,3,4.. 다 실행함
+        */
+
+        // a = 10;
+        console.log(inEle.value);
+        // input에 입력한 데이터는 문자열이다.
+        inEle.value = 2;
+
+        switch (inEle.value) {
+            case '1':
+                pEle4.title = '첫 번째 조건이 참입니다.';
+                break
+            case '2':
+                pEle4.title = '첫 번째 거짓 두번째 참';
+                break
+            case '3':
+                pEle4.title = '두번째도 거짓 세번째는 참';
+            default:
+                pEle4.title = '모두 거짓이다.';
+        }
+
+
+        /* 
+            for (초기식; 조건식; 증감식) {
+                코드;
+            }
+        */
+
+        // 값이 변하면 let, 변하지 않으면 const
+        // i는 지역 변수
+        for (let i = 0; i < 10; i++) {
+            // 조건식이 true이면 아래 코드 실행
+            // 조건식이 false이면 for 문장을 빠져나간다.
+            // if문에서 실행 코드가 1문장이면 {} 생략 가능
+            if (i === 6) break;
+            pEle5.innerHTML += '<br>' + i;
+        }
+
+        pEle5.innerhtml = 0; + '<br>';
+        pEle5.innerhtml += 1; + '<br>';
+        pEle5.innerhtml += 2; + '<br>';
+        pEle5.innerhtml += 3; + '<br>';
+        pEle5.innerhtml += 4; + '<br>';
+        pEle5.innerhtml += 5; + '<br>';
+        pEle5.innerhtml += 6; + '<br>';
+        pEle5.innerhtml += 7; + '<br>';
+        pEle5.innerhtml += 8; + '<br>';
+        pEle5.innerhtml += 9; + '<br>';
+
+        /* 
+            step1 : i = 0, 0 < 10 -> true, 코드실행(innerHTML), i++ -> 1
+            step2 :      , 1 < 10 -> true, 코드실행(innerHTML), i++ -> 2
+            step3 :      , 2 < 10 -> true, 코드실행(innerHTML), i++ -> 3
+
+            증감시키기전에 코드를 실행하기 때문에 9가 나온다.
+        */
+
+        /* 
+            초기식
+            while (조건식) {
+                // 조건식이 true이면 코드 실행
+                // 조건식이 false이면 while 탈출
+                코드;
+                증감식;
+            }
+        */
+
+        // i는 전역 변수
+        let i = 0;
+        while (i < 10) {
+            pEle6.innerHTML += '<br>' + i;
+            i++;
+        }
+
+        /* 
+            do는 while과 다르게 조건 비교를 뒤에서 하기 때문에 1번은 무조건 코드가 실행된다.
+
+            초기식
+            do {
+                코드;
+                증감식;
+            } while (조건식)
+        
+        */
+
+        i = 0;
+        do {
+            pEle7.innerHTML += '<br>' + i;
+            i++;
+        } while (i < 10)
+
+
+
+        /* 
+            제어문에서 break 키워드를 만나면 제어문을 탈출한다.
+
+        */
+
+        for (let i = 0; i < 10; i++) {
+            if (i === 6) break;
+            pEle8.innerHTML += '<br>' + i;
+        }
+
+        /* 
+            제어문에서 continue를 만나면
+            continue 아래에 있는 코드를 실행하지 않고, 제어문의 시작으로 올라간다.
+        */
+
+        for (let i = 0; i < 10; i++) {
+            if (i >= 3 && i <= 6) continue;
+            pEle9.innerHTML += '<br>' + i;
+        }
+
+    </script>
+</body>
+
+</html>
