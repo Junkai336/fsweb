@@ -1,3 +1,7 @@
+// 
+var lili = document.querySelectorAll(li);
+console.log(lili);
+
 // 탭 버튼 정의
 const all_tab = document.querySelector('.all_tab');
 const notice_tab = document.querySelector('.notice_tab');
