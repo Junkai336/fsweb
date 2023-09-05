@@ -1,6 +1,6 @@
 // 
-var lili = document.querySelectorAll(li);
-console.log(lili);
+// var lili = document.querySelectorAll(li);
+// console.log(lili);
 
 // 탭 버튼 정의
 const all_tab = document.querySelector('.all_tab');
