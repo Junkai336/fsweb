@@ -18,7 +18,7 @@
     position: relative;
     height: 960px;
     background-color: #ccc;
-    /* outline: 2px solid red; */
+    /* outline: 2px solid red; */   
 }
 
 .wrap_regist {
@@ -180,7 +180,8 @@ li img {
 #modal_close {
     position: fixed;
     left: calc(50% - 50px);
-    top: 800px;
+    /* top: 800px; */
+    top: 81%;
     /* margin-top: 100%; */
     width: 100px;
     height: 50px;
@@ -237,6 +238,7 @@ li img {
 /* mobile */
 @media (max-width:768px) {
 
+
     .regist_section {
         position: relative;
         /* width: 50%; */
@@ -249,7 +251,7 @@ li img {
         width: 375px;
         height: 795px;
         left: calc(50% - 188px);
-        top: calc(50% - 375px);
+        top: calc(50% - 360px);
         background-color: #fff;
         padding: 25px 0;
         /* margin-bottom: -20px; */

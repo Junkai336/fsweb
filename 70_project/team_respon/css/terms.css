@@ -98,12 +98,12 @@ textarea {
 
 /* pc */
 /* ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ */
-@media (min-width:768px) {
+@media (min-width:767px) {
 
 /* 약관동의 섹션 */
 /* each */
 #terms_section {
-    height: 890px;
+    height: 910px;
 }
 
 /* 약관동의 큰 박스 */

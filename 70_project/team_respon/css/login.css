@@ -269,7 +269,7 @@ a {
 }
 
 /* mobile */
-@media (max-width:768px) {
+@media (max-width:767px) {
 
 .panel_box {
         width: 95%;
@@ -283,6 +283,18 @@ span > a {
     font-size: 1.6rem;
 }
 
+.wrap_login {
+    padding-top: 80px;
+}
+}
+
+/* Tablet */
+
+@media (min-width:768px) and (max-width:992px) {
+
+    .wrap_login {
+        padding-top: 85px;
+    }
 
 }
 
