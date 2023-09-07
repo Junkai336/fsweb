@@ -10,40 +10,140 @@
         body {
             height: 2000px;
         }
+
         div {
-            width: 300px;
-            height: 300px;
-            margin: 50px;
+            width: 200px;
+            height: 200px;
+            margin: 20px;
             font-size: 50px;
             color: #fff;
         }
+
         .box1 {
             background: red;
         }
+
         .box2 {
             background: blue;
         }
+
+        .box3 {
+            background: pink;
+        }
+
         p {
+            position: fixed;
+            right: 0;
             font-size: 30px;
         }
+        /* 매개변수 좀더 알아봐야함 */
+
+        /* 읽혀지는 순서가 중요하다.
+        선언적함수는 전역,지역이든 상관없다?
+         */
     </style>
+    <script>
+
+
+        // 스크립트 영역이 서로 다르면 함수,변수 공유해서 쓰지 못하고 혼용 안됨 (중복이름이된다는것으로도해석이가능할지도)
+        // 
+        window.addEventListener('DOMContentLoaded', loadFn);
+
+        let txt;
+
+        // 전역 함수(Global Function) 이 안에 있는 것들은 지역함수(Local Function)이 된다.
+        function loadFn() {
+
+            // qs 함수 만들기   (qs옆에 sel이 선택자. 왜?)
+            /* 
+                화살표 함수
+                (para1, para2, ...) => {코드1; 코드2; ...}
+                매개변수가 1개면 () 생략 가능
+                코드가 1개이면 {} 생략 가능 (1개의 코드가 return문이면 return키워드도 함께 생략 해 야 함
+            */
+
+            /* const qs = function (sel) {
+return document.querySelector(sel);
+ 
+} */
+
+
+
+            // ev(); = 먼저 출력된다? ev; = 호출을 한다?
+
+            /*
+                요소.addEventListener('이벤트', function(para){
+                    코드;
+                });
+    
+                                                fn(para) <- 이건 이벤트가 발생하기도 전에 호출을 해버리는 것
+                                                fn
+                요소.addEventListener('이벤트', function(){fn(para)});
+    
+                function fn(){
+                function fn(para){
+                    코드;
+                }
+             */
+
+            // const qs = sel => {return document.querySelector(sel)};
+            function qs(sel) {
+                return document.querySelector(sel);
+            };
+
+            // 요소는 const로
+            const box2 = qs('.box2');
+            const box3 = qs('.box3');
+            txt = qs('p');
+
+            box2.onclick = ev2;
+
+            console.log(box3);
+
+            box3.addEventListener('click', function () {
+                txt.innerText = '박스3을 클릭했습니다.';
+            });
+            
+            box2.onmouseover = ev1;
+            
+        }; // ev.DOMContentLoaded
+        
+
+        
+        function ev1() {
+            txt.innerText = '박스1을 클릭했습니다.';
+        }
+        
+        function ev2() {
+            txt.innerText = '박스2을 클릭했습니다.';
+            txt.style.backgroundColor = 'green';
+        }
+
+    </script>
 </head>
 
 <body>
-    <div class="box1">박스1</div>
+    <!-- 이벤트 리스너 안에 변수,함수 들어가면 지역함수변수가 돼서 전역이랑 달라짐. 그래서 에러가 발생. -->
+
+
+    <!-- 변수는 값을 저장하는 공간 -->
+    <!-- 함수는 코드를 저장하는 공간 -->
+    <p>여기에 출력~</p>
+    <!-- 인라인 스크립트: HTML 이벤트 속성으로 지정하기 -->
+    <div class="box1" onclick="ev1();">박스1</div>
     <div class="box2">박스2</div>
-    <p></p>
+    <div class="box3">박스3</div>
 
     <script>
-        /* 
+        /*
             Event(이벤트): 웹 문서 영역 안에서 웹 브라우저 또는 사용자가 행하는 동작
 
             이벤트 종류
-            1. 마우스 이벤트: click, mouseenter, mouseleave, mousemove
+            1. 마우스 이벤트: click, dblclick, mouseenter(mouseover), mouseleave(mouseout), mousemove
             2. 키보드 이벤트: keydown, keypress, keyup
             3. 윈도우 이벤트: scroll, resize
 
-            이벤트 처리기(이벤트 핸들러): 이벤트가 발생할 때 그 이벤트에 반응하여 실행하는 함수
+            이벤트 처리기(이벤트 핸들러 등록 방법): 이벤트가 발생할 때 그 이벤트에 반응하여 실행하는 함수
 
             //방법1
             <태그 on이벤트명="함수명()">
@@ -57,8 +157,42 @@
 
             //방법4
             요소.addEventListener('이벤트', function(){});
+        */
+
+        /*
+            요소1.on이벤트 = function(){
+                함수(para);
+            };
+            요소2.on이벤트 = function(para){
+                코드;
+            };
+            요소3.on이벤트 = function(para){
+                함수();
+            };
+            < = 요소3.on이벤트 = 함수; >
+
+
+            
+            요소1.on이벤트 = 함수(para);
+            요소2.on이벤트 = 함수(para);
+            요소3.on이벤트 = 함수(para);
+            
+            <익명함수>
+            const 함수 = function(para){
+                코드;
+            };
+
+            <선언적 함수>
+            function 함수(para){
+                코드;
+            };
 
         */
+
+
+
+
+
 
     </script>
 </body>
