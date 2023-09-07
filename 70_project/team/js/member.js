@@ -1,9 +1,11 @@
 // 모달 열기
 const open_modal = document.querySelector('#btn');
 const box_modal = document.querySelector('#modal_box');
+const closee_modal = document.querySelector('.modal_close_box');
 
 open_modal.addEventListener("click", ()=>{
     box_modal.style.display = "block";
+    closee_modal.style.display = "block";
 })
 
 // 모달 닫기
@@ -11,6 +13,7 @@ const close_modal = document.querySelector('#modal_close');
 
 close_modal.addEventListener("click", ()=>{
     box_modal.style.display = "none";
+    closee_modal.style.display = "none";
 })
 
 // 좋아하는 메뉴의 변수를 선언
@@ -48,6 +51,7 @@ eggmayo.addEventListener("click", ()=>{
     rbc_display.style.display = "none";
     ns_display.style.display = "none";
     box_modal.style.display = "none";
+    closee_modal.style.display = "none";
 })
 
 chickenslice.addEventListener("click", ()=>{
@@ -61,6 +65,7 @@ chickenslice.addEventListener("click", ()=>{
     rbc_display.style.display = "none";
     ns_display.style.display = "none";
     box_modal.style.display = "none";
+    closee_modal.style.display = "none";
 })
 
 tuna.addEventListener("click", ()=>{
@@ -74,6 +79,7 @@ tuna.addEventListener("click", ()=>{
     rbc_display.style.display = "none";
     ns_display.style.display = "none";
     box_modal.style.display = "none";
+    closee_modal.style.display = "none";
 })
 
 pulledporkbarbecue.addEventListener("click", ()=>{
@@ -87,6 +93,7 @@ pulledporkbarbecue.addEventListener("click", ()=>{
     rbc_display.style.display = "none";
     ns_display.style.display = "none";
     box_modal.style.display = "none";
+    closee_modal.style.display = "none";
 })
 
 subwayclub.addEventListener("click", ()=>{
@@ -100,6 +107,7 @@ subwayclub.addEventListener("click", ()=>{
     rbc_display.style.display = "none";
     ns_display.style.display = "none";
     box_modal.style.display = "none";
+    closee_modal.style.display = "none";
 })
 
 roastedchicken.addEventListener("click", ()=>{
@@ -113,6 +121,7 @@ roastedchicken.addEventListener("click", ()=>{
     rbc_display.style.display = "none";
     ns_display.style.display = "none";
     box_modal.style.display = "none";
+    closee_modal.style.display = "none";
 })
 
 chickenbaconavocado.addEventListener("click", ()=>{
@@ -126,6 +135,7 @@ chickenbaconavocado.addEventListener("click", ()=>{
     rbc_display.style.display = "none";
     ns_display.style.display = "none";
     box_modal.style.display = "none";
+    closee_modal.style.display = "none";
 })
 
 rotisseriebarbecuechicken.addEventListener("click", ()=>{
@@ -139,6 +149,7 @@ rotisseriebarbecuechicken.addEventListener("click", ()=>{
     tuna_display.style.display = "none";
     ns_display.style.display = "none";
     box_modal.style.display = "none";
+    closee_modal.style.display = "none";
 })
 
 shrimp.addEventListener("click", ()=>{
@@ -152,6 +163,7 @@ shrimp.addEventListener("click", ()=>{
     rbc_display.style.display = "none";
     tuna_display.style.display = "none";
     box_modal.style.display = "none";
+    closee_modal.style.display = "none";
 })
 
 // 메뉴1~메뉴9가 favorite menu box에 들어가있는 경우를 만들어라. v
