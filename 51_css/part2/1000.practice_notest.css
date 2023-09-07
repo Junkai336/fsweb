@@ -313,7 +313,7 @@
             - normal
             - stretch : 아이템 크기 지정안했을 경우 기본값 / 컨테이너 크기만큼 늘어남
             - flex-start : 아이템 크기 지정했을 경우 기본값
-            - flex-end : 끝
+            - flex-end : 끝 (끝에 맞춰진 채로 시작)
             - center : 가운데
             - baseline
             
@@ -326,14 +326,22 @@
             - space-between
             - space-around
             - space-evenly
-            
+
+            - align-items와 align-content를 동시 적용하면 align-content로 적용된다.
+            - 
+
         
         자식: 플렉스 아이템
         - align-self : 교차축 정렬 (align-items 보다 우선 적용)
+
         - flex-grow : 커진다
+
         - flex-shrink : 작아진다
+
         - flex-basis : 처음 크기
+
         - flex: grow shrink basis
+        
         - order : 순서 (숫자가 작을 수록 앞배치)
 */
 
@@ -342,6 +350,9 @@
         - display:flex; 를 부모에게 적용시키면 컨테이너. 자식은 아이템이면서 컨테이너 자손은 플렉스 아이템이 되고 플렉스가 적용됨.
 */
 
+/* 
+    writing-mode
+*/
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
 /* 28 - position */

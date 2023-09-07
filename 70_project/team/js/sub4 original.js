@@ -160,66 +160,6 @@ mo6.addEventListener("click", ()=>{
     modal6.style.display = "block";
 })
 
-/* mo7.addEventListener("click", ()=>{
-    modal0.style.display = "block";
-    modal1.style.display = "block";
-    modal2.style.display = "none";
-    modal3.style.display = "none";
-    modal4.style.display = "none";
-    modal5.style.display = "none";
-    modal6.style.display = "none";
-})
-
-mo8.addEventListener("click", ()=>{
-    modal0.style.display = "block";
-    modal1.style.display = "none";
-    modal2.style.display = "block";
-    modal3.style.display = "none";
-    modal4.style.display = "none";
-    modal5.style.display = "none";
-    modal6.style.display = "none";
-})
-
-mo9.addEventListener("click", ()=>{
-    modal0.style.display = "block";
-    modal1.style.display = "none";
-    modal2.style.display = "none";
-    modal3.style.display = "block";
-    modal4.style.display = "none";
-    modal5.style.display = "none";
-    modal6.style.display = "none";
-})
-
-mo10.addEventListener("click", ()=>{
-    modal0.style.display = "block";
-    modal1.style.display = "none";
-    modal2.style.display = "none";
-    modal3.style.display = "none";
-    modal4.style.display = "block";
-    modal5.style.display = "none";
-    modal6.style.display = "none";
-})
-
-mo11.addEventListener("click", ()=>{
-    modal0.style.display = "block";
-    modal1.style.display = "none";
-    modal2.style.display = "none";
-    modal3.style.display = "none";
-    modal4.style.display = "none";
-    modal5.style.display = "block";
-    modal6.style.display = "none";
-})
-
-mo12.addEventListener("click", ()=>{
-    modal0.style.display = "block";
-    modal1.style.display = "none";
-    modal2.style.display = "none";
-    modal3.style.display = "none";
-    modal4.style.display = "none";
-    modal5.style.display = "none";
-    modal6.style.display = "block";
-}) */
-
 
 // 모달 닫기
 const modal_close = document.querySelector('#modal_close_a');
