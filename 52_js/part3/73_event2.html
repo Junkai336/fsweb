@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        body {
+            height: 2000px;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            font-size: 50px;
+            color: #fff;
+        }
+
+        .box1 {
+            background: red;
+        }
+
+        .box2 {
+            background: blue;
+        }
+
+        .box3 {
+            background: pink;
+        }
+
+        p {
+            position: fixed;
+            right: 0;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>여기에 출력~</p>
+    <input type="text">
+    <div class="box1" onclick="ev1();">박스1</div>
+    <div class="box2">박스2</div>
+    <div class="box3">박스3</div>
+
+    <script>
+
+        const qs = sel => document.querySelector(sel);
+
+        const box1 = qs('.box1');
+        const box2 = qs('.box2');
+        const box3 = qs('.box3');
+        const txt = qs('p');
+        const inBox = qs('input');
+
+        box1.onmouseenter = () => ev(1);
+        box1.onmouseleave = () => ev(2);
+        box2.onclick = function () { ev(3) };
+        box3.onmousemove = () => ev(4);
+        box3.onclick = () => ev(5);
+        box2.onclick = () => ev(6);
+        window.onresize = () => ev(7);
+        window.onscroll = () => ev(8);
+        inBox.onkeydown = () => ev(9);
+        inBox.onkeyup = () => ev(10);
+
+        function ev(num) {
+            if (num === 1) {
+                txt.innerText = '박스1 호버';
+            } else if (num === 2) {
+                txt.innerText = '박스1 나가기';
+            } else if (num === 3) {
+                txt.innerText = '박스2 클릭';
+            } else if (num === 4) {
+                txt.innerText = 'asdasdasda박스3 클릭';
+            } else if (num === 9) {
+                txt.innerText = 'asdasd';
+            } else if (num === 10) {
+                txt.innerText = 'asdasd23423432';
+        }
+
+        // switch ~ case
+        switch (num) {
+            case 5:
+                txt.innerText = 'leave';
+                break;
+            case 6:
+                txt.innerText = 'leave2';
+                break;
+            case 7:
+                txt.innerText = 'resize';
+                break;
+            case 8:
+                txt.innerText = 'scroll';
+                break;
+        }
+    }
+    
+
+
+        // length ~ 객체{속성:값,속성:값}, 배열[1,2,3], 컬렉션(Nodelist), 문자열(abc)의 개수
+
+        /*
+            이벤트
+            click(mousedown, mouseup), mouserenter(mouseover), mouseleave(mouseout), mousemove, wheel, keydown, keyup, keypress, resize, scroll, change
+        */
+
+    </script>
+</body>
+
+</html>

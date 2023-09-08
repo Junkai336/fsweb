@@ -1,12 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
-        div {display: inline-block; width: 200px; border: 1px solid red; margin: 20px;}
-        img, video {width: 200px; height: 200px;}
+        div {
+            display: inline-block;
+            width: 200px;
+            border: 1px solid red;
+            margin: 20px;
+        }
+
+        img,
+        video {
+            width: 200px;
+            height: 200px;
+        }
+
+        .bg div {
+            width: 200px;
+            height: 200px;
+            background: url(../assets/images/coca.png) no-repeat;
+        }
+
+        .bg div:nth-of-type(1) {
+            background-size: auto;
+        }
+        
+        .bg div:nth-of-type(2) {
+            background-size: 100%;
+            background-position: 50% 50%;
+        }
+        
+        .bg div:nth-of-type(3) {
+            background-size: contain;
+            background-position: right;
+        }
+        
+        .bg div:nth-of-type(4) {
+            background-size: cover;
+            background-position: left;
+        }
+
+        /* 
+            background-size: 가로크기 [세로크기];
+                값: cover, contain, auto(기본값) - 이미지 크기 그대로
+                px, %
+            background-position
+                값: 0 0 (기본)
+
+        */
 
         /* 
             object-fit: 값;
@@ -16,44 +61,78 @@
                     contain: 비율 유지, 이미지 잘림없이 상자에 맞게 크기 조정, 빈 공간이 생길 수 있음.
                     cover: 비율 유지, 이미지가 잘리더라도 상자를 가득 채움.
                     none: 원본 크기 그대로, 이미지가 잘리거나 빈 공간이 생길 수 있음.
-            object-position: x위치 y위치;
-                값: left, right, top, bottom, center, %, px
+                    object-position: x위치 y위치;
+                    값: left, right, top, bottom, center, %, px
                 기본값: 50% 50%
         */
-        div:nth-of-type(2) img,
-        div:nth-of-type(7) video {
+        .media div:nth-of-type(2) img,
+        .media div:nth-of-type(2) video {
             object-fit: fill;
             object-position: 50px 50px;
         }
-        div:nth-of-type(3) img,
-        div:nth-of-type(8) video  {
+
+        .media div:nth-of-type(3) img,
+        .media div:nth-of-type(3) video {
             object-fit: contain;
             object-position: right;
         }
-        div:nth-of-type(4) img,
-        div:nth-of-type(9) video  {
-            object-fit:cover;
+
+        .media div:nth-of-type(4) img,
+        .media div:nth-of-type(4) video {
+            object-fit: cover;
             object-position: bottom;
         }
-        div:nth-of-type(5) img,
-        div:nth-of-type(10) video  {
-            object-fit:none;
+
+        .media div:nth-of-type(5) img,
+        .media div:nth-of-type(5) video {
+            object-fit: none;
             object-position: 0 0;
         }
     </style>
 </head>
+
 <body>
     <h1>object-fit &amp; object-position</h1>
-    <div>original<img src="/assets/images/coca.png" alt="coca"></div>
-    <div>fill(default)<img src="/assets/images/coca.png" alt="coca"></div>
-    <div>contain<img src="/assets/images/coca.png" alt="coca"></div>
-    <div>cover<img src="/assets/images/coca.png" alt="coca"></div>
-    <div>none<img src="/assets/images/coca.png" alt="coca"></div>
+    <h2>배경이미지</h2>
+    <section class="bg">
+        <div>auto</div>
+        <div>fill=100%</div>
+        <div>contain</div>
+        <div>cover</div>
+    </section>
+
+    <section class="media">
+        <h2>이미지</h2>
+        <div>original<img src="../assets/images/coca.png" alt="coca"></div>
+        <div>fill(default)<img src="../assets/images/coca.png" alt="coca"></div>
+        <div>contain<img src="../assets/images/coca.png" alt="coca"></div>
+        <div>cover<img src="../assets/images/coca.png" alt="coca"></div>
+        <div>none<img src="../assets/images/coca.png" alt="coca"></div>
+    </section>
     <hr>
-    <div>original<video src="/assets/video/mov_bbb.mp4" type="video/mp4" autoplay muted></div>
-    <div>fill(default)<video src="/assets/video/mov_bbb.mp4" type="video/mp4" autoplay muted></div>
-    <div>contain<video src="/assets/video/mov_bbb.mp4" type="video/mp4" autoplay muted></div>
-    <div>cover<video src="/assets/video/mov_bbb.mp4" type="video/mp4" autoplay muted></div>
-    <div>none<video src="/assets/video/mov_bbb.mp4" type="video/mp4" autoplay muted></div>
+
+    <!-- 
+        
+
+        <video>
+            <source src="비디오파일.mp4" type="비디오/mp4">
+            <source src="비디오파일.webm" type="비디오/webm">
+            <source src="비디오파일.ogv" type="비디오/ogg">
+        </video>
+
+        또는
+
+        <video src="비디오파일" type="video/타입"></video>
+
+     -->
+
+    <section class="media">
+        <div>original<video src="../assets/video/mov_bbb.mp4" type="video/mp4" autoplay muted></video></div>
+        <div>fill(default)<video src="../assets/video/mov_bbb.mp4" type="video/mp4" autoplay muted></video></div>
+        <div>contain<video src="../assets/video/mov_bbb.mp4" type="video/mp4" autoplay muted></video></div>
+        <div>cover<video src="../assets/video/mov_bbb.mp4" type="video/mp4" autoplay muted></video></div>
+        <div>none<video src="../assets/video/mov_bbb.mp4" type="video/mp4" autoplay muted></video></div>
+    </section>
 </body>
+
 </html>
