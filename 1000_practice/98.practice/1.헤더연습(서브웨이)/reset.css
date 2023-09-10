@@ -1,0 +1,43 @@
+/* 초기화 */
+* {
+    box-sizing: border-box;
+}
+
+/* scroll IE에서는 적용되지 않는다. */
+html {
+    scroll-behavior: smooth;
+    font-size: 10px;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+ul,
+ol,
+p {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+/* li {
+    list-style: none;
+} */
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+img {
+    width: 100%;
+}
+
+button {
+    border: none;
+}

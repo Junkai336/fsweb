@@ -1,0 +1,331 @@
+@charset "UTF-8";
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+
+/* typo */
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font: 1.6rem/1.8 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+}
+
+.depth1 {
+    font-size: 2.8rem;
+    font-weight: 500;
+}
+
+.depth2 {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.sns {
+    font-weight: 500;
+}
+
+.hamburger_sub p {
+    font-size: 2.4rem;
+}
+
+/* 확인용 윤곽선 */
+/* header {
+    border: 1px dashed black;
+}
+
+#gnb {
+    border: 1px dashed red;
+}
+
+h1 {
+    border: 1px dashed blue;
+}
+
+.depth1 ul {
+    border: 1px dashed yellow;
+}
+
+.depth1 li {
+    border: 1px dashed coral;
+}
+
+.member {
+    border: 1px dashed orange;
+}
+
+.sns {
+    border: 1px dashed lightcyan;
+}
+
+.hamburger {
+    border: 1px dashed violet;
+} */
+
+/* .depth2 {
+    border: 1px dashed darkgreen;
+}
+
+.depth2 li {
+    border: 1px dashed darkgreen;
+} */
+
+/* 헤더 */
+header {
+    position: fixed;
+    width: 100%;
+    height: 85px;
+    /* background-color: #fff; */
+}
+
+/* header::after {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 85px;
+    width: 100%;
+    background: #fff;
+    border: 1px solid red;
+    overflow: hidden;
+    transition: .5s;
+} */
+
+/* 헤더 호버효과 */
+header:hover {
+    background-color: #fff;
+    transition: .2s;
+}
+
+/* 글로벌 네비게이션 박스 */
+#gnb {
+    width: 100%;
+    margin: 16px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    /* overflow: hidden; */
+}
+
+/* 로고 이미지 크기 */
+h1 img {
+    width: 202px;
+    height: 40px;
+    vertical-align: middle;
+}
+
+/* 1depth */
+.depth1 {
+    margin: 0 2% 0 4%;
+}
+
+.depth1 ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.depth1 li {
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* 1depth 호버 효과 */
+
+.depth1:hover {
+    translate: 200px, 200px;
+}
+
+.depth1 li:nth-of-type(1):hover {
+    background-color: #ffce32;
+    transition: .2s;
+}
+
+.depth1 li:nth-of-type(2):hover {
+    background-color: #ffce32;
+    transition: .2s;
+}
+
+.depth1 li:nth-of-type(3):hover {
+    background-color: #ffce32;
+    transition: .2s;
+}
+
+.depth1 li:nth-of-type(4):hover {
+    background-color: #ffce32;
+    transition: .2s;
+}
+
+.depth1 a:nth-of-type(1):hover {
+    color: #009923;
+    transition: .2s;
+}
+
+.depth1 a:nth-of-type(2):hover {
+    color: #009923;
+    transition: .2s;
+}
+
+.depth1 a:nth-of-type(3):hover {
+    color: #009923;
+    transition: .2s;
+}
+
+.depth1 a:nth-of-type(4):hover {
+    color: #009923;
+    transition: .2s;
+}
+
+/* 2depth */
+
+.depth2 li {
+    display: none;
+}
+
+/* 로그인 회원가입 */
+.member ul {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.member li {
+    width: 75px;
+    transform: translate(0, 40%);
+}
+
+/* 로그인 회원가입 호버 효과 */
+.member a:hover {
+    color: #009923;
+    font-weight: bold;
+    transition: .2s;
+}
+
+/* sns */
+.member {
+    margin-right: 2%;
+}
+
+.sns ul {
+    display: flex;
+    flex-flow: row nowrap;
+    padding-top: 15px;
+}
+
+.sns img {
+    width: 25px;
+    height: 25px;
+    margin: 0 8px;
+    /* transform: translate(0, 50%); */
+}
+
+/* sns 호버효과 */
+.sns img:hover {
+    width: 35px;
+    height: 35px;
+    transition: .2s;
+    translate: 0 -5px;
+}
+
+/* 햄버거 메뉴 */
+.hamburger {
+    display: none;
+}
+
+/* section1 */
+.section1 {
+    background-color: lightblue;
+    height: 1500px;
+}
+
+/* 맥북 */
+@media (max-width:1280px) {
+
+    header {
+        height: 60px;
+    }
+
+    /* 내비게이션 배열 방식 변경 */
+    #gnb {
+        justify-content: flex-end;
+        margin: 0 0;
+    }
+
+    header h1 {
+        /* justify-self: flex-start; */
+        justify-self: flex-start;
+        width: 100%;
+        margin: 0 16px;
+    }
+
+
+    /* 1뎁스 2뎁스 X */
+    .depth1,
+    .depth2 {
+        display: none;
+    }
+
+    /* 햄버거메뉴 보이게 */
+    .hamburger {
+        position: relative;
+        display: flex;
+        flex-flow: column nowrap;
+        font-size: 25px;
+        line-height: 8px;
+        transform: translate(0, 30%);
+        margin: 0 16px;
+        font-weight: bolder;
+        cursor: pointer;
+    }
+
+    .hamburger:hover > p{
+        font-size: 3.0rem;
+        scale: 1.1;
+        transition: .2s;
+    }
+
+    .hamburger_sub {
+        position: absolute;
+        z-index: 999;
+        left: 300px;
+        /* top: 200px; */
+        top: -20px;
+        width: 180px;
+        height: 110vh;
+        padding: 45px 30px;
+        background-color: #333;
+    }
+
+    .hamburger_sub span {
+        color: #fff;
+        position:absolute;
+        left: 85%;
+        top: 2%;
+    }
+
+    .hamburger_sub p {
+        color: #eee;
+        margin: 54px 0;
+    }
+}
+
+/* 모바일 */
+@media (max-width:767px) {
+
+    /* 내비게이션 배열 방식 변경 */
+    #gnb {
+        justify-content: space-between;
+    }
+
+    .member,
+    .sns {
+        display: none;
+    }
+}
+
+/* 
+?
+- 우측 메뉴가 헤더 창크기 비례해서 계속 오른쪽 끝에 배치되게 하는 법? (창크기에 맞춰서 따라오게 하는거)
+*/

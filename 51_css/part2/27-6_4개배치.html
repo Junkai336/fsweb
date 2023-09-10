@@ -14,16 +14,30 @@
             margin: 0;
         }
 
+        body {
+            border: 1px solid black;
+        }
+
+        div {
+            border: 1px solid yellow;
+        }
+
         .container {
             width: 1500px;
             margin: 0 auto;
+            border: 1px solid red;
             /* width값을 주고 마진 0 auto 써야하는듯?? */
             /* 디자인을 위해 div를 쓰는 경우도 있다.  */
         }
 
         ul {
+            border: 1px solid blue;
             list-style: none;
             padding: 0;
+        }
+
+        li {
+            border: 1px solid green;
         }
 
         a {
@@ -60,6 +74,10 @@
             width: 360px;
             /* outline: 1px solid red; */
         }
+
+        img, h1, p {
+            border: 1px solid orange;
+        }
     </style>
 </head>
 
@@ -78,19 +96,21 @@
                             ullam officiis nam. Sed ex quasi quibusdam quidem sit ad voluptas.
                         </p>
                     </div>
-                        <a href="#">자세히보기</a>
+                    <a href="#">자세히보기</a>
                 </li>
                 <li>
                     <div>
                         <img src="https://via.placeholder.com/360x240" alt="테스트">
                         <h1>John Doe</h1>
                         <p>CEO &amp; Founder</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem in ut necessitatibus amet dolorem
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem in ut necessitatibus amet
+                            dolorem
                             cum
-                            voluptatum omnis a nihil, tenetur corporis excepturi! Amet cumque a velit adipisci obcaecati nam
+                            voluptatum omnis a nihil, tenetur corporis excepturi! Amet cumque a velit adipisci obcaecati
+                            nam
                             quos.</p>
-                        </div>
-                        <a href="#">자세히보기</a>
+                    </div>
+                    <a href="#">자세히보기</a>
                 </li>
                 <li>
                     <div> <!-- div는 그룹핑하기 위해 사용 -->
@@ -99,7 +119,7 @@
                         <p>CEO &amp; Founder</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, repudiandae.</p>
                     </div>
-                        <a href="#">자세히보기</a>
+                    <a href="#">자세히보기</a>
                 </li>
                 <li>
                     <div>
@@ -110,7 +130,7 @@
                             Ratioa
                         </p>
                     </div>
-                        <a href="#">자세히보기</a>
+                    <a href="#">자세히보기</a>
                 </li>
             </ul>
         </div>

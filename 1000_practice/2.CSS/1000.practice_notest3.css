@@ -1,0 +1,132 @@
+/* 30.font-family */
+
+/* 
+    타이포(typo) 시스템
+
+    color: 글자색;
+
+    font-size: 글자크기;
+    font-weight: 글자굵기;
+    font-style: 글자기울임;
+    font-family: 글꼴;
+
+    line-height: 줄간격;
+    letter-spacing: 자간; (글자와 글자사이 간격)
+    word-spacing: 어간; (단어 사이 간격)
+    white-space: 공백; (줄바꿈)
+
+    writing-mode: 글이 쓰여지는 방향
+        - horizontal-tb : 가로로 , 위에서 아래로
+        - vertical-rl : 세로로, 왼쪽에서 오른쪽으로
+
+    font: 속기형
+          [스타일] [굵기] 크기[/줄간격] 글꼴;
+          폰트에는 색이 포함되지 않는다. (따로 쓰기)
+          (줄간격 1.5 ~ 2.0 사이)
+*/
+/* 
+    text-decoration: 꾸밈; -> 밑줄 생성/제거    (a태그)
+    text-align: 텍스트 정렬 + 인라인 요소 좌우정렬
+    vertical-align: 수직 정렬 + 인라인 요소 상하정렬
+
+    text-shadow: 텍스트 그림자
+*/
+
+
+/* 
+    font-family: 글꼴1, 글꼴2, 글꼴3, ...;
+        글꼴 이름에 공백이 있으면 ''로 묶기
+        ex) 'Courier New', sans-serif, serif, monospace, cursive, fantasy, Courier
+
+        경로는 C:/Windows/Fonts 
+
+        body {font-family: 'Courier New', Courier, monospace;}
+*/
+
+/* 
+    1234 아라비아숫자: 1byte
+    abcd 영문자: 1byte
+    가나다 한글: 2byte
+
+    무료 폰트 사이트: 다폰트(https://www.dafont.com/)
+*/
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+/* 30-1 WebFont */
+
+
+@font-face {
+    font-family: '0SeongandHanEum';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OSeongandHanEum.woff') format('woff');
+}
+/* 
+    src 링크 내에 폰트 이름을 font-family 로 사용하겠다.
+*/
+
+/* 
+    @font-face
+        - 글꼴을 사용할 선택자 위에 기록
+        - font-family: 글꼴이름;
+        - src: url('경로/글꼴파일')
+
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;500;700&display=swap');
+
+/* 
+    CDN(Content Delivery Network, 컨텐츠 전송 네트워크)
+        - 여러개의 서버를 통해 웹 컨텐츠를 사용자와 가까운 곳에서 전송함으로써 전송 속도 높임
+        - 구글: https://fonts.google.com/noto/specimen/Noto+Sans+KR?query=noto
+*/
+
+/* 
+    폰트 종류
+        1. ttf/otf (true type font)
+        2. woff (wep open font format)
+*/
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+/* 30-2~5 font-size font-weight font-style font  */
+
+/* 
+    font-size: 값; (숫자, 키워드)
+        키워드: xx-small, x-small, small, smaller, medium, large, larger, x-large, xx-large
+        단위: px, em, rem, %
+
+        em: 조상 > 부모 태그에 지정한 글꼴 크기 기준 (조상에서 내려옴)
+        rem: html에 지정한 글꼴 크기 기준 (html 10px이면 body 1.5rem 15px)
+        %: 부모 태그에 지정한 글꼴 크기 기준
+*/
+
+/* 
+    font-weight: 값; (숫자, 키워드)
+        키워드: lighter, bold, bolder
+        숫자: 100 ~ 900
+        
+        폰트 종류에 따라 지원하는 굵기의 단계 다름
+*/
+
+/* 
+    font-style: 값;
+        값: italic, oblique
+
+        italic: 기울어진 글꼴이 처음부터 디자인 됨
+        oblique: 원래 글꼴을 기울어지게 표시
+*/
+
+/* 
+    font: [스타일] [굵기] 크기[/줄간격] 글꼴;
+            italic bold 1.5rem/1.616 'Courier New', Courier, monospace;
+*/
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+/* 31.text-align */
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+/* 31-1.vertical-align */
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+/* 31-2,3 text-decoration, text-indent */
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
