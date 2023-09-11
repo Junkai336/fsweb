@@ -135,14 +135,36 @@
  */
 
  /* 
-    word-break: 값;
-        normal : 
-        break-all : 
+    word-wrap: 비아시아언어
+        normal : 기본
+        break-word : 글자가 길어지면 강제로 끊어서 줄바꿈 처리, 단어의 기준이 글자로.
+
+    word-break: 비아시아언어, 아시아언어    
+        normal : 기본
+        break-all : 글자 기준 줄바꿈
+        keep-all :  단어 기준 줄바꿈
 
  */
 
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 /* 31-1.vertical-align */
+
+/* 
+    인라인 요소가 한박스에 여러개 크기가 다르게 있을 때 의미 있는듯? 
+*/
+
+/* 
+    vertical-align: 값;
+        - top
+        - middle
+        - bottom
+        - baseline
+        - text-top
+        - sub
+
+        https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align
+*/
+
 
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 /* 31-2,3 text-decoration, text-indent */
