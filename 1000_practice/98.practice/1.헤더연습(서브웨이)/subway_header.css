@@ -75,6 +75,7 @@ h1 {
 /* 헤더 */
 header {
     position: fixed;
+    z-index: 3;
     width: 100%;
     height: 85px;
     /* background-color: #fff; */
@@ -199,7 +200,7 @@ h1 img {
 /* 로그인 회원가입 호버 효과 */
 .member a:hover {
     color: #009923;
-    font-weight: bold;
+    font-weight: 900;
     transition: .2s;
 }
 
@@ -218,7 +219,6 @@ h1 img {
     width: 25px;
     height: 25px;
     margin: 0 8px;
-    /* transform: translate(0, 50%); */
 }
 
 /* sns 호버효과 */
@@ -231,6 +231,14 @@ h1 img {
 
 /* 햄버거 메뉴 */
 .hamburger {
+    display: none;
+}
+
+.hamburger_sub {
+    display: none;
+}
+
+.hamburger_close {
     display: none;
 }
 
@@ -272,6 +280,7 @@ h1 img {
         position: relative;
         display: flex;
         flex-flow: column nowrap;
+        justify-self: flex-end;
         font-size: 25px;
         line-height: 8px;
         transform: translate(0, 30%);
@@ -280,29 +289,38 @@ h1 img {
         cursor: pointer;
     }
 
-    .hamburger:hover > p{
+    .hamburger p {
+        z-index: 5;
+    }
+
+    .hamburger:hover>p {
         font-size: 3.0rem;
         scale: 1.1;
         transition: .2s;
     }
 
+    .hamburger:target > p:nth-of-type(1) {
+        scale: 3;
+    }
+
     .hamburger_sub {
         position: absolute;
-        z-index: 999;
-        left: 300px;
+        z-index: 4;
+        left: 900px;
         /* top: 200px; */
+        /* transform: translateX(275%); */
+        display: block;
         top: -20px;
-        width: 180px;
+        width: 185px;
         height: 110vh;
         padding: 60px 30px;
         background-color: #333;
     }
 
-    .hamburger_sub span {
-        color: #fff;
-        position:absolute;
-        left: 85%;
-        top: 2%;
+    .hamburger_sub p:hover {
+        color: #ffce32;
+        scale: 1.02;
+        font-weight: bolder;
     }
 
     .hamburger_sub p {

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            box-sizing: border-box;
+            width: 300px;
+            height: 300px;
+        }
+        
+        .parent {
+            position: absolute;
+            left: 300px;
+            border: 1px solid red;
+        }
+        
+        .child {
+            position: absolute;
+            top: 300px;
+            left: 300px;
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">parent
+        <div class="child">child</div>
+    </div>
+
+    <script>
+        // 변수선언
+        const parentt = document.querySelector('.parent')
+        const child = document.querySelector('.child')
+        // const div = document.querySelectorAll('div')
+
+        // 변수확인
+        console.log(parentt);
+        console.log(child);
+        // console.log(div);
+
+        // 함수정의
+        function parentright() {
+            parentt.style.left = "150px";
+            child.style.left = "150px";
+            console.log(parentt.style.left, child.style.left);
+        }
+
+        function parentleft() {
+            parentt.style.left = "-150px";
+            child.style.left = "-150px";
+            console.log(parentt.style.left, child.style.left);
+        }
+
+        // 함수호출
+        parentt.addEventListener('click', parentright);
+        child.addEventListener('click', parentleft);
+        // div[0].addEventListener('click', parentright);
+        // div[1].addEventListener('click', parentleft);
+
+
+
+        // ?: 부모자식 관계에서 부모의 함수만 호출 , 자식은 무시?
+        //     부모가 자식의 높이값을 가져서? 자식만 지정해도?
+
+        // 결: 자식을 누를 떄 부모도 같이 눌린다. 형제 관계로 만드는게 최선
+        // 서브햄버거메뉴: 형제관계 X 버튼 만들고 같이 움직이게 해야할듯
+    </script>
+</body>
+
+</html>

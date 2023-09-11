@@ -6,10 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+JS</title>
+    <style>
+        img {width: 300px;}
+    </style>
 </head>
 
 <body>
     <h1>객체</h1>
+    <div></div>
     <script>
         /* 
             현실 세계
@@ -38,7 +42,53 @@
         // 내장 객체 생성
         // 객체 생성 시 new 키워드와 생성함수를 사용한다.
         // 참조변수(인스턴스명) = new 생성함수()
+            const box = document.querySelector('div');
+            let photo = `<img src="../../51_css/assets/images/coca.png" alt="zhzk">`;
+            let tit1 = '메인 타이틀입니다.';
+            let tit2 = '서브 타이틀입니다.';
+            let btn =  `<button>자세히보기</button>`;
+            // box.innerHTML = `
+            // ${photo}<br>
+            // ${tit1}<br>
+            // ${tit2}<br>
+            // ${btn}<br>
+            // `;
 
+        const obj0 = {
+            'photo': `<img src="../../51_css/assets/images/coca.png" alt="zhzk">`,
+            'tit1': '메인 타이틀입니다.',
+            'tit2': '서브 타이틀입니다.',
+            'btn': `<button>자세히보기</button>`
+        };
+        const obj1 = {
+            'photo image': `<img src="../../51_css/assets/images/coca.png" alt="zhzk">`,
+            tit1: '메인 타이틀입니다.',
+            tit2: '서브 타이틀입니다.',
+            btn: `<button>자세히보기</button>`
+        };
+        const obj2 = {
+            photo: `<img src="../../51_css/assets/images/coca.png" alt="zhzk">`,
+            tit1: '메인 타이틀2입니다.',
+            tit2: '서브 타이틀2입니다.',
+            btn: `<button>자세히보기2</button>`
+        };
+
+        // 객체 속성
+        /*box.innerHTML = `
+        ${obj1.photo}<br>
+        ${obj1.tit1}<br>
+        ${obj1.tit2}<br>
+        ${obj1.btn}<br>
+`; */
+
+    
+    // 객체.속성
+    box.innerHTML = obj0.photo + '<br>';
+    // 객체['속성']
+    box.innerHTML += obj0['photo'] + '<br>';
+    box.innerHTML += obj1['photo image'] + '<br>';
+
+    // const obj2 = new Object();
 
     </script>
 </body>

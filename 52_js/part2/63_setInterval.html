@@ -10,13 +10,18 @@
 
 <body>
     <h1>일정 시간 간격으로 값 증감시키기</h1>
-    <p>콘솔 패널을 열어 확인하세요.</p>
-    <button onclick="clearInterval(auto_1)">증가 정지</button>
-    <button onclick="clearInterval(auto_2)">감소 정지</button>
+    <button>set</button>
+    <button>clear</button>
+    <p>여기에 출력</p>
     <script>
-        /* 
+        /*
+            타이머 함수
+                const 함수
+        */
+
+        /*
             setInterval(): 일정한 시간 간격으로 코드를 반복 실행
-            clearInterval(): setInterval() 메서드 제거
+            clearInterval(): setInterval() 정지
 
             var 참조변수 = setInterval(function(){
                 코드;
@@ -24,8 +29,62 @@
             
             clearInterval(참조변수);
         */
+
+        /* 
+            setTimeout(): 일정한 시간 간격으로 코드를 반복 실행
+            clearTimeout(): setTimeout() 정지
+        */
+
+        const ele = document.querySelector('p');
+        const btn = document.querySelectorAll('button');
+        let i = 0;
+
+        // 1000ms -> 1s(1초) 마다 함수 실행 반복
+        const timer = setInterval(()=>{
+            ele.innerHTML += '<br>'+i;
+            i++;
+        }, 1000);
         
+        /*
+        setTimeout(): 일정한 시간 후에 코드를 한 번 실행
+        clearTimeout(): setTimeout() 메서드 제거
+        
+        var 참조변수 = setTimeout(function(){
+            코드;
+        }, 시간간격(ms));
+        
+        clearTimeout(참조변수);
+        */
+
+        // 1000ms -> 1s(1초) 후 1번 함수 실행 반복
+       let timer2 = setTimeout(()=>clearInterval(timer), 5000);
+
+       btn[0].onclick = function(){
+        timer2 = setTimeout(()=>clearInterval(timer), 5000);
+       };
+
+       btn[1].onclick = function(){
+        clearTimeout(timer2);
+       };
+       
     </script>
 </body>
 
 </html>
+
+<!-- 
+    객체는 속성과 메서드가 있다. 속성의 값이 함수일 경우 메서드 이다.
+    객체
+    const 객체 = {
+        속성:값,
+        메서드:function(){},
+        ...
+    }
+
+    배열
+    const 배열 = [
+        값, <- 변수[0]; 
+        값, 
+        ...
+    ]
+ -->
