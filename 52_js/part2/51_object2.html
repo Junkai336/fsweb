@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>
+    <style>
+        img {width: 300px;}
+    </style>
+</head>
+
+<body>
+    <h1>객체</h1>
+    <div></div>
+    <script>
+
+    const box = document.querySelector('div');
+
+    // 객체 생성(선언)
+    const person = {
+        'first name': '길동',
+        lastName: '홍',
+        age: 20,
+        gender: '남',
+        // name을 호출할 때 동착하는 함수
+        name: function(){
+            // alert('홍길동입니다.');
+            return person.lastName + person['first name'];
+        } 
+    };
+
+    const array = {
+
+    }
+
+    // 객체의 값을 가져오기
+    // 객체['속성'] 또는 객체.속성
+    // 속성의 이름에 공백이 있을 경우 []안에 속성은 문자열로 표기
+    // 객체 호출(사용)
+    // 
+    box.innerHTML = person['first name'] + '<br>'
+    box.innerHTML += person['age'] + '<br>'
+    box.innerHTML += person.gender + '<br>'
+    
+    // 객체 값 수정하기
+    // 객체.속성 = 값;
+    person.lastName = '김';
+
+    // 객체의 메서드 실행
+    box.innerHTML += person.name() + '<br>'
+
+    console.log(box.innerHTML);
+
+    // 출력
+    box.innerText += `
+        나의 이름은 ${person.name()}입니다.
+        나이는 ${person['age']}이고
+        성별은 ${person.gender}입니다
+        `;
+    
+
+    </script>
+</body>
+
+</html>

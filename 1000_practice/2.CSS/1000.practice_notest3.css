@@ -165,8 +165,39 @@
         https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align
 */
 
-
+/* padding은 음수 불가 */
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 /* 31-2,3 text-decoration, text-indent */
+
+/* 
+    text-decoration : 속기형; (순서는 겹치지 않으니 상관없다)
+        text-decoration : red 10px underline dashed;
+    text-decoration-color : 색;
+        기본값: 글자색
+    text-decoration-thickness : 두께; 
+        값: px, %
+    text-decoration-line : 위치;
+        값: none, overline, underline, line-through(가운데줄)
+    text-decoration-style : 종류;
+        값: solid, dotted, dashed, double, wavy
+*/
+
+/* 
+    a {text-decoration: none;} => a태그 밑줄 지우기용    
+*/
+
+/* 
+    text-indent : 단락의 첫 줄 들여쓰기;
+        - 값: px, %
+        - %는 width가 기준
+
+    text-transform : 대소문자 변환 (대문자, 소문자)
+        값: none, uppercase, lowercase, captialize (단어(띄어쓰기)별 첫글자 대문자) 
+
+    line-height : 줄간격 (글자의 세로)
+        - 값: 숫자(배수), px, %, em, rem
+        - px로 쓰면 텍스트 크기에 대응 불가. 글자 겹침 문제 발생 가능.
+        - %는 글자크기 기준
+*/
 
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ

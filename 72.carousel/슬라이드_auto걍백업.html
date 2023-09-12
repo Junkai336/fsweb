@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캐로셀 - 데이터</title>
+    <style>
+        /* reset.css */
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        img {
+            vertical-align: top;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* slide */
+        #slideWrap {
+            border: 1px solid red;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+        }
+
+        ul {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        li {
+            position: absolute;
+            left: 100%;
+            width: 100%;
+            height: 100%;
+            /* flex-shrink: 0; 박스크기에 맞춰서 줄어드는 것 같음 (플렉스박스보다 아이템이 사이즈가 큰 경우)  */
+        }
+
+        li:first-of-type {
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="slideWrap">
+        <!-- 컨텐츠 -->
+        <ul></ul>
+        <!-- 좌우버튼 -->
+        <!-- 인디케이터 -->
+<!--         <ul class="indi">
+        </ul> -->
+    </div>
+    <script>
+        // 데이터 정의
+        const imgObj = {
+            imgData1: {
+                imgSrc: 'images/pic1.jpg',
+                imgAlt: '이미지1',
+            },
+            imgData2: {
+                imgSrc: 'images/pic2.jpg',
+                imgAlt: '이미지2',
+            },
+            imgData3: {
+                imgSrc: 'images/pic3.jpg',
+                imgAlt: '이미지3',
+            },
+            imgData4: {
+                imgSrc: 'images/pic4.jpg',
+                imgAlt: '이미지4',
+            },
+            imgData5: {
+                imgSrc: 'images/pic5.jpg',
+                imgAlt: '이미지5',
+            }
+        }
+
+        console.log(imgObj.imgData1.imgSrc);
+        console.log(imgObj.imgData1.imgAlt);
+
+
+        /*         
+                const data0 = {
+                    // imgSrc: '<img src="images/pic1" src="이탈리아">'
+                    imgSrc: 'images/pic1.jpg',
+                    imgAlt: '이탈리아1',
+                };
+        
+                const data1 = {
+                    // imgSrc: '<img src="images/pic1" src="이탈리아">'
+                    imgSrc: 'images/pic2.jpg',
+                    imgAlt: '이탈리아2',
+                }; 
+        */
+
+        let slideCount = 0;
+
+        // for ~ in 제어문
+        for (let i in imgObj) {
+            slideCount++;
+            console.log(slideCount);
+        }
+
+        // 요소 선택
+        const list = document.querySelector('ul');
+        console.log(imgObj);
+/*         const indiItem = document.querySelectorAll('.indi li');
+        console.log(indiItem); */
+        
+        // 이미지를 돔요소에 삽입
+        for (let i = 0; i < slideCount; i++) {
+            list.innerHTML += `
+            <li><img src="${imgObj.imgData1.imgSrc.replace(1, i+1)}" alt="${imgObj.imgData1.imgAlt.replace(1, i+1)}"></li>
+            `;
+        }
+        
+        // 이미지를 돔요소에 삽입
+/*         for (let i = 1; i < indiItem.length; i++) {
+            indiItem.innerHTML += `
+            <li>${i}</li>
+            `;
+        } */
+        
+        const listItem = document.querySelectorAll('li');
+        console.log(listItem);
+        
+
+
+/*         list.innerHTML += `
+            <li><img src="${imgObj.imgData2.imgSrc}" alt="${imgObj.imgData2.imgAlt}"></li>
+        `;
+
+        list.innerHTML += `
+            <li><img src="${imgObj.imgData3.imgSrc}" alt="${imgObj.imgData3.imgAlt}"></li>
+        `;
+
+        list.innerHTML += `
+            <li><img src="${imgObj.imgData4.imgSrc}" alt="${imgObj.imgData4.imgAlt}"></li>
+        `; */
+
+
+    </script>
+</body>
+
+</html>
+
+<!-- 
+    'string1'.replace(값1을, 값2로)
+ -->

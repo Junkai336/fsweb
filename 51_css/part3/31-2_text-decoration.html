@@ -9,13 +9,13 @@
     <style>
         /* 
         var css3.x
-        text-dacioraition-color - 색;
+        text-dacoraition-color - 색;
             기본값은 글자색
-        text-dacioraition-thickness - 두께;
+        text-dacoraition-thickness - 두께;
             값: px, %
-        text-dacioraition-line  - 위치;
+        text-dacoraition-line  - 위치;
             값: none, underline, overline, line-through
-        text-dacioraition-style - 종류;
+        text-dacoraition-style - 종류;
             값: solid, dotted, dashed, double, wavy
 
             (속기형)
@@ -50,6 +50,18 @@
         .tdl {
             text-decoration: line-through;
         }
+
+        a {
+            text-decoration: none;
+        }
+
+        .dd p:nth-of-type(1) {
+            color: blue;
+            text-decoration-color: red;
+            text-decoration-thickness: 10%;
+            text-decoration-line: line-through;
+            text-decoration-style: double;
+        }
     </style>
 </head>
 
@@ -63,6 +75,17 @@
     <a href="#" class="tdo">text-decoration: overline;</a>
     <p class="tdl">text-decoration: underline;</p>
     <a href="#" class="tdl">text-decoration: line-through;</a>
+    <ul>
+        <li><a href="">a</a></li>
+    </ul>
+
+    <div class="dd">
+        <p>1aaaaa</p>
+        <p>2aaaaa</p>
+        <p>3aaaaa</p>
+        <p>4aaaaa</p>
+        <p>5aaaaa</p>
+    </div>
 </body>
 
 </html>
