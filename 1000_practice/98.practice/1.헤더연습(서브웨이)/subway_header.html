@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subway Header</title>
+    <title>인터페이스구현_허준</title>
     <link rel="stylesheet" href="subway_header.css">
     <link rel="icon" href="">
 </head>
@@ -18,7 +18,7 @@
             <h1 class="logo"><a href="#"><img src="assets/images/logo_w.png" alt="mainlogo"></a></h1>
             <!-- 1뎁스 (div박스) -->
             <div class="depth1">
-                <ul>
+                <ul class="depth1_main">
                     <li><a href="#">회사 소개</a>
                         <!-- 2뎁스-->
                         <ul class="depth2">
@@ -44,17 +44,17 @@
                         <ul class="depth2">
                             <li><a href="#">미국 1위 프렌차이즈</a></li>
                             <li><a href="#">브랜드 경쟁력</a></li>
-                            <li><a href="#"></a>가맹점 개설 절차</li>
-                            <li><a href="#"></a>예상 투자비용</li>
+                            <li><a href="#">가맹점 개설 절차</a></li>
+                            <li><a href="#">예상 투자비용</a></li>
                         </ul>
                     </li>
                     <li><a href="#">공지사항</a>
                         <!-- 2뎁스-->
                         <ul class="depth2">
-                            <li><a href="#"></a>전체보기</li>
-                            <li><a href="#"></a>공지사항</li>
-                            <li><a href="#"></a>뉴스</li>
-                            <li><a href="#"></a>채널</li>
+                            <li><a href="#">전체보기</a></li>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">뉴스</a></li>
+                            <li><a href="#">채널</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -77,22 +77,27 @@
             </div>
             <!-- 햄버거메뉴 (div박스)-->
             <div class="hamburger">
-                <p>ㅡ</p>
-                <p>ㅡ</p>
-                <p>ㅡ</p>
+                <div class="hamburger_p">
+                    <p>ㅡ</p>
+                    <p>ㅡ</p>
+                    <p>ㅡ</p>
+                </div>
                 <div class="hamburger_sub">
                     <img src="assets/images/logo_w.png" alt="햄버거로고">
-                    <p>회사 소개</p>
-                    <p>제품 소개</p>
-                    <p>가맹점 모집</p>
-                    <p>공지사항</p>
+                    <p><a href="#">회사 소개</a></p>
+                    <p><a href="#">제품 소개</a></p>
+                    <p><a href="#">가맹점 모집</a></p>
+                    <p><a href="#">공지사항</a></p>
                 </div>
             </div>
-            <!-- <div class="hamburger_close">X</div> -->
         </nav>
     </header>
     <!-- 섹션 -->
     <section class="section1"></section>
+    <!-- 푸터 -->
+    <footer>
+        <p>Copyright 허준. All rights reserved.</p>
+    </footer>
     <!-- JS -->
     <script src="subway_header.js"></script>
 </body>

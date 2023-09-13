@@ -1,35 +1,48 @@
-const depth1 = document.querySelectorAll('li')
-
+// 햄버거메뉴 변수 정의
 const div = document.querySelectorAll('div')
-const hamburgerSub = document.querySelector('.hamburger_sub')
 const hamburger = document.querySelector('.hamburger')
+const subP = document.querySelector('.hamburger_p')
+const subPList = document.querySelectorAll('.hamburger_p > p')
+const hamburgerSub = document.querySelector('.hamburger_sub')
 
-console.log(depth1);
-console.log(div);
-div.length;
+// console.log(div);
+// console.log(subPList);
 
-let i = 1;
+// 햄버거메뉴 함수호출
+let z = 1;
 
-div[3].onclick = function() {
-    if (i===1) {
-        hamleft();
-        i++;
-    } else if (i===2) {
-        hamright();
-        i--;
+subP.onclick = function() {
+    if (z===1) {
+        hamOpen();
+        z++;
+    } else if (z===2) {
+        hamClose();
+        z--;
     }
 }
 
-console.log(i);
-
-function hamleft() {
+// 햄버거메뉴 함수정의
+function hamOpen() {
     hamburgerSub.style.left = "-135px";
-    hamburger.style.color = '#fff';
+    subP.style.color = '#fff';
     hamburgerSub.style.transition = ".5s";
+    subPList[0].style.rotate = "-45deg";
+    subPList[0].style.transition = ".3s";
+    subPList[0].style.transformOrigin = "right bottom";
+    subPList[1].style.opacity = "0";
+    subPList[1].style.transition = ".3s";
+    subPList[2].style.rotate = "45deg";
+    subPList[2].style.transition = ".3s";
+    subPList[2].style.transformOrigin = "right bottom";
 }
 
-function hamright() {
+function hamClose() {
     hamburgerSub.style.left = "135px";
-    hamburger.style.color = '#000';
+    subP.style.color = '#000';
     hamburgerSub.style.transition = ".5s";
+    subPList[0].style.rotate = "0deg";
+    subPList[1].style.opacity = "1";
+    subPList[2].style.rotate = "0deg";
 } 
+
+// 캐로셀

@@ -32,36 +32,33 @@ body {
 }
 
 /* 확인용 윤곽선 */
-/* header {
-    border: 1px dashed black;
+ header {
+    border: 1px dashed blue;
 }
 
 #gnb {
     border: 1px dashed red;
 }
 
-h1 {
-    border: 1px dashed blue;
+/* .depth1 {
+    border: 1px solid orange;
+    height: 78px;
+    transform: translateY(20px);
 }
 
-.depth1 ul {
+.depth1_main {
+    border: 1px solid red;
+    height: 78px;
+    transform: translateY(-20px);
+    
+} */
+
+/* .depth1 ul {
     border: 1px dashed yellow;
-}
+} */
 
-.depth1 li {
+/* .depth1 li {
     border: 1px dashed coral;
-}
-
-.member {
-    border: 1px dashed orange;
-}
-
-.sns {
-    border: 1px dashed lightcyan;
-}
-
-.hamburger {
-    border: 1px dashed violet;
 } */
 
 /* .depth2 {
@@ -77,8 +74,8 @@ header {
     position: fixed;
     z-index: 3;
     width: 100%;
-    height: 85px;
-    /* background-color: #fff; */
+    height: 95px;
+    background-color: #fff;
 }
 
 /* header::after {
@@ -242,10 +239,24 @@ h1 img {
     display: none;
 }
 
-/* section1 */
+/* 섹션1 */
 .section1 {
     background-color: lightblue;
-    height: 1500px;
+    height: 1000px;
+}
+
+/* 푸터 */
+footer {
+    height: 100px;
+    background-color: #ffce32;
+}
+
+footer p {
+    color: #333;
+    text-align: center;
+    /* transform: translateY(50%); */
+    padding-top: 36px;
+    letter-spacing: 2px;
 }
 
 /* 맥북 */
@@ -289,20 +300,12 @@ h1 img {
         cursor: pointer;
     }
 
+    /* 햄버거 메뉴 */
     .hamburger p {
         z-index: 5;
     }
 
-    .hamburger:hover>p {
-        font-size: 3.0rem;
-        scale: 1.1;
-        transition: .2s;
-    }
-
-    .hamburger:target > p:nth-of-type(1) {
-        scale: 3;
-    }
-
+    /* 햄버거 서브메뉴 */
     .hamburger_sub {
         position: absolute;
         z-index: 4;
@@ -317,9 +320,19 @@ h1 img {
         background-color: #333;
     }
 
+    .hamburger_p {
+        z-index: 6;
+    }
+
+    /* 햄버거 서브메뉴 호버 */
     .hamburger_sub p:hover {
         color: #ffce32;
         scale: 1.02;
+        font-weight: bolder;
+    }
+
+    .hamburger_sub a:hover {
+        color: #ffce32;
         font-weight: bolder;
     }
 
@@ -327,10 +340,25 @@ h1 img {
         color: #eee;
         margin: 54px 0;
     }
+
+    .hamburger_sub a {
+        color: #fff;
+    }
+
 }
 
 /* 모바일 */
 @media (max-width:767px) {
+
+    header {
+        height: 50px;
+    }
+
+    /* 로고 이미지 크기 */
+    h1 img {
+        width: 162px;
+        height: 32px;
+    }
 
     /* 내비게이션 배열 방식 변경 */
     #gnb {
@@ -342,8 +370,3 @@ h1 img {
         display: none;
     }
 }
-
-/* 
-?
-- 우측 메뉴가 헤더 창크기 비례해서 계속 오른쪽 끝에 배치되게 하는 법? (창크기에 맞춰서 따라오게 하는거)
-*/

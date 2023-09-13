@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인터페이스구현_허준</title>
+    <link rel="icon" href="assets/images/favicon.png">
+    <style>
+        /* 초기화 */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* scroll IE에서는 적용되지 않는다. */
+        html {
+            scroll-behavior: smooth;
+            font-size: 10px;
+        }
+
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        ul,
+        ol,
+        p {
+            margin: 0;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        /* li {
+    list-style: none;
+} */
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        button {
+            border: none;
+        }
+
+        /* typo */
+
+        html {
+            font-size: 10px;
+        }
+
+        body {
+            font: 1.6rem/1.8 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+        }
+
+        .depth1 {
+            font-size: 2.8rem;
+            font-weight: 500;
+        }
+
+        .depth2 {
+            font-size: 1.4rem;
+            font-weight: 400;
+        }
+
+        .sns {
+            font-weight: 500;
+        }
+
+        .hamburger_sub p {
+            font-size: 2.4rem;
+        }
+
+        /* 헤더 */
+        header {
+            position: fixed;
+            z-index: 3;
+            width: 100%;
+            height: 95px;
+            /* background-color: #fff; */
+        }
+
+        /* 헤더 호버효과 */
+        header:hover {
+            background-color: #fff;
+            transition: .2s;
+        }
+
+        /* 글로벌 네비게이션 박스 */
+        #gnb {
+            width: 100%;
+            margin: 16px 0;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            /* overflow: hidden; */
+        }
+
+        /* 로고 이미지 크기 */
+        h1 img {
+            width: 202px;
+            height: 40px;
+            vertical-align: middle;
+        }
+
+        /* 1depth */
+        .depth1 {
+            margin: 0 2% 0 4%;
+        }
+
+        .depth1_main {
+            width: 770px;
+        }
+
+        .depth1_main li {
+            width: 100%;
+        }
+
+        .depth1 ul {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+        }
+
+        .depth1 li {
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        /* 1depth 호버 효과 */
+
+        .depth1 li:nth-of-type(1):hover {
+            background-color: #ffce32;
+            color: #009923;
+            transition: .2s;
+        }
+
+        .depth1 li:nth-of-type(2):hover {
+            background-color: #ffce32;
+            color: #009923;
+            transition: .2s;
+        }
+
+        .depth1 li:nth-of-type(3):hover {
+            background-color: #ffce32;
+            color: #009923;
+            transition: .2s;
+        }
+
+        .depth1 li:nth-of-type(4):hover {
+            background-color: #ffce32;
+            color: #009923;
+            transition: .2s;
+        }
+
+        .depth1 a:nth-of-type(1):hover {
+            color: #009923;
+            transition: .2s;
+        }
+
+        .depth1 a:nth-of-type(2):hover {
+            color: #009923;
+            transition: .2s;
+        }
+
+        .depth1 a:nth-of-type(3):hover {
+            color: #009923;
+            transition: .2s;
+        }
+
+        .depth1 a:nth-of-type(4):hover {
+            color: #009923;
+            transition: .2s;
+        }
+
+        /* 2depth */
+
+        .depth1_main li:after {
+            position: absolute;
+            display: none;
+            top: 0;
+            content: '';
+            z-index: -1;
+            transform: translateX(-1500px);
+            width: 10000%;
+            height: 229%;
+            background-color: #fff;
+        }
+
+        .depth2 {
+            display: none;
+            width: 0;
+        }
+
+        .depth2 li {
+            display: none;
+        }
+
+        /* 2뎁스 호버효과 */
+
+        .depth1_main>li:hover .depth2 li {
+            display: inline-block;
+            /* display: block; */
+        }
+
+        .depth1_main>li:hover li:after {
+            display: block;
+        }
+
+        .depth1_main>li:hover .depth2 {
+            display: flex;
+            flex-flow: column nowrap;
+            white-space: nowrap;
+            text-align: center;
+            width: 100%;
+        }
+
+        .depth2 a:hover {
+            color: #009923;
+            font-weight: 900;
+            transition: .2s;
+        }
+
+        /* 로그인 회원가입 */
+        .member ul {
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        .member li {
+            width: 75px;
+            transform: translate(0, 40%);
+        }
+
+        /* 로그인 회원가입 호버 효과 */
+        .member a:hover {
+            color: #009923;
+            font-weight: 900;
+            transition: .2s;
+        }
+
+        /* sns */
+        .member {
+            margin-right: 2%;
+        }
+
+        .sns ul {
+            display: flex;
+            flex-flow: row nowrap;
+            padding-top: 15px;
+        }
+
+
+        .sns img {
+            width: 25px;
+            height: 25px;
+            margin: 0 8px;
+        }
+
+        /* sns 호버효과 */
+        .sns img:hover {
+            width: 35px;
+            height: 35px;
+            transform: translateY(-5px);
+            transition: .2s;
+        }
+
+        /* 햄버거 메뉴 */
+        .hamburger {
+            display: none;
+        }
+
+        .hamburger_sub {
+            display: none;
+        }
+
+        .hamburger_close {
+            display: none;
+        }
+
+        /* 섹션1 */
+        .section1 {
+            background-color: lightblue;
+            height: 960px;
+        }
+
+        .section1 div {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .section1 img {
+            position: absolute;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        .section1 img:nth-of-type(2) {
+            left: 100%;
+        }
+
+        .section1 img:nth-of-type(3) {
+            left: -100%;
+        }
+
+        .slide_box img {
+            transition: .75s;
+        }
+
+        .slide_box {
+            overflow: hidden;
+        }
+
+        .indi {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            position: absolute;
+            left: 50%;
+            top: 90%;
+            transform: translate(-50%, -50%);
+        }
+
+        .indi li {
+            width: 20px;
+            text-align: center;
+            border: 1px solid #333;
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        #prev, #next {
+            position: absolute;
+            z-index: 30;
+            padding: 10px;
+        }
+
+        #prev {
+            left: 0%;
+            top: 50%;
+        }
+
+        #next {
+            right: 0;
+            top: 50%;
+        }
+
+        #repeatrepeatrepeat {
+            padding: 20px;
+        }
+        
+        /* 푸터 */
+        footer {
+            height: 100px;
+            background-color: #ffce32;
+        }
+
+        footer p {
+            color: #333;
+            text-align: center;
+            /* transform: translateY(50%); */
+            padding-top: 36px;
+            letter-spacing: 2px;
+        }
+
+        /* 맥북 */
+        @media (max-width:1280px) {
+
+            header {
+                height: 60px;
+            }
+
+            /* 내비게이션 배열 방식 변경 */
+            #gnb {
+                justify-content: flex-end;
+                margin: 0 0;
+            }
+
+            header h1 {
+                /* justify-self: flex-start; */
+                justify-self: flex-start;
+                width: 100%;
+                margin: 0 16px;
+            }
+
+
+            /* 1뎁스 2뎁스 X */
+            .depth1,
+            .depth2 {
+                display: none;
+            }
+
+            /* 햄버거메뉴 보이게 */
+            .hamburger {
+                position: relative;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-self: flex-end;
+                font-size: 25px;
+                line-height: 8px;
+                transform: translate(0, 30%);
+                margin: 0 16px;
+                font-weight: bolder;
+                cursor: pointer;
+            }
+
+            /* 햄버거 메뉴 */
+            .hamburger p {
+                z-index: 5;
+            }
+
+            /* 햄버거 서브메뉴 */
+            .hamburger_sub {
+                position: absolute;
+                z-index: 4;
+                left: 900px;
+                /* top: 200px; */
+                /* transform: translateX(275%); */
+                display: block;
+                top: -20px;
+                width: 185px;
+                height: 110vh;
+                padding: 60px 30px;
+                background-color: #333;
+            }
+
+            .hamburger_p {
+                z-index: 6;
+            }
+
+            /* 햄버거 서브메뉴 호버 */
+            .hamburger_sub p:hover {
+                color: #ffce32;
+                font-size: 2.5rem;
+                font-weight: bolder;
+            }
+
+            .hamburger_sub a:hover {
+                color: #ffce32;
+                font-weight: bolder;
+            }
+
+            .hamburger_sub p {
+                color: #eee;
+                margin: 54px 0;
+            }
+
+            .hamburger_sub a {
+                color: #fff;
+            }
+
+        }
+
+        /* 모바일 */
+        @media (max-width:767px) {
+
+            header {
+                height: 50px;
+            }
+
+            /* 로고 이미지 크기 */
+            h1 img {
+                width: 162px;
+                height: 32px;
+            }
+
+            /* 내비게이션 배열 방식 변경 */
+            #gnb {
+                justify-content: space-between;
+            }
+
+            .member,
+            .sns {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 헤더 -->
+    <header>
+        <!-- 글로벌네비게이션 -->
+        <nav id="gnb">
+            <!-- 네비게이션 -->
+            <h1 class="logo"><a href="#"><img src="assets/images/logo_w.png" alt="mainlogo"></a></h1>
+            <!-- 1뎁스 (div박스) -->
+            <div class="depth1">
+                <ul class="depth1_main">
+                    <li><a href="#">회사 소개</a>
+                        <!-- 2뎁스-->
+                        <ul class="depth2">
+                            <li><a href="#">서브웨이 약속</a></li>
+                            <li><a href="#">NOW 핵심 요소</a></li>
+                            <li><a href="#">샌드위치 아티스트</a></li>
+                            <li><a href="#">채용</a></li>
+                            <li>　</li>
+                            <li>　</li>
+                        </ul>
+                    </li>
+                    <li><a href="#">제품 소개</a>
+                        <!-- 2뎁스-->
+                        <ul class="depth2">
+                            <li><a href="#">샌드위치</a></li>
+                            <li><a href="#">랩/기타</a></li>
+                            <li><a href="#">샐러드</a></li>
+                            <li><a href="#">아침메뉴</a></li>
+                            <li><a href="#">스마일 썹</a></li>
+                            <li><a href="#">단체메뉴</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">가맹점 모집</a>
+                        <!-- 2뎁스-->
+                        <ul class="depth2">
+                            <li><a href="#">미국 1위 프렌차이즈</a></li>
+                            <li><a href="#">브랜드 경쟁력</a></li>
+                            <li><a href="#">가맹점 개설 절차</a></li>
+                            <li><a href="#">예상 투자비용</a></li>
+                            <li>　</li>
+                            <li>　</li>
+                        </ul>
+                    </li>
+                    <li><a href="#">공지사항</a>
+                        <!-- 2뎁스-->
+                        <ul class="depth2">
+                            <li><a href="#">전체보기</a></li>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">뉴스</a></li>
+                            <li><a href="#">채널</a></li>
+                            <li>　</li>
+                            <li>　</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- 로그인 회원가입 (div박스)-->
+            <div class="member">
+                <ul>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                </ul>
+            </div>
+            <!-- SNS (div박스)-->
+            <div class="sns">
+                <ul>
+                    <li><a href="#"><img src="assets/images/sns_icon_in.png" alt="sns"></a></li>
+                    <li><a href="#"><img src="assets/images/sns_icon_yt.png" alt="sns"></a></li>
+                    <li><a href="#"><img src="assets/images/sns_icon_fb.png" alt="sns"></a></li>
+                    <li><a href="#"><img src="assets/images/sns_icon_tw.png" alt="sns"></a></li>
+                </ul>
+            </div>
+            <!-- 햄버거메뉴 (div박스)-->
+            <div class="hamburger">
+                <div class="hamburger_p">
+                    <p>ㅡ</p>
+                    <p>ㅡ</p>
+                    <p>ㅡ</p>
+                </div>
+                <div class="hamburger_sub">
+                    <img src="assets/images/logo_w.png" alt="햄버거로고">
+                    <p><a href="#">회사 소개</a></p>
+                    <p><a href="#">제품 소개</a></p>
+                    <p><a href="#">가맹점 모집</a></p>
+                    <p><a href="#">공지사항</a></p>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- 섹션 -->
+    <section class="section1">
+        <h2>　</h2>
+        <div class="slide_box">
+            <img src="assets/images/slide1.jpg" alt="슬라이드1">
+            <img src="assets/images/slide2.jpg" alt="슬라이드2">
+            <img src="assets/images/slide3.jpg" alt="슬라이드3">
+            <button id="prev">prev</button>
+            <button id="next">next</button>
+            <ul class="indi">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </div>
+        <button id="repeatrepeatrepeat">자동슬라이드 온오프</button>
+    </section>
+    <!-- 푸터 -->
+    <footer>
+        <p>Copyright 허준. All rights reserved.</p>
+    </footer>
+    <!-- JS -->
+    <!-- <script src="subway_header.js"></script> -->
+    <script>
+        // 햄버거메뉴 변수 정의
+const div = document.querySelectorAll('div')
+const hamburger = document.querySelector('.hamburger')
+const subP = document.querySelector('.hamburger_p')
+const subPList = document.querySelectorAll('.hamburger_p > p')
+const hamburgerSub = document.querySelector('.hamburger_sub')
+
+// console.log(div);
+// console.log(subPList);
+
+// 햄버거메뉴 함수호출
+let z = 1;
+
+subP.onclick = function () {
+    if (z === 1) {
+        hamOpen();
+        z++;
+    } else if (z === 2) {
+        hamClose();
+        z--;
+    }
+}
+
+// 햄버거메뉴 함수정의
+function hamOpen() {
+    hamburgerSub.style.left = "-135px";
+    subP.style.color = '#fff';
+    hamburgerSub.style.transition = ".5s";
+    subPList[0].style.rotate = "-45deg";
+    subPList[0].style.transition = ".3s";
+    subPList[0].style.transformOrigin = "right bottom";
+    subPList[1].style.opacity = "0";
+    subPList[1].style.transition = ".3s";
+    subPList[2].style.rotate = "45deg";
+    subPList[2].style.transition = ".3s";
+    subPList[2].style.transformOrigin = "right bottom";
+}
+
+function hamClose() {
+    hamburgerSub.style.left = "135px";
+    subP.style.color = '#000';
+    hamburgerSub.style.transition = ".5s";
+    subPList[0].style.rotate = "0deg";
+    subPList[1].style.opacity = "1";
+    subPList[2].style.rotate = "0deg";
+}
+
+// 캐로셀
+
+// 이미지 3개만 통제.
+
+// 변수 정의
+const slideImg = document.querySelectorAll('.slide_box img')
+const indi = document.querySelectorAll('.indi li')
+const prev = document.querySelector('#prev')
+const next = document.querySelector('#next')
+const repeat = document.querySelector('#repeatrepeatrepeat')
+
+// console.log(slideImg);
+// console.log(indi);
+
+// 함수 정의
+function i1() {
+    // slideImg[0].zIndex = "10"
+    // slideImg[1].zIndex = "10"
+    // slideImg[2].zIndex = "-10"
+    slideImg[0].style.left = "-100%"
+    slideImg[1].style.left = "0%"
+    slideImg[2].style.left = "100%"
+    slideImg[0].rotate = "90deg"
+    
+}
+function i2() {
+    // slideImg[1].zIndex = "10"
+    // slideImg[2].zIndex = "10"
+    // slideImg[0].zIndex = "-10"
+    slideImg[0].backgroundColor = "red"
+    slideImg[1].style.left = "-100%"
+    slideImg[2].style.left = "0%"
+    slideImg[0].style.left = "100%"
+}
+function i3() {
+    // slideImg[2].zIndex = "10"
+    // slideImg[0].zIndex = "10"
+    // slideImg[1].zIndex = "-10"
+    slideImg[2].style.left = "-100%"
+    slideImg[0].style.left = "0%"
+    slideImg[1].style.left = "100%"
+}
+
+let i = 1
+
+// 함수 호출
+
+// 인디케이터 (잘못쓴거같음) (3번 누르고 next 누르면 2번으로 감?)
+indi[0].onclick = function () {
+    i3();
+    i = 1
+}
+indi[1].onclick = function () {
+    i1();
+    i = 2
+}
+indi[2].onclick = function () {
+    i2();
+    i = 3
+}
+
+// prev next
+prev.onclick = function () {
+    if (i === 1) {
+        i2();
+        i++
+    } else if (i === 2) {
+        i1();
+        i++
+    } else if (i === 3) {
+        i3();
+        i++
+    } else if (i > 3) {
+        i = 1
+        i2();
+        i++
+
+    }
+}
+next.onclick = function () {
+    if (i === 1) {
+        i1();
+        i++
+    } else if (i === 2) {
+        i2();
+        i++
+    } else if (i === 3) {
+        i3();
+        i++
+    } else if (i > 3) {
+        i = 1
+        i1();
+        i++
+    }
+}
+
+// 자동 슬라이드
+
+let x = 1;
+
+repeat.onclick = function () {
+    if (x === 1) {
+        x = 0
+    } else if (x === 0) {
+        x = 1
+    }
+}
+
+
+setInterval(moveSlide, 3000);
+
+function moveSlide() {
+    if (x === 0) {
+        if (i === 1) {
+            i1();
+            i++
+        } else if (i === 2) {
+            i2();
+            i++
+        } else if (i === 3) {
+            i3();
+            i++
+    } else if (i > 3) {
+       i = 1;
+       i1();
+       i++
+    }
+}
+}
+    </script>
+</body>
+
+</html>
