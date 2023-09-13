@@ -179,8 +179,26 @@ h1 img {
 
 /* 2depth */
 
+/* .depth2 ul {display: flex; flex-flow: row nowrap;} */
+
+.depth11:hover .depth2 li {
+    display: block;
+    transition: .5s;
+}
+
+.depth2 {
+    display: flex;
+}
+
+.depth2 ul {
+    position: relative;
+}
+
 .depth2 li {
     display: none;
+    position: relative;
+    white-space: nowrap;
+    background-color: #ffce32;
 }
 
 /* 로그인 회원가입 */
@@ -262,6 +280,7 @@ footer p {
 /* 맥북 */
 @media (max-width:1280px) {
 
+    
     header {
         height: 60px;
     }
@@ -269,7 +288,7 @@ footer p {
     /* 내비게이션 배열 방식 변경 */
     #gnb {
         justify-content: flex-end;
-        margin: 0 0;
+        margin: 4px 0;
     }
 
     header h1 {
@@ -300,11 +319,25 @@ footer p {
         cursor: pointer;
     }
 
+<<<<<<< Updated upstream:1000_practice/98.practice/1.헤더연습(서브웨이)/subway_header.css
     /* 햄버거 메뉴 */
+=======
+    /* 햄버거메뉴 ㅡㅡㅡ */
+>>>>>>> Stashed changes:1000_practice/98.practice/1.헤더연습(서브웨이)/subway_header2.css
     .hamburger p {
         z-index: 5;
     }
 
+<<<<<<< Updated upstream:1000_practice/98.practice/1.헤더연습(서브웨이)/subway_header.css
+=======
+    /* 햄버거메뉴 호버 */
+    .hamburger:hover>p {
+        /* font-size: 3.0rem; */
+        /* scale: 1.1; */
+        transition: .3s;
+    }
+
+>>>>>>> Stashed changes:1000_practice/98.practice/1.헤더연습(서브웨이)/subway_header2.css
     /* 햄버거 서브메뉴 */
     .hamburger_sub {
         position: absolute;
@@ -320,8 +353,14 @@ footer p {
         background-color: #333;
     }
 
+<<<<<<< Updated upstream:1000_practice/98.practice/1.헤더연습(서브웨이)/subway_header.css
     .hamburger_p {
         z-index: 6;
+=======
+    .hamburger_sub p {
+        color: #eee;
+        margin: 54px 0;
+>>>>>>> Stashed changes:1000_practice/98.practice/1.헤더연습(서브웨이)/subway_header2.css
     }
 
     /* 햄버거 서브메뉴 호버 */
@@ -330,6 +369,7 @@ footer p {
         scale: 1.02;
         font-weight: bolder;
     }
+<<<<<<< Updated upstream:1000_practice/98.practice/1.헤더연습(서브웨이)/subway_header.css
 
     .hamburger_sub a:hover {
         color: #ffce32;
@@ -345,11 +385,14 @@ footer p {
         color: #fff;
     }
 
+=======
+>>>>>>> Stashed changes:1000_practice/98.practice/1.헤더연습(서브웨이)/subway_header2.css
 }
 
 /* 모바일 */
 @media (max-width:767px) {
 
+<<<<<<< Updated upstream:1000_practice/98.practice/1.헤더연습(서브웨이)/subway_header.css
     header {
         height: 50px;
     }
@@ -358,10 +401,22 @@ footer p {
     h1 img {
         width: 162px;
         height: 32px;
+=======
+    
+    header {
+        height: 50px;
+    }
+    
+    h1 img {
+        width: 162px;
+        height: 32px;
+        vertical-align: middle;
+>>>>>>> Stashed changes:1000_practice/98.practice/1.헤더연습(서브웨이)/subway_header2.css
     }
 
     /* 내비게이션 배열 방식 변경 */
     #gnb {
+        margin: 0 0;
         justify-content: space-between;
     }
 
