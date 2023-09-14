@@ -258,6 +258,32 @@
 
 /* 32, 32-1 list-style-type, list-style */
 
+/* 
+    list-style-type : 마커유형 (ul, ol, 쓸 때 왼쪽 목록 붙는거)
+            - ul: disc, circle, square
+            - ol: decimal, decimal-leading-zero, upper-alpha, lower-alpha, upper-roman,
+                lower-roman, upper-greek, lower-greek, upper-latin, lower-latin ...
+
+            https://www.w3schools.com/cssref/pr_list-style-type.php/
+*/
+
+/* 
+    li에 쓰는거인듯?
+
+    list-style-image: url('경로/이미지파일');
+            - 이미지 마커 (왼쪽에 목록에 이미지가 뜸) 
+
+    list-style-position: 마커의 위치
+            - outside(기본값), inside
+            - li 태그 기준
+*/
+
+/* 
+    <ul start="2"> <- 2부터 시작
+
+    비트맵: png, jpg, gif -> 확대시 깨짐
+    벡터: svg -> 확대시 안깨짐 -> 로고, 아이콘, 버튼
+*/
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
 /* 33.table */
