@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        div {
+            width: 360px;
+            height: 240px;
+            background-color: red;
+            transform: translateY(600px);
+        }
+
+        section {
+            height: 100vh;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h2>섹션1</h2>
+    </section>
+    <section>
+        <h2>섹션2</h2>
+        <div>박스</div>
+    </section>
+    <script>
+        const docEle = document.documentElement;
+        const sec = document.querySelectorAll('section');
+        const box = document.querySelector('div');
+
+        // for(let i=0; i<sec.length; i++) {
+        window.onscroll = function () {
+            let st = docEle.scrollTop;
+            console.log(st);
+
+            if (st > 720) {
+                // box.style.translate = '0 -500px';
+                box.style.transform = 'translateY(0)';
+                box.style.transition = '1s ease-out';
+            } else {
+                box.style.transform = 'translateY(600px)';
+            }
+        };
+        // }
+
+
+    </script>
+</body>
+
+</html>

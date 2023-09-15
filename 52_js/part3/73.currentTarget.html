@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        .ancestor {
+            width: 500px;
+            height: 500px;
+            background: #ccc;
+        }
+
+        .parent {
+            width: 400px;
+            height: 400px;
+            background: #ddd;
+        }
+
+        .child {
+            width: 300px;
+            height: 300px;
+            background: #eee;
+        }
+
+        div {
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Target</h1>
+    <ul class="list1">
+        <li>this</li>
+        <li>target</li>
+        <li>currentTarget</li>
+    </ul>
+    <ul class="list2">
+        <li>this2</li>
+        <li>target2</li>
+        <li>currentTarget2</li>
+    </ul>
+    <script>
+        const list1 = document.querySelectorAll('.list1 li');
+        const list2 = document.querySelectorAll('.list2 li');
+
+        // i는 인덱스번호가 아니라 리스트의 요소다
+        // for (let i of list) {
+
+        // i는 인덱스번호로 활용한다.
+        for (let i = 0; i < list1.length; i++) {
+            console.log(list1[i]);
+            console.log(list2[i]);
+            list1[i].addEventListener('click', () => {
+                list1[i].style.color = 'red';
+            });
+            list2[i].addEventListener('click', fn);
+                // 화살표 함수 내 this는 (x)
+                // this.style.color = 'red';
+                // event.currentTarget.style.color = 'red';
+
+            
+            function fn() {
+                event.currentTarget.style.color = 'red';
+            }
+        }
+
+    </script>
+</body>
+
+<!-- for는 조건 충족되면 쭈르륵 나오는 느낌 -->
+</html>

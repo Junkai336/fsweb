@@ -8,10 +8,12 @@
     <title>HTML+CSS+JS</title>
     <style>
         div {
+            box-sizing: border-box;
+            overflow-y: scroll;
             width: 200px;
             height: 400px;
             padding: 20px;
-            border: 5px solid blue;
+            border: 5px solid red;
             margin: 50px;
             background: blue;
         }
@@ -19,13 +21,58 @@
 </head>
 
 <body>
-    <div></div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium odio recusandae sit architecto possimus
+        iure deleniti ipsa ab provident necessitatibus, sequi quam fugiat commodi hic asperiores enim ullam et harum
+        ipsum est doloribus odit. Beatae impedit, eaque quos debitis magni sunt, quibusdam odio dolore hic voluptatem
+        nisi earum illum nostrum, ab iure a nam dolores qui culpa laudantium quia aspernatur dignissimos enim? Dicta
+        natus sunt nemo, cum in ab consequuntur illum ex. Sapiente fugiat deserunt maxime provident voluptatibus.
+        Cupiditate, unde. Molestiae pariatur praesentium suscipit est eius a nulla aliquid repudiandae quos ipsa,
+        laudantium quaerat, aperiam veritatis dicta magni nobis ipsum cumque magnam quis architecto, quia dolore et.
+        Distinctio facere nam, assumenda temporibus pariatur incidunt numquam tenetur blanditiis reprehenderit officiis
+        molestias corporis, unde dolorem. Id repudiandae odit quis fugiat deleniti voluptate corrupti necessitatibus
+        quibusdam vel eaque unde perspiciatis, aperiam consequatur architecto quae dolores vero sapiente tempora
+        praesentium ipsum dignissimos omnis quam. Ratione a nostrum nulla, sunt aperiam dolores possimus quas nesciunt
+        pariatur quaerat quis incidunt vero voluptatem ipsam sed velit dolor debitis asperiores? Eveniet deleniti
+        provident nisi dolorum temporibus maiores iste expedita, dolorem sunt ratione ducimus ex! Libero provident aut
+        ab accusamus, vel sed quis aliquid! Animi nostrum ab tenetur eos.</div>
+    <p>여기에 출력</p>
+    <button>버튼</button>
 
     <script>
         /* 
-            요소.offsetWidth ~ 패딩, 테두리 및 스크롤 막대를 포함하여 요소의 볼 수 있는 너비(픽셀 단위)를 반환
-            요소.offsetHeight ~ 패딩, 테두리 및 스크롤 막대를 포함하여 요소의 볼 수 있는 높이(픽셀 단위)를 반환
+
+            요소의 크기
+                요소.offsetWidth ~ 테두리, 패딩, 스크롤바 포함 너비 (읽기 전용)
+                요소.offsetHeight ~ 테두리, 패딩, 스크롤바 포함 높이 (읽기 전용)
+                요소.clientWidth ~ 패딩 포함 너비 (읽기 전용)
+                요소.clientHeight ~ 패딩 포함 높이 (읽기 전용)
+
+            가져오기
+                요소.offsetHeight
+
         */
+        
+        const box = document.querySelector('div');
+        const txt = document.querySelector('p');
+        const btn = document.querySelector('button');
+
+        // 가져오기
+        let oh = box.offsetHeight;
+        
+        btn.onclick = function(){
+            // 설정하기
+            box.offsetHeight = '200px';
+            // box.offsetHeight = 200 + 'px';
+        };
+
+
+        // 출력
+        txt.innerHTML = `
+            box.offsetWidth = ${box.offsetWidth}<br>
+            box.offsetHeight = ${oh}<br>
+            box.clientWidth = ${box.clientWidth}(border가 빠짐)<br>
+            box.clientHeight = ${box.clientHeight}(border가 빠짐)<br>
+        `;
 
     </script>
 </body>

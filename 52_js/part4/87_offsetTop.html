@@ -15,17 +15,40 @@
             height: 200px;
             background: blue;
         }
+
+        p {
+            font-size: 2rem;
+        }
     </style>
 </head>
 
 <body>
     <button>버튼</button><span></span>
+    <p>여기에 출력</p>
     <div></div>
 
     <script>
         /* 
-            요소.offsetTop ~ 창 끝에서 요소의 y축 위치 반환
+            요소.offsetTop ~ 창 끝에서 요소의 y축 위치 반환 (읽기 전용)
+            요소.offsetLeft ~ 창 끝에서 요소의 x축 위치 반환 (읽기 전용)
+
+            가져오기
+                요소.offsetTop
         */
+
+        
+        // 요소 선택
+        const box = document.querySelector('div');
+        const txt = document.querySelector('p');
+
+        // 읽기 전용이라 안바뀜
+        // box.offsetTop = 200;
+
+        // 출력
+        txt.innerText = `
+        box.offsetTop = ${box.offsetTop}
+        box.offsetLeft = ${box.offsetLeft}
+        `;
 
     </script>
 </body>
