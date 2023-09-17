@@ -1,0 +1,117 @@
+/*  40, 40-1 transition, transition-timing-function */
+
+/* 
+    transition: [property] duration [timing-function] [delay];
+            - 속기형
+            - transition: property duration, property duration delay 이런식으로 2개 이상 다르게 가능
+
+    transition-property : 값1, 값2
+            - 전환 속성
+            - 값: all, CSS속성명
+            - 기본값은 all ?
+
+    transition-duration : 값1, 값2
+            - 전환 시간
+            - 값: 숫자s
+    
+    transition-timing-function: 값;
+            - ease : 보통-빠름-느림
+            - ease-in : 느림-빠름
+            - ease-out : 빠름-느림
+            - ease-in-out : 느림-빠름-느림
+            - linear : 보통
+            - cubic-bezier(n,n,n,n) : 사용자 정의
+                https://cubic-bezier.com/#.17,.67,.83,.67 
+                0 ~ 1
+
+    transition-delay : 값1, 값2
+            - 전환 지연 시간
+            - 값: 숫자s
+*/
+
+/* 가속도: easing */
+
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+/* 41~41-4 transform, translate, scale, rotate, skew */
+
+/* 
+    transform: 값; (이동, 크기 조절, 회전, 기울임)
+        단위: px, %
+
+        translateX(x) : 좌우
+        translateY(y) : 상하
+        translateZ(z) : 깊이(앞/뒤)
+        translate(x,y) : y생략하면 x만.
+        translate3d(x,y,z) : 
+
+        단위 없음. 배수 적용.
+        scaleX(x) : 가로
+        scaleY(y) : 세로
+        scaleZ(z) : 깊이 (앞이나 뒤로 가면서 커지거나 작아지는 느낌)
+        scale3D(x,y,z)
+        scale(x,y) : y생략하면 x에 비례해서 y값이 적용된다.
+
+        단위: 0~360deg
+        rotateX(x): 3D (앞뒤로 회전하는 느낌)
+        rotateY(y): 3D (앞뒤로 회전하는 느낌)
+        rotateZ(z): 2D (옆으로 회전하는 느낌)
+        rotate3d(x,y,z, 각도) : 얘는 잘 모르겠음
+        rotate(각도): 2D = rotateZ
+
+        단위: 각도(deg)
+        skewX(deg)
+        skewY(deg)
+        skew(deg,deg)
+
+
+        perspective: 값;
+            - 단위 : px
+            - 관점, 부모 요소에 지정
+            - ~px 기준에서 봤을 때 이렇게 보인다~ 정도인듯
+            - 부모에 perspective를 지정하지 않았을 경우 transform: perspective() translateZ(z);
+            - translateZ하면 앞뒤로 움직이는데 perspective(관점) 기준으로 앞뒤. 관점이 멀면 앞뒤로 조금 움직이는 것처럼 보인다.
+
+        perspective-origin: x축 y축;
+            - 변형 대상 요소의 변형 기준
+
+        transform-origin : x축 y축;
+            - 변형 대상 요소의 변형 기준
+            - 값: px, %, 키워드
+            - x축: left, right, center
+            - y축: top, bottom, center
+            - rotate의 경우 어느 기준에서 회전할 것인가를 물음 (없으면 중앙 기준인듯)
+
+        transform-style : 
+
+        backface-visibility : 
+*/
+
+/* 
+    display: none; 
+        - 요소가 아예 제거
+        - 트랜지션 적용 x
+    opacity: 0 , visibility: hidden
+        - 화면상에서만 안보임
+        - 트랜지션 적용 o
+*/
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+/* 42~42.2 animation, animation-fill-mode, animation,play-state */
+
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+/* 50. viewpoint */
+
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+/* 51.mediaquery, rwd */
+
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+/* 52 viewport */

@@ -8,8 +8,16 @@ body,h1,h2,h3,p,ul {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 ul {
     padding: 0;
+}
+
+li {
+    list-style-type: none;
 }
 
 img {

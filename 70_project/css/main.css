@@ -19,6 +19,7 @@
 .container {
     width: 960px;
     margin: 0 auto;
+    padding-bottom: 64px;
     /* background-color: lightgreen; */
 }
 
@@ -38,7 +39,7 @@ footer {
 
 .parallax {
     height: 400px;
-    background: no-repeat center/cover fixed;
+    background: #1e1e1e no-repeat center/cover fixed;
 }
 
 
@@ -54,9 +55,8 @@ header {
 }
 
 /* 내비게이션 */
-#gnb li {
-    float: left;
-    list-style-type: none;
+#gnb ul {
+    display: flex;
 }
 
 #gnb a {
@@ -64,7 +64,11 @@ header {
 }
 
 #gnb a:hover {
-    background-color: #ccc;
+    background-color: #bbb;
+}
+
+#gnb i {
+    margin-right: 8px;
 }
 
 /* 섹션1: 패럴렉스 이미지 */
@@ -73,9 +77,34 @@ header {
     position: relative;
     height: 100vh;
     background-image: url(../images/bg3.jpg);
-
-    /* 컨텐츠가 없기 때문에 높이를 준다? 블록레벨이라서?? */
+    overflow: hidden;
 }
+
+#sec1::after {
+    content: '';
+    width: 300%;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(../images/cloud.png) no-repeat 0 0/cover fixed;
+    animation: cloud 3s forwards;
+}
+
+@keyframes cloud {
+    0% {
+        left: -100%;
+    }
+
+    99.99% {
+        left: 100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
 
 #sec1 h1 {
     position: absolute;
@@ -87,23 +116,70 @@ header {
 
 /* 메인타이틀 */
 
+.sec h2 {
+    padding-top: 64px;
+}
+
+.sec h2+p {
+    margin: 24px 0 16px 0;
+}
+
 /* 섹션2: 나의 소개 */
 /* 기본 프로필 */
 /* 이미지 */
 
 .basic>p:nth-of-type(1) {
-    margin-bottom: 48x;
+    margin-bottom: 48px;
+}
+
+.profile2 {
+    display: flex;
 }
 
 .my_pic {
-    float: left;
+    flex-shrink: 0;
     width: 425px;
     margin-left: 24px;
     margin-right: 48px;
-    margin-bottom: 24px;
+    /* margin-bottom: 24px; */
 }
 
 /* 스킬: 프로그래스바(progressbar) */
+
+.skill h3 {
+    margin: 48px 0 32px 0;
+}
+
+.skill p {
+    margin: 16px 0;
+}
+
+.skill p i {
+    margin-right: 8px;
+}
+
+.progress {
+    background: red;
+}
+
+.progressbar {
+    background: #616161;
+    height: 36px;
+    color: #fff;
+    text-align: center;
+}
+
+.progress:nth-of-type(1) div {
+    width: 90%;
+}
+
+.progress:nth-of-type(2) div {
+    width: 85%;
+}
+
+.progress:nth-of-type(3) div {
+    width: 75%;
+}
 
 /* 카운터(counter) */
 
@@ -111,10 +187,12 @@ header {
     padding: 32px 0;
 }
 
+.counter ul {
+    display: flex
+}
+
 .counter li {
-    float: left;
     width: 25%;
-    list-style-type: none;
 }
 
 .counter span {
@@ -127,16 +205,32 @@ header {
     background-image: url(../images/bg1-2.png);
 }
 
+.pf ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 48px;
+}
+
 .pf li {
-    float: left;
+    flex-shrink: 0;
     width: 225px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    list-style-type: none;
+    aspect-ratio: 1.4 / 1;
+    margin-right: 16px;
+    margin-bottom: 16px;
 }
 
 .pf li:nth-of-type(4n) {
     margin-right: 0;
+}
+
+.pfBtn {
+    margin-top: 32px;
+    text-align: center;
+}
+
+.pfBtn a {
+    background: red;
+    padding: 12px 24px;
 }
 
 /* 섹션4: 연락처 */
@@ -144,18 +238,32 @@ header {
     background-image: url(../images/bg2-2.png);
 }
 
+#sec4 .pos {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 48px auto 64px;
+}
+
 .map {
-    float: left;
     width: 284px;
+    aspect-ratio: 1.8 / 1;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .right {
-    float: right;
     width: 640px;
 }
 
-.addr > ul > li {
-    list-style-type: none;
+.addr i {
+    margin-right: 32px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 input {
@@ -164,23 +272,47 @@ input {
 }
 
 input:nth-of-type(1) {
-    width: 45%;
-    float: left;
-    margin-bottom: 8px;
+    width: calc(50% - 4px);
 }
 
 input:nth-of-type(2) {
-    width: 45%;
-    float: right;
-
+    width: calc(50% - 4px);
 }
 
 input:nth-of-type(3) {
     display: block;
     width: 100%;
-    float: left;
+    margin-top: 8px;
 }
 
+form div {
+    width: 100%;
+    text-align: right;
+}
 
+button {
+    border: none;
+    background: red;
+    padding: 12px 24px;
+    margin-top: 16px;
+}
+
+button i {
+    margin-right: 8px;
+}
 
 /* 푸터 */
+
+footer {
+    padding: 64px 0;
+}
+
+.toTop a {
+    display: inline-block;
+    background: red;
+    padding: 12px 24px;
+}
+
+.sns {
+    margin: 16px 0;
+}

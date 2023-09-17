@@ -14,6 +14,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>허준</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="shortcut icon" href="images/my.png">
 </head>
 
 <body>
@@ -22,9 +24,9 @@
         <nav id="gnb">
             <ul class="clearfix">
                 <li><a href="#sec1">HOME</a></li>
-                <li><a href="#sec2">ABOUT</a></li>
-                <li><a href="#sec3">PORTFOLIO</a></li>
-                <li><a href="#sec4">CONTACT</a></li>
+                <li><a href="#sec2"><i class="fa-solid fa-user"></i>ABOUT</a></li>
+                <li><a href="#sec3"><i class="fa-solid fa-code"></i>PORTFOLIO</a></li>
+                <li><a href="#sec4"><i class="fa-solid fa-envelope"></i>CONTACT</a></li>
             </ul>
         </nav>
     </header>
@@ -33,6 +35,7 @@
     <section id="sec1" class="sec parallax">
         <h1>Heo June</h1>
     </section>
+
     <!-- 섹션2 -->
     <h2>About Me</h2>
     <p><em>나는 프로그래밍을 좋아한다.</em></p>
@@ -60,37 +63,45 @@
                     porro
                     ut, ipsam quam? Qui fugit saepe perferendis, voluptatum cupiditate ipsa molestiae ex optio libero
                     ducimus quod </p>
-                <div class="my_pic">
-                    <p>Heo june</p>
-                    <img src="images/my.png" alt="나의 프로필 사진">
+                <div class="porfile2">
+                    <div class="my_pic">
+                        <p>Heo june</p>
+                        <img src="images/my.png" alt="나의 프로필 사진">
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis illo sit veritatis
+                        necessitatibus
+                        impedit a recusandae quis eum labore molestias! Sint, voluptatibus a? At provident sint deserunt
+                        dignissimos
+                        deleniti rerum sunt reiciendis ad, fuga doloribus dolorem placeat quaerat qui. Sequi nulla, nemo
+                        voluptas
+                        quaerat modi ratione exercitationem tequaerat modi ratione exercitationem tempore minus
+                        expedita? quaerat modi ratione exercitationem tempore minus expedita?mpore minus expedita?
+                        quaerat modi ratione exercitationem tempore minus expedita? quaerat modi ratione exercitationem
+                        tempore minus expedita? quaerat modi ratione exercitationem tempore minus expedita?</p>
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis illo sit veritatis
-                    necessitatibus
-                    impedit a recusandae quis eum labore molestias! Sint, voluptatibus a? At provident sint deserunt
-                    dignissimos
-                    deleniti rerum sunt reiciendis ad, fuga doloribus dolorem placeat quaerat qui. Sequi nulla, nemo
-                    voluptas
-                    quaerat modi ratione exercitationem tequaerat modi ratione exercitationem tempore minus
-                    expedita? quaerat modi ratione exercitationem tempore minus expedita?mpore minus expedita?
-                    quaerat modi ratione exercitationem tempore minus expedita? quaerat modi ratione exercitationem
-                    tempore minus expedita? quaerat modi ratione exercitationem tempore minus expedita?</p>
             </div>
 
             <!-- 스킬 -->
             <div class="skill">
                 <h3>Im really good at</h3>
-                <p>Web Planning</p>
-                <div><span>90%</span></div>
-                <p>Frontend Programming</p>
-                <div><span>80%</span></div>
-                <p>Backend Programming</p>
-                <div><span>70%</span></div>
+                <p><i class="fa-brands fa-figma"></i>Web Planning</p>
+                <div class="progress">
+                    <div class="progressbar">90%</div>
+                </div>
+                <p><i class="fa-brands fa-html5"></i>Frontend Programming</p>
+                <div class="progress">
+                    <div class="progressbar">90%</div>
+                </div>
+                <p><i class="fa-brands fa-java"></i>Backend Programming</p>
+                <div class="progress">
+                    <div class="progressbar">90%</div>
+                </div>
             </div> <!-- //.skill -->
         </div> <!-- //.container -->
 
         <!-- 카운터 -->
         <div class="counter">
-            <ul class="clearfix">
+            <ul>
                 <li><span>20+</span>Total Pages</li>
                 <li><span>4+</span>Web Projects</li>
                 <li><span>2+</span>App Projects</li>
@@ -119,7 +130,7 @@
                     <li><img src="images/pf1.png" alt="미상8"></li>
                 </ul>
             </div>
-            <a href="#">더보기</a>
+            <div class="pfBtn"><a href="#">작품 더보기</a></div>
         </div> <!-- //.container -->
 
     </section>
@@ -129,25 +140,25 @@
         <div class="parallax"><span>CONTACT</span></div>
         <h2>my location</h2>
         <p><em>i'd love your feedback!</em></p>
-        <div class="container clearfix">
+        <div class="container pos">
             <div class="map">
-                <img src="images/map.png" alt="나의 위치">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.9709917774576!2d126.94200002675137!3d37.390518284200276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b60ae69e70c55%3A0x5751e8d4578ba409!2z7ZWc66eI7J2M7J6E6rSR7JWE7YyM7Yq4!5e0!3m2!1sko!2skr!4v1694990907311!5m2!1sko!2skr"></iframe>
             </div>
 
             <div class="right">
                 <div class="addr">
                     <ul>
-                        <li>경기도 안양시</li>
-                        <li>Phone: +82 10-4050-1299</li>
-                        <li>Email: gjwnssla2@gmail.com</li>
+                        <li><i class="fa-solid fa-house"></i>경기도 안양시</li>
+                        <li><i class="fa-solid fa-phone"></i>Phone: +82 10-4050-1299</li>
+                        <li><i class="fa-solid fa-envelope"></i>Email: gjwnssla2@gmail.com</li>
                     </ul>
-                    <p>Swing by for a cup of, or leave me a note:</p>
+                    <p>Swing by for a cup of <i class="fa-solid fa-mug-hot"></i>, or leave me a note:</p>
                 </div>
                 <form action="main.jpg">
                     <input type="text" placeholder="이름을 입력하세요">
                     <input type="email" placeholder="이메일을 입력하세요">
                     <input type="text" placeholder="메시지를 간단하게 기록하세요">
-                    <button>메시지 전송하기</button>
+                    <div><button type="submit"><i class="fa-solid fa-paper-plane"></i>메시지 전송하기</button></div>
                 </form>
             </div> <!-- //.right -->
         </div> <!-- //.container -->
@@ -155,16 +166,16 @@
 
     <!-- 푸터 -->
     <footer>
-        <div class="tbtn">To The Top</div>
-        <div class="sns">SNS
-            <a href="#">페이스북</a>
-            <a href="#">인스타그램</a>
-            <a href="#">스냅챗</a>
-            <a href="#">핀터레스트</a>
-            <a href="#">트위터</a>
-            <a href="#">링크드인</a>
+        <div class="toTop"><a href="#top"><i class="fa-solid fa-arrow-up"></i>위로 가기</a></div>
+        <div class="sns">
+            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-snapchat"></i></a>
+            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
         </div>
-        <p class="copy">Copyright 2023 HJ. All right reserved.</p>
+        <p class="copy">&copy; 2023 HJ. All right reserved.</p>
     </footer>
 
 </body>

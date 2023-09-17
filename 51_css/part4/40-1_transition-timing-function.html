@@ -12,7 +12,7 @@
             height: 50px;
             margin: 10px;
             background: red;
-            transition: 1s;
+            transition: 2s;
             /* transition: all 1s ease 0s; 기본값 */
         }
 
@@ -31,31 +31,31 @@
         /* 느린 시작과 끝, 시작 속도가 마지막 속도보다 약간 빠름    /       느림(약간빠름)-빠름-느림 */
         .trs1 {
             transition-timing-function: ease;
-            transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 0.1);
+            /* transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 0.1); */
         }
 
         /* 느린 시작 / 느림 - 빠름 -> 출발동작 */
         .trs2 {
             transition-timing-function: ease-in;
-            transition-timing-function: cubic-bezier(.42, 0, 1, 1);
+            /* transition-timing-function: cubic-bezier(.42, 0, 1, 1); */
         }
 
         /* 느린 끝 / 빠름 - 느림 -> 정지동작 */
         .trs3 {
             transition-timing-function: ease-out;
-            transition-timing-function: cubic-bezier(0,0,.85,1);
+            /* transition-timing-function: cubic-bezier(0,0,.85,1); */
         }
 
         /* 느린 시작과 끝, 시작 속도가 마지막 속도보다 약간 느림    /   느림-빠름-느림 */
         .trs4 {
             transition-timing-function: ease-in-out;
-            transition-timing-function: cubic-bezier(.42,0,.58,1);
+            /* transition-timing-function: cubic-bezier(.42,0,.58,1); */
         }
 
         /* 등속 */
         .trs5 {
             transition-timing-function: linear;
-            transition-timing-function: cubic-bezier(0,0,1,1);
+            /* transition-timing-function: cubic-bezier(0,0,1,1); */
         }
 
         /* cubic-bezier(n,n,n,n) */

@@ -59,6 +59,7 @@
     font-family: '0SeongandHanEum';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OSeongandHanEum.woff') format('woff');
 }
+
 /* 
     src 링크 내에 폰트 이름을 font-family 로 사용하겠다.
 */
@@ -134,7 +135,7 @@
             justify는 이미지에 적용 안되는 듯 함
  */
 
- /* 
+/* 
     word-wrap: 비아시아언어
         normal : 기본
         break-word : 글자가 길어지면 강제로 끊어서 줄바꿈 처리, 단어의 기준이 글자로.
@@ -201,7 +202,6 @@
 */
 
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
-
 /* 31-4,5,6 letter-spacing, pre, br, white-space */
 
 /* 
@@ -238,7 +238,6 @@
 */
 
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
-
 /* 31-6 text-shadow, text-overflow  */
 
 /* 
@@ -252,10 +251,9 @@
         - ellipsis : 말 줄임표 (...)
         
         ex) div박스에서 넘친 텍스트를 어떻게 할 것인가 (white-space 하고 연동)
-*/ 
+*/
 
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
-
 /* 32, 32-1 list-style-type, list-style */
 
 /* 
@@ -279,27 +277,108 @@
 */
 
 /* 
+    list-style : 타입 이미지 위치
+        - 속기형
+        - list-style : none; (왼쪽 없애기용, 리셋)
+*/
+a {
+    list-style: url(../assets/images) disc outside
+}
+
+/* 
     <ul start="2"> <- 2부터 시작
 
     비트맵: png, jpg, gif -> 확대시 깨짐
     벡터: svg -> 확대시 안깨짐 -> 로고, 아이콘, 버튼
 */
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
-
 /* 33.table */
 
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
-
 /* 34~34-2 background-image, background-repeat, background-position */
 
-ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+/* 
+    background-image: url(), url(), ...
+            - 첫번째로 기록한 url이 위로 지정
 
+    background-repeat: 값;
+            - no-repeat : 이미지 반복 X 
+            - repeat :  이미지 반복 O
+            - repeat-x : 가로로만 이미지 반복 O
+            - repeat-y : 세로로만 이미지 반복 O
+
+    background-position: x위치 y위치;
+            - 단위 : px, em, rem, %,
+            - x위치 : left, right, center
+            - y위치 : top, bottom, center
+            - 크기 하나만 지정하면 나머지 위치는 가운데 가는듯
+            - center center = 50% 50%
+*/
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 /* 34-3~34-6 background-size, background-attachment, background-origin*/
 
-ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+/* 
+    background-size : 너비 [높이];
+            - 단위 하나만 사용하면 너비 / 높이는 비례 조정
+            - 값: px, em, rem, %
+            - 키워드: auto, cover, contain
+                - auto : 이미지가 가진 크기 그대로
+                        (이미지가 박스보다 크면 남은 부분 잘림)
+                - cover : 이미지 일부 잘릴 수 있으나 가득 채움 (패럴렉스)
+                        (
+                - contain : 이미지 잘리지 않으나 빈공간 생길 수 있음
+                        (박스를 채우면서 다 보여줌 크든. 작든.)
+                            
 
+    background-attachment : 값;
+            - fixed : 배경 이미지 고정 (이게 패럴렉스 스크롤)
+            - scroll : 배경 이미지 스크롤
+
+
+    background-origin : 이미지 시작 위치;
+            - 값: padding-box, border-box, content-box
+
+*/
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 /* 34-7~34-9 background-clip, background, background-blend-mode */
 
-ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+/* 
+    background-clip : 배경색 시작 위치;
+            - 값: padding-box, border-box, content-box
 
+    background : 속기형;
+
+    background-blend-mode : 배경이미지 혼합;
+            - 값: normal, multiply, screen, overlay, darken, lighten, color-burn,
+                  hard-light, soft-light, difference, exclusion, hue, saturation,
+                  color, luminosity
+*/
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 /* 35 gradient */
+
+/* 
+    gradient : 두가지 이상 색 + 점진적 변화
+
+    유형 : 선형(linear), 원형(radial), 원뿔형(conic)
+
+    background-image: linear-gradient([to 방향1 방향2], 색1, 색2, [색3, 색4, ...]);
+            - 방향: left, right, top, bottom
+
+    background-image: linear-gradient([각도], 색1, 색2, [색3, 색4, ...]);
+            - 각도: 0~360deg
+    
+    background-image: repeating-liner-gradient => 반복되는 gradient
+                    : ([circle, closet-side,farthest-corner,farthest-side,] 색1, 색2..)
+
+    background-image: radial-gradient([모양], 색1, 색2, [색3, 색4, ...]);
+
+    background-image: conic-gradient([from 각도] [at x위치 y위치], 색1 [각], 색2 [각], [색3 [각], 색4 [각], ...]);
+            - from 각도 : 색의 시작 위치
+*/
+
+/* 
+Permalink - use to edit and share this gradient: 
+    https://colorzilla.com/gradient-editor/#d0e4f7+3,73b1e7+18,73b1e7+18,0a77d5+50,539fe1+79,87bcea+100 
+*/
