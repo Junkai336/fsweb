@@ -101,11 +101,59 @@
 
 /* 42~42.2 animation, animation-fill-mode, animation,play-state */
 
+/* 
+    animation : name duration [delay] [timing-function] [iteration-count] [direction]
+                이름  시간   지연시간     가속도           반복횟수         방 향
+
+        animation-name : 애니메이션 이름
+        animation-duration : 애니메이션 지속시간s
+        animation-iteration-count : 에니메이션 반복여부
+                    - 값 : 숫자, infinite
+        animation-direction : 애니메이션 방향;
+                    - 값 :  normal : 기본값, 원래방향, 내가기록한방향
+                            alternate : 좌우 왕복
+                            reverse :  반대로
+                            alternate-reverse : 반대로 왕복
+        animation-timing-function : 애니메이션 시간함수
+                    - 값 : ease, ease-in, ease-out, ease-in-out, linear, cubic-bezier(n,n,n,n)
+        animation-delay : 애니메이션 지연 시간s
+        animation-fill-mode : 값;
+                    - 값 :  none : 끝나고 원위치
+                                - 시작(지연) -> 0% -> 100% -> 시작
+                            forwards : 100% 상태 유지, 반복 횟수 1회
+                                - 시작(지연) -> 0% -> 100%
+                            backwards : 0% 위치에서 시작 (끝나고 원위치)
+                                - 0%(지연) -> 100% -> 시작
+                            both : 0% 위치에서 시작, 100% 상태 유지
+                                - 0%(지연) -> 100%
+        animation-play-state : 실행 상태
+                    - 값 : running, paused
+                    - 호버하면 running, 가만히 paused 이런식으로 활용
+
+    @keyframes 애니메이션 이름 {
+        n% {시작 CSS}
+        n% {끝 CSS}
+    }
+        - 애니메이션 작업단위
+        - 이름 규칙: 첫글자는 영문자,-,_ 두번째부터 영문자,-,_,숫자, 대소문자 구별
+*/
+
+/* 
+    animation: steps(n) : n단계에 걸쳐서 재생한다. (이미지 애니메이션)
+
+*/
+
 
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
 /* 50. viewpoint */
 
+/* 
+    반응형 : 감지된 화면 크기에 따라 자동으로 페이지 재배열 %단위
+    적응형 : 브라우저가 주어진 플랫폼에 맞춰 특별히 생성된 레이아웃 불러오는 방식
+*/
+
+/* 경로지정: .은 현재 폴더 의미 맨앞 /은 작업영역폴더 */
 
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 

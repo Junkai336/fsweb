@@ -243,12 +243,12 @@ modal_close6.addEventListener("click", () => {
     modal_close_fn();
 })
 
-const docEle = document.documentElement;
+/* const docEle = document.documentElement;
 const sm1 = document.querySelector('.text_box')
 const sm2 = document.querySelector('.text_box h3')
-const sm3 = document.querySelector('.text_box p')
+const sm3 = document.querySelector('.text_box p') */
 
-window.onscroll = function () {
+/* window.onscroll = function () {
     let st = docEle.scrollTop;
     console.log(st);
 
@@ -269,5 +269,5 @@ window.onscroll = function () {
         sm1.style.transition = '0.65s';
         sm1.style.opacity = '0';   
     }
-}
+} */
 // sm2.stopPropagation();
