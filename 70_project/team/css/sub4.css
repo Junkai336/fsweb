@@ -56,13 +56,19 @@ li {
 .text_box h3 {
     transform: translateX(-30px);
     font-size: 36px;
+    opacity: 0;
+}
+
+.text_box p {
+    opacity: 0;
 }
 
 /* 노랑이 이미지 100% X */
 h3 img {
     width: 60px;
     height: 60px;
-    transform: translateX(-10px);
+    transform: translateX(-100px);
+    opacity: 0;
     /* transform: translateY(-5px); */
 }
 

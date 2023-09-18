@@ -242,3 +242,32 @@ modal_close5.addEventListener("click", () => {
 modal_close6.addEventListener("click", () => {
     modal_close_fn();
 })
+
+const docEle = document.documentElement;
+const sm1 = document.querySelector('.text_box')
+const sm2 = document.querySelector('.text_box h3')
+const sm3 = document.querySelector('.text_box p')
+
+window.onscroll = function () {
+    let st = docEle.scrollTop;
+    console.log(st);
+
+    if (st < 280) {
+        sm1.style.transform = 'translateX(-10px)';
+        sm1.style.transition = '1.3s';
+        sm1.style.opacity = '1';
+        setTimeout(function(){
+            sm2.style.transition = '1.3s';
+            sm2.style.opacity = '1';
+        }, 1300);  
+        setTimeout(function(){
+            sm3.style.transition = '1.3s';
+            sm3.style.opacity = '1';
+        }, 2300);  
+    } else if (st > 290) {
+        sm1.style.transform = 'translateX(-100px)';
+        sm1.style.transition = '0.65s';
+        sm1.style.opacity = '0';   
+    }
+}
+// sm2.stopPropagation();
