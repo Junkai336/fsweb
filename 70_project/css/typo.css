@@ -1,7 +1,17 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap');
-html {font-size: 10px;}
-body {font: 1.5rem/1.8 'Noto Sans KR', sans-serif;}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font: 1.5rem/1.8 'Noto Sans KR', sans-serif;
+}
+
+a {
+    color: #111;
+}
 
 h2 {
     text-align: center;
@@ -13,17 +23,11 @@ h2+p {
 
 .skill h3 {
     text-align: center;
+    font-weight: normal;
 }
 
-.parallax {
-    text-align: center; /* 인라인요소는 width=컨텐츠 크기라 여기다 줘야함 */
-}
-
-.parallax span {
-    font-size: 3.6rem;
-    letter-spacing: 10px;
-    color: #fff;
-    line-height: 400px; /* 한 줄 텍스트일 때만 가능함 */
+.skill p {
+    letter-spacing: 8px;
 }
 
 .counter {
@@ -35,8 +39,38 @@ h2+p {
     font-size: 2.4rem;
 }
 
+.parallax {
+    text-align: center;
+}
+
+.parallax span {
+    letter-spacing: 10px;
+    font-size: 3.6rem;
+    line-height: 400px;
+    color: #fff;
+}
+
+.addr ul {
+    font-size: 1.8rem;
+}
+.addr ul i {
+    color: #777;
+}
+.addr ul i:hover {
+    color: #111;
+}
+.addr p {
+    margin: 32px 0 16px;
+}
+
+input, button {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.5rem;
+}
+
 footer {
     color: #fff;
+    text-align: center;
 }
 
 footer a {
@@ -46,7 +80,10 @@ footer a {
 footer .copy {
     color: #777;
 }
-
-a {
-    color: #111;
+.sns a {
+    font-size: 24px;
+    color: #777;
+}
+.sns a:hover {
+    color: #fff;
 }

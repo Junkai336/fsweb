@@ -1,0 +1,52 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap');
+html {font-size: 10px;}
+body {font: 1.5rem/1.8 'Noto Sans KR', sans-serif;}
+
+h2 {
+    text-align: center;
+}
+
+h2+p {
+    text-align: center;
+}
+
+.skill h3 {
+    text-align: center;
+}
+
+.parallax {
+    text-align: center; /* 인라인요소는 width=컨텐츠 크기라 여기다 줘야함 */
+}
+
+.parallax span {
+    font-size: 3.6rem;
+    letter-spacing: 10px;
+    color: #fff;
+    line-height: 400px; /* 한 줄 텍스트일 때만 가능함 */
+}
+
+.counter {
+    text-align: center;
+    color: #fff;
+}
+
+.counter span {
+    font-size: 2.4rem;
+}
+
+footer {
+    color: #fff;
+}
+
+footer a {
+    color: #fff;
+}
+
+footer .copy {
+    color: #777;
+}
+
+a {
+    color: #111;
+}
