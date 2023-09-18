@@ -13,12 +13,12 @@
 /* 이건 전체 페이지 색상을 한번에 변경하는 용도 */
 
 :root {
-    --t333: #333;
     --t111: #111;
-    --tfff: #fff;
+    --t333: #333;
     --t777: #777;
     --tccc: #ccc;
     --tf1f1f1: #f1f1f1;
+    --tfff: #fff;
 }
 
 /**************************************************************************************
@@ -46,51 +46,31 @@ body {
     background: var(--tfff);
 }
 
-footer,
-::placeholder {
-    color: var(--t777);
-}
+a {}
 
-/* .txt {
+.txt {
     font-size: 3.6rem;
-} */
+}
 
 #gnb,
 .txt {
     letter-spacing: 4px;
 }
 
+.wtxt,
+button {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: var(--tfff);
+}
+
+footer,
+::placeholder {
+    color: var(--t777);
+}
+
 /* 
   #gnb a {color:#fff;} 이런식으로 색상 타이포 묶을 수도 있다. (파일따로써서 typo.css)
 */
-
-
-/* 와이어프레임(작업용) */
-/* body * {outline: 1px solid black;} */
-/* header {
-    background-color: lightblue;
-}
-
-
-#sec1 {
-    background-color: lightcoral;
-}
-
-#sec2 {
-    background-color: darkcyan;
-}
-
-#sec3 {
-    background-color: lightgreen;
-}
-
-#sec4 {
-    background-color: gold
-} */
-
-/* footer {
-    background-color: #333;
-} */
 
 /* 
     높이 강제지정은 웬만하면 하지 마라.
@@ -118,6 +98,15 @@ header {
 
 .logo {
     width: 40%;
+}
+
+.logo a {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.logo img {
+    vertical-align: middle;
 }
 
 #gnb {
@@ -153,7 +142,7 @@ header {
 
     font-weight: bolder;
     color: var(--tfff);
-    font-family: "Segoe UI", Arial, sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
     letter-spacing: 4px;
 }
 
@@ -164,7 +153,7 @@ header {
 /* 섹션2,3,4 공통 */
 
 section {
-    padding: 0 30px;
+    padding: 0 32px;
 }
 
 section h2 {
@@ -182,15 +171,10 @@ section h2 {
 
 
 .sec23 li {
-    width: auto;
-    height: auto;
+    aspect-ratio: 1.5 / 1;
     /* margin-bottom: 20px; */
 }
 
-/* 섹션3,4 공통 */
-section:first-of-type~section>p {
-    margin-bottom: 40px;
-}
 
 /* 섹션2 */
 
@@ -205,15 +189,20 @@ section:first-of-type~section>p {
 
 /* #sec2 li:first-of-type ~ li { */
 /* 
-     첫번째 요소를 제외한 아래 모든 형제 요소
+    첫번째 요소를 제외한 아래 모든 형제 요소
     */
 
 /* 
     +는 바로 인접한 형제.
     근데 그게 계속 반복돼서 8개 다 되는거임
-     */
+    */
 #sec2 li+li {
     margin-top: 16px;
+}
+
+/* 섹션3,4 공통 */
+section:first-of-type~section>p {
+    margin-bottom: 40px;
 }
 
 /* 섹션3 */
@@ -234,8 +223,8 @@ section:first-of-type~section>p {
 #sec3 a {
     display: block;
     background-color: var(--tf1f1f1);
-    color: #111;
-    border: 1px solid #111;
+    color: var(--t111);
+    /* border: 1px solid #111; */
     text-align: center;
     /* line-height: 40px; */
     padding: 8px 0;
@@ -270,13 +259,8 @@ section:first-of-type~section>p {
 }
 
 .map {
-    height: 184px;
-}
-
-.map iframe {
-    border: none;
     width: 100%;
-    height: 100%;
+    aspect-ratio: 1.8 / 1;
 }
 
 /* 푸터 */
@@ -293,9 +277,6 @@ footer {
     color: var(--t777);
 }
 
-/* ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ*/
-/* ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ*/
-/* ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ*/
 /* 최소 992px 이상ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ*/
 /* 데스크탑 */
 @media (min-width:992px) {

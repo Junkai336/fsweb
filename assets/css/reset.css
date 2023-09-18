@@ -22,7 +22,17 @@ ul {
 
 img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     vertical-align: top;
+}
+
+video {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
 }
 
 button {
@@ -34,8 +44,4 @@ iframe {
     border: none;
     width: 100%;
     height: 100%;
-}
-
-a {
-    text-decoration: none;
 }

@@ -675,6 +675,9 @@ function i1() {
     slideImg[1].style.left = "0%"
     slideImg[2].style.left = "100%"
     slideImg[0].rotate = "90deg"
+    slideImg[0].style.transition = ".7s"
+    slideImg[1].style.transition = ".7s"
+    slideImg[2].style.transition = "none"
     
 }
 function i2() {
@@ -685,6 +688,9 @@ function i2() {
     slideImg[1].style.left = "-100%"
     slideImg[2].style.left = "0%"
     slideImg[0].style.left = "100%"
+    slideImg[1].style.transition = ".7s"
+    slideImg[2].style.transition = ".7s"
+    slideImg[0].style.transition = "none"
 }
 function i3() {
     // slideImg[2].zIndex = "10"
@@ -693,6 +699,9 @@ function i3() {
     slideImg[2].style.left = "-100%"
     slideImg[0].style.left = "0%"
     slideImg[1].style.left = "100%"
+    slideImg[2].style.transition = ".7s"
+    slideImg[0].style.transition = ".7s"
+    slideImg[1].style.transition = "none"
 }
 
 let i = 1
