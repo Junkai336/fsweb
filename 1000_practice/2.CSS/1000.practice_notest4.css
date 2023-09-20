@@ -213,7 +213,7 @@
 /* 
     filter : 값;
         값: 
-        brightness : 
+        brightness : 0% 검은색 / 100% 기본값 / 초과: 밝게
         contrast : 
         grayscale : 
         invert : 
