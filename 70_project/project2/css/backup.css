@@ -1,0 +1,139 @@
+/* 원래 프로젝트2번 데스크탑 미디어쿼리 밑에 */
+
+.tit1 {
+    font-size: 56px;
+}
+
+.txt {
+    /* margin-top: -37.5px; */
+    /* margin-left: -141px; */
+
+    /* margin-bottom: -80px; */
+    /* transform: translate(-50%, -50%); */
+    color: var(--tfff);
+    font-family: "Segoe UI", Arial, sans-serif;
+    letter-spacing: 4px;
+    font-size: 56px;
+}
+
+.main_img {
+    width: 1500px;
+    margin: 0 auto;
+    /* text-align: center; */
+}
+
+
+.tit1+span {
+    font-size: 52px;
+}
+
+/* 섹션2,3,4 공통 */
+
+/* section:first-of-type ~ section {
+margin-top: 64px;
+} */
+
+
+
+/* 섹션2,3 공통 */
+
+.sec23 ul {
+    /* 이미지 가로 배치 */
+    display: flex;
+    /* 줄바꿈 -> 이미지 한 줄에 4개씩 */
+    flex-wrap: wrap;
+}
+
+.sec23 li {
+    width: 360px;
+    height: 240px;
+    margin-right: 20px;
+    /* margin-bottom: 20px; */
+}
+
+.sec23 li:nth-of-type(4n) {
+    margin-right: 0;
+}
+
+/* 섹션2 */
+/* id > class, 가상 클래스(:), 속성 > 요소, 가상 요소(::) */
+
+/* 인라인요소의 마진은 좌우만 적용O, 위아래 적용X */
+/* 마진 위아래는 겹치면 큰쪽'만'. */
+/*      좌우는 준만큼 + 되는듯 함 */
+
+
+
+/* 8개의 이미지 중 5번째 이미지 부터 4개만 위쪽 여백 */
+#sec2 li:nth-of-type(4)~li {
+    margin-top: 20px;
+}
+
+#sec2 span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--tfff);
+    background: rgba(88, 88, 88, 0.3);
+    padding: 8px 16px;
+}
+
+/* #sec2 .li4 {
+margin-right: 0;
+}
+
+#sec2 .li8 {
+margin-right: 0;
+} */
+
+
+/* 섹션3 */
+
+#sec3 li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 455px;
+    max-height: 455px;
+}
+
+/* 섹션4 */
+
+.map {
+    height: 845px;
+}
+
+/* 푸터 */
+
+footer {
+    /* 한 줄 텍스트일 때 박스의 수직 중앙 정렬 (라인하이트) */
+    /* line-height: 84px; */
+
+    /* padding의 산출 근거?
+     폰트사이즈 15 * 1.8 = 29
+    */
+    padding: 32px 0;
+    height: 84px;
+    text-align: center;
+}
+
+/* padding으로 글자 간격 맞추는거 boxsizing borderbox 랑 관련있음 */
+
+/* p는 기본 마진 있음 */
+/* 여백의 일관성.. */
+
+/* 
+a, button, ::placeholder
+    - 이 친구들 글자색은 직접 설정한다. (직접 지정)
+
+
+: -> 가상 클래스
+:: -> 가상 요소 (가상으로 내용이 들어간 것?)
+*/
+
+}
+
+/* @media 미디어쿼리 992이상 */
+
+/* 아이패드미니가 태블릿, 아이폰12프로가 모바일 기준? */
+/* 개발자모드, 크롬웹확장프로그램으로 확인 */
