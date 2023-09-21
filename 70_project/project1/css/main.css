@@ -93,12 +93,6 @@ header {
     color: #777;
 }
 
-.logo image {
-    width: 7px;
-    vertical-align: middle;
-    margin-right: 16px;
-}
-
 /* global navigation bar */
 #gnb {
     float: right;

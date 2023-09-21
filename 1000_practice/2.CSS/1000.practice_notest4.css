@@ -214,15 +214,15 @@
     filter : 값;
         값: 
         brightness : 0% 검은색 / 100% 기본값 / 초과: 밝게
-        contrast : 
-        grayscale : 
-        invert : 
-        opacity : 
-        sepia : 
-        saturate : 
-        blur : 
-        hue-rotate : 
-        drop-shadow : 
+        contrast : 0% 검은색 / 100% 기본값 / 초과: 대비차 크게
+        grayscale : 0% 기본값 / 100% 회색 / 음수지정X
+        invert : 0% 기본값 / 100% 반전 / 음수지정X
+        opacity : 0% 투명 / 100% 기본값 / 음수지정X
+        sepia :  0% 기본값 / 100% 세피아 / 음수지정X
+        saturate : 0% 무채도 / 100% 기본값 / 음수지정X
+        blur :  0% 기본값 / 음수지정X
+        hue-rotate : 0deg~360deg 빨-주-노-초-파-남-보-빨
+        drop-shadow : 그림자: h위치 v위치 흐림 색
 
 */
 
@@ -230,15 +230,75 @@
 
 /* 62 var */
 
+/* 
+    변수
+        :root = HTML
+        용도: 반복사용, 수정보완용이
+ */
+
+    /* 변수 정의 : --변수명: 값; */
+    :root {
+        --textred: #f00;
+        --textblue: #00f;
+        --textsize30px: 30px;
+        --textbold: bold;
+    }
+
+    /* 변수 호출 : var(변수명) */
+    h1 {
+        var(--textred);
+        font-size: var(--textsize30px);
+    }
+
+    h2 {
+        var(--textblue);
+        font-weight: var(--textbold);
+    }
+
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
 /* 63 object-fit */
+
+/* 
+    object-fit: 값;
+        - <img> <video> 를 지정하는데 사용
+        - 박스 크기에 맞게 미디어 크기 조정
+        - 값 : 
+            - fill : 기본값, 비율유지x 가득채움
+            - contain : 비율 유지, 이미지 잘림 없이 "상자에 맞게" 크기 조정 빈공간
+            - cover : 비율 유지, 이미지 잘리더라도 "상자를 가득" 채움
+            - none : 원본 크기 그대로. 이미지 잘리거나, 빈공간
+    
+    object-position: x위치 y위치;
+        - 값 : left, right, top, bottom, center, %, px
+        - 기본값: 50% 50%
+
+*/
 
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
 /* 64,65 삼각형 만들기, clip-path */
 
+/* 
+    모형 만들어주는 사이트
+    https://bennettfeely.com/clippy/
+
+    clip-path : 
+                circle, ellipse, triangle, polygon, path, inset
+                circle(radius at X Y)
+                ellipse(horizontal radius vertical radius at X Y)
+                triangle(좌측 상단 X Y, 우측 상단 X Y, 하단 X Y);
+                polygon(좌측 상단, 우측 상단, 우측 하단, 좌측 하단)
+                path()
+                inset()
+*/
+
 
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
  /* 68 aspect-ratio */
+
+ /* 
+    aspect-ratio: 가로비율 / 세로비율
+ 
+ */
