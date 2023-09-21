@@ -196,9 +196,9 @@ section h2 {
     +는 바로 인접한 형제.
     근데 그게 계속 반복돼서 8개 다 되는거임
     */
-#sec2 li+li {
+/* #sec2 li+li {
     margin-top: 16px;
-}
+} */
 
 /* 섹션3,4 공통 */
 section:first-of-type~section>p {
@@ -207,9 +207,9 @@ section:first-of-type~section>p {
 
 /* 섹션3 */
 
-#sec3 li+li {
+/* #sec3 li+li {
     margin-top: 32px;
-}
+} */
 
 #sec3 li h3 {
     margin: 16px 0;

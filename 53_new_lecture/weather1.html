@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        // $.getJSON("파일(날씨)경로", function (result) {
+        //     $.each(result, function (i, field) {
+        //         $("div").append(field + " ");
+        //     });
+        // });
+
+        // $.getJSON("파일(날씨)경로", function (data) {
+        // data 할일
+        // });
+
+        $.getJSON("http://api.openweathermap.org/data/2.5/weather?id=1846898&appid=0ba97bb231c81911eeb4f3f2d4ca5762&units=metric", function (data) {
+            // 변수 앞에 $ 붙여도 되고 안붙여도 됨
+            const cTemp = data.main.temp; 
+            const maxTemp = data.main.temp_max; 
+            const minTemp = data.main.temp_min;
+            // 대괄호가 있으면 배열처리.
+            const $wIcon = data.weather[0].icon;
+            
+            console.log(cTemp, maxTemp, minTemp);
+
+            // append : 추가 메서드
+            // 현재 온도를 .ctemp , 현재온도(텍스트) : 뒤에 추가한다.
+            $(".ctemp").append(cTemp);
+            $(".clowtemp").append(minTemp);
+            $(".chightemp").append(maxTemp);
+            // $(".cicon").append($wIcon);
+            // $(".cicon").append("<img src='https://openweathermap.org/img/wn/"+$wIcon+"@2x.png'>");
+            
+            // 벡틱문법
+            $(".cicon").append(`<img src='https://openweathermap.org/img/wn/${$wIcon}@2x.png'>`);
+            
+            var $now = new Date();
+            var $cDate = $now.getFullYear() + "/" + ($now.getMonth()+1) + "/" + $now.getDate()+ " " + $now.getHours() + " : " + $now.getMinutes();
+
+            console.log($cDate);
+            $('h2').prepend($cDate);
+            
+        });
+
+
+    </script>
+</head>
+
+<body>
+    <h1>weather api</h1>
+    <h2>날씨 정보</h2>
+    <div class="ctemp">현재 온도 : </div>
+    <div class="clowtemp">최저 온도 : </div>
+    <div class="chightemp">최고 온도 : </div>
+    <!-- <div class="cicon">아이콘 : <img src="https://openweathermap.org/img/wn/10d@2x.png" alt=""></div> -->
+    <div class="cicon">아이콘 : </div>
+</body>
+
+</html>
