@@ -41,8 +41,8 @@
             display: flex;
             justify-content: flex-end;
         }
-        
-        nav > ul {
+
+        nav>ul {
             width: 50%;
             height: 40%;
             display: flex;
@@ -50,18 +50,22 @@
             justify-content: space-around;
             background-color: yellow;
             margin-right: 32px;
-            margin-top  : 25px;
+            margin-top: 25px;
         }
 
-        .depth1 > li {
+        .depth1>li {
             width: 100%;
             text-align: center;
-            padding-top: 16px;
+            padding-top: 12px;
         }
 
-        .depth2 > li {
+        .depth2>li {
             padding-top: 12px;
             background-color: yellow;
+        }
+
+        .depth2 li:nth-of-type(4) {
+            padding-bottom: 12px;
         }
 
         #sec1 {
@@ -74,23 +78,23 @@
             flex-flow: row nowrap;
         }
 
-        #sec2>div:nth-of-type(1) {
+        #sec2 > div {
             height: 200px;
             width: 33.33%;
+        }
+
+        #sec2>div:nth-of-type(1) {
             background-color: purple;
         }
 
         #sec2>div:nth-of-type(2) {
-            height: 200px;
-            width: 33.33%;
             background-color: gray;
         }
 
         #sec2>div:nth-of-type(3) {
-            height: 200px;
-            width: 33.33%;
             background-color: lightpink;
         }
+
         footer {
             display: flex;
             height: 125px;
@@ -121,7 +125,6 @@
             height: 50%;
             background-color: orange;
         }
-
     </style>
 </head>
 
@@ -180,26 +183,28 @@
         </footer>
     </div>
     <script>
+        // 투뎁스 일단 가린다
         $(".depth2 li").hide();
 
-        // let i = $(this).index();
-
-        $(".depth1 li").hover(function(){
+        // 투뎁스 호버한다.
+        // 변수정의 + 조건 : 원뎁스의 자손(자식의 자식)의 css가 display가
+        // none, 안보일 경우에만 보이게 한다.
+        $(".depth1 li").hover(function () {
             const nocontinue = $(this).children().children().css('display');
             if (nocontinue == 'none') {
-            } 
-
-                $(this).css("background-color","gray");
+                $(this).css("background-color", "gray");
                 $(this).children().children().slideDown();
-                // $('.depth2 li').eq(i).slideDown();
-            }, function(){
-                $(this).css("background-color","yellow");
-                $(this).children().children().slideUp();
-                // $('.depth2 li').eq(i).slideUp();
-                return false;
-            });
-
-    </script>
+            }
+        }, function () {
+            $(this).css("background-color", "yellow");
+            $(this).children().children().slideUp();
+        });
+  
+        
+        </script>
 </body>
 
 </html>
+
+ <!-- return false; -->
+ <!-- return false = e.preventDefault (비슷) -->
