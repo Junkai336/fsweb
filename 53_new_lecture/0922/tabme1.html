@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .tab {
+            width: 500px;
+            height: 300px;
+            border: 1px solid black;
+        }
+
+        .tab_menu {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .tab > ul {
+            border: 1px solid red;
+        }
+
+
+        .tab_menu div {
+            display: none;
+        }
+
+        .on {
+            background-color: red;
+        }
+
+        .on div {
+            display: block;
+        }
+
+    </style>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+</head>
+
+<body>
+    <div class="tab">
+        <ul class="tab_menu">
+            <li class="on">공지사항
+                <div>공지사항입니다.</div>
+                <div>공지사항입니다.</div>
+                <div>공지사항입니다.</div>
+            </li>
+            <li>갤러리
+                <div><img src="hyundai/CN12_EXT.jpg" alt="a"></div>
+                <div><img src="hyundai/GN02_EXT.jpg" alt="b"></div>
+                <div><img src="hyundai/LX06_EXT.jpg" alt="c"></div>
+            </li>
+            <li>정보마당
+                <div>정보마당입니다.</div>
+                <div>정보마당입니다.</div>
+                <div>정보마당입니다.</div>
+            </li>
+    </div>
+
+    <script>
+        $(function () {
+            $(".tab_menu > li").click(function () {
+                $('.tab_menu > li').removeClass('on');
+                $(this).addClass('on');
+            });
+        });
+    </script>
+</body>
+
+</html>

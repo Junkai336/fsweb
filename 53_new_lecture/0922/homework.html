@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <style>
+        /* 전역 */
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        #wrap {
+            width: 75%;
+            margin: 0 auto;
+            border: 1px solid black;
+        }
+
+        /* 헤더 */
+
+        header {
+            height: 100px;
+            background-color: violet;
+        }
+
+        nav {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        nav > ul {
+            width: 50%;
+            height: 40%;
+            display: flex;
+            flex-direction: flex-end;
+            justify-content: space-around;
+            background-color: yellow;
+            margin-right: 32px;
+            margin-top  : 25px;
+        }
+
+        .depth1 > li {
+            width: 100%;
+            text-align: center;
+            padding-top: 16px;
+        }
+
+        .depth2 > li {
+            padding-top: 12px;
+            background-color: yellow;
+        }
+
+        #sec1 {
+            height: 300px;
+            background-color: lightcoral;
+        }
+
+        #sec2 {
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        #sec2>div:nth-of-type(1) {
+            height: 200px;
+            width: 33.33%;
+            background-color: purple;
+        }
+
+        #sec2>div:nth-of-type(2) {
+            height: 200px;
+            width: 33.33%;
+            background-color: gray;
+        }
+
+        #sec2>div:nth-of-type(3) {
+            height: 200px;
+            width: 33.33%;
+            background-color: lightpink;
+        }
+        footer {
+            display: flex;
+            height: 125px;
+        }
+
+        footer>div:nth-of-type(1) {
+            height: 100%;
+            width: 20%;
+            background-color: darkred;
+        }
+
+
+        #wrap2 {
+            display: flex;
+            flex-flow: column nowrap;
+            width: 80%;
+            height: 100%;
+        }
+
+        #wrap2>div:nth-of-type(1) {
+            width: 100%;
+            height: 50%;
+            background-color: lightgreen;
+        }
+
+        #wrap2>div:nth-of-type(2) {
+            width: 100%;
+            height: 50%;
+            background-color: orange;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <nav>
+                <ul class="depth1">
+                    <li>MENU-1
+                        <ul class="depth2">
+                            <li>SUBMENU-1</li>
+                            <li>SUBMENU-2</li>
+                            <li>SUBMENU-3</li>
+                            <li>SUBMENU-4</li>
+                        </ul>
+                    </li>
+                    <li>MENU-2
+                        <ul class="depth2">
+                            <li>SUBMENU-1</li>
+                            <li>SUBMENU-2</li>
+                            <li>SUBMENU-3</li>
+                            <li>SUBMENU-4</li>
+                        </ul>
+                    </li>
+                    <li>MENU-3
+                        <ul class="depth2">
+                            <li>SUBMENU-1</li>
+                            <li>SUBMENU-2</li>
+                            <li>SUBMENU-3</li>
+                            <li>SUBMENU-4</li>
+                        </ul>
+                    </li>
+                    <li>MENU-4
+                        <ul class="depth2">
+                            <li>SUBMENU-1</li>
+                            <li>SUBMENU-2</li>
+                            <li>SUBMENU-3</li>
+                            <li>SUBMENU-4</li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div id="sec1"></div>
+        <div id="sec2">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <footer>
+            <div></div>
+            <div id="wrap2">
+                <div></div>
+                <div></div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        $(".depth2 li").hide();
+
+        // let i = $(this).index();
+
+        $(".depth1 li").hover(function(){
+            const nocontinue = $(this).children().children().css('display');
+            if (nocontinue == 'none') {
+            } 
+
+                $(this).css("background-color","gray");
+                $(this).children().children().slideDown();
+                // $('.depth2 li').eq(i).slideDown();
+            }, function(){
+                $(this).css("background-color","yellow");
+                $(this).children().children().slideUp();
+                // $('.depth2 li').eq(i).slideUp();
+                return false;
+            });
+
+    </script>
+</body>
+
+</html>
