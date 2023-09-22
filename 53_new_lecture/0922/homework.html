@@ -18,6 +18,11 @@
             list-style: none;
         }
 
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
         img {
             width: 100%;
         }
@@ -78,7 +83,7 @@
             flex-flow: row nowrap;
         }
 
-        #sec2 > div {
+        #sec2>div {
             height: 200px;
             width: 33.33%;
         }
@@ -133,36 +138,36 @@
         <header>
             <nav>
                 <ul class="depth1">
-                    <li>MENU-1
+                    <li><a href="#">MENU-1</a>
                         <ul class="depth2">
-                            <li>SUBMENU-1</li>
-                            <li>SUBMENU-2</li>
-                            <li>SUBMENU-3</li>
-                            <li>SUBMENU-4</li>
+                            <li><a href="#">SUBMENU-1</a></li>
+                            <li><a href="#">SUBMENU-2</a></li>
+                            <li><a href="#">SUBMENU-3</a></li>
+                            <li><a href="#">SUBMENU-4</a></li>
                         </ul>
                     </li>
-                    <li>MENU-2
+                    <li><a href="#">MENU-2</a>
                         <ul class="depth2">
-                            <li>SUBMENU-1</li>
-                            <li>SUBMENU-2</li>
-                            <li>SUBMENU-3</li>
-                            <li>SUBMENU-4</li>
+                            <li><a href="#">SUBMENU-1</a></li>
+                            <li><a href="#">SUBMENU-2</a></li>
+                            <li><a href="#">SUBMENU-3</a></li>
+                            <li><a href="#">SUBMENU-4</a></li>
                         </ul>
                     </li>
-                    <li>MENU-3
+                    <li><a href="#">MENU-3</a>
                         <ul class="depth2">
-                            <li>SUBMENU-1</li>
-                            <li>SUBMENU-2</li>
-                            <li>SUBMENU-3</li>
-                            <li>SUBMENU-4</li>
+                            <li><a href="#">SUBMENU-1</a></li>
+                            <li><a href="#">SUBMENU-2</a></li>
+                            <li><a href="#">SUBMENU-3</a></li>
+                            <li><a href="#">SUBMENU-4</a></li>
                         </ul>
                     </li>
-                    <li>MENU-4
+                    <li><a href="#">MENU-4</a>
                         <ul class="depth2">
-                            <li>SUBMENU-1</li>
-                            <li>SUBMENU-2</li>
-                            <li>SUBMENU-3</li>
-                            <li>SUBMENU-4</li>
+                            <li><a href="#">SUBMENU-1</a></li>
+                            <li><a href="#">SUBMENU-2</a></li>
+                            <li><a href="#">SUBMENU-3</a></li>
+                            <li><a href="#">SUBMENU-4</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -198,13 +203,14 @@
         }, function () {
             $(this).css("background-color", "yellow");
             $(this).children().children().slideUp();
+
         });
-  
-        
-        </script>
+
+        $(".depth2 a").click(function () { return false; });
+
+    </script>
 </body>
 
 </html>
 
- <!-- return false; -->
- <!-- return false = e.preventDefault (비슷) -->
+<!-- return false = e.preventDefault (비슷) -->
