@@ -1,21 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
 
-<!-- 
-    1. 로고: 1장 - 154x22 v (사이즈안맞음)
-    2. 메인 이미지: 1장 - 1500x800 v
-    3. 섹션2: 8장 - 360x240 v
-    4. 섹션3: 4장 - 360x240
-    5. 지도1장 - 1500x845 
- 
-    08.30 이후
-    - 로고이미지를 수정해야함. (좀 짤림)
-    - 벤치마킹 할 때는 최대한 비슷하게 ~ 똑같이 해야 하는 듯
-    - 포폴은 여백이나 이런 것들 최대한 정확한 간격으로. (불필요한 여백같은거 ㄴㄴ)
-    - 기존의 현직 디자이너가 만든 것들을 최대한 따라해라
-
- -->
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,6 +24,14 @@
                 <li><a href="#sec4">가맹문의</a></li>
             </ul>
         </nav>
+        <div id="hamburger">
+            <a href="#"><span></span></a>
+        </div>
+        <ul class="mobile_menu">
+            <li><a href="#sec2">메뉴소개</a></li>
+            <li><a href="#sec3">창업안내</a></li>
+            <li><a href="#sec4">가맹문의</a></li>
+        </ul>
     </header>
 
     <div class="container">
@@ -60,12 +53,10 @@
                 <li><img src="image/b_menu2.png" alt="섹션2_메뉴이미지2"><span>토마호크카츠</span></li>
                 <li><img src="image/b_menu3.png" alt="섹션2_메뉴이미지3"><span>새우튀김카레</span></li>
                 <li><img src="image/b_menu4.png" alt="섹션2_메뉴이미지4"><span>김치나베</span></li>
-                <!-- <li class="li4"><img src="image/house4a.png" alt="섹션2_메뉴이미지4"><span>김치나베</span></li> -->
                 <li><img src="image/b_menu5.png" alt="섹션2_메뉴이미지5"><span>돈쫄</span></li>
                 <li><img src="image/b_menu6.png" alt="섹션2_메뉴이미지6"><span>함박카츠</span></li>
                 <li><img src="image/b_menu7.png" alt="섹션2_메뉴이미지7"><span>등심카레우동</span></li>
                 <li><img src="image/b_menu8.png" alt="섹션2_메뉴이미지8"><span>유미유동</span></li>
-                <!-- <li class="li8"><img src="image/house8a.png" alt="섹션2_메뉴이미지8"><span>유미유동</span></li> -->
             </ul>
         </section> <!-- //#sec2 -->
 
@@ -129,21 +120,17 @@
                 <button type="submit">제출하기</button>
             </form>
             <div class="map">
-                <!-- 구글 지도에서 퍼가기 비스무리한거 누르면 됨 -->
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25355.86746548523!2d126.92184789218203!3d37.402046860328426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b61af4c54a9fd%3A0x463193421e9c53aa!2z7Jyg66-47Lm07LigIOuylOqzhOygkA!5e0!3m2!1sko!2skr!4v1693368281957!5m2!1sko!2skr"></iframe>
             </div>
         </section> <!-- //#sec4 -->
-        <!-- 필드셋 테두리는 border:none; 하면 됨 -->
-        <!-- 인라인 태그 안에 블록 요소를 쓰지 않는다. -->
-        <!-- a태그는 인라인 태그지만 블록을 안에 쓸 수 있다? -->
-        <!-- HTML 값은 단위(PX)로 지정하지 않는다. 크기는 가능하면 CSS로 한다. -->
     </div>
 
     <!-- 푸터 -->
     <footer>
         <p>COPYRIGHT 2022 (주)호윤크리에이티브 유미카츠. ALL RIGHTS RESERVED.</p>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

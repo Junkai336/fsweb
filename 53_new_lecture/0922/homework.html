@@ -12,6 +12,7 @@
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         li {
@@ -111,7 +112,6 @@
             background-color: darkred;
         }
 
-
         #wrap2 {
             display: flex;
             flex-flow: column nowrap;
@@ -195,8 +195,8 @@
         // 변수정의 + 조건 : 원뎁스의 자손(자식의 자식)의 css가 display가
         // none, 안보일 경우에만 보이게 한다.
         $(".depth1 li").hover(function () {
-            const nocontinue = $(this).children().children().css('display');
-            if (nocontinue == 'none') {
+            const noRepeat = $(this).children().children().css('display');
+            if (noRepeat == 'none') {
                 $(this).css("background-color", "gray");
                 $(this).children().children().slideDown();
             }
@@ -206,11 +206,11 @@
 
         });
 
+        // return false = e.preventDefault (HTML 기본기능 막기) (비슷)
+        $(".depth1 a").click(function () { return false; });
         $(".depth2 a").click(function () { return false; });
 
     </script>
 </body>
 
 </html>
-
-<!-- return false = e.preventDefault (비슷) -->

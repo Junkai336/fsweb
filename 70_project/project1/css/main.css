@@ -1,29 +1,12 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
 @import url(reset.css);
-/* @import url(typo.css); */
-
-
-/* 작업용 */
-/* body * {
-        outline: 1px solid green;
-    } */
-
-/* reset */
-
-/* 
-    typo: 글꼴, 크기, 색, 줄간격, 자간, 밑줄
-    font: 스타일(굵기, 기울기) 크기/줄간격 글꼴;
-    letter-spacing
-    color: 글자색
-*/
 
 html {
     font-size: 10px;
 }
 
 body {
-    /* font: 15px/1.8 'Noto Sans KR', sans=serif; */
     font-size: 1.5rem;
     line-height: 1.6;
     font-family: 'Noto Sans KR', sans-serif;
@@ -46,7 +29,6 @@ a {
 
 .copy {
     color: #444;
-    /* text-align: center; */
     line-height: 50px;
     font-size: 1.2rem;
 }
@@ -55,17 +37,10 @@ a {
     font-size: 1.33rem;
 }
 
-/* .blogo {
-    text-align: left;
-    opacity: .95;
-} */
-
 /* common */
 
 #wrap {
     width: 1200px;
-    /* 가로 가운데 배치
-    width값은 100%이기 때문에 표현한다.*/
     margin: 0 auto;
 }
 
@@ -78,7 +53,6 @@ header {
 /* logo */
 
 .logo {
-    /* float: left; */
     font: 18px;
     letter-spacing: 4px;
     width: 300px;
@@ -103,9 +77,23 @@ header {
 /* 1depth */
 
 #gnb .main li {
+    position: relative;
     display: inline-block;
     width: 150px;
-    /* margin: 0px 16px; */
+}
+
+.hover div {
+    position: absolute;
+    width: 1px;
+    border: 1px solid #ccc;
+    left: -1%;
+    opacity: 0;
+}
+
+.hover:hover div:nth-of-type(1) {
+    opacity: 1;
+    width: 70px;
+    transition: .4s;
 }
 
 /* 2depth */
@@ -117,12 +105,23 @@ header {
 /* slide */
 
 #slide {
+    position: relative;
     height: 300px;
+    overflow: hidden;
 }
 
 #slide li {
+    left: 0;
+    top: 0;
     position: absolute;
     background-color: #5177a7;
+    transition: 1s;
+    opacity: 0;
+}
+
+#slide li:nth-of-type(4) {
+    opacity: 1;
+    z-index: -1;
 }
 
 /* modal */
@@ -136,10 +135,9 @@ header {
 #contents {
     height: 200px;
     margin: 5px 0;
-    }
+}
 
 #contents>div {
-    /* 1200 - 424 = 776/2 = 388 */
     float: left;
     width: 380px;
 }
@@ -172,15 +170,16 @@ label {
     background-color: #8cf;
 }
 
+.pointer {
+    cursor: pointer;
+}
+
 /* 공지사항 */
 
+
 #tab1 li {
-    /* display: none; */
     border-bottom: 1px solid #ccc;
-    /* line-height: 1.6; */
-    /* padding-bottom: 8px; */
-    /* margin: 8px 0; */
-    /* 숫자 0은 단위 생략 가능 */
+    margin: 2px 0;
 }
 
 #tab1 span {
@@ -194,10 +193,6 @@ label {
 
 /* 갤러리 */
 #tabs #tab2 {
-    /* box-sizing: border-box; */
-    /* display: none; */
-    /* width: calc(400px - 32px); */
-
     padding: 20px 16px;
 }
 
@@ -206,16 +201,53 @@ label {
     margin: 0 4px;
 }
 
+/* 라이트박스 */
+.lightbox {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, .5);
+}
+
+.lightbox img {
+    position: absolute;
+    display: none;
+    width: 400px;
+    height: 600px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+}
+
+.visible {
+    display: block;
+}
+
 /* banner */
 
 .banner {
     margin-left: 8px;
 }
 
+.banner img {
+    height: 190px;
+}
+
+
 /* shortcut */
 
 #contents .shortcut {
     float: right;
+}
+
+.shortcut img {
+    height: 190px;
 }
 
 /* footer */
@@ -228,27 +260,33 @@ footer {
 }
 
 footer>a {
-    /* a 태그는 글자색을 별도 지정한다. */
     color: #fff;
 }
 
-footer div {
+/* footer div {
     float: left;
-}
+} */
 
 /* 하단 로고 */
 
-.blogo {
+.blogo{
+    position: absolute;
     width: 200px;
+    transform: translate(10%, 100%);
+}
+
+.blogo img {
+    /* padding-top: 25px; */
 }
 
 /* 주소 및 저작권 */
 
 .copy {
-    float:left;
-    /* width: 640px; */
+    float: left;
     background: url(../images/blogo.png) no-repeat 200px 50/71px;
-    padding-left: 300px;
+    padding-left: 350px;
+    text-align: center;
+    line-height: 45px;
 }
 
 /* SNS */
@@ -256,7 +294,7 @@ footer div {
 .sns {
     float: right;
     width: 300px;
-    line-height: 100px;
+    line-height: 85px;
 }
 
 .sns li {

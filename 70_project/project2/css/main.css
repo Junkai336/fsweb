@@ -2,16 +2,6 @@
 @import url(reset.css);
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 
-/* 
-    배운거만 굉장히 잘 활용해도 ok
-    포폴 품질 ↑
-    벤치마킹은 최대한에서 최대한 똑같이.
-    이름없는 개발자가 임의대로 한 건 그다지 쳐주지 않는다. 
-*/
-
-/* 변수 정의 */
-/* 이건 전체 페이지 색상을 한번에 변경하는 용도 */
-
 :root {
     --t111: #111;
     --t333: #333;
@@ -24,13 +14,6 @@
 /**************************************************************************************
 typo.css: 크기, 색, 종류, 굵기, 줄간격, 자간 
 **************************************************************************************/
-
-/* typo는 완전 기본적인 폰트만 하는듯 */
-
-/* 
-    text-align:center;는 인라인 요소를 가운데 가게 하는 거. 이미지도 감
-    text-align은 부모 요소에 기록한다.
- */
 
 /* 
     vertical-align 또한 인라인 요소, table에서 <th>,<td>도 포함함.
@@ -45,8 +28,6 @@ body {
     color: var(--t333);
     background: var(--tfff);
 }
-
-a {}
 
 .txt {
     font-size: 3.6rem;
@@ -68,27 +49,12 @@ footer,
     color: var(--t777);
 }
 
-/* 
-  #gnb a {color:#fff;} 이런식으로 색상 타이포 묶을 수도 있다. (파일따로써서 typo.css)
-*/
-
-/* 
-    높이 강제지정은 웬만하면 하지 마라.
-    div박스가 벗어날 수 있다.
-    섹션 적당히 나누는 용도로 사용하는 것
- */
-/* .sec {
-    height: 800px
-} */
-
-/* 밑에가 pc고 여기가 모바일 */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 10000;
     position: fixed;
-    /* position fixed, absolute 이면 width가 인라인처럼 된다. (요소 크기가 컨텐츠 크기) */
     width: 100%;
     height: 55px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 2px 10px 0 rgba(0, 0, 0, 0.12);
@@ -113,14 +79,85 @@ header {
     display: none;
 }
 
+#hamburger {
+    display: block;
+    position: absolute;
+    left: 92%;
+    top: 10%;
+    width: 30px;
+    height: 40px;
+    /* border: 1px solid red; */
+}
+
+#hamburger span {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 5px;
+    left: 7px;
+    top: 28%;
+    transform: translate(0 -50%);
+    background-color: var(--t333);
+    transform: translate(-8px, 8px);
+    transition: all .5s
+}
+
+#hamburger span:before,
+#hamburger span:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: var(--t333);
+    transition: .5s
+}
+
+#hamburger span:before {
+    top: -10px;
+}
+
+#hamburger span:after {
+    top: 10px;
+}
+
+#hamburger span.on {
+    background: rgba(0, 0, 0, 0);
+    
+}
+
+#hamburger span.on:before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+#hamburger.on span.on:after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.mobile_menu {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 150px;
+    height: 100vh;
+    background-color: var(--tfff);
+    border: 1px solid var(--t333);
+    margin-left: 25px;
+    transition: all .5s
+}
+
+.mobile_menu li {
+    margin-top: 75px;
+    margin-left: 6px;
+}
+
 /* 섹션1 */
 
 #sec1 {
     padding-top: 55px;
-    /* top: 55px; */
-    /* margin-top: 55px; */
-    /* transform: translateY(55px); */
-
 }
 
 .main_img {
@@ -137,7 +174,6 @@ header {
 .tit1 {
     padding: 8px 16px;
     background-color: var(--t111);
-    /* opacity는 불투명도 0(투명) 1(불투명) 불투명이 기본값. 숫자만 쓴다. 단위 없음. */
     opacity: 0.75;
 
     font-weight: bolder;
@@ -158,23 +194,17 @@ section {
 
 section h2 {
     padding: 96px 0 20px 0;
-    /* margin: 64px 0 20px 0; */
-    /* margin-top: 64px; */
-    /* margin-bottom: 20px; */
     border-bottom: 1px solid var(--tccc);
     padding-bottom: 20px;
     margin-bottom: 20px;
 }
 
-
 /* 섹션2,3 공통 */
-
 
 .sec23 li {
     aspect-ratio: 1.5 / 1;
-    /* margin-bottom: 20px; */
+    margin-bottom: 20px;
 }
-
 
 /* 섹션2 */
 
@@ -187,18 +217,14 @@ section h2 {
     margin-bottom: 40px;
 }
 
-/* #sec2 li:first-of-type ~ li { */
-/* 
-    첫번째 요소를 제외한 아래 모든 형제 요소
-    */
-
-/* 
-    +는 바로 인접한 형제.
-    근데 그게 계속 반복돼서 8개 다 되는거임
-    */
-/* #sec2 li+li {
-    margin-top: 16px;
-} */
+#sec2 span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--t333);
+    color: var(--tfff);
+    padding: 8px 16px;
+}
 
 /* 섹션3,4 공통 */
 section:first-of-type~section>p {
@@ -206,10 +232,6 @@ section:first-of-type~section>p {
 }
 
 /* 섹션3 */
-
-/* #sec3 li+li {
-    margin-top: 32px;
-} */
 
 #sec3 li h3 {
     margin: 16px 0;
@@ -224,9 +246,7 @@ section:first-of-type~section>p {
     display: block;
     background-color: var(--tf1f1f1);
     color: var(--t111);
-    /* border: 1px solid #111; */
     text-align: center;
-    /* line-height: 40px; */
     padding: 8px 0;
     margin-top: 20px;
 }
@@ -238,13 +258,10 @@ section:first-of-type~section>p {
 /* 섹션4 */
 
 #sec4 {
-    /* 지도 아래 여백 */
     padding-bottom: 8px;
-    /* margin-bottom: 8px; */
 }
 
 #sec4 input {
-    /* display: block; */
     width: 100%;
     padding: 12px 16px;
     border: 1px solid var(--tccc);
@@ -266,12 +283,7 @@ section:first-of-type~section>p {
 /* 푸터 */
 
 footer {
-    /* 한 줄 텍스트일 때 박스의 수직 중앙 정렬 (라인하이트) */
-    /* line-height: 84px; */
-
-    /*  */
     padding: 32px 0;
-    /* height: 84px; */
     text-align: center;
     background-color: #333;
     color: var(--t777);
@@ -295,16 +307,14 @@ footer {
     .tit2 {
         display: inline-block;
     }
+
     /* 섹션2,3 공통 */
     .sec23 ul {
-        /* 이미지 가로배치 */
         display: flex;
-        /* 줄바꿈: 이미지 한 줄에 2개씩 */
         flex-wrap: wrap;
     }
 
     .sec23 li {
-        /* calc(숫자 연산자 숫자) ~ 숫자와 연산자 사이는 띄어써야 함. */
         width: calc(50% - 8px);
         margin-right: 16px;
     }
@@ -313,42 +323,41 @@ footer {
         margin-right: 0;
     }
 
-        /* 8(4)개 이미지 중 3번째 이미지 부터 6(2)개만 위쪽 여백 지정 */
-        .sec23 li:nth-of-type(2)~li {
-            margin-top: 16px;
-        }
-        /* 폰에서 지정한 값을 초기화 */
-        .sec23 li+li {
-            margin-top: 0px;
-        }
-    
-        #sec2 span {
-            position: absolute;
-            left: 0;
-            top: 0;
-            background-color: var(--c111);
-            padding: 8px 16px;
-        }
-    
-        /* 섹션3 */
-        #sec3 li {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 530px;
-            max-height: 530px;
-        }
-    
+    .sec23 li:nth-of-type(2)~li {
+        margin-top: 16px;
+    }
+
+    .sec23 li+li {
+        margin-top: 0px;
+    }
+
+
     /* 섹션3 */
+    #sec3 li {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 530px;
+        max-height: 530px;
+    }
 
 }
 
 /* // 576px 이상 */
 
+@media (min-width:577px) {
+    #hamburger {
+        display: none;
+    }
+
+    .mobile_menu {
+        display: none;
+    }
+}
+
 /* 992px 이상 */
 /* 데스크탑 */
 @media (min-width:992px) {
-
 
     /* 4개 섹션 공통 */
     .sec {
@@ -366,12 +375,15 @@ footer {
         width: calc(25% - 15px);
         margin-right: 20px;
     }
+
     .sec23 li:nth-of-type(2n) {
         margin-right: 20px;
     }
+
     .sec23 li:nth-of-type(4n) {
         margin-right: 0;
     }
+
     .sec23 li:nth-of-type(3),
     .sec23 li:nth-of-type(4) {
         margin-top: 0 !important;
@@ -379,17 +391,8 @@ footer {
 
     /* 섹션2 */
 
-    /* 8개 이미지 중 5번째 이미지 부터 4개만 위쪽 여백 지정 */
     #sec2 li:nth-of-type(4)~li {
         margin-top: 20px;
-    }
-
-    #sec2 span {
-        position: absolute;
-        left: 0;
-        top: 0;
-        background-color: var(--c111);
-        padding: 8px 16px;
     }
 
     /* 섹션3 */
@@ -406,8 +409,4 @@ footer {
         height: 845px;
     }
 
-    /* 푸터 */
-
 }
-
-/*------------- @media 992px 이상 ---------------*/

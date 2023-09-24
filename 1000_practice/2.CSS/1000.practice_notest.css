@@ -192,7 +192,7 @@ p {
     :link - 방문전
     :visited - 방문후
     :hover - 마우스 올린 경우
-    :active - 마우스로부터 눌린 경우
+    :active - 마우스로부터 눌린 경우(눌리고있는중)
 
     4개의 선택자 함께 사용시
     :link -> :visited -> :hover -> :active 순으로 기록
