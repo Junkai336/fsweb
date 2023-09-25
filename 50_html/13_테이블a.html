@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <link rel="stylesheet" href="css/13_테이블.css">
+</head>
+<body>
+    <!--[테이블 구조]
+        <table>
+            <caption>: table태그 바로 밑에 사용해야 하며 대제목을 나타내주는 태그이다.
+            <colgroup> 그룹 태그
+                <col> : 열을 그룹핑하는 용도로 사용
+            </colgroup>
+            
+            <thead> :  그룹 태그 (th를 감싸는 tr을 그룹하는태그) ->큰 그룹핑하는건 선택사항
+                <tr> : 행(raw)을 나타냄 / 셀 하나를 의미한다
+                    <th rowspan="숫자" colspan="숫자"> : 셀의 제목 <th>
+                    <td rowspan="숫자" colspan="숫자"> : 셀의 내용 <td>
+                <tr>
+            <thead>    
+            <tbody> : 그룹 태그(td를 감싸는 tr을 그룹하는태그)
+                <tr> 
+                    <td>셀의내용<th>
+                <tr>
+            <tbody>                   
+            <tfoot> : 그룹 태그(총계를 낼때사용) 
+                <tr> 
+                    <th>항목의 제목<th>
+                <tr>
+            <tfoot>                  
+            
+      -->
+      <!-- 병합 속성 -> th,td한테만 사용가능하다
+            rowspan="숫자" 
+            colspan="숫자" 
+       -->
+
+    <h1>표</h1>
+    <!-- 교재 19페이지에 있는 기본 표를 만들어 보세요. -->
+
+
+    <table>
+        <caption>표의 대제목</caption>
+        <colgroup>
+            <col>
+            <col span="3">
+            <col>
+        </colgroup>
+        <tr>
+            <th scope="col">번호</th>
+            <th scope="col">과목</td>
+            <th scope="col">이름</th>
+            <th scope="col">점수</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>html</td>
+            <td>홍길동</td>
+            <td>90점</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>html</td>
+            <td>홍길동</td>
+            <td>90점</td>
+        </tr>
+        <tfoot>
+            <tr>
+                <td colspan="3">평균</td>
+                <td>92.5</td>
+            </tr>
+        </tfoot>
+    </table>
+<hr>
+    <h2>기본</h2>
+    <table>
+        <caption>표의 대제목</caption>
+        <tr>
+            <!-- scope는 열/행 범위를 나타낸다  -->
+            <th scope="row">번호</th>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <th scope="col">과목</th>
+            <td>html</td>
+            <td>css</td>
+            <td>js</td>
+        </tr>
+    </table>
+
+
+ <hr>
+    <h2>행 병합 row </h2>
+    <table>
+        <tr>
+            <td rowspan="2">1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>3</td>
+        </tr>
+    </table>
+ <hr>
+    <h2>열 병합 col</h2>
+    <table>
+        <table>
+            <tr>
+                <td colspan="2">1</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+        </table>
+    </table>
+</body>
+</html>
