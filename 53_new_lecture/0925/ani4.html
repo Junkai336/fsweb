@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a {
+            width: 100px;
+            height: 100px;
+            border-radius: 90px;
+            border: 1px solid black;
+            background: url(img/f1.png) no-repeat 50% 50%;
+            animation: amove 3s 3s forwards;
+        }
+
+        .a2 {
+            width: 100px;
+            height: 100px;
+            border-radius: 90px;
+            border: 1px solid black;
+            background: url(img/f1.png) no-repeat 50% 50%;
+            animation: amove2 3s 3s forwards;
+            transform: translateX(300px);
+        }
+
+        @keyframes amove {
+
+            50% {
+                background: url(img/f2.png);
+            }
+
+            100% {
+                transform: translateX(300px);
+            }
+        }
+
+        @keyframes amove2 {
+
+            50% {
+                background: url(img/f2.png);
+            }
+
+            100% {
+                transform: translateX(0px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="a"></div>
+    <div class="a2"></div>
+</body>
+</html>
