@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 5000px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        img {
+            width: 466px;
+            height: 466px;
+            opacity: 0;
+            transition: 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>스크롤시 이미지가 나타납니다!</h1>
+    <img src="images/work1.jpg" alt="img1">
+    <img src="images/work2.jpg" alt="img2">
+    <img src="images/work3.jpg" alt="img3">
+    <img src="images/work4.jpg" alt="img4">
+    <img src="images/work5.jpg" alt="img5">
+    <img src="images/work6.jpg" alt="img6">
+
+    <script>
+        const imageList = document.querySelectorAll('img');
+
+        window.onscroll = () => {
+            let st = document.documentElement.scrollTop;
+
+            if (st > 250) {
+                imageList[0].style.opacity = '1';
+            }
+
+            if (st > 1170) {
+                imageList[1].style.opacity = '1';
+            }
+
+            if (st > 2050) {
+                imageList[2].style.opacity = '1';
+            }
+
+            if (st > 2880) {
+                imageList[3].style.opacity = '1';
+            }
+
+            if (st > 3710) {
+                imageList[4].style.opacity = '1';
+            }
+
+            if (st > 3790) {
+                imageList[5].style.opacity = '1';
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

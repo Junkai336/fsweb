@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: lightskyblue;
+            position: fixed;
+            width: 100%;
+            height: 80px;
+            text-align: center;
+        }
+
+        header h1 {
+            padding-top: 15px;
+        }
+
+        #hamburger {
+            position: relative;
+            border: 1px solid black;
+            width: 60px;
+            height: 60px;
+            left: 93%;
+            top: -50px;
+        }
+
+        #hamburger span {
+            display: block;
+            position: absolute;
+            background-color: black;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 5px;
+        }
+
+        #hamburger span::before {
+            content: '';
+            position: absolute;
+            background-color: black;
+            top: 15px;
+            transform: translate(-50%, 0);
+            width: 40px;
+            height: 5px;
+        }
+
+        #hamburger span::after {
+            content: '';
+            position: absolute;
+            background-color: black;
+            top: -15px;
+            transform: translate(-50%, 0);
+            width: 40px;
+            height: 5px;
+        }
+
+        #hamburger.on span {
+            background: rgba(0, 0, 0, 0);
+        }
+
+        #hamburger.on span::before {
+            text-align: center;
+            top: 50%;
+            transform: rotate(-45deg);
+            translate: -50%;
+        }
+
+        #hamburger.on span::after {
+            top: 50%;
+            transform: rotate(45deg);
+            translate: -50%;
+        }
+
+        .mobile_menu {
+            background-color: lawngreen;
+            position: absolute;
+            right: 100%;
+            top: 100%;
+            width: 200px;
+
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .mobile_menu {
+            padding: 20px;
+        }
+
+        .sub {
+            margin: 10px 0;
+        }
+
+        .sub li {
+            display: none;
+            margin: 10px 0;
+
+        }
+
+        li.on {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="nav">
+            <h1>Bundang_ezen</h1>
+            <div id="hamburger">
+                <a href="#"><span></span></a>
+            </div>
+        </div>
+        <ul class="mobile_menu">
+            <li><a href="#">회사소개</a>
+                <ul class="sub">
+                    <li><a href="#">submenu1</a></li>
+                    <li><a href="#">submenu2</a></li>
+                    <li><a href="#">submenu3</a></li>
+                    <li><a href="#">submenu4</a></li>
+                </ul>
+            </li>
+            <li><a href="#">제품소개</a>
+                <ul class="sub">
+                    <li><a href="#">submenu1</a></li>
+                    <li><a href="#">submenu2</a></li>
+                    <li><a href="#">submenu3</a></li>
+                    <li><a href="#">submenu4</a></li>
+                </ul>
+            </li>
+            <li><a href="#">커뮤니티</a>
+                <ul class="sub">
+                    <li><a href="#">submenu1</a></li>
+                    <li><a href="#">submenu2</a></li>
+                    <li><a href="#">submenu3</a></li>
+                    <li><a href="#">submenu4</a></li>
+                </ul>
+            </li>
+            <li><a href="#">다운로드</a>
+                <ul class="sub">
+                    <li><a href="#">submenu1</a></li>
+                    <li><a href="#">submenu2</a></li>
+                    <li><a href="#">submenu3</a></li>
+                    <li><a href="#">submenu4</a></li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+
+    <script>
+        const hamburger = document.querySelector('#hamburger');
+        const span = document.querySelector('#hamburger span');
+        const subMenu = document.querySelector('.mobile_menu');
+
+        
+        let i = 0
+
+        hamburger.addEventListener('click', function (e) {
+            e.preventDefault();
+            if (i === 0) {
+                span.classList.add('on');
+                hamburger.classList.add('on');
+                subMenu.style.right = '0';
+                i++
+            } else if (i === 1) {
+                span.classList.remove('on');
+                hamburger.classList.remove('on');
+                subMenu.style.right = '100%';
+                i--
+            }
+        });
+        
+        const ul = document.querySelectorAll('.sub ul')
+        const li = document.querySelectorAll('.sub li')
+
+        console.log(ul);
+        console.log(li);
+
+        for(let a = 0; a<ul.length; a++) {
+            console.log(a);
+        }
+
+
+    </script>
+
+</body>
+
+</html>
