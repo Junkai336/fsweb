@@ -21,5 +21,6 @@ public class A0927_2 {
         int test = 136;
         byte btest = (byte) test;
         System.out.println(btest);
+        System.out.println("Hello, World!");
     }
 }

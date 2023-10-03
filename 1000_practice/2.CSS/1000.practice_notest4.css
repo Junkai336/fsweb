@@ -302,3 +302,13 @@
     aspect-ratio: 가로비율 / 세로비율
  
  */
+
+
+ /* 
+    pointer-events : HTML 클릭 이벤트 제어
+        - 값: none, auto, inherit
+            none: 없음
+            auto: 브라우저 자동으로 선
+            inherit: 상속 받음
+            https://inpa.tistory.com/entry/CSS-%F0%9F%93%9A-pointer-events-%ED%81%B4%EB%A6%AD-%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EB%B0%A9%EC%A7%80
+ */
