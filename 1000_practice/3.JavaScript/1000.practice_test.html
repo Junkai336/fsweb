@@ -28,6 +28,7 @@
     <span>b</span>
     <span>c</span>
     <span>d</span>
+    <span>e</span>
 
     <script>
         const a = document.querySelector('p');
@@ -70,6 +71,13 @@
 
         b[2].innerHTML = ('ㄴ문자1 ' + 50 + '문자2 ' + '<br>');
         b[3].innerHTML = (`ㄷ문자1 50 문자2`);
+
+        b[4].outerHTML = (
+            `<br><br> 1 + 2 = ${1 + 2}
+            `
+        )
+
+        console.log(b[4].outerHTML);
 
     </script>
 <!-- <img src="images/a1.jpg" alt="a"> -->
