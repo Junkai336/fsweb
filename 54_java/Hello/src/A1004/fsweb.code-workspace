@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "D:/학생방/허준/fsweb"
+		},
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "fsweb"
+	}
+}
