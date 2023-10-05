@@ -38,6 +38,9 @@
         const aaaaa = document.getElementsByTagName('p');
         const b = document.querySelectorAll('span');
 
+        let z = 1;
+        let x = "2";
+
         console.log(aa);
 
         // console.log(a);
@@ -73,7 +76,11 @@
         b[3].innerHTML = (`ㄷ문자1 50 문자2`);
 
         b[4].outerHTML = (
-            `<br><br> 1 + 2 = ${1 + 2}
+            `
+            <h2>계산</h2>
+            <br><br> 1 + 2 = ${1 + 2}
+            <br> 3 ** 3 = ${3 ** 3}
+            typeof ${typeof z} ${typeof x} ${typeof "dd"}
             `
         )
 
