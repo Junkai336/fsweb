@@ -216,6 +216,44 @@
 
 // ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
+// 06_제어문
+
+/* 
+    자동형변환?
+
+    if (조건식) {}
+    if (조건식) {} else {}
+    if (조건식) {} else if {} ... else {}
+
+    switch (조건식) {
+        case n:
+            코드;
+            break;
+        case n:
+        case n:
+            코드;
+            break;
+        default:
+            코드;
+            break;
+    }
+    break가 없으면 밑에 코드 주르륵 실행
+    default: case에 해당하지 않는 값을 입력한 경우
+
+*/
+
+/* 
+    property = css 속성
+    attribute = html 속성
+
+    요소.getAttribute =
+    요소.setAttribute = ('para', 'para')
+
+    html title 속성: 마우스 올렸을 때 툴팁같은거 뜨는 거
+
+    input에 입력한 데이터는 "문자열"이다.
+*/
+
 // ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
 // ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
