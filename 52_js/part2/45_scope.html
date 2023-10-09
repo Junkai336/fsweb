@@ -87,16 +87,23 @@
         global1 = 20;
 
         var global1 = 10;
-        var global1 = 20;
+        var global1 = 25;
 
         function fna() {
             // 지역변수 (함수안에서만 쓸 수 있다~)
             var local1 = 30;
+            var global1 = 35;
             console.log(`var local1 함수안 ${local1}`);
             console.log(`var global1 함수안 ${global1}`);
         }
 
+        function fna2() {
+            var global1 = 45;
+            console.log(global1);
+        }
+
         fna();
+        fna2();
         
         // var global1;
         console.log(`var global1 함수밖 ${global1}`);

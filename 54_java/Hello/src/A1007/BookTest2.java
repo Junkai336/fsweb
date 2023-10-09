@@ -64,7 +64,9 @@ public class BookTest2 {
                 case "5":
                 System.out.println("시스템을 종료합니다.");
                 run = false;
+                scan.close();
                 break;
+                
                 
             }
         }

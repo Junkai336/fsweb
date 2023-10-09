@@ -46,6 +46,7 @@ for (let i = 0; i < galleryImg.length; i++) {
         // console.log(imgNewSrc);
         boxImg[i].setAttribute('src', imgNewSrc);
 
+
     });
 }
 
