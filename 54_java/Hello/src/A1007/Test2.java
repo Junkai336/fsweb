@@ -5,8 +5,12 @@ import java.util.Scanner;
 
 public class Test2 {
     public static void main(String[] args) {
+        
+        Calendar now = Calendar.getInstance();
+        Scanner scan = new Scanner(System.in);
 
-        /* ? 0을 2개 인식 못함?
+        /*
+         * ? 0을 2개 인식 못함?
          * 문제 48 나이계산 (난이도 중)
          * 문제 설명
          * 주민등록번호는 생년월일과 성별정보, 지역정보로 이루어진다.
@@ -20,14 +24,12 @@ public class Test2 {
          * 080521
          * 4        =====>  성별정보가 4이므로, 2008년생,  5살이다.
          */
-        Calendar now = Calendar.getInstance();
-        Scanner scan = new Scanner(System.in);
 
         System.out.print("주민등록번호 7자리를 입력하세요. (xxxxxx) : ");
         String identity = scan.nextLine();
 
         int sex = Integer.parseInt(identity.substring(6));
-        int birth = Integer.parseInt(identity.substring(0,2));
+        int birth = Integer.parseInt(identity.substring(0, 2));
 
         if (sex == 1) {
             System.out.println("성별: 남자");
@@ -43,7 +45,7 @@ public class Test2 {
             System.out.println("20" + birth + "년생");
         }
 
-        /* 
+        /*
          * 문제 49 30분전 시간계산 (난이도 중)
          * 문제 설명
          * 수호는 30분 전으로 돌아가고 싶은 1人 이다.
