@@ -74,13 +74,26 @@ public class Test {
             System.out.println("no angry");
         }
 
+        // 58 잘못 품
+
+        System.out.print("삼각형의 변 a 길이: ");
+        int a = scan.nextInt();
+        System.out.print("삼각형의 변 b 길이: ");
+        int b = scan.nextInt();
+        System.out.print("삼각형의 변 c 길이: ");
+        int c = scan.nextInt();
+
+        if(c < a + b) {
+            System.out.println("삼각형 가능");
+        } else {
+            System.out.println("삼각형 불가능");
+        }
+
     }
 }
 
-// class MenuKal {
-// int cheese = 400;
-// int vegetable = 300;
-// int milk = 170;
-// int egg = 100;
-// int salad = 70;
-// }
+/* class Triangle  {
+    int a;
+    int b;
+    int c;
+ } */
