@@ -216,7 +216,7 @@ function loadFn() {
 
         2. 브라우저 객체 모델(Browser Object Model)
             - 브라우저에 계층 구조로 내장되어 있는 객체
-            - windw, screen, location, history, navigator ...
+            - window, screen, location, history, navigator ...
             - 문서 객체 모델(Document Object Model) : HTML 문서 구조
 
     내장객체
@@ -224,6 +224,15 @@ function loadFn() {
             - 현재 시간과 날짜
                 - 참조변수 = new Date();
                 - 참조변수 = new Date(연, 월, 일);
+                    - getter(게터) : 가져오기
+                        - 변수 = 객체.메서드();
+
+
+                    
+                    
+                    
+                    - setter(세터) : 지정하기
+                        - 객체.메서드(값);
 
 
 */
