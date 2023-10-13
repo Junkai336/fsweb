@@ -51,7 +51,7 @@ public class Test2 {
             return;
         }
 
-        System.out.printf("학년:%01d, 반:%02d, 번호:%03d", student[0], student[1], student[2]);
+        System.out.printf("학년:%01d, 반:%02d, 번a호:%03d", student[0], student[1], student[2]);
         System.out.printf("\n%01d%02d%03d", student[0], student[1], student[2]);
 
     }

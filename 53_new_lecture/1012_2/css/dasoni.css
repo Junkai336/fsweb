@@ -3,8 +3,38 @@
 
 * {
     margin: 0;
-    padding: 0
+    padding: 0;
+    box-sizing: border-box;
 }
+
+/* 헤더 */
+
+#header {
+    border: 1px solid black;
+    position: fixed;
+    z-index: 999;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 161px;
+}
+
+.header_line {
+    /* background-color: #fff; */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 111px;
+    
+}
+
+.gnb_line {
+    /* background-color: #fff; */
+    height: 50px;
+}
+
+/* //..헤더 */
 
 .cf::after {
     content: '';
