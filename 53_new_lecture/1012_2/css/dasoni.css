@@ -31,6 +31,7 @@
 
 .gnb_line {
     /* background-color: #fff; */
+    position: absolute;
     height: 50px;
 }
 
