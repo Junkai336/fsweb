@@ -192,7 +192,7 @@
         `;
         // Math.sqrt(숫자): 제곱근값 반환
         ele[1].innerHTML += `
-        Math.sqrt() = ${Math.sqrt(40)} <br>
+        Math.sqrt() = ${Math.sqrt(2)} <br>
         `;
         // Math.PI: 원주율(3.141592...) 상수 반환
         ele[1].innerHTML += `
@@ -204,7 +204,8 @@
 
         // let str1 = 'Hello Javascript';
         let str1 = 'NAME: 홍길동, id: Hello Javascript, pw: 1234';
-        let str2 = '2023-09-20-14-30-25';
+        // let str2 = '2023-09-20-14-30-25';
+        let str2 = '가나다라마바사아자차카타파하abcdefghjABCDEFGHJ'
 
 
         // 문자열객체.charAt(index): index 번호에 해당하는 문자열 반환
@@ -272,6 +273,9 @@
         ele[2].innerHTML += `
             str1.length= ${str1.length}<br>
         `;
+
+        let str4 = 'accc,bccc,cccc,dccc cc';
+
         // slice(a개수, b): 왼쪽에서 a개의 문자를 자르고, b번째 이후에 문자열을 자른 후 남은 문자열을 반환(단, b가 - 1인 경우 뒤에서부터 1글자를 가리킴)
         ele[2].innerHTML += `
             str1.slice(1,10)= ${str1.slice(1,10)}<br>
@@ -280,7 +284,8 @@
         `;
         // split('문자'): 지정한 문자를 기준으로 문자열 데이터를 나누어 배열에 저장하여 반환
         ele[2].innerHTML += `
-            str1.split(',')= ${str1.split(',')}<br>
+            str1.split(',')= ${str4.split(',')}<br>
+            ${console.log(str4)}
             str2.split('-')= ${str2.split('-')}<br>
         `;
         

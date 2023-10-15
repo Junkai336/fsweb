@@ -196,6 +196,9 @@ function loadFn() {
         객체.속성 = 값; :       객체의 속성 값을 바꾼다.
         객체.메서드() :         객체의 메서드를 실행
 
+    객체 값 수정하기
+            - 객체.속성 = 값;
+
     예시?
         요소['length']
         요소.length
@@ -219,28 +222,181 @@ function loadFn() {
             - window, screen, location, history, navigator ...
             - 문서 객체 모델(Document Object Model) : HTML 문서 구조
 
-    내장객체
+    내장객체 (51_object3)
         - 참조변수 = new Object([속성, 값]);
             - 현재 시간과 날짜
                 - 참조변수 = new Date();
                 - 참조변수 = new Date(연, 월, 일);
                     - getter(게터) : 가져오기
                         - 변수 = 객체.메서드();
+                            - 날짜 정보 가져오기
+                                - getFullYear() : 년
+                                - getMonth() : 월( 0 : 1월  /  11 : 12월)
+                                - getDate(): 일
+                                - getDay(): 요일 ( 0 : 일 / 6 : 토)
+                                - getHours() : 시간
+                                - getMinutes() : 분
+                                - getSeconds() : 초
+                                - getMilliseconds() : 밀리초
+                                - getTime() : 1970년 1월 1일부터 경과된 시간을 밀리초로 변환
+                                - toGMTString() : GMT 표준 표기 방식으로 문자열 데이터로 반환
+                                - toLocaleString() : 운영 시스템 표기 방식으로 문자열 데이터로 반환
+                                - toLocaleDateString() : 날짜 객체의 날짜를 문자열로 반환
+                                - toLocaleTimeString() : 날짜 객체의 시간부분을 문자열로 반환
 
 
-                    
-                    
-                    
                     - setter(세터) : 지정하기
                         - 객체.메서드(값);
+                            - 날짜 정보 수정
+                                - setFullYear()
+                                - setMonth()
+                                - setDate()
+                                - setHour()
+                                - setMinutes()
+                                - setSeconds()
+                                - setMilliseconds()
+                                - setTime()
+
+                    - 남은 일 수 (밀리초) = 특정 날짜 밀리초 - 현재 날짜 밀리초
+                    - 1일 = 24시간 = 24 * 60분 = 24 * 60 * 60초 = 24 * 60 * 60 * 1000 밀리초
+
+            - Math
+                - Math.abS(숫자) : 절대값(음수 에서 -> 양수 로) 반환
+                - Math.max(숫자1, 숫자2, 숫자3...) : 가장 큰 값 반환
+                - Math.min(숫자1, 숫자2, 숫자3...) : 가장 작은 값 반환
+                - Math.pow(숫자, 제곱값) : 거듭제곱값 반환
+                - Math.random() : 0~1 사이 난수 반환 (0:포함 1:제외)
+                                예) let random = Math.random()
+                                    random (0) ~ random * 6 + 1 (6)
+                - Math.round(숫자) : 소수점 첫째 자리 반올림 정수 반환
+                - Math.ceil(숫자) : 소수점 첫째 자리 올림 정수 반환
+                - Math.floor(숫자) : 소수점 첫째 자리 내림 정수 반환
+                - Math.sqrt(숫자) : 제곱근 값 반환
+                - Math.PI : 원주율(3.141592..) 상수 반환
+
+            - String
+                - var 참조변수 = new String('문자열');
+                - var 변수 = '문자열';
+
+                예) 문자열객체or변수.CharAt(7)
+
+                - CharAt(index) : index 번호에 해당하는 문자열 반환
+
+                - indexOf('찾을문자') : 왼쪽부터 문자열 찾아 최초 일치하는
+                                        index번호 반환 (없으면 -1)
+
+                - indexOf('찾을문자', 인덱스) : 인덱스 번호부터 왼쪽부터 문자열
+                                                찾아 최초 일치하는 index번호 반환
+
+                - lastIndexOf('찾을문자') : 오른쪽부터 문자열 찾아 최초 일치하는
+                                            index번호 반환 (없으면 -1)
+
+                - lastIndexOf('찾을문자', 인덱스) : 인덱스 번호부터 오른쪽부터
+                                                    왼쪽으로 문자열 찾아 최초 일치하는 index번호 반환
+
+                - match('찾을문자') : 왼쪽부터 문자열을 찾아 최초 일치하는
+                                        문자열 반환
+
+                - search('찾을문자') : 왼쪽부터 문자열 찾아 최초 일치하는
+                                        index 번호 반환 (없으면 -1)
+                                        (정규식 사용 가능)
+
+                - substr(index, 개수) : 인덱스 번호부터 개수만큼 문자열 반환
+
+                - substring(index1, index2) : index1부터 index2 이전 구간의
+                                                문자열 반환
+                                                (음수: 인덱스 0)
+
+                - replace('바꿀문자', '새문자') : 왼쪽부터 바꿀 문자열 찾아
+                                                일치하는 문자열을 새 문자열로 치환
+
+                - toLowerCase(): 소문자로 변환
+
+                - toUpperCase(): 대문자로 변환
+
+                - length : 문자열의 문자 총 개수 반환
+
+                - slice(a개수, b) : 왼쪽에서 a개의 문자를 자르고,
+                                    b번째 이후에 문자열을 자른 후 남은 문자열 반환
+                                    (b가 -n 인 경우 뒤에서부터 n 글자 지칭)
+
+                - split('문자') : 지정한 문자를 기준으로 문자열 데이터를 나누어
+                                    배열에 저장하여 반환
+
+                - concat('새문자열') : 문자열에 새 문자열 결합 (뒤에 붙는듯?)
+
+                - charCodeAt(index) : 인덱스 번호에 해당하는 문자열의 아스키코드 값 반환 (인덱스 생략하면 0)
+
+                - fromCharCode(아스키코드값) : 아스키코드 값에 해당하는 문자열 반환
+                String.fromCharCode('문자')
+
+                - trim() : 문자열 앞 또는 뒤 공백 문자열 삭제
 
 
 */
 
 ////////////////////////////////////////////////////////////////////////////////
 
-// 52_Date
+// 54_Array
+
+/*
+        배열
+            - 여러 개의 데이터를 하나의 저장소에 저장
+            - 단일 이름으로 많은 값 보유
+            - 인덱스 번호(0,1,2..)를 참조하여 값에 접근 가능
+
+        배열의 값
+            - 숫자, 문자열, 불, 객체, undefined, 변수
+
+        배열 선언
+            - const array1 = [10, 20, 30];
+
+        배열 총 개수
+            - 배열.length
+
+        ex) const 변수 = [값, 값, 값, ...];
+                        0번  1번  2번
+            변수[0] = ~
+
+        ex) const 배열 = new Array(값1, 값2, ...);
+            const 배열 = new Array();
+
+
+
+        const 객체 = {속성:값, 속성:값};
+        const 객체 = new Object();
+        const 배열 = new Array();
+        const 날짜 = new Date();
+        const 문자열 = new String();
+
+
+
+        for (let i = 0; 0 < arr.length; i++) {
+            list.innerHTML += `<li>${arr[i]}</li>`;
+        }
+
+        forEach() 메서드
+
+            forEach() 메서드
+                배열.forEach(function(값,인덱스,배열) {
+                    코드;
+                });
+
+            객체.forEach(para, para, para) 메서드
+
+            배열.forEach(function(값,인덱스,배열){코드;});
+
+        
+*/
 
 ////////////////////////////////////////////////////////////////////////////////
 
-// 53_Math
+// 61_BOM, 62_팝업창
+
+////////////////////////////////////////////////////////////////////////////////
+
+// 63_setInterVal, setTimeout
+
+////////////////////////////////////////////////////////////////////////////////
+
+// 65_userAgent
