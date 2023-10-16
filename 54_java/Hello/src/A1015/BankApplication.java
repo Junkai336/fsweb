@@ -32,9 +32,9 @@ public class BankApplication {
                 case "5":
                     run = false;
                     break;
-                default:
-                    System.out.println("잘못된 입력입니다. 다시 입력해 주십시오.");
-                    continue O;
+                // default:
+                //     System.out.println("잘못된 입력입니다. 다시 입력해 주십시오.");
+                //     continue O;
             }
         }
         System.out.println("프로그램 종료");
