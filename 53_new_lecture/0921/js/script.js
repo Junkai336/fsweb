@@ -8,7 +8,7 @@ $(function () {
     });
     $(window).trigger('resize');
     // 브라우저 시작시 강제로 resize를 진행
-
+    
     $(window).scroll(function () {
         var sct = $(window).scrollTop();
         $('#sTop').text(sct);
@@ -17,7 +17,8 @@ $(function () {
         } else {
             $('nav').removeClass('fixed');
         }
-
+        
+        var dTop = $('#floatdiv').offset().top; //250;
 
 
     });
