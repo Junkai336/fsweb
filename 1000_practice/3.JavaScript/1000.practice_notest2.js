@@ -358,8 +358,11 @@ function loadFn() {
                         0번  1번  2번
             변수[0] = ~
 
-        ex) const 배열 = new Array(값1, 값2, ...);
-            const 배열 = new Array();
+        ex) const 참조변수 = new Array(값1, 값2, ...);
+            const 참조변수 = new Array();
+                참조변수[0] = 값1;
+                참조변수[1] = 값2;
+                참조변수[2] = 값3;
 
 
 
@@ -369,6 +372,7 @@ function loadFn() {
         const 날짜 = new Date();
         const 문자열 = new String();
 
+        
 
 
         for (let i = 0; 0 < arr.length; i++) {
@@ -376,22 +380,100 @@ function loadFn() {
         }
 
         forEach() 메서드
+            - Array,Map,Set 객체에서 사용 가능한 메서드
+            - 배열의 요소들을 반복하여 작업 수행할 수 있음
 
             forEach() 메서드
                 배열.forEach(function(값,인덱스,배열) {
                     코드;
                 });
 
-            객체.forEach(para, para, para) 메서드
+            ex) arr1.forEach(function(value,index) {
+                list.innerHTML += `<li>${index}</li>`;
+            })
 
-            배열.forEach(function(값,인덱스,배열){코드;});
+            객체.forEach(para, para, para) 메서드 <-?
 
-        
+
+        for ~ of
+            for (let i of array) {
+                list.innerHTML += `<li>${i}</li>`;
+            }
+
+
+            
+        body만 유일하게 .body로 선택 가능
+
+        document.body.innerHTML =
+
+
+        배열 메서드
+            push(new data) : 마지막 인덱스에 새 데이터 삽입
+            
+            pop() : 마지막 인덱스 데이터 삭제
+            
+            unshift(new data) : 첫번째 인덱스에 새 데이터 삽입
+            
+            shift() : 첫번째 인덱스 데이터 삭제
+            
+            join(연결문자) : 연결문자 기준으로 1개의 문자열 데이터로 반환
+            
+            배열1.concat(배열2) : 2개의 배열 객체를 하나로 결합하여 반환
+            
+            slice(index1, index2) : 인덱스1 ~ 인덱스2 이전까지 반환
+            
+            sort() : 오름차 순 정렬 반환 (1,2,3 / a,b,c / 가,나다)
+            
+            reverse() : 데이터 순서를 거꾸로 바꾼 후 반환
+            
+            splice(index, count, value1, value2, ...) : index 번호부터 count 개수만큼 삭제 후 value 추가
+*/
+
+// Array와 Object는 재복습 필요
+// forEach, forin, forof 복습 필요
+
+/* 
+    자료구조
+            stack(스택)
+            Queue(큐)
+            Deque(데크)
+            Tree(트리)
+            Linked List(링크드 리스트)
+
 */
 
 ////////////////////////////////////////////////////////////////////////////////
 
 // 61_BOM, 62_팝업창
+
+/* 
+    브라우저 객체 모델(Bom, Browser Object Model)
+
+    window - document, screen, location, history, navigator
+
+    window : 브라우저 객체의 최상위 객체
+
+    alert('메시지') : 알림 창 출력
+    prompt('텍스트'[, '기본텍스트']) : 프롬프트 창 입력
+    confirm('메시지') : 확인/취소 창
+
+    open('URL', '새창이름', '새창옵션') : URL 페이지를 새창으로 열기
+            새창 옵션
+                - width : 너비
+                - height : 높이
+                - left : x축 위치
+                - top : y축 위치
+                - scrollbars : 스크롤바 숨김 / 표시 (no / yes) 설정
+                - location : URL 주소 입력 영역 숨김 / 표시
+                - status : 상태 표시줄 영역 숨김 / 표시
+                - toolbars : 도구 상자 영역 숨김 / 표시
+    close() : 창 닫기
+
+    setInterval(function () {코드}, 시간) : 일정한 시간 간격으로 코드를 반복 실행
+    clearInterval() : setInterval() 정지
+    setTimeout(function () {코드}, 시간) : 일정한 시간 후에 코드 한 번 실행
+    clearTimeout() : setTimeout() 정지, 실행할 것을 취소
+*/
 
 ////////////////////////////////////////////////////////////////////////////////
 
