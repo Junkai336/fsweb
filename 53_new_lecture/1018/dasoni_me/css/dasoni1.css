@@ -177,32 +177,102 @@ header .gnb {
 #s5 {
     height: 460px;
     border: 1px solid pink;
+    background: url(../img/sec4_bg.jpg) no-repeat 0% 0%;
 }
 
 /* ************************************************************************************************** */
 /* 섹션6 스크롤못녀 옆 */
 
 #s6 {
+    display: flex;
+    justify-content: center;
     height: 395px;
     border: 1px solid pink;
+}
+
+.s6_wrap {
+    display: flex;
+    position: relative;
+    width: 1000px;
+    height: 395px;
+    margin: 0 auto;
+    border: 1px solid red;
+}
+
+.s6_wrap > div {
+    width: 500px;
+    border: 1px solid blue;
+}
+
+.left_container a {
+    width: 100%;
+}
+
+.right_container {
+    width: 100%;
+
 }
 
 /* ************************************************************************************************** */
 /* 푸터 */
 
 #footer {
+    position: relative;
     height: 265px;
-    border: 1px solid pink;
+    color: #fff;
+    font-size: 0.9rem;
+    background: #222 url(../img/f_logo.png) no-repeat 25% 45%;
+    white-space: pre;
+    text-align: center;
 }
+
+#footer p:nth-of-type(1) {
+    line-height: 24px;
+}
+
+#footer p:nth-of-type(2) {
+    color: #999;
+    padding: -100px 0;
+}
+
+#footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 75%;
+    top: 50%;
+    transform: translate(-75%, -55%);
+    width: 150px;
+    height: 100%;
+}
+
+#footer li {
+    width: 24px;
+    height: 24px;
+    margin: 0 12px;
+}
+
+#footer li:nth-of-type(1) {
+    background: url(../img/sns_icon.png) no-repeat 0% 0%;
+}
+#footer li:nth-of-type(2) {
+    background: url(../img/sns_icon2.png) no-repeat 0% 0%;
+}
+#footer li:nth-of-type(3) {
+    background: url(../img/sns_icon3.png) no-repeat 0% 0%;
+}
+
 
 /* ************************************************************************************************** */
 /* 팝업창 */
 
 .advertise {
+    display: none;
     position: fixed;
     z-index: 99999;
-    left: 100px;
-    top: 100px;
+    left: 50px;
+    top: 200px;
     width: 400px;
     height: 440px;
     background-color: #000;
@@ -232,20 +302,35 @@ header .gnb {
 
 .quick_menu {
     position: absolute;
-    left: 85%;
-    top: 50%;
-    /* background-color: black; */
+    left: 78%;
+    top: 38%;
 }
 
 .quick_menu li {
     width: 75px;
     height: 75px;
-    border: 1px solid orange;
-    background-color: orange;
     border-radius: 50%;
     text-align: center;
 }
 
 .quick_menu li+li {
-    margin-top: 12px;
+    margin-top: 16px;
+}
+
+.quick_menu li:nth-of-type(1) {
+    background: #d46f5d url(../img/q_icon.png) no-repeat 50% 50%;
+}
+
+.quick_menu li:nth-of-type(2) {
+    background: #d46f5d url(../img/q_icon2.png) no-repeat 50% 50%;
+}
+
+.quick_menu li:nth-of-type(3) {
+    background: #d46f5d url(../img/q_icon3.png) no-repeat 50% 50%;
+}
+
+/* 보이기 전용 */
+
+.on {
+    display: block;
 }
