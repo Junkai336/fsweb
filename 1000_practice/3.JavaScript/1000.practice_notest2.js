@@ -469,16 +469,46 @@ function loadFn() {
                 - toolbars : 도구 상자 영역 숨김 / 표시
     close() : 창 닫기
 
-    setInterval(function () {코드}, 시간) : 일정한 시간 간격으로 코드를 반복 실행
-    clearInterval() : setInterval() 정지
-    setTimeout(function () {코드}, 시간) : 일정한 시간 후에 코드 한 번 실행
-    clearTimeout() : setTimeout() 정지, 실행할 것을 취소
+    */
+   
+////////////////////////////////////////////////////////////////////////////////
+
+// 63_setInterVal, setTimeout
+/*
+
+setInterval(function () {코드}, 시간) : 일정한 시간 간격으로 코드를 반복 실행
+clearInterval() : setInterval() 정지
+
+setTimeout(function () {코드}, 시간) : 일정한 시간 후에 코드 한 번 실행
+clearTimeout() : setTimeout() 정지, 실행할 것을 취소
+
 */
 
 ////////////////////////////////////////////////////////////////////////////////
 
-// 63_setInterVal, setTimeout
-
-////////////////////////////////////////////////////////////////////////////////
-
 // 65_userAgent
+
+/* 
+        screen : 사용자의 모니터 정보 제공
+            screen.width : 화면 너비값
+            screen.height : 화면 높이값
+        
+        location : 사용자의 현재 URL에 대한 정보와 새로고침 메소드 제공
+            location.href = 'url';
+                - 지정한 url로 위치 이동
+            location.reload();
+                - 브라우저 새로 고침
+
+        navigator : 사용자의 브라우저와 운영체제 정보 제공
+            navigator.userAgent;
+                - 기본 플랫폼
+                - 운영체제 정보
+                - 사용중인 브라우저의 엔진 이름
+                - 사용중인 브라우저 이름
+                - 같은 엔진을 사용중이며 호환 가능한 다른 브라우저?
+
+        홈페이지: 브라우저의 시작페이지로 설정해놓은 페이지
+            특정사이트의 홈페이지 = 메인페이지 = index.html
+        웹페이지: 홈페이지, 메인페이지, 서브페이지
+        
+*/
