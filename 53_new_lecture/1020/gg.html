@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="display"></div>
+    <script>
+        const display = document.querySelector('.display');
+
+        setInterval(function () {
+            const date = new Date();
+            display.innerHTML = ` <br>  ${date.getFullYear()} `;
+            display.innerHTML += ` <br> ${date.getMonth() + 1} `;
+            display.innerHTML += ` <br> ${date.getDate()} `;
+            display.innerHTML += ` <br> ${date.getDay() + 1} `;
+            display.innerHTML += ` <br> ${date.getHours()} `;
+            display.innerHTML += ` <br> ${date.getMinutes()} `;
+            display.innerHTML += ` <br> ${date.getSeconds()} `;
+            display.innerHTML += ` <br> ${date.getMilliseconds()} `;
+            display.innerHTML += ` <br> ${date.toLocaleTimeString()} `;
+        }, 1000);
+    </script>
+</body>
+
+</html>

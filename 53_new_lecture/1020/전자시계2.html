@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+</head>
+<script>
+    window.onload = function () {
+
+        setInterval(function () {
+
+            var today = new Date();
+
+            var y = today.getFullYear();
+            var m = today.getMonth();
+            var d = today.getDate();
+            var n = today.getDay();
+            var yoil;
+            if (n == '0') {
+                yoil = "일";
+            }
+            else if (n == '1') {
+                yoil = "월";
+            }
+            else if (n == '2') {
+                yoil = "화";
+            }
+            else if (n == '3') {
+                yoil = "수";
+            }
+            else if (n == '4') {
+                yoil = "목";
+            }
+            else if (n == '5') {
+                yoil = "금";
+            }
+            else if (n == '6') {
+                yoil = "토";
+            }
+            else if (n == '7') {
+                yoil = "일";
+            }
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+
+            document.getElementById("year").innerHTML = y;
+            document.getElementById("month").innerHTML = m;
+            document.getElementById("date").innerHTML = d;
+            document.getElementById("nday").innerHTML = yoil;
+            document.getElementById("hour").innerHTML = h;
+            document.getElementById("minute").innerHTML = m;
+            document.getElementById("second").innerHTML = s;
+        }, 1000);
+    };
+</script>
+</head>
+
+<body>
+<span id="year">0000</span>년
+<span id="month">00</span>월
+<span id="date">00</span>일
+<span id="nday">0</span>요일
+<span id="hour">00</span>시
+<span id="minute">00</span>분
+<span id="second">00</span>초
+</body>
+</html>
