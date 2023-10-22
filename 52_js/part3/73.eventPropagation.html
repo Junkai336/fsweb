@@ -82,9 +82,14 @@
             // child.style.background = 'blue';
             // event.currentTarget.style.background = 'blue';
             e.currentTarget.style.background = 'blue';
-            console.log(event.currentTarget);
+            // e.target.style.background = 'blue';
+            // this.style.background = 'blue';
+            // console.log(event.currentTarget);
+            // console.log(target);
+            // console.log(this);
             // 부모/조상으로 전파되는 이벤트 정지
-            event.stopPropagation();
+            event.stopImmediatePropagation();
+            // event.stopPropagation();
             // a태그 링크 기본 이벤트 막기
             event.preventDefault();
         });

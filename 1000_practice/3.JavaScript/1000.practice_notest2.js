@@ -512,3 +512,224 @@ clearTimeout() : setTimeout() 정지, 실행할 것을 취소
         웹페이지: 홈페이지, 메인페이지, 서브페이지
         
 */
+
+////////////////////////////////////////////////////////////////////////////////
+
+// 71_DOM
+
+/* 
+    자바스크립트 : 동적 표현
+        - HTML 속성 변경
+        - HTML 내용 변경
+        - CSS 속성 변경
+    
+    DOM(Document Object Model, 문서 객체 모델)
+        - 자바스크립트를 이용하여 웹 문서에 접근하고 제어할 수 있도록
+            객체를 사용해 웹 문서를 체계적으로 정리하는 방법
+        
+    DOM tree
+        - 전체 문서 : 문서 노드
+        - 모든 HTML 요소 : 요소 노드
+        - HTML 요소 내부의 텍스트 : 텍스트 노드
+        - 모든 주석 : 주석 노드
+
+    DOM에 접근하기
+        - document.getElementById('아이디명')
+        - document.getElementsByClassName('클래스명').item(숫자)
+        - document.getElementsByTagName('태그명')
+        - document.querySelector('선택자')
+        - document.querySelectorAll('선택자들')[숫자]
+
+    객체.메서드();
+    객체.메서드().객체.CSS속성 = 값;
+    객체.style.속성 = 값;
+
+    2개 이상이 있을 때 querySelector를 선택하면 무조건 첫번째꺼가 된다.
+        
+*/
+
+////////////////////////////////////////////////////////////////////////////////
+
+// 72_parentElement
+
+/* 
+    '요소'만 선택
+        parentElement : 부모 요소 선택
+        children[노드번호] : 자식 요소 선택
+        previousElementSibling : 이전 형제 요소 선택
+        nextElementSibling : 다음 형제 요소 선택
+
+    '모든 노드' 선택
+        parentNode : 부모 노드 선택
+        childNodes[노드번호] : 자식 노드 선택
+        previousSibling : 이전 형제 노드 선택
+        nextSibling : 다음 형제 노드 선택
+        
+    ex) 요소.parentElement.nextElementSibling = '';
+        요소.children[1].children[2] = '';
+*/
+
+////////////////////////////////////////////////////////////////////////////////
+
+// 73_event
+
+/* 
+    Event(이벤트) : 웹문서 영역 안에서 웹브라우저 또는 사용자가 행하는 동작
+            - click(mousedown, mouseup), mouseenter(mouseover), mouseleave(mouseout), mousemove, wheel, keydown, keyup, keypress, resize, scroll, change
+
+    이벤트 핸들러: 이벤트가 발생할 때 그 이벤트에 반응해 실행하는 함수
+
+    방법1
+        <태그 on이벤트명="함수명()">
+
+    방법2
+        요소.onclick = 함수;
+        function 함수(){}
+
+        요소.onclick = function () {};
+
+    방법3
+        요소.addEventListener('이벤트', function(){});
+
+    쿼리셀렉터 함수 만들기?
+        function qs(sel) {
+            return document.querySelector(sel);
+        }
+
+        const box = qs('box1');
+
+    요소.addEventListener('이벤트', function () {});
+    요소.addEventListener('이벤트', function () {함수();});
+
+
+    전역함수 안에 있는 것들은 지역함수가 된다.
+    이벤트리스너 안에 변수,함수 들어가면 지역함수,변수가 된다.
+
+
+
+
+
+    length : 객체{속성:값,속성:값}, 배열[1,2,3], 컬렉션[Nodelist], 문자열(abc)의 개수
+
+    for(let 변수 of 배열,컬렉션,문자열) {코드}
+
+    요소.addEventListener('click', function (e) {})
+        e.target, e.currentTarget : 클릭한 대상
+
+
+
+    e.deltaY : 0:스크롤안함, 1:아래스크롤, -1:위스크롤
+
+*/
+
+////////////////////////////////////////////////////////////////////////////////
+
+// 73_eventPropagation
+
+/* 
+    this : 이벤트를 발생시킨 주체 (핸들러가 실제 할당한 요소)
+    target : 이벤트가 발생한 바로 그 요소 (이벤트가 실행된 대상)
+    currentTarget : 이벤트리스너를 가진 요소 (핸들러가 실제 할당한 요소)
+    
+    event 객체 : https://blog.sonim1.com/152 
+        - DOM 관련 이벤트 발생 시 관련 정보(이벤트 발생 요소, 이벤트 타입, 이벤트 관련 데이터) 저장
+        - 이벤트 핸들러에 전달되는 매개변수
+        - stopImmediatePropagation()
+
+    event.target : 이벤트가 실제로 발생한 바로 그 요소
+
+    event.currentTarget : 이벤트 전파로 인해 이벤트가 발생한 대상 요소나 부모 요소
+                            이벤트 리스너를 가진 요소
+
+    event.stopPropagation() : 이벤트 전파 방지
+    event.stopImmediatePropagation() : 이벤트 전파 방지 + 다른 이벤트 핸들러 호출 막음
+
+    event.preventDefault() : 이벤트 기본값 방지
+
+    
+
+    버블링(Bubbling)
+        - 기본값
+        - 자식 요소에서 발생한 이벤트가 바깥 부모 요소로 전파
+        - child -> parent -> ancestor 순으로 실행 진행
+
+    캡쳐링(Capturing)
+        - 자식 요소에서 발생한 이벤트가 부모 요소부터 시작하여 안쪽 자식 요소까지 도달
+        - ancestor -> parent -> child 순으로 실행 진행
+
+
+
+    요소.on이벤트 = 함수;
+        - 하나의 요소에 단일 이벤트만 등록 가능
+
+    요소.addEventListener('이벤트', 함수, 불);
+        - 하나의 요소에 다중 이벤트 등록 가능
+        - 불: useCapture(불값) : false(기본값,버블링), true(캡쳐링). 생략가능.
+
+
+
+    offsetX, offsetY : 
+    
+    clientX, clientY : 
+
+    screenX, screenY : 현재 모니터에 보이는 화면 전체 해상도에 대한 커서 좌표 반환
+
+    PageX, PageY : 
+
+    scrollX, scrollY : 
+
+*/
+
+////////////////////////////////////////////////////////////////////////////////
+
+// 77_createElement(), 77-2_input
+
+/* 
+    document.createElement(노드명) : document에 요소 노드 추가
+
+    document.createAttribute(속성명) : document에 속성 추가
+
+    document.createTextNode(텍스트) : document에 텍스트 노트 추가
+
+    요소.setAttributeNode(속성) : 요소에 속성 삽입
+
+    부모요소.appendChild(자식요소) : 부모 노드 끝에 자식 노드 삽입
+
+    부모요소.insertBefore(자식요소, 기준자식요소) : 기존자식요소 앞에 자식요소 삽입
+
+    요소.setAttribute('속성', 값) : HTML의 속성 값 변경
+
+    요소.getAttribute('속성') : HTML의 속성 값 가져오기
+
+    요소.classList.add('클래스명') : 클래스 추가
+
+    요소.classList.remove('클래스명') : 클래스 제거
+
+    요소.classList.contains('클래스명') : 클래스 있으면 true, 없으면 false
+
+    요소.classList.toggle('클래스명') : add와 remove를 번갈아 적용
+
+*/
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+/* 
+    offsetTop
+    offsetLeft
+    offsetRight
+    offsetBottom
+
+    getBoundingClientRect();
+
+    offsetWidth
+    offsetHeight
+
+    clientWidth
+    clientHeight
+
+    childElementCount
+
+    scrollTop
+
+*/
