@@ -668,15 +668,6 @@ clearTimeout() : setTimeout() 정지, 실행할 것을 취소
 
 
 
-    offsetX, offsetY : 
-    
-    clientX, clientY : 
-
-    screenX, screenY : 현재 모니터에 보이는 화면 전체 해상도에 대한 커서 좌표 반환
-
-    PageX, PageY : 
-
-    scrollX, scrollY : 
 
 */
 
@@ -715,21 +706,54 @@ clearTimeout() : setTimeout() 정지, 실행할 것을 취소
 ////////////////////////////////////////////////////////////////////////////////
 
 /* 
-    offsetTop
-    offsetLeft
-    offsetRight
-    offsetBottom
+    scrollTop : 아래로 스크롤 되어서 안 보이는 요소의 위쪽 높이
+    scrollLeft : 오른쪽으로 스크롤 되어서 안 보이는 요소의 왼쪽 너비
+    scrollRight : 왼쪽으로 스크롤 되어서 안 보이는 요소의 오른쪽 너비
+    scrollBottom : 위로 스크롤 되어서 안 보이는 요소의 아래쪽 높이
 
-    getBoundingClientRect();
+    offsetTop : 위쪽으로부터 요소의 위치 값
+    offsetLeft : 왼쪽으로부터 요소의 위치 값
+    offsetRight : 오른쪽으로부터 요소의 위치 값
+    offsetBottom : 아래로부터 요소의 위치 값
 
-    offsetWidth
-    offsetHeight
 
-    clientWidth
-    clientHeight
+    
+    offsetWidth : padding, border, scrollbar 까지 포함된 요소의 너비
+    offsetHeight : padding,  border, scrollbar 까지 포함된 요소의 높이
+    
+    scrollWidth : 스크롤해야 보이는 영역까지 포함한 요소의 전체 너비
+    scrollHeight : 스크롤해야 보이는 영역까지 포함한 요소의 전체 높이
+    
+    clientWidth : padding을 포함한 요소의 너비
+    clientHeight : padding을 포함한 요소의 높이
 
-    childElementCount
+    
+    
+    screenX, screenY : 사용자 모니터 화면 기준으로 한 좌표 표시 (현재 모니터에 보이는 화면 전체 해상도에 대한 커서 좌표 반환)
+    
+    offsetX, offsetY : 좌표를 출력하도록 하는 이벤트가 걸려있는 돔 노드 기준으로 좌표 표시 (자기가 기준이면 0,0)
+    
+    clientX, clientY : 사용자에게 웹페이지가 보여지는 영역을 기준으로 좌표 표시 (스크롤이 움직여도 값은 변하지 않음) [현재 화면 말고 이걸 볼 때의 화면에서 보여지는 기준을 상정한듯?]
 
-    scrollTop
+    PageX, PageY : 전체 문서를 기준으로 한 좌표 표시
+
+    scrollX, scrollY : 원점으로부터 문서를 수평, 수직 방향으로 스크롤한 픽셀의 수를 나타낸다. (문서가 위나 아래로 전혀 움직이지 않은 상태면 0을 반환) (var sct = window.scrollY)
+
+
+
+    getBoundingClientRect(); : 반환 값은 padding, border-width를 포함해 전체 요소가 들어있음. left,top,right,bottom,x,y,width,height 등을 픽셀 단위로 나타냄
+
+    childElementCount : 자식 요소의 개수 구하기 (자식의 자식은 안나타남)
+
+
+
+    window.scrollTo(X좌표, Y좌표) : 전달된 좌표로 이동 (문서의 지정된 위치로 스크롤을 이동) (문서의 왼쪽 상단부터 시작함)
+
+    window.scrollBy(X좌표, Y좌표) : 현재 좌표를 기준으로 전달된 좌표만큼 이동
+
+
+
+
+    https://hianna.tistory.com/493
 
 */
