@@ -9,7 +9,7 @@ $(function () {
         controls: false,
         pager: false,
         mode: 'fade',
-        pause: 5000, // 실제 슬라이드 속도 - setInterval과 비슷
+        pause: 3000, // 실제 슬라이드 속도 - setInterval과 비슷
         autoHover: true,
         onSlideBeofre: function () { },
         onSlideAfter: function () {
@@ -115,8 +115,20 @@ advertise.addEventListener('click', function (e) {
 /* ******** */
 // 24시간동안 보지 않기
 /* ******** */
+// function setCookie(name, value, exp) {
+//     var date = new Date();
+//     date.setTime(date.getTime() + exp*24*60*60*1000);
+//     document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/';
+// }
+
+// function getCookie(name) {
+//     var value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+//     return value? value[2] : null;
+// }
+
 advertiseClose[0].addEventListener('click', function () {
     advertise.classList.remove('on');
+    // getCookie('pop');
 });
 
 // 닫기
