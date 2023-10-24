@@ -682,16 +682,19 @@ clearTimeout() : setTimeout() 정지, 실행할 것을 취소
 
     document.createTextNode(텍스트) : document에 텍스트 노트 추가
 
+    
     요소.setAttributeNode(속성) : 요소에 속성 삽입
 
     부모요소.appendChild(자식요소) : 부모 노드 끝에 자식 노드 삽입
 
     부모요소.insertBefore(자식요소, 기준자식요소) : 기존자식요소 앞에 자식요소 삽입
 
+    
     요소.setAttribute('속성', 값) : HTML의 속성 값 변경
 
     요소.getAttribute('속성') : HTML의 속성 값 가져오기
 
+    
     요소.classList.add('클래스명') : 클래스 추가
 
     요소.classList.remove('클래스명') : 클래스 제거
