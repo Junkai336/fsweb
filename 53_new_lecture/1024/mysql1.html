@@ -21,6 +21,10 @@ DataBase 삭제하기
 DataBase를 삭제하는 명령어는 Drop 입니다.
 Drop database test_sample 
 
+
+show tables;
+
+
 3. Table
 
 Table 생성
@@ -71,6 +75,127 @@ Primary key(필드명)
     drop table friends;
 
 
+테이블에 데이터 삽입
+
+    insert into 테이블 (필드명1, 필드명2...) values (필드값1, 필드값2...)
+
+전체 필드와 데이터 검색
+
+테이블 데이터 확인(조회)
+
+    select * from 테이블명;
+
+특정 필드의 전체 레코드 검색
+
+필드는 하나의 항목(id, num, address, phone)
+
+레코드는 황영주 데이터 전체 (id, name, gender, post_num, address, tel, age) (한줄을 의미)
+
+    select name, tel, address from member(테이블명)
+
+특정 조건에 맞는 레코드 검색
+
+    select 필드명1, 필드명2, ... from 테이블명 where 조건식;
+
+        1. 여성회원의 아이디, 이름, 주소, 성별 검색
+
+            select id, name, address, gender from member where gender='W';
+
+        2. 50세 이상인 남성 회원의 이름, 전화번호, 성별, 나이 검색
+
+            select name, tel, gender, age from member where gender='M' && age >= 50;
+            select name, tel, gender, age from member where gender='M' and age >= 50;
+
+        3. 20대 회원의 이름, 성별, 주소, 나이 검색
+
+            select name, gender, age from member where age>=20 and age<30;
+
+        4. 30대 또는 50대 남성 회원의 이름, 전화번호, 나이, 성별 검색
+
+            select name, tel, age, gender from member where ((age >= 30 and age <= 39) or (age >= 50 and age <= 59)) and gender='M';
+
+            db의 같다는 =
+        
+        5. 이름이 '안철영'인 회원의 일련번호, 이름, 전화번호, 주소, 우편번호, 나이, 성별 검색
+        
+            select num, name, tel, address, post_num, age, gender from member where name='안철영';
+
+        특정 문자열이 포함된 레코드 검색
+
+        select 필드명1, 필드명2,.. from 테이블명 where 검색필드 like 문서수식
+
+        6. 성이 박씨인 회원의 이름, 전화번호 검색
+
+        select name, tel, from member where name like '박%';
+
+        7. 서울에 거주하는 회원의 일련번호, 이름, 주소, 성별 검색
+
+        select num, name, address, gender from member where address like '서울%';
+
+        8. 은평구에 거주하는 회원의 모든 정보 검색
+
+        select * from member where address like '%은평구%';
+
+        9. 성이 김씨이고 광주에 거주하는 회원의 모든 정보 검색
+
+        select * from member where address like '%광주%' and name like '김%';
+
+
+
+
+        레코드 정렬
+            - '테이블명' 이라는 DB 테이블에서 '필드명'을 기준으로 오름차순 정렬된 필드명1, 필드명2, ... 를 검색하는 명령 형식
+
+            select 필드명1, 필드명2, ... from 테이블명 order by 필드명;
+
+        10. 서울에 사는 회원을 나이순으로 오름차순 정렬한 뒤 이름, 나이, 주소, 전화번호, 성별 출력
+
+            select name, age, address, tel, gender from member where address like '서울%' order by age;
+
+        11. 부산에 사는 회원을 나이순으로 내림차순 정렬한 뒤 이름, 나이, 주소, 전화번호 출력
+
+            select name, age, address, tel from member where address like '부산%' order by age desc; <- 내림차순 descending
+
+        
+
+        레코드 수정
+            - '테이블명' 이라는 DB 테이블에서 조건식을 만족하는 레코드의 '필드명' 값을 '필드값'으로 변경하는 명령 형식
+
+            update 테이블명 set 필드명=필드값 where 조건식;
+
+            12. 이름이 '고재진'인 레코드의 전화번호를 123-4567로 변경한 뒤 데이터 확인
+
+                update member set tel='123-4567' where name='고재진';
+
+                select name, tel from member where name = "고재진";
+
+            13. 이름이 '정한나'인 회원의 나이를 확인하고 값을 37로 변경
+
+                update member set age=37 where name='정한나'; 
+                select name, age from member where name='정한나';
+
+
+        레코드 삭제
+
+            '테이블명'이라는 DB 테이블에서 조건식을 만족하는 레코드를 삭제하는 명령 형식
+
+            delete from 테이블명 where 조건식;
+
+            14. 이름이 '김수련'인 레코드를 삭제한 뒤 확인
+
+                delete from member where name='김수련';
+
+                select * from member where name like '김%';
+
+            15. 40대 회원의 레코드를 삭제한 뒤 35 ~ 53 세 회원의 이름, 나이, 성별을 나이순으로 출력하여 확인
+
+                delete from member where age > 39 and age < 50
+
+                select name, age, gender from member where age >= 35 and age <53 order by age;
+
+            member 테이블의 전체 레코드를 삭제하는 명령
+
+            delete from member => member 테이블의 전체 레코드가 삭제되니 조심히 사용할 것.
 
 
 
@@ -83,14 +208,4 @@ Primary key(필드명)
 
 
 
-
-
-
-
-
-
-
-
-
-
- -->
+-->
