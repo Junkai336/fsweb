@@ -18,10 +18,19 @@ public class HelloControllerPractice {
         return "question3"; // question3 경로로 값을 돌려준다.
     }
 
-    @GetMapping("hello-mvc")
+    @GetMapping("hello-man")
     public String helloMvc(@RequestParam(value="name", required = false) String name, Model model) {
             model.addAttribute("name", name);
             return "hello-template";
+            // -mvc가 고유 명령어? => 아니다.
+
+            // require : 입력값이 필요한가?
+            // template/hello-man : require = false면 메소드 실행 true면 오류
+            // template/hello-man?name=값 : require = true여도 실행
+
+            // @RequestParam?
+            // value?
+            // name 끼리 상관관계 알아야함.
     }
 
 }
