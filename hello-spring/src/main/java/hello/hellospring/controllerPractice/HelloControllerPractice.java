@@ -5,7 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@Controller
+//@Controller
 
 public class HelloControllerPractice {
         @GetMapping("/") // template 경로를 기준으로 보는듯. , / 면 static으로 넘어가나?
