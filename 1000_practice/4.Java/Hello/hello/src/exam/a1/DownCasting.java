@@ -23,12 +23,11 @@ public class DownCasting {
         Child child = (Child) parent;
 
         parent.papa();
-        parent.chch();
+        // parent.chch();
 
         child.papa();
         child.chch();
 
         System.out.println("dd");
-        System.out.println(parent.b);
     }
 }
