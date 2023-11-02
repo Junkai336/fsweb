@@ -32,6 +32,7 @@ public class ArticleController {
     public String createArticle(ArticleForm form) {
         System.out.println(form.toString());
         // 1. Dto를 Entity로 변환
+        // 전송을 Dto로 하고 Entity로 저장한다.
         Article article = form.toEntity();
         System.out.println(article.toString());
         // 2. Repository에게 Entity를 DB로 저장하게 함
