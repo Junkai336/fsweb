@@ -1,0 +1,53 @@
+{{>layouts/header}}
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Content</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    {{#article}}
+        <tr>
+            <th>{{id}}</th>
+            <td>{{title}}</td>
+            <td>{{content}}</td>
+        </tr>
+    {{/article}}
+    <!--    반복문 역할     -->
+
+<!--   혹은
+        <tr>
+            <th>{{article.id}}</th>
+            <td>{{article.title}}</td>
+            <td>{{article.content}}</td>
+        </tr>
+
+
+
+-->
+
+
+
+
+
+
+
+    <!--
+     <tr th:each="article : ${articleList}">
+            <th th:text="${article.id}"></th>
+            <td th:text="${article.title}"></td>
+            <td th:text="${article.content}"></td>
+        </tr>
+
+    thymeleaf에서는 이러하다~
+    -->
+    </tbody>
+
+</table>
+
+<a href="/articles/{{article.id}}/edit" class="btn btn-primary">Edit</a>
+<a href="/articles">Go to Article List</a>
+{{>layouts/footer}}

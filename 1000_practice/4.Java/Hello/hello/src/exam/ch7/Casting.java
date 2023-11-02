@@ -34,5 +34,19 @@ public class Casting {
         System.out.println("123");
 
         // 에러발생원인을 모르겠다.
+
+        boolean result1 = animal instanceof Cat;
+        boolean result2 = cat instanceof Animal;
+        boolean result3 = animalC instanceof Cat;
+        boolean result4 = animalC instanceof Animal;
+        // boolean result5 = catC instanceof Animal;
+        // boolean result6 = catC instanceof Cat;
+
+        System.out.println(result1);
+        System.out.println(result2);
+        System.out.println(result3);
+        System.out.println(result4);
+        // System.out.println(result5);
+        // System.out.println(result6);
     }
 }
