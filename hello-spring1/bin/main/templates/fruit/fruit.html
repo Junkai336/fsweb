@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>${....} 변수 표현식</p>
+    <span th:text="${fruit.fruit1}"></span> <br/>
+    <span th:text="${fruit.fruit2}"></span> <br/>
+    <span th:text="${fruit.fruit3}"></span> <br/>
+
+    <div th:object="${fruit}">
+        <span th:text="*{fruit1}"></span> <br/>
+        <span th:text="*{fruit2}"></span> <br/>
+        <span th:text="*{fruit3}"></span> <br/>
+    </div>
+<ul>
+    <li th:each="entry : ${fruit}">
+        <span th:text="${entry.key}"></span> <br/>
+        <span th:text="${entry.value}"></span> <br/>
+    </li>
+
+    <li th"each="entry : ${fruit}">
+        <span th:text="${entry.key"></span> - <span td=:text></span>
+    </li>
+</ul>
+</body>
+</html>

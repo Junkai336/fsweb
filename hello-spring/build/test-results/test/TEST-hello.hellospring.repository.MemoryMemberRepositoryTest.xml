@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="hello.hellospring.repository.MemoryMemberRepositoryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-10-30T03:48:26" hostname="DESKTOP-N0RLKE9" time="0.077">
+  <properties/>
+  <testcase name="save()" classname="hello.hellospring.repository.MemoryMemberRepositoryTest" time="0.077"/>
+  <system-out><![CDATA[Member 정보: Member{id=1, name='spring'}
+result 정보: Member{id=1, name='spring'}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
