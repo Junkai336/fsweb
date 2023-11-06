@@ -23,5 +23,4 @@ public class MemberService {
         memberRepository.save(memberEntity);
         // Repository의 save 메소드 호출 (조건. entity 객체를 넘겨줘야 함)
     }
-
 }
