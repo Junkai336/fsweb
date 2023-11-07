@@ -1,5 +1,7 @@
 package exam.ch7;
 
+import java.util.List;
+
 class Cat extends Animal {
     public void catMethod() {
         System.out.println("catmethod");
@@ -48,5 +50,19 @@ public class Casting {
         System.out.println(result4);
         // System.out.println(result5);
         // System.out.println(result6);
+                
+                // List list = new Linkedlist();
+        
+                // list.add(10);
+                // list.add(20);
+                // list.add(30);
+                // list.add(40);
+                // list.add(50);
+        
+                // list.remove(2);
+        
+                // list.size();
+
+        }
+        
     }
-}
