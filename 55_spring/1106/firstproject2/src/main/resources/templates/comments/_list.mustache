@@ -126,7 +126,6 @@
 
 <script>
 
-    {
 
     // 삭제 버튼 선택
     const commentDeleteBtns = document.querySelectorAll(".comment-delete-btn");
@@ -145,22 +144,22 @@
             console.log(`삭제 버튼 클릭: ${commentId}번 댓글`);
 
             // 삭제 API 호출 및 처리
-            const url = `/api/comments/${comment.id}`;
 
-         fetch(url, {
-         method: "delete",
-         body: JSON.stringify(comment),
-         headers: {
-           "Content-Type": "application/json"
-         }
-       }).then(response => {
-         const msg = (response.ok) ? "댓글이 삭제되었습니다." : "댓글 삭제 실패..!";
-         alert(msg);
-         window.location.reload();
+<!--            const url = `/api/comments/${comment.id}`;-->
+
+<!--         fetch(url, {-->
+<!--         method: "delete",-->
+<!--         body: JSON.stringify(comment),-->
+<!--         headers: {-->
+<!--           "Content-Type": "application/json"-->
+<!--         }-->
+<!--       }).then(response => {-->
+<!--         const msg = (response.ok) ? "댓글이 삭제되었습니다." : "댓글 삭제 실패..!";-->
+<!--         alert(msg);-->
+<!--         window.location.reload();-->
 
         });
     });
 
-    }
 
 </script>
