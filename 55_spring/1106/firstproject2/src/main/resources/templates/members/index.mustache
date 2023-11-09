@@ -1,0 +1,28 @@
+{{>layouts/header}}
+
+<table>
+
+    <thead>
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Email</th>
+        <th scope="col">Password</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <!--이게 for문 같은건가? 조건 일치하면 반복해서 만들어주는거?-->
+    {{#members}}
+        <tr>
+            <th>{{id}}</th>
+            <td><a href="/members/{{id}}">{{email}}</a></td>
+            <td>{{password}}</td>
+        </tr>
+    {{/members}}
+    </tbody>
+
+</table>
+
+<a href="/signup" class="btn btn-primary">회원가입</a>
+
+{{>layouts/footer}}

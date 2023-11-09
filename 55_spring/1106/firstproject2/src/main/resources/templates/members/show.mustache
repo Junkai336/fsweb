@@ -1,0 +1,30 @@
+{{>layouts/header}}
+
+<table>
+
+<thead>
+<tr>
+    <th scope="col">Id</th>
+    <th scope="col">Email</th>
+    <th scope="col">Password</th>
+</tr>
+</thead>
+
+<tbody>
+<!--이게 for문 같은건가? 조건 일치하면 반복해서 만들어주는거?-->
+{{#member}}
+    <tr>
+        <th>{{id}}</th>
+        <td><a href="/members/{{id}}">{{email}}</a></td>
+        <td>{{password}}</td>
+    </tr>
+    {{/member}}
+</tbody>
+
+</table>
+
+<a href="/members/{{member.id}}/edit" class="btn btn-primary">수정하기</a>
+<a href="/members/{{member.id}}/delete" class="btn btn-danger">삭제하기</a>
+<a href="/members">Go to member list</a>
+
+{{>layouts/footer}}
