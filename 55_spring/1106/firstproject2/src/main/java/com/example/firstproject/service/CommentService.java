@@ -6,6 +6,7 @@ import com.example.firstproject.entity.Comment;
 import com.example.firstproject.repository.ArticleRepository;
 import com.example.firstproject.repository.CommentRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -16,14 +17,15 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
-@Transactional
+//@Transactional
+@Slf4j
 public class CommentService {
 
     private final CommentRepository commentRepository;
 
     private final ArticleRepository articleRepository;
 
-    @Transactional(readOnly = true)
+//    @Transactional(readOnly = true)
     public List<CommentDto> comments(Long articleId) {
         // 조회 댓글 목록
         List<Comment> comments = commentRepository.findByArticleId(articleId);
@@ -45,8 +47,11 @@ public class CommentService {
         return dtos;
 
     }
-
+@Transactional // DB에 접근하므로 트랜잭션 어노테이션으로 문제가 발생하면 롤백되도록 해야함.
     public CommentDto create(Long articleId, CommentDto dto) {
+        log.info("입력값 => {}", articleId);
+        log.info("입력값 => {}", dto);
+
         // 게시글 조회 및 예외 발생
         Article article = articleRepository.findById(articleId)
                 .orElseThrow(() -> new IllegalArgumentException("댓글생성실패!"));
@@ -57,9 +62,13 @@ public class CommentService {
         Comment created = commentRepository.save(comment);
 
         // Dto로 변경하여 반환
-        return CommentDto.createCommentDto(created);
+//        return CommentDto.createCommentDto(created);
+          CommentDto createdDto = CommentDto.createCommentDto(created);
+          log.info("반환값 => {}", createdDto);
+          return createdDto;
     }
 
+    @Transactional
     public CommentDto update(Long id, CommentDto dto) {
     Comment target = commentRepository.findById(id)
         .orElseThrow(() -> new IllegalArgumentException("댓글수정실패!"));
@@ -74,6 +83,7 @@ public class CommentService {
         return CommentDto.createCommentDto(updated);
     }
 
+    @Transactional
     public CommentDto delete(Long id) {
         // 댓글조회 및 예외발생
         Comment target = commentRepository.findById(id)
