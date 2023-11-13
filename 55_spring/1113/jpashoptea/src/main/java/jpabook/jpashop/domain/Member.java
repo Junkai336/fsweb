@@ -1,6 +1,8 @@
-package jpabook.jpashob.domain;
+package jpabook.jpashop.domain;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -23,5 +25,6 @@ public class Member {
 
     @OneToMany(mappedBy = "member") // member가 하인 연관관계의 주인은 order
     private List<Order> orders = new ArrayList<>();
+
 
 }

@@ -25,11 +25,13 @@ public class UserService {
 
     // 이거 지워야 하는데 왜 계속 오류 뜨는지 모르겠음. 필드주입? autowired? 생성자주입? repository에는 아무것도 안쓰는데?
 //     기본 생성자가 아닌 다른 생성자가 필요하다는 말인데, 원리를 모르겠다.
-    @Autowired
+    // => 필드주입, 생성자주입을 하면 한 번 쓰면 사라진다. 공통의 Service,Repository를 쓰기 위한 것
+    // 그렇지 않으면, new로 여러번 생성해야 한다. (필드나 생성자가 얽히기 때문인 듯 함. 한번 지정하면 어쨋든 계속 남으니깐.)
+//    @Autowired
 //    @AllArgsConstructor
-    public UserService(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
+//    public UserService(UserRepository userRepository) {
+//        this.userRepository = userRepository;
+//    }
 
     public boolean checkLoginIdDuplicate(String loginId) {
         return userRepository.existsByLoginId(loginId);
