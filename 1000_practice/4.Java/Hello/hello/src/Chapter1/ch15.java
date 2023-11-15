@@ -263,11 +263,60 @@ public class ch15 {
  * ) : 시작과 끝 사이 Map.Entry 들을 NavigableMap 컬렉션으로 반환, 주어진 Map.Entry 포함 여부는 두번째, 네번째 매개값
  * 
  * Comparable
- * -
+ * - TreeSet, TreeMap 에 저장되는 키 객체는 저장과 동시에 오름차순으로 정렬
+ * - Integer, Double, String 타입은 모두 Comparable을 구현하고 있음
+ * - 그 외에 사용자 정의 객체 저장시 반드시 Comparable을 구현하고 있어야 한다. <- ?
+ * - compareTo(타입파라미터 변수명) : 리턴타입은 int
+ *      - 같으면 0 리턴
+ *      - 적으면 음수 리턴
+ *      - 크면 양수 리턴
+ * - ex)
+ *  public class Person implements Comparable<Person> {
+ *  @Override
+ *  public int compareTo(Person o) {
+ *      if(age < o.age) return -1
+ *      else if(age == o.age) return 0
+ *      else return 1;
+ *  }
+ * }
+ * - 이렇게 재정의 되어있으면 다른 객체에서 Treeset<Person> 만들면 알아서 되는듯
  * 
  * Comparator
- * - 
+ * - Comparable 비구현 객체를 저장하고 싶을 경우 비교자 제공?
+ * - TreeSet<E> treeSet = new TreeSet<E>(new ComparatorImpl());
+ * - TreeMap<key, value> treeMap = new TreeMap<key, value>(new ComparatorImpl());
+ * - compare(T o1, T o2) : 리턴타입은 int
+ *      - o1 = o2 0리턴
+ *      - o1이 앞에 오게 하려면 음수 리턴
+ *      - o2가 앞에 오게 하려면 양수 리턴
+ * - ex)
+ * public class FruitComparator implements Comparator<Fruit> {
+ * @Override
+ * public int compare(Fruit o1, Fruit o2) {
+ *      if(o1.price < o2.price) return -1;
+ * else if(o1.price == o2.price) return 0;
+ * else return 1;
+ *  }
+ * }
  * 
+ * LIFO, FIFO 컬렉션
+ * - 후입선출(LIFO)
+ *  - 나중에 넣은 객체가 먼저 빠져나간다.
+ *      Stack
+ *          - Stack<E> stack = new Stack<E>();
+ *          - Stack<E> stack = new Stack<>()
+ *          메소드
+ *              - push(E item) : 주어진 객체를 스택에 넣는다.
+ *              - pop() : 스택의 맨 위 객체를 빼낸다.
+ * 
+ * - 선입선출(FIFO)
+ *  - 먼저 넣은 객체가 먼저 빠져나간다.
+ *      Queue
+ *          - Queue<E> queue = new LinkedList<E>();
+ *          - Queue<E> queue = new LinkedList<>();
+ *          메소드
+ *              - offer(E e) : 주어진 객체를 큐에 넣는다.
+ *              - poll() : 큐에서 객체를 빼낸다.
  * 
  * 
  * 
