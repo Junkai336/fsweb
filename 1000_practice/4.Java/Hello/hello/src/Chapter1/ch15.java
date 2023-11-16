@@ -318,13 +318,51 @@ public class ch15 {
  *              - offer(E e) : 주어진 객체를 큐에 넣는다.
  *              - poll() : 큐에서 객체를 빼낸다.
  * 
+ * 동기화된 컬렉션
+ *  - synchronizedXXX() 메소드
+ *      - 비동기화된 메소드를 동기화된 메소드로 래핑
+ *      - List<T> : synchronizedList(List<T> list) : List를 동기화된 List로 리턴
+ *          - List<T> list = Collections.synchronizedList(new ArrayList<T>());
+ *      - Set<T> : synchroizedSet(Set<T> set) : Set을 동기화된 Set으로 리턴
+ *          - Set<E> set = Collections.synchronizedSet(new HashSet<E>());
+ *      - Map<key, value> : synchronized(Map<key,value> map) : Map을 동기화된 Map으로 리턴
+ *          - Map<key, value> map = Collections.synchronizedMap(new HashMap<key, value>());
  * 
+ *  비동기화 : 응답을 기다리지 않고 정하는순서대로 막 (경합이 생길 수 있다.)
+ *  동기화된 : 순서가 있는 차례대로. (느림)
  * 
+ * 수정할 수 없는 컬렉션
+ *  - 요소를 추가, 삭제할 수 없는 컬렉션
+ *  - 저장된 요소를 변경하고 싶지 않을 때 유용
  * 
+ * of
+ *  - List<E> list = List.of(E..elements);
+ *      - List<String> list = List.of("A", "B", "C");
+
+ *  - Set<E> set = Set.of(E..elements);
+ *      - Set<String> set = Set.of("A", "B", "C");
+
+ *  - Map<key,value> map = Map.of(K key1, V value1, K key2, V value2...)
+ *      - Map<Integer,String> map = Map.of(
+ *          1, "A",
+ *          2, "B",
+ *          3, "C"
+ *      );
  * 
+ * copyof
+ *  - 기존 컬렉션을 복사하여 수정할 수 없는 컬렉션 만들기
+ *  
+ *  - List<E> list = List.copyOf(Collection<E> coll);
  * 
+ *  - Set<E> set = Set.copyOf(Collection<E> coll);
  * 
+ *  - Map<key,value> map2 = Map.copyOf(Map<key,value> map1); 
  * 
+ * asList
+ *  - 배열을 수정할 수 없는 List 컭렉션으로 만들기
+ * 
+ *  - String[] arr = { "A", "B", "C"};
+ *  - List<String> list = Arrays.asList(arr);
  * 
  * 
  * 
