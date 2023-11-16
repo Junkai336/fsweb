@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p th:text="${name}"></p>
+    <p th:text="${detail}"></p>
+    <p th:text="${price}"></p>
+    <p th:text="${regtime}"></p>
+    <br/>
+    <br/>
+<p th:text="'상품명 : '+${item.itemNm}">
+<p th:text="'상품 상세 설명 : '+${item.itemDetail}"></p>
+<p th:text="'상품 가격 : '+${item.price}"></p>
+<p th:text="'상품등록일 : '+${item.regTime}"></p>
+</body>
+</html>
