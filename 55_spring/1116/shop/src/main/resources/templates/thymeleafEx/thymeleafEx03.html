@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table * {border: 1px solid black;}
+    </style>
+</head>
+<body>
+<table>
+    <thead>
+
+    <tr>
+        <td>순번</td>
+        <td>상품명</td>
+        <td>상품설명</td>
+        <td>가격</td>
+        <td>상품등록일</td>
+    </tr>
+    </thead>
+    <tbody>
+        <tr th:each="items, status : ${item}">
+            <th th:text="${status.index}">1</th>
+            <th th:text="${items.itemNm}">2</th>
+            <th th:text="${items.itemDetail}">3</th>
+            <th th:text="${items.price}">4</th>
+            <th th:text="${items.regTime}">5</th>
+        </tr>
+<!--        status : 반복문 상태를 나타내는 객체 -->
+<!--
+    count : 현재까지의 반복 횟수 (1부터 시작)
+    size: 전체 리스트의 크기
+    current: 현재 반복되는 요소
+    even/odd: 현재 요소가 짝수 또는 홀수인지 여부를 나타냄
+-->
+    </tr>
+    </tbody>
+    </table>
+
+</body>
+</html>
