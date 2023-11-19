@@ -11,7 +11,7 @@ import javax.validation.constraints.NotBlank;
 @Getter
 @Setter
 @NoArgsConstructor
-//@Builder
+@Builder
 public class JoinRequest {
 
     @NotBlank(message = "로그인 아이디가 비어있습니다.")
