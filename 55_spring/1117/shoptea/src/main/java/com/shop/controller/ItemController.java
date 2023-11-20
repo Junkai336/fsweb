@@ -10,5 +10,7 @@ public class ItemController {
     public String itemForm(Model model){
         return "item/itemForm";
     }
+//    del.addAttribute("")
+
 
 }

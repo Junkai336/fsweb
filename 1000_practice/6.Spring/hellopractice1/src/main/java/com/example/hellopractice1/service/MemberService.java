@@ -14,8 +14,22 @@ public class MemberService {
 //    private final MemoryMemberRepository memoryMemberRepository;
     private final MemberRepository memberRepository = new MemoryMemberRepository();
 
+//    회원가입
+    // 왜 굳이 id를 리턴하지???
     public Long join(Member member) {
         validateDuplicateMember(member);
+        memberRepository.save(member);
+        return member.getId();
     }
+
+    // isPresent : Optional 객체가 값을 가지고 있으면 true 없으면 false
+    // ifPresent : Optional 객체가 값을 가지고 있으면 실행 없으면 넘어감
+    private void validateDuplicateMember(Member member) {
+        memberRepository.findByName(member.getName())
+    .ifPresent(m -> {
+        throw new IllegalStateException("이미 존재하는 회원입니다.");
+    });
+    }
+
 
 }
