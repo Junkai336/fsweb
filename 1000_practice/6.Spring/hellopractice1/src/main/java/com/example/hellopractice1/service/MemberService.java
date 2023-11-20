@@ -3,8 +3,14 @@ package com.example.hellopractice1.service;
 import com.example.hellopractice1.domain.Member;
 import com.example.hellopractice1.repository.MemberRepository;
 import com.example.hellopractice1.repository.MemoryMemberRepository;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -12,6 +18,7 @@ public class MemberService {
 
     // 이건 안되나?
 //    private final MemoryMemberRepository memoryMemberRepository;
+
     private final MemberRepository memberRepository = new MemoryMemberRepository();
 
 //    회원가입
@@ -29,6 +36,16 @@ public class MemberService {
     .ifPresent(m -> {
         throw new IllegalStateException("이미 존재하는 회원입니다.");
     });
+    }
+
+    // 회원 조회
+    public List<Member> findMember() {
+        return memberRepository.findAll();
+    }
+
+    // memberId?
+    public Optional<Member> findOne(Long memberId) {
+        return memberRepository.findById(memberId);
     }
 
 

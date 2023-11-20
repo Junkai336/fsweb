@@ -1,6 +1,9 @@
 package com.example.hellopractice1.repository;
 
 import com.example.hellopractice1.domain.Member;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 
 import java.util.*;
 
