@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
 public class MemberService {
 
     // 이건 안되나?
@@ -21,7 +21,11 @@ public class MemberService {
 
     private final MemberRepository memberRepository = new MemoryMemberRepository();
 
-//    회원가입
+    @Autowired
+    public MemberService(MemberRepository memberRepository) {
+    }
+
+    //    회원가입
     // 왜 굳이 id를 리턴하지???
     public Long join(Member member) {
         validateDuplicateMember(member);
