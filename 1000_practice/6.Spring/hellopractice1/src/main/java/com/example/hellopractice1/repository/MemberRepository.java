@@ -1,10 +1,14 @@
 package com.example.hellopractice1.repository;
 
 import com.example.hellopractice1.domain.Member;
+import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
 
+@Repository
 public interface MemberRepository {
 
     // service에서 member를 set하고 서비스에서 memberrepository.save(전달인자) 메소드를 불러오면 전달인자는 service 시점의 member.

@@ -13,15 +13,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 import java.util.List;
 
 @Controller
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
 public class MemberController {
 
     private final MemberService memberService;
 
-//    @Autowired
-//    public MemberController(MemberService memberService) {
-//        this.memberService = memberService;
-//    }
+    @Autowired
+    public MemberController(MemberService memberService) {
+        this.memberService = memberService;
+    }
 
 
     // 컨트롤러가 정적 컨텐츠보다 우선순위가 높음
