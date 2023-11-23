@@ -2,6 +2,10 @@
     도메인
         - 회원, 주문, 쿠폰 등 데이터베이스에 저장되고 관리되는 비즈니스 도메인 객체 (DTO, Entity 같은 것)
 
+    DB연결 하기 위한 동작
+        - 커넥션 연결 : 주로 TCP/IP를 사용해 애플리케이션 서버와 DB서버가 연결
+        - SQL 전달 : 애플리케이션 서버는 DB가 이해할 수 있는 SQL을 연결된 커넥션을 통해 DB에 전달
+        - 결과 응답 : DB는 전달된 SQL을 수행하고 그 결과를 응답
 
 -->
 
@@ -66,6 +70,8 @@
     Jdbc (api)
         - Java DataBase Connectivity
         - 자바기반 애플리케이션의 데이터를 데이터베이스에 저장, 업데이트 혹은 저장된 데이터를 자바에서 사용할 수 있게 하는 자바 API
+        - Jdbc를 사용하면 데이터베이스를 변경하더라도 Jdbc 구현 라이브러리(jdbc 드라이버)만 변경하면 된다.
+        - jdbc 표준 인터페이스 사용법만 학습하더라도 수많은 데이터베이스에 동일하게 적용할 수 있게 된다.
 
         DataSource
             - 데이터베이스 커넥션을 획득할 때 사용하는 객체
@@ -78,12 +84,31 @@
         Jdbc Driver
             - DB와 통신을 담당하는 자바 클래스
             - DB 종류에 맞는 드라이버 사용하면 됨 (보통 jar 파일)
+            - 데이터베이스에 접속할 수 있도록 하는 자바 API
+            - 데이터베이스에서 자료를 쿼리하거나 업데이트하는 방법을 제공
             - Class.forName(DB에 맞는 driver)를 사용해 로딩
                 - mySQL : com.mysql.cj.jdbc.Driver
                 - Oracle : oracle.jdbc.driver.OracleDriver
 
         Jdbc Template
             - Jdbc Template나 MyBatis 같은 라이브러리는 Jdbc api에서 본 반복 코드들을 대부분 제거해준다. 하지만 SQL은 직접 작성해야 한다.
+            - JDBC 코어 패키지의 중앙 클래스로 JDBC 사용을 단순화하고 일반적인 오류를 방지하는데 도움을 준다.
+            - 반복 작업을 대신 처리해준다.
+                - 커넥션 획득
+                - statement를 준비하고 실행
+                - 결과를 반복하도록 루프를 실행
+                - 커넥션 종료, statement 및 resultset 종료
+                - 트랜잭션을 다루기 위한 커넥션 동기화
+                - 예외 발생시 스프링 예외 변환기 실행
+            - 개발자가 JDBC 기술을 쉽게 사용할 수 있도록 도와주는 클래스
+
+        Jdbc 표준 인터페이스
+            Connection
+                - 연결
+            Statement
+                - SQL 전달
+            ResultSet
+                - 결과 응답
 
         
     -->
@@ -103,17 +128,5 @@ this.dataSource = dataSource;
 <!-- 
 
     MyBatis (api)
-
--->
-
-
-<!-- 
-    SQL
-    
-
-    CHAR : 길이가 정해짐
-
-    VARCHAR : 가변길이
-
 
 -->

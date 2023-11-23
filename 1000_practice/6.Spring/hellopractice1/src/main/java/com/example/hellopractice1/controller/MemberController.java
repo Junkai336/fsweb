@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 //@RequiredArgsConstructor
@@ -61,12 +62,17 @@ public class MemberController {
 
 
 
-    // 회원목록으로~
+    // 회원목록으로
     @GetMapping(value = "/member/list")
     public String list(Model model) {
 
         List<Member> members = memberService.findMember();
         model.addAttribute("members", members);
+
+        // 그냥한거
+        Optional<Member> test = memberService.findOne(1L);
+        System.out.println(test.get());
+
 
         return "member/memberlist";
     }
