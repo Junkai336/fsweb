@@ -24,17 +24,19 @@ import static java.sql.DriverManager.getConnection;
         }
 
         // Connection
-        // getConnection
-        // PreparedStatement
-        // Statement.RETURN_GENERATED_KEYS
-        // executeUpdate()
-        // ResultSet
+        // getConnection(url, id, password) : DB의위치, DB계정, 비번
+        // PrepareStatement :
+        // Statement.RETURN_GENERATED_KEYS : DB상에 AUTO_INCREMENT 로 인해 자동으로 생성되어진 key(=id)를 가져오는 쿼리
+        // executeUpdate() : select 구문이 아닐 때 사용, int값 반환, 구문 수행
+        // ResultSet : 쿼리문이 SELECT면 ResultSet으로 받고, 그 외에는 int로 반환받는다.
         // getGeneratedKeys()
         // throw new SQLException
-        // close()
-        // executeQuery()
+        // close() 쿼리를 다 사용했다면, ResultSet으로부터 역순으로 리소스 close()를 진행한다.
+        // executeQuery() : 작성한 쿼리문 전송
+
         // Optional.of()
         // Optional.empty()
+
         // 쿼리문에서 ? <-
         @Override
         public Member save(Member member) {
