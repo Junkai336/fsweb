@@ -30,7 +30,7 @@ public class JdbcTemplateMemberRepository implements MemberRepository {
         return member;
     }
 
-    // ? 의 의미?
+    // ? 의 의미? 일단 파라미터인걸로 .
     @Override
     public Optional<Member> findById(Long id) {
         List<Member> result = jdbcTemplate.query("select * from member where id = ?", memberRowMapper(), id);

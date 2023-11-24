@@ -71,7 +71,7 @@ public class MemberController {
 
         // 그냥한거
         Optional<Member> test = memberService.findOne(1L);
-        System.out.println(test.get());
+        System.out.println(test.get().getName());
 
 
         return "member/memberlist";
