@@ -1,67 +1,41 @@
 package com.example.member.dto;
 
-import com.example.member.entity.MemberEntity;
-import lombok.RequiredArgsConstructor;
-import lombok.ToString;
+import lombok.Getter;
+import lombok.Setter;
+import org.hibernate.validator.constraints.Length;
 
-// lombok 어노테이션으로 getter, setter, 생성자, toString 메소드 생략 가능
-@ToString
-@RequiredArgsConstructor
-public class MemberDTO {
-    // 회원정보를 필드로 정의
-    // memberController의 매개변수들과 연동이 되는가?
-    private Long id;
-    private String memberEmail;
-    private String memberPassword;
-    private String memberName;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Pattern;
 
-    public MemberDTO() {}
+@Getter
+@Setter
+public class MemberDto {
+    // ?? : 정규식 제대로 동작하는지 봐야 한다..
 
-    public MemberDTO(Long id, String memberEmail, String memberPassword, String memberName) {
-        this.id = id;
-        this.memberEmail = memberEmail;
-        this.memberPassword = memberPassword;
-        this.memberName = memberName;
-    }
+    // null, "" (초기화된 String 혹은 빈 문자열) , " " (공백) 허용하지 않음
+    @NotBlank(message = "이름은 필수 입력 값입니다.")
+    private String userName;
 
-    public Long getId(Long id) {
-        return id;
-    }
+    // null, "" 허용하지 않음
+    @NotEmpty(message = "이메일은 필수 입력 값입니다.")
+    private String userEmail;
 
-    public String getMemberEmail() {
-        return memberEmail;
-    }
+    // @Pattern : 정규식을 검사할 때 사용한다.
+    // min, max = value 이하, 이상의 값만 허용한다.
+    @NotBlank(message = "비밀번호는 필수 입력 값입니다.")
+    @Length(min=8, max=16, message = "비밀번호는 8자 이상, 16자 이하로 입력해 주세요.")
+    @Pattern(regexp = "(?=.*[0-9])(?=.*[a-zA-Z])(?=.*\\W)(?=\\S+$)", message = "비밀번호는 영문 대소문자, 숫자, 특수문자를 사용해 주세요.")
+    private String password;
 
-    public String getMemberPassword() {
-        return memberPassword;
-    }
+    @NotEmpty(message = "핸드폰 번호는 필수 입력 값입니다.")
+    @Pattern(regexp = "^(01[1|6|7|8|9|0])-(\\d{3,4})-(\\d{4})$", message = "01x-xxxx-xxxx의 형식으로 작성해주세요")
+    private String userPhoneNumber;
 
-    public String getMemberName() {
-        return memberName;
-    }
-
-    public void setMemberEmail(String memberEmail) {
-        this.memberEmail = memberEmail;
-    }
-
-    public void setMemberPassword(String memberPassword) {
-        this.memberPassword = memberPassword;
-    }
-
-    public void setMemberName(String memberName) {
-        this.memberName = memberName;
-    }
-
-    // Entity에 저장된 내용을 DTO로 지정하는 듯 하고, 목적은 엔티티 저장 내용에 대한 데이터 전송인 듯 함.
-    public static MemberDTO toMemberDTO(MemberEntity memberEntity) {
-        MemberDTO memberDTO = new MemberDTO();
-        memberDTO.setId(memberEntity.getId());
-        memberDTO.setMemberEmail(memberEntity.getMemberEmail());
-        memberDTO.setMemberPassword(memberEntity.getPassword());
-        memberDTO.setMemberName(memberEntity.getMemberName());
-
-        // return은 왜 쓰는지 모르겠음
-        return memberDTO;
-    }
+    @NotEmpty(message = "주소지는 필수 입력 값입니다.")
+    private String userAddress;
 
 }
+
+// https://dev-coco.tistory.com/123
+// https://inpa.tistory.com/entry/JAVA-%E2%98%95-%EC%A0%95%EA%B7%9C%EC%8B%9DRegular-Expression-%EC%82%AC%EC%9A%A9%EB%B2%95-%EC%A0%95%EB%A6%AC#regex_%ED%8C%A8%ED%82%A4%EC%A7%80_%ED%81%B4%EB%9E%98%EC%8A%A4

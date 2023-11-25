@@ -1,12 +1,10 @@
 package com.example.member.repository;
 
-import com.example.member.entity.MemberEntity;
-import lombok.RequiredArgsConstructor;
+import com.example.member.entity.Member;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
-@Repository
-@RequiredArgsConstructor
-public class MemberRepository extends JpaRepository<MemberEntity, Long> {
+public interface MemberRepository extends JpaRepository<Member,Long> {
+
+    Member findByUserEmail(String userEmail);
 
 }

@@ -37,15 +37,33 @@
 
     MySQL
 
+    선언
+        - application.properties
+
+
+        - build.gradle
+            
+
 -->
 
 <!-- 
 
     spring.jpa.show-sql=true
+        - true 설정시 JPA 쿼리문 확인 가능
+
     spring.jpa.hibernate.ddl-auto=XXX
+        - DDL(create, alter, drop) 정의시 DB 고유 기능 사용할 수 있다.
         - XXX
-            - create-drop : 
-            - update : 
+            - create : 기존 테이블 삭제하고 새로 생성 ( drop + create )
+            - create-drop : create 속성에 추가로 어플리케이션 종료할 때 생성한 ddl 제거 ( drop + create + drop )
+            - update : DB 테이블과 엔티티 매핑 정보를 비교해서 변경 사항만 수정 ( 테이블이 없으면 create )
+            - validate : DB 테이블과 엔티티 매핑 정보를 비교해서 차이가 있으면 경고를 남기고 어플리케이션을 실행하지 않음
+            - none : 자동 생성 기능 수행 x
+            
+    spring.jpa.properties.hibernate.format_sql=true
+                - JPA의 구현체인 Hibernate가 동작하면서 발생한 SQL의 가독성을 높여준다.
+
+    
 
 -->
 
