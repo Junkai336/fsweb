@@ -29,6 +29,7 @@ public class MemberDto {
     private String password;
 
     @NotEmpty(message = "핸드폰 번호는 필수 입력 값입니다.")
+    @Pattern(regexp = "^(01[1|6|7|8|9|0])-(\\d{3,4})-(\\d{4})$", message = "01x-xxxx-xxxx의 형식으로 작성해주세요")
     private String userPhoneNumber;
 
     @NotEmpty(message = "주소지는 필수 입력 값입니다.")
