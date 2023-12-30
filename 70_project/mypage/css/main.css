@@ -15,6 +15,7 @@ a {
 
 img {
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -71,7 +72,7 @@ body {
 }
 
 .name p:nth-of-type(1) {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     margin-top: 4px;
 }
 
@@ -126,4 +127,162 @@ h2 {
     text-align: center;
     padding-bottom: 18px;
     border-bottom: 1px dashed #666;
+}
+
+/* sec1 */
+
+/* sec2 */
+
+/* sec3 */
+
+/* sec4 */
+
+/* sec5 */
+
+.project_box {
+    width: 100%;
+    height: 80%;
+}
+
+.project {
+    display: flex;
+    height: 100%;
+}
+
+.project ~ .project {
+    display: none;
+}
+
+.left_project_content {
+    width: 50%;
+    height: 100%;
+    text-align: center;
+}
+
+.right_project_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    height: 100%;
+}
+
+.text_box {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 80px;
+}
+
+.text_box p {
+    display: flex;
+    text-align: start;
+}
+
+.text_box2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.text_box2 p {
+    display: flex;
+    text-align: start;
+}
+
+.text_box2 span {
+    margin-left: 12px;
+    align-self: center;
+    justify-self: center;
+}
+
+.text_box span {
+    margin-left: 12px;
+    width: 250px;
+    align-self: center;
+}
+
+.mt {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.tab {
+    display: flex;
+    width: 100%;
+    height: 13%;
+    border-top: 1px dashed #666;
+}
+
+.sub_tab {
+    margin-top: 8px;
+    width: 110px;
+    height: 110px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10%;
+    transition: .5s;
+}
+
+.sub_tab + .sub_tab {
+    margin-left: 4px;
+}
+
+.bold {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.left_imgbox {
+    margin: 8px auto;
+    border: 1px solid black;
+    width: 450px;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5%;
+}
+
+.project span {
+    font-size: 1.15rem;
+    color: #aaa;
+}
+
+.project a {
+    border-bottom: 1px solid #fff;
+}
+
+.text_box2 > p:nth-of-type(1) {
+    font-size: 1.35rem;
+}
+
+.flex_box p + p{
+    font-size: 1.35rem;
+}
+
+.project5_imgbox {
+    background-image: url(../img/project5full.png);
+    box-shadow: 2px 2px 2px 2px #333;
+}
+
+.project5_tab {
+    background-image: url(../img/project5.png);
+}
+
+.project4_tab {
+    background-image: url(../img/project4.png);
+    background-position: 50%;
+}
+
+.project3_tab {
+    background-image: url(../img/project3.png);
+    background-position: 50%;
+}
+
+.project2_tab {
+    background-image: url(../img/project2.png);
+    background-position: 50%;
+}
+
+.project1_tab {
+    background-image: url(../img/project1.png);
 }
