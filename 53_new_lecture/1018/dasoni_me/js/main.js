@@ -178,32 +178,3 @@ document.addEventListener('mousemove', function (e) {
         advertise.style.top = `${Math.min(Math.max(0, originTop + diffY), endOfYPoint)}px`;
     }
 });
-
-// advertise.addEventListener('mousedown', function () {
-//     advertise.classList.add('drag');
-// });
-
-// let mouseX = 0;
-// let mouseY = 0;
-
-// document.addEventListener('mouseup', function () {
-//     advertise.classList.remove('drag');
-// });
-
-// document.addEventListener('mousemove', function (e) {
-//     if (advertise.classList.contains('drag')) {
-//         mouseX = e.clientX;
-//         mouseY = e.clientY;
-
-//         advertise.style.left = `${mouseX - (advertise.offsetLeft)}px`;
-//         advertise.style.top = `${mouseY - (advertise.offsetTop)}px`;
-//         // advertise.style.left = `${mouseX + (mouseX - advertise.getBoundingClientRect().width)}px`;
-//         // advertise.style.top = `${mouseY + (mouseY - advertise.getBoundingClientRect().height)}px`;
-//         console.log(advertise.getBoundingClientRect().width);
-//     }
-// });
-
-
-// console.log(advertise.getBoundingClientRect());
-// console.log(advertise.offsetLeft);
-// console.log(advertise.offsetTop);

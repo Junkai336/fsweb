@@ -137,6 +137,57 @@ h2 {
 
 /* sec4 */
 
+#sec4 {
+    position: relative;
+}
+
+.progress_box {
+    display: flex;
+    justify-content: space-evenly;
+    height: 180px;
+}
+
+.progress_text_box {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 4px;
+}
+
+.progress_text_box p:nth-of-type(1){
+    transform: translateX(-20px);
+}
+
+.progress_text_box p:nth-of-type(2){
+    transform: translateX(-10px);
+}
+
+.progress_text_box p:nth-of-type(3){
+    transform: translateX(10px);
+}
+
+.circleChart {
+    width: 175px;
+    height: 175px;
+}
+
+.skil_box {
+    display: flex;
+    flex-direction: row;
+}
+
+.ml {
+    margin-left: 15px;
+}
+
+.ml2 {
+    margin-left: 30px;
+}
+
+.text_gray {
+    font-size: 1.15rem;
+    color: #aaa;
+}
+
 /* sec5 */
 
 .project_box {
@@ -149,7 +200,7 @@ h2 {
     height: 100%;
 }
 
-.project ~ .project {
+.project~.project {
     display: none;
 }
 
@@ -165,6 +216,10 @@ h2 {
     justify-content: space-between;
     width: 50%;
     height: 100%;
+}
+
+.flex_start {
+    justify-content: flex-start;
 }
 
 .text_box {
@@ -205,6 +260,10 @@ h2 {
     margin-bottom: 2px;
 }
 
+.mt2 {
+    margin-top: 30px;
+}
+
 .tab {
     display: flex;
     width: 100%;
@@ -223,7 +282,7 @@ h2 {
     transition: .5s;
 }
 
-.sub_tab + .sub_tab {
+.sub_tab+.sub_tab {
     margin-left: 4px;
 }
 
@@ -240,6 +299,7 @@ h2 {
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 5%;
+    background-color: #fff;
 }
 
 .project span {
@@ -251,17 +311,39 @@ h2 {
     border-bottom: 1px solid #fff;
 }
 
-.text_box2 > p:nth-of-type(1) {
+.text_box2>p:nth-of-type(1) {
     font-size: 1.35rem;
 }
 
-.flex_box p + p{
+.flex_box p+p {
     font-size: 1.35rem;
 }
 
 .project5_imgbox {
     background-image: url(../img/project5full.png);
     box-shadow: 2px 2px 2px 2px #333;
+}
+
+.project4_imgbox {
+    background-image: url(../img/project4full.png);
+    box-shadow: 2px 2px 2px 2px #333;
+}
+
+.project3_imgbox {
+    background-image: url(../img/project3full.png);
+    box-shadow: 2px 2px 2px 2px #333;
+}
+
+.project2_imgbox {
+    background-image: url(../img/project2full.png);
+    box-shadow: 2px 2px 2px 2px #333;
+}
+
+.project1_imgbox {
+    background-image: url(../img/project1full.png);
+    box-shadow: 2px 2px 2px 2px #333;
+    background-size: contain;
+    background-position: 0 50%;
 }
 
 .project5_tab {

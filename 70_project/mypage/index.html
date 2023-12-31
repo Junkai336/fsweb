@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,9 @@
     <link rel="icon" href="img/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
 </head>
+
 <body>
     <div id="wrap">
         <div id="container">
@@ -23,7 +26,7 @@
                     <div class="quick_menu">
                         <p><a href="#sec1"><i class="fa-solid fa-user"></i> About Me</a></p>
                         <p><a href="#sec2"><i class="fa-solid fa-list"></i> History</a></p>
-                        <p><a href="#sec3"><i class="fa-brands fa-openid"></i> Possible Position</a></p>
+                        <p><a href="#sec3"><i class="fa-brands fa-openid"></i> X</a></p>
                         <p><a href="#sec4"><i class="fa-solid fa-chart-simple"></i> Skill</a></p>
                         <p><a href="#sec5"><i class="fa-solid fa-book"></i> Project</a></p>
                     </div>
@@ -31,7 +34,8 @@
                         <p><i class="fa-solid fa-phone-volume"></i> Tel: 010-4050-1299</p>
                         <p><i class="fa-solid fa-envelope"></i> Email: gjwnssla2@gmail.com</p>
                         <div class="img_div">
-                            <a href="https://github.com/junkai336" target="_blank"><i class="fa-brands fa-github fa-3x"></i>Github</a>
+                            <a href="https://github.com/junkai336" target="_blank"><i
+                                    class="fa-brands fa-github fa-3x"></i>Github</a>
                         </div>
                     </div>
                 </div>
@@ -45,15 +49,60 @@
                         <h2>History</h2>
                     </section>
                     <section id="sec3">
-                        <h2>Possible Position</h2>
+                        <h2>X</h2>
+                        <p>뭐 넣을지 고민중</p>
                     </section>
+
                     <section id="sec4">
                         <h2>Skill</h2>
+                        <p class="bold">Develop Skill</p>
+                        <div class="progress_text_box mt-2">
+                            <p>Publishing</p>
+                            <p>Front-End</p>
+                            <p>Back-End</p>
+                        </div>
+                        <div class="progress_box">
+                            <div class="circleChart" id="0">
+                            </div>
+                            <div class="circleChart" id="1">
+                            </div>
+                            <div class="circleChart" id="2">
+                            </div>
+                        </div>
+                        <p class="bold">Knowledges</p>
+                        <div class="skill_box">
+                            <div>
+                                <p class="ml">Front-End</p>
+                                <p class="text_gray ml2"> - HTML5, CSS3, JavaScript(ES6), JQuery</p>
+                            </div>
+                            <div>
+                                <p class="ml">Back-End</p>
+                                <p class="text_gray ml2"> - Java, Spring Framework, Spring Boot, JPA, RESTful API(JSON)</p>
+                            </div>
+                            <div>
+                                <p class="ml">Server</p>
+                                <p class="text_gray ml2"> - Apache Tomcat, AWS LightShall</p>
+                            </div>
+                            <div>
+                                <p class="ml">DB</p>
+                                <p class="text_gray ml2"> - MYSQL</p>
+                            </div>
+                            <div>
+                                <p class="ml">Tools</p>
+                                <p class="text_gray ml2"> - VisualStudioCode, InteliJ</p>
+                            </div>
+                            <div>
+                                <p class="ml">Collaboration & Design & Document</p>
+                                <p class="text_gray ml2"> - Github, Figma, PowerPoint, Excel</p>
+                            </div>
+                        </div>
                     </section>
+
                     <section id="sec5">
                         <h2>Project</h2>
 
                         <div class="project_box">
+                            <!-- 여기놀자 -->
                             <div class="project5 project">
                                 <div class="left_project_content">
                                     <p class="bold">여기놀자<span> ㅣ숙소 등록/예약 서비스</span></p>
@@ -68,15 +117,17 @@
                                     <div class="flex_box">
                                         <p class="bold">개발환경</p>
                                         <div class="text_box2">
-                                        <p>언어<span> ㅣ HTML, CSS, JavaScript, JQuery, Java</span></p>
-                                        <p>서버<span> ㅣ Apache Tomcat, AWS, Lightshall</span></p>
-                                        <p>프레임워크<span> ㅣ Spring Boot, JPA</span></p>
-                                        <p>DB<span> ㅣ MySQL 8.0.35, RDS</span></p>
-                                        <p>IDE<span> ㅣ VisualStudioCode, InteliJ IDEA</span></p>
-                                        <p>API<span> ㅣ Oauth 2.0 login, Summernote, TimePicker, DateTimePicker, Daum-Postcode-Service, IamPort</span></p>
+                                            <p>언어<span> ㅣ HTML, CSS, JavaScript, Java</span></p>
+                                            <p>서버<span> ㅣ Apache Tomcat, AWS, Lightshall</span></p>
+                                            <p>프레임워크<span> ㅣ Spring Boot, JPA</span></p>
+                                            <p>DB<span> ㅣ MySQL 8.0.35, RDS</span></p>
+                                            <p>IDE<span> ㅣ VisualStudioCode, InteliJ IDEA</span></p>
+                                            <p>API<span> ㅣ Oauth 2.0 login, Summernote, Daum-Postcode-Service,
+                                                    IamPort</span></p>
+                                            <p>라이브러리<span> ㅣ JQuery, TimePicker, DateTimePicker</span></p>
+                                        </div>
                                     </div>
-                                </div>
-                                        
+
                                     <div class="flex_box">
                                         <p class="bold mt">담당역할</p>
                                         <p>숙소 및 객실 관리 페이지<span> ㅣ (기여도 100%)</span></p>
@@ -88,56 +139,125 @@
 
                                     <div class="flex_box">
                                         <p class="bold mt">발표자료</p>
-                                        <a href="file/여기놀자_발표자료.pdf" download="여기놀자_발표자료">여기놀자_발표자료.pdf</a>
+                                        <a href="file/여기놀자_발표자료.pdf" download="여기놀자_발표자료"><i
+                                                class="fa-solid fa-download"></i> 여기놀자_발표자료.pdf</a>
                                     </div>
                                 </div>
                             </div>
+                            <!-- 다소니 -->
                             <div class="project4 project">
-                                    <div class="left_project_content">
-                                        <p class="bold">다소니<span> ㅣ메인페이지 클론코딩</span></p>
-                                        <div class="left_imgbox project5_imgbox"></div>
-                                        <p class="bold"><a href="http://43.200.250.193:1207/" target="_blank">링크</a></p>
-                                        <div class="text_box">
-                                            <p>개발 기간<span> ㅣ 2023.11.27 ~ 2023.12.26</span></p>
-                                            <p>개발 인원<span> ㅣ 3명</span></p>
+                                <div class="left_project_content">
+                                    <p class="bold">다소니<span> ㅣ메인페이지 구현</span></p>
+                                    <div class="left_imgbox project4_imgbox"></div>
+                                    <p class="bold"><a href="dasoni/index1.html" target="_blank">링크</a></p>
+                                    <div class="text_box">
+                                        <p>개발 기간<span> ㅣ 2023.10.13 ~ 2023.10.18</span></p>
+                                        <p>개발 인원<span> ㅣ 1명</span></p>
+                                    </div>
+                                </div>
+                                <div class="right_project_content flex_start">
+                                    <div class="flex_box">
+                                        <p class="bold">개발환경</p>
+                                        <div class="text_box2">
+                                            <p>언어<span> ㅣ HTML, CSS, JavaScript </span></p>
+                                            <p>IDE<span> ㅣ VisualStudioCode</span></p>
+                                            <p>라이브러리<span> ㅣ JQuery, BxSlider</span></p>
                                         </div>
                                     </div>
-                                    <div class="right_project_content">
-                                        <div class="flex_box">
-                                            <p class="bold">개발환경</p>
-                                            <div class="text_box2">
-                                            <p>언어<span> ㅣ HTML, CSS, JavaScript, JQuery, Java</span></p>
-                                            <p>서버<span> ㅣ Apache Tomcat, AWS, Lightshall</span></p>
-                                            <p>프레임워크<span> ㅣ Spring Boot, JPA</span></p>
-                                            <p>DB<span> ㅣ MySQL 8.0.35, RDS</span></p>
-                                            <p>IDE<span> ㅣ VisualStudioCode, InteliJ IDEA</span></p>
-                                            <p>API<span> ㅣ Oauth 2.0 login, Summernote, TimePicker, DateTimePicker, Daum-Postcode-Service, IamPort</span></p>
+
+                                    <div class="flex_box">
+                                        <p class="bold mt2">구현기능</p>
+                                        <p>팝업창 드래그 기능<span> ㅣ JavaScript</span></p>
+                                        <p>스크롤 모션<span> ㅣ JavaScript</span></p>
+                                        <p>이미지 슬라이드<span> ㅣ JQuery</span></p>
+                                        <p>쿠키 생성 및 소멸<span> ㅣ JQuery</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 서브웨이 -->
+                            <div class="project3 project">
+                                <div class="left_project_content">
+                                    <p class="bold">서브웨이<span> ㅣ페이지 디자인</span></p>
+                                    <div class="left_imgbox project3_imgbox"></div>
+                                    <p class="bold"><a href="https://junkai336.github.io/fsweb/70_project/team/"
+                                            target="_blank">링크</a></p>
+                                    <div class="text_box">
+                                        <p>개발 기간<span> ㅣ 2023.08.21 ~ 2023.09.08</span></p>
+                                        <p>개발 인원<span> ㅣ 5명</span></p>
+                                    </div>
+                                </div>
+                                <div class="right_project_content flex_start">
+                                    <div class="flex_box">
+                                        <p class="bold">개발환경</p>
+                                        <div class="text_box2">
+                                            <p>언어<span> ㅣ HTML, CSS, JavaScript </span></p>
+                                            <p>IDE<span> ㅣ VisualStudioCode</span></p>
+                                            <p>라이브러리<span> ㅣ JQuery, BxSlider</span></p>
                                         </div>
                                     </div>
-                                            
-                                        <div class="flex_box">
-                                            <p class="bold mt">담당역할</p>
-                                            <p>숙소 및 객실 관리 페이지<span> ㅣ (기여도 100%)</span></p>
-                                            <p>게시판<span> ㅣ (기여도 70%)</span></p>
-                                            <p>서머노트 API, 업로드 예외사항 처리<span> ㅣ (기여도 90%)</span></p>
-                                            <p>이미지 업로드<span> ㅣ (기여도 90%)</span></p>
-                                            <p>결제 서비스, IamPort API<span> ㅣ (기여도 100%)</span></p>
+
+                                    <div class="flex_box mt2">
+                                        <p class="bold mt">담당역할</p>
+                                        <p>공지사항 페이지<span> ㅣ (기여도 100%)</span></p>
+                                        <p>로그인, 회원가입, 약관동의 페이지<span> ㅣ (기여도 100%)</span></p>
+                                        <p>페이지 반응형 작업<span> ㅣ (기여도 100%)</span></p>
+                                    </div>
+
+                                    <div class="flex_box mt2">
+                                        <p class="bold mt">발표자료</p>
+                                        <a href="file/서브웨이_발표자료.pdf" download="서브웨이_발표자료"><i
+                                                class="fa-solid fa-download"></i> 서브웨이_발표자료.pdf</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 유미카츠 -->
+                            <div class="project2 project">
+                                <div class="left_project_content">
+                                    <p class="bold">유미카츠<span> ㅣ페이지 디자인</span></p>
+                                    <div class="left_imgbox project2_imgbox"></div>
+                                    <p class="bold"><a href="https://junkai336.github.io/fsweb/70_project/project2/"
+                                            target="_blank">링크</a></p>
+                                    <div class="text_box">
+                                        <p>개발 기간<span> ㅣ 2023.08.07 ~ 2023.08.14</span></p>
+                                        <p>개발 인원<span> ㅣ 1명</span></p>
+                                    </div>
+                                </div>
+                                <div class="right_project_content flex_start">
+                                    <div class="flex_box">
+                                        <p class="bold">개발환경</p>
+                                        <div class="text_box2">
+                                            <p>언어<span> ㅣ HTML, CSS </span></p>
+                                            <p>IDE<span> ㅣ VisualStudioCode</span></p>
                                         </div>
-    
-                                        <div class="flex_box">
-                                            <p class="bold mt">발표자료</p>
-                                            <a href="file/여기놀자_발표자료.pdf" download="여기놀자_발표자료">여기놀자_발표자료.pdf</a>
+                                    </div>
+
+                                    <div class="flex_box">
+                                        <p class="bold mt2">구현기능</p>
+                                        <p>페이지 반응형 작업<span> ㅣ CSS</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 농협은행 -->
+                            <div class="project1 project">
+                                <div class="left_project_content">
+                                    <p class="bold">농협은행<span> ㅣ페이지 디자인</span></p>
+                                    <div class="left_imgbox project1_imgbox"></div>
+                                    <p class="bold"><a href="https://junkai336.github.io/fsweb/70_project/project1/"
+                                            target="_blank">링크</a></p>
+                                    <div class="text_box">
+                                        <p>개발 기간<span> ㅣ 2023.07.21 ~ 2023.07.27</span></p>
+                                        <p>개발 인원<span> ㅣ 1명</span></p>
+                                    </div>
+                                </div>
+                                <div class="right_project_content flex_start">
+                                    <div class="flex_box">
+                                        <p class="bold">개발환경</p>
+                                        <div class="text_box2">
+                                            <p>언어<span> ㅣ HTML, CSS </span></p>
+                                            <p>IDE<span> ㅣ VisualStudioCode</span></p>
                                         </div>
                                     </div>
                                 </div>
-                            <div class="project3 project">
-
-                            </div>
-                            <div class="project2 project">
-
-                            </div>
-                            <div class="project1 project">
-
                             </div>
                         </div>
 
@@ -164,7 +284,9 @@
             </div>
         </div>
     </div>
+    <script src="js/circleChart.min.js"></script>
     <script src="js/fullpage.js"></script>
     <script src="js/script.js"></script>
 </body>
+
 </html>

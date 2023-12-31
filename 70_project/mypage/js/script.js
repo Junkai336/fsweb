@@ -14,3 +14,44 @@ for (let i = 0; i < tabButton.length; i++) {
     });
 
 }
+
+rightContent.addEventListener('scroll', function () {
+    // console.log(rightContent.scrollTop)
+    if (rightContent.scrollTop > 1901) {
+        $(".circleChart#0").circleChart({
+            size: 150,
+            value: 80,
+            text: 0,
+            color: "#ddd",
+            speed: 2500,
+            backgroundColor: "#444",
+            onDraw: function (el, circle) {
+                circle.text(Math.round(circle.value) + "%");
+            }
+        });
+
+        $(".circleChart#1").circleChart({
+            size: 150,
+            value: 80,
+            text: 0,
+            color: "#ddd",
+            speed: 2500,
+            backgroundColor: "#444",
+            onDraw: function (el, circle) {
+                circle.text(Math.round(circle.value) + "%");
+            }
+        });
+
+        $(".circleChart#2").circleChart({
+            size: 150,
+            value: 90,
+            text: 0,
+            color: "#ddd",
+            speed: 2500,
+            backgroundColor: "#444",
+            onDraw: function (el, circle) {
+                circle.text(Math.round(circle.value) + "%");
+            }
+        });
+    }
+})
