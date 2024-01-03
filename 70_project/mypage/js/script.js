@@ -1,8 +1,8 @@
 const tabButton = document.querySelectorAll('.sub_tab');
 const tabProject = document.querySelectorAll('.project');
 
-console.log(tabButton);
-console.log(tabProject);
+// console.log(tabButton);
+// console.log(tabProject);
 
 for (let i = 0; i < tabButton.length; i++) {
     tabButton[i].addEventListener('click', function () {
@@ -17,7 +17,7 @@ for (let i = 0; i < tabButton.length; i++) {
 
 rightContent.addEventListener('scroll', function () {
     // console.log(rightContent.scrollTop)
-    if (rightContent.scrollTop > 1901) {
+    if (rightContent.scrollTop > section[2].offsetTop - 500) {
         $(".circleChart#0").circleChart({
             size: 150,
             value: 80,
