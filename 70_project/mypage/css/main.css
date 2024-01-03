@@ -60,7 +60,7 @@ body {
 .profile_image {
     width: 200px;
     height: 200px;
-    background-image: url(../img/project3.png);
+    background-image: url(../img/profile.png);
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 50%;
