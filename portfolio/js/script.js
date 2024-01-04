@@ -3,14 +3,17 @@ const tabProject = document.querySelectorAll('.project');
 
 // console.log(tabButton);
 // console.log(tabProject);
+tabButton[0].style.border = '4px solid #999';
 
 for (let i = 0; i < tabButton.length; i++) {
     tabButton[i].addEventListener('click', function () {
         for (let l = 0; l < tabProject.length; l++) {
             tabProject[l].style.display = 'none';
+            tabButton[l].style.border = 'none';
 
         }
         tabProject[i].style.display = 'flex';
+        tabButton[i].style.border = '4px solid #999';
     });
 
 }
