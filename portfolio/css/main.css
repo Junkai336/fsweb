@@ -138,18 +138,19 @@ h2 {
 /* sec1 */
 
 .sec1_greet {
-    margin-top: 66px;
+    margin-top: 36px;
     font-size: 3.0rem;
+    font-weight: 700;
     text-align: center;
 }
 
 .sec1_detail {
-    margin-top: 76px;
-    font-size: 1.8rem;
+    margin-top: 66px;
+    font-size: 1.65rem;
 }
 
 .sec1_detail p + p {
-    margin-top: 36px;
+    margin-top: 24px;
 }
 
 /* sec2 */
