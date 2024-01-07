@@ -153,6 +153,14 @@ h2 {
     margin-top: 24px;
 }
 
+.sec1_greet > p {
+    opacity: 0;
+}
+
+.sec1_detail > p {
+    opacity: 0;
+}
+
 /* sec2 */
 
 .history_box {
@@ -383,6 +391,22 @@ h2 {
 .project5_imgbox {
     background-image: url(../img/project5full.png);
     box-shadow: 2px 2px 2px 2px #333;
+    position: relative;
+}
+
+.project5_imgbox > a {
+    border-radius: 50%;
+    color: #222;
+    background-color: #fff;
+    position: absolute;
+    left: 85%;
+    top: 88%;
+}
+
+.project5_imgbox > a:hover {
+    cursor: pointer;
+    scale: 1.08;
+    transition: .5s;
 }
 
 .project4_imgbox {
@@ -428,4 +452,8 @@ h2 {
 
 .project1_tab {
     background-image: url(../img/project1.png);
+}
+
+.transition {
+    transition: 1s;
 }

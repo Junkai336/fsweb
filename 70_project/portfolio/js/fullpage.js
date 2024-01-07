@@ -2,7 +2,7 @@ const section = document.querySelectorAll('section');
 const rightContent = document.querySelector('.right_content');
 const wrap = document.querySelector('#wrap');
 // 해상도에 맞춰서 높이값 구하기
-let diffHeight = Math.round((wrap.offsetHeight - rightContent.offsetHeight) / 2) ;
+let diffHeight = Math.round((wrap.offsetHeight - rightContent.offsetHeight) / 2);
 
 // console.log(wrap.offsetHeight);
 // console.log(rightContent.offsetHeight);
@@ -24,7 +24,7 @@ window.addEventListener('load', function () {
 rightContent.addEventListener('scroll', function () {
     for (let i = 0; i < section.length; i++) {
         // console.log(rightContent.scrollTop);
-        if (rightContent.scrollTop == section[i].offsetTop -diffHeight) {
+        if (rightContent.scrollTop == section[i].offsetTop - diffHeight) {
             action = false;
         };
     }
@@ -44,17 +44,17 @@ for (let i = 0; i < section.length; i++) {
     section[i].addEventListener('wheel', function (e) {
         e.preventDefault();
         if (e.deltaY > 0 && action == false) {
-            if (rightContent.scrollTop == section[section.length - 1].offsetTop -diffHeight) { return; }
+            if (rightContent.scrollTop == section[section.length - 1].offsetTop - diffHeight) { return; }
             action = true;
-            let next = e.currentTarget.nextElementSibling.offsetTop -diffHeight
+            let next = e.currentTarget.nextElementSibling.offsetTop - diffHeight
             // console.log(next);
             rightContent.scrollTop = next;
             count++;
             if (count > section.length - 1) { count = section.length - 1; }
         } else if (e.deltaY < 0 && action == false) {
-            if (rightContent.scrollTop == section[0].offsetTop -diffHeight) { return; }
+            if (rightContent.scrollTop == section[0].offsetTop - diffHeight) { return; }
             action = true;
-            let prev = e.currentTarget.previousElementSibling.offsetTop -diffHeight
+            let prev = e.currentTarget.previousElementSibling.offsetTop - diffHeight
             rightContent.scrollTop = prev;
             count--;
             if (count < 0) { count = 0; }
