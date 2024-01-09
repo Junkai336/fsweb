@@ -1,54 +1,77 @@
-// 진행률바의 스크롤 모션
-const docEle = document.documentElement,
-    sec = document.querySelectorAll('section'),
-    box = document.querySelector('div'),
-    pgBar = document.querySelectorAll('.progressbar');
+        $(document).ready(function(){
 
-window.onscroll = () => {
-    let st = docEle.scrollTop;
-    console.log(st);
+        const username = [[${#authentication.principal.username}]];
 
-    if (st > 1000) {
-        skill();
-    }
-    
-};
+        $("#disconn").on("click", (e) => {
+            disconnect();
+        })
 
-function skill() {
+        $("#button-send").on("click", (e) => {
+            send();
+        });
 
-    let i0 = 0;
-    let i1 = 0;
-    let i2 = 0;
-    const pgTimer0 = setInterval(() => counter0(), 30);
-    const pgTimer1 = setInterval(() => counter1(), 30);
-    const pgTimer2 = setInterval(() => counter2(), 30);
+        const websocket = new WebSocket("ws://localhost:8080/ws/chat");
 
-    function counter0() {
-        if (i0 >= 90) {
-            clearInterval(pgTimer0);
-        } else {
-            i0++;
-            pgBar[0].style.width = i0 + '%';
-            pgBar[0].innerHTML = i0 + '%';
+        websocket.onmessage = onMessage;
+        websocket.onopen = onOpen;
+        websocket.onclose = onClose;
+
+        function send(){
+
+            let msg = document.getElementById("msg");
+
+            console.log(username + ":" + msg.value);
+            websocket.send(username + ":" + msg.value);
+            msg.value = '';
         }
-    }
-    function counter1() {
-        if (i1 >= 80) {
-            clearInterval(pgTimer1);
-        } else {
-            i1++;
-            pgBar[1].style.width = i1 + '%';
-            pgBar[1].innerHTML = i1 + '%';
-        }
-    }
-    function counter2() {
-        if (i2 >= 85) {
-            clearInterval(pgTimer2);
-        } else {
-            i2++;
-            pgBar[2].style.width = i2 + '%';
-            pgBar[2].innerHTML = i2 + '%';
-        }
-    }
 
-} //skill();
+        //채팅창에서 나갔을 때
+        function onClose(evt) {
+            var str = username + ": 님이 방을 나가셨습니다.";
+            websocket.send(str);
+        }
+
+        //채팅창에 들어왔을 때
+        function onOpen(evt) {
+            var str = username + ": 님이 입장하셨습니다.";
+            websocket.send(str);
+        }
+
+        function onMessage(msg) {
+            var data = msg.data;
+            var sessionId = null;
+            //데이터를 보낸 사람
+            var message = null;
+            var arr = data.split(":");
+
+            for(var i=0; i<arr.length; i++){
+                console.log('arr[' + i + ']: ' + arr[i]);
+            }
+
+            var cur_session = username;
+
+            //현재 세션에 로그인 한 사람
+            console.log("cur_session : " + cur_session);
+            sessionId = arr[0];
+            message = arr[1];
+
+            console.log("sessionID : " + sessionId);
+            console.log("cur_session : " + cur_session);
+
+            //로그인 한 클라이언트와 타 클라이언트를 분류하기 위함
+            if(sessionId == cur_session){
+                var str = "<div class='col-6'>";
+                str += "<div class='alert alert-secondary'>";
+                str += "<b>" + sessionId + " : " + message + "</b>";
+                str += "</div></div>";
+                $("#msgArea").append(str);
+            }
+            else{
+                var str = "<div class='col-6'>";
+                str += "<div class='alert alert-warning'>";
+                str += "<b>" + sessionId + " : " + message + "</b>";
+                str += "</div></div>";
+                $("#msgArea").append(str);
+            }
+        }
+        })
