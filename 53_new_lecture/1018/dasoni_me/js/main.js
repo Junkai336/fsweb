@@ -115,20 +115,23 @@ advertise.addEventListener('click', function (e) {
 /* ******** */
 // 24시간동안 보지 않기
 /* ******** */
-// function setCookie(name, value, exp) {
-//     var date = new Date();
-//     date.setTime(date.getTime() + exp*24*60*60*1000);
-//     document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/';
-// }
 
-// function getCookie(name) {
-//     var value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
-//     return value? value[2] : null;
-// }
+// 'pop' 쿠키가 생성되어 있을 경우 팝업창이 보이지 않음
+if($.cookie('pop') != null) {
+    advertise.classList.remove('on');
+}
 
+// 쿠키 설정
+function setCookie(name, value, exp) {
+    var date = new Date();
+    date.setTime(date.getTime() + exp*24*60*60*1000);
+    document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/';
+}
+
+// 24시간동안 열지 않기
 advertiseClose[0].addEventListener('click', function () {
     advertise.classList.remove('on');
-    // getCookie('pop');
+    setCookie('pop','',1);
 });
 
 // 닫기
@@ -136,11 +139,15 @@ advertiseClose[1].addEventListener('click', function () {
     advertise.classList.remove('on');
 });
 
+// function getCookie(name) {
+//     var value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+//     return value? value[2] : null;
+// }
+
 /* ******** */
 // 팝업창 끌기
 /* ******** */
 
-// const container = document.querySelector("body");
 const container = document.body
 
 const { width: containerWidth, height: containerHeight } = container.getBoundingClientRect();

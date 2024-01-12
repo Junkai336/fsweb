@@ -9,7 +9,7 @@ hamburger.addEventListener('click', function (e) {
     if (i === 0) {
         span.classList.add('on');
         hamburger.classList.add('on');
-        subMenu.style.left = '80%';
+        subMenu.style.left = '60%';
         i++
     } else if (i === 1) {
         span.classList.remove('on');
