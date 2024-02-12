@@ -51,9 +51,9 @@
 
 /* 
     id, class, 태그 선택
-        - getElementById('아이디명)    
-        - getElementsByClassName('클래스명)      Element"s"
-        - getElementsByTagName('태그명)
+        - getElementById('아이디명')    
+        - getElementsByClassName('클래스명')      Element"s"
+        - getElementsByTagName('태그명')
 
     선택자 선택
         - querySelector('선택자')

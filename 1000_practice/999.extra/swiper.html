@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="swiper.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <!-- <script src="swiper.js"></script> -->
+    <style>
+        .box1 {
+            background-color: red;
+        }
+
+        .box2 {
+            background-color: blue;
+        }
+
+        .box3 {
+            background-color: green;
+        }
+
+        .swiper-container {
+            width: 1300px;
+            height: 350px;
+        }
+
+        .swiper-container2 {
+            width: 300px;
+            height: 300px;
+        }
+
+        .container2 {
+            margin-top: 24px;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        /* .swiper-slide {
+            width: 200px;
+            height: 200px;
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- Slider main container -->
+    <div class="swiper swiper22 swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide box1">Slide 1</div>
+            <div class="swiper-slide box2">Slide 2</div>
+            <div class="swiper-slide box3">Slide 3</div>
+            <div class="swiper-slide box3">Slide 3</div>
+            <div class="swiper-slide box3">Slide 3</div>
+            <div class="swiper-slide box3">Slide 3</div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+
+    <!--  -->
+
+    <div class="container2">
+        <!-- Slider main container -->
+        <div class="swiper2 swiper-container2">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide box1">Slide 1</div>
+                <div class="swiper-slide box2">Slide 2</div>
+                <div class="swiper-slide box3">Slide 3</div>
+                <div class="swiper-slide box3">Slide 3</div>
+                <div class="swiper-slide box3">Slide 3</div>
+                <div class="swiper-slide box3">Slide 3</div>
+            </div>
+        </div>
+        <div class="swiper2 swiper-container2">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide box1">Slide 1</div>
+                <div class="swiper-slide box2">Slide 2</div>
+                <div class="swiper-slide box3">Slide 3</div>
+                <div class="swiper-slide box3">Slide 3</div>
+                <div class="swiper-slide box3">Slide 3</div>
+                <div class="swiper-slide box3">Slide 3</div>
+            </div>
+        </div>
+        <div class="swiper2 swiper-container2">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide box1">Slide 1</div>
+                <div class="swiper-slide box2">Slide 2</div>
+                <div class="swiper-slide box3">Slide 3</div>
+                <div class="swiper-slide box3">Slide 3</div>
+                <div class="swiper-slide box3">Slide 3</div>
+                <div class="swiper-slide box3">Slide 3</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".swiper22", {
+            slidesPerView: 3,
+            spaceBetween: 100,
+            loop: true,
+            navigation: {
+                prevEl: ".swiper-button-prev",
+                nextEl: ".swiper-button-next",
+            },
+        });
+
+        var swiper2 = new Swiper(".swiper2", {
+            spaceBetween: 100,
+            effect: "cards",
+            grabCursor: true,
+            loop: true,
+        });
+    </script>
+</body>
+
+</html>
