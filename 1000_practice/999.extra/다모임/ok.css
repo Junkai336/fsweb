@@ -77,6 +77,85 @@ header>div:nth-of-type(1)>h1 {
     font-size: 2.4rem;
 }
 
+/* 햄버거 메뉴 버튼 */
+
+header .hamburger {
+    background-color: #fff;
+    width: 44px;
+    height: 40px;
+    border-radius: 15%;
+    border-color: #999;
+    /* flex에서 하나만 오른쪽 끝 정렬 */
+    margin-left: auto;
+}
+
+header .stick {
+    position: relative;
+    background-color: #444;
+    display: block;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 50%;
+    height: 3px;
+}
+
+header .stick::before {
+    content: "";
+    position: absolute;
+    background-color: #444;
+    display: block;
+    width: 100%;
+    height: 3px;
+    top: 300%;
+}
+
+header .stick::after {
+    content: "";
+    position: absolute;
+    background-color: #444;
+    display: block;
+    width: 100%;
+    height: 3px;
+    top: -300%;
+}
+
+/* 햄버거 메뉴 */
+
+header .hamburger_menu {
+    background-color: rgba(240, 240, 240, 0.9);
+    position: fixed;
+    z-index: 99999;
+    left: 0;
+    top: 9.8%;
+    width: 100%;
+    /* 햄버거메뉴 크기 */
+    height: 280px;
+    /* border: 1px solid black; */
+    transition: .5s;
+}
+
+header .hamburger_menu li {
+    font-size: 1.7rem;
+    height: 50px;
+    /* border-bottom: 1px solid black; */
+    text-align: center;
+    transition: .5s;
+}
+
+header .hamburger_menu>div>ul>li:nth-of-type(1) {
+    margin-top: 8px;
+}
+
+header .hamburger_menu>div:nth-of-type(2) {
+    margin: 8px auto;
+    width: 400px;
+}
+
+header .hamburger_menu>div:nth-of-type(1)>img {
+    width: 44px;
+    height: 44px;
+}
+
 /* 메뉴(모임, 커뮤니티 등) */
 header>div:nth-of-type(2) {
     min-width: 580px;
@@ -95,12 +174,12 @@ header>div:nth-of-type(3) {
 header .search_form {
     width: 80%;
     border: 2px solid #EA5B0C;
-    transition: .1s;
 }
 
 header .search_form:focus {
     outline: 6px double #EA5B0C;
     box-shadow: none;
+    transition: .1s;
 }
 
 /* 회원정보(로그인/회원가입/마이페이지) */
@@ -129,6 +208,68 @@ header .dropdown-item:active {
 
 .content_below_push {
     height: 80px;
+}
+
+header .none {
+    display: none;
+}
+
+/* header .op_0 {
+    opacity: 0;
+} */
+
+/* 헤더 반응형 */
+
+/* 비회원/회원란 보이기 */
+@media screen and (max-width: 1250px) {
+
+    header {
+        padding: 0 6%;
+    }
+
+
+    /* 로고 */
+    header>div:nth-of-type(1) {
+        width: 0%;
+        min-width: 170px;
+    }
+
+    /* 메뉴(모임, 커뮤니티 등) */
+    header>div:nth-of-type(2) {
+        min-width: 410px;
+    }
+
+    header>div:nth-of-type(2)>ul>li {
+        font-size: 1.4rem;
+        margin-left: 20px;
+    }
+
+    /* 검색 */
+    header>div:nth-of-type(3) {
+        min-width: 200px;
+    }
+
+    header .search_form {
+        width: 100%;
+    }
+
+    /* 회원정보(로그인/회원가입/마이페이지) */
+    header>div:nth-of-type(4) {
+        margin-left: 8px;
+        max-width: 100px;
+        min-width: 200px;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    header>div~div {
+        display: none;
+    }
+
+    header .hamburger {
+        display: block;
+    }
 }
 
 /* ------------------------------------------------------------------ */
@@ -252,9 +393,9 @@ header .dropdown-item:active {
 
 /* 섹션2 */
 .section2 {
-    height: 950px;
+    height: 920px;
     background-color: rgb(235, 235, 235);
-    padding: 0 100px;
+    padding: 0 8%;
 }
 
 .section23_textbox {
@@ -273,14 +414,14 @@ header .dropdown-item:active {
 
 .section2 .meeting_box {
     margin: 0 auto;
-    width: 1400px;
-    height: 500px;
+    width: 90%;
+    height: 510px;
 }
 
 .section2 .meeting_slide {
     background-color: #fff;
     width: 200px;
-    height: 500px;
+    height: 510px;
     border-radius: 15px;
 }
 
@@ -293,13 +434,15 @@ header .dropdown-item:active {
 
 /* 슬라이드 안의 컨텐츠 */
 
-.section2 .slide_img_box {
+.section2 .slide_img_box,
+.section3 .slide_img_box {
     position: relative;
     width: 100%;
     height: 250px;
 }
 
-.section2 .slide_img_box img:nth-of-type(1) {
+.section2 .slide_img_box img:nth-of-type(1),
+.section3 .slide_img_box img:nth-of-type(1) {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -307,100 +450,111 @@ header .dropdown-item:active {
     border-top-right-radius: 15px;
 }
 
-.section2 .slide_img_box img:nth-of-type(2) {
+.section2 .slide_img_box img:nth-of-type(2),
+.section3 .slide_img_box img:nth-of-type(2) {
     position: absolute;
     left: 4%;
     top: 82%;
 }
 
-.section2 .slide_img_box span {
+.section2 .slide_img_box span,
+.section3 .slide_img_box span {
     color: #fff;
     position: absolute;
     left: 13%;
     top: 81%;
 }
 
-.section2 .slide_contents_box {
+.section2 .slide_contents_box,
+.section3 .slide_contents_box {
     padding: 2px 28px;
     color: #333;
 }
 
-.section2 .slide_contents_box>p:nth-of-type(1) {
+.section2 .slide_contents_box>p:nth-of-type(1),
+.section3 .slide_contents_box>p:nth-of-type(1) {
     margin-top: 12px;
 }
 
-.section2 .slide_contents_box>div:nth-of-type(1) {
+.section2 .slide_contents_box>div:nth-of-type(1),
+.section3 .slide_contents_box>div:nth-of-type(1) {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #bbb;
 }
 
-.section2 .slide_contents_box>div:nth-of-type(1)>span {
+.section2 .slide_contents_box>div:nth-of-type(1)>span,
+.section3 .slide_contents_box>div:nth-of-type(1)>span {
     font-size: 1.6rem;
 }
 
 .section2 .meeting_info p,
-.section2 .meeting_info span {
+.section2 .meeting_info span,
+.section3 .meeting_info p,
+.section3 .meeting_info span {
     margin: 0;
 }
 
-.section2 .meeting_info>p:nth-of-type(1) {
+.section2 .meeting_info>p:nth-of-type(1),
+.section3 .meeting_info>p:nth-of-type(1) {
     margin-top: 8px;
 }
 
-.section2 .meeting_info>div.ea5b0c {
+.section2 .meeting_info>div.ea5b0c,
+.section3 .meeting_info>div.ea5b0c {
     margin-top: 10px;
 }
 
-.section2 .meeting_info>div:nth-of-type(2) {
+.section2 .meeting_info>div:nth-of-type(2),
+.section3 .meeting_info>div:nth-of-type(2) {
     margin-top: 12px;
 }
 
-.section2 .text_shadow {
+.section2 .text_shadow,
+.section3 .text_shadow {
     text-shadow: 1px 1px 1px #333;
-}
-
-
-/* .meeting_info {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-} */
-
-
-.section2 .ea5b0c {
-    color: #EA5B0C;
-    font-weight: bold;
 }
 
 /* 섹션3 */
 
 .section3 {
-    height: 800px;
-    padding: 0 100px;
+    min-height: 800px;
+    padding: 0 80px 60px 80px;
 }
 
 .flex {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
 }
 
 .section3 .recommendation_box {
-    width: 400px;
-    height: 400px;
-    margin: 0 100px;
+    width: 350px;
+    margin: 0px 72px 16px 72px;
 }
 
 .section3 .recommendation_slide_box {
-    background-color: #333;
+    /* background-color: #333; */
     border-radius: 15px;
 }
 
 .section3 .recommendation_slide {
     background-color: #444;
-    width: 400px;
-    height: 450px;
+    width: 350px;
+    height: 520px;
     border-radius: 15px;
+}
+
+.section3 .slide_box div {
+    color: #fff;
+}
+
+.recommendation_box>p {
+    /* color: #333; */
+    font-size: 1.9rem;
+    font-weight: bold;
 }
 
 /* 섹션4 */
@@ -421,9 +575,8 @@ header .dropdown-item:active {
     top: 10%;
     right: 10px;
     bottom: 10%;
-    left: 10px;
+    left: 10%;
     content: "";
-    background-color: rgba(255, 255, 255, .1);
     border-radius: 5px;
 }
 
@@ -431,13 +584,54 @@ header .dropdown-item:active {
     top: -25%;
     right: auto;
     bottom: 0;
-    left: 5%;
-    background-color: #e5e5e5;
+    left: 10%;
+}
+
+.section4_description {
+    position: relative;
+    z-index: 2;
+}
+
+.section4_img1 {
+    background-image: url(section4_img1.png);
+}
+
+.section4_img2 {
+    background-image: url(section4_img2.png);
+}
+
+.section4_img1,
+.section4_img2 {
+    background-size: 300px 540px;
+    background-repeat: no-repeat;
 }
 
 /* 기타 */
 
+.section2 .ea5b0c span,
+.section3 .ea5b0c span,
+.ea5b0c {
+    color: #EA5B0C;
+    font-weight: bold;
+}
+
 .hover_ea5b0c:hover {
     color: #EA5B0C;
     font-weight: bold;
+}
+
+
+
+/* 푸터 */
+
+footer a:hover {
+    color: #EA5B0C;
+    font-weight: bold;
+}
+
+/* 푸터 간격 띄우기 */
+@media screen and (max-width: 991px) {
+    footer>div>div>ul>li:nth-last-of-type(1) {
+        margin-bottom: 8px;
+    }
 }

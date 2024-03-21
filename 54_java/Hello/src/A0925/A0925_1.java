@@ -1,31 +1,29 @@
 package A0925;
 
+import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.StringTokenizer;
+
 public class A0925_1 {
-    public static void main(String[] args) {
-       int var1 = 10;
-       System.out.println(var1);
-       
-       int var2 = 20;
-       System.out.println(var2);
-       
-       int var3 = 0x10; //hexa 16진수 - 16
-       System.out.println(var3);
+    public static void main(String[] args) throws IOException {
 
-       int var4 = (int)20.7;
-       System.out.println(var4);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-       Double var44 = 20.7;
-       System.out.println(var44);
-       
+        int N = Integer.parseInt(br.readLine());
+
+        StringTokenizer st;
+
+        for (int i = 0; i < N; i++) {
+            st = new StringTokenizer(br.readLine(), " ");
+            bw.write((Integer.parseInt(st.nextToken()) + Integer.parseInt(st.nextToken())) + "\n");
+        }
+        br.close();
+
+        bw.flush();
+        bw.close();
     }
 }
-
-
-
-/* 
-    package : 폴더랑 비슷
-    클래스 안에는 하나의 메인 클래스 필요
-    int = 정수형 변수만 받는다.
-    Double? 
-
- */
