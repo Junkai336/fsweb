@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Java 프로그램 실행",
+            "request": "launch",
+            "mainClass": "${file}"
+        }
+    ]
+}

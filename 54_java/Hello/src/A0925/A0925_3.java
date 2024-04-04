@@ -14,5 +14,3 @@ public class A0925_3 {
         System.out.println("총" + totalMinute + "분");
     }
 }
-
-// 노란 밑줄: 아직 활용한 적이 없다.
